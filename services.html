@@ -1,0 +1,2149 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>SEO Services - MR Soomro | Professional SEO Agency</title>
+
+  <meta name="description" content="Professional SEO services including keyword research, on-page optimization, link building, and Reddit marketing. Get results-driven SEO that actually works.">
+
+  <link rel="icon" href="favicon.png" type="image/png">
+
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+
+    :root {
+
+  --bg: #fafaf7;
+
+  --bg2: #f2f0ea;
+
+  --bg3: #fffdf8;
+
+  --surface: #ffffff;
+
+  --surface-2: #fef9f0;
+
+
+
+  /* Accent Palette */
+
+  --A: #f97316;
+
+  --A2: #f59e0b;
+
+  --A3: #fbbf24;
+
+  --A-glow: rgba(249,115,22,0.18);
+
+  --A2-glow: rgba(245,158,11,0.2);
+
+
+
+  /* Text */
+
+  --T: #1a1714;
+
+  --Tm: #3d3833;
+
+  --Ts: #7a746d;
+
+  --Tmut: #b0a89e;
+
+
+
+  /* Borders */
+
+  --bdr: rgba(26,23,20,0.1);
+
+  --bdr2: rgba(249,115,22,0.25);
+
+  --glass: rgba(255,255,255,0.8);
+
+
+
+  /* Typography */
+
+  --fd: 'Inter', sans-serif;
+
+  --fb: 'Crimson Text', serif;
+
+
+
+  /* Easing */
+
+  --ee: cubic-bezier(.16,1,.3,1);
+
+  --eb: cubic-bezier(.34,1.56,.64,1);
+
+}
+
+
+
+html, body {
+
+  overflow-x: hidden;
+
+  max-width: 100vw;
+
+}
+
+
+
+/* SECTION BASE */
+
+#services {
+
+  padding: 140px 60px;
+
+  background: var(--bg2);
+
+  position: relative;
+
+}
+
+
+
+/* HEADER */
+
+#services .se {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: .2em;
+
+  text-transform: uppercase;
+
+  color: var(--A);
+
+  margin-bottom: 20px;
+
+}
+
+
+
+#services .se::before {
+
+  content: '';
+
+  display: block;
+
+  width: 28px;
+
+  height: 2px;
+
+  background: linear-gradient(90deg, var(--A), var(--A2));
+
+  border-radius: 2px;
+
+}
+
+
+
+#services .st {
+
+  font-family: var(--fd);
+
+  font-size: clamp(48px, 6vw, 96px);
+
+  font-weight: 800;
+
+  letter-spacing: -.02em;
+
+  line-height: .95;
+
+  color: var(--T);
+
+  margin-bottom: 50px;
+
+}
+
+
+
+#services .st em {
+
+  font-style: normal;
+
+  background: linear-gradient(135deg, var(--A) 0%, var(--A2) 100%);
+
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  background-clip: text;
+
+}
+
+
+
+/* GRID */
+
+.services-container {
+
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  padding: 0 20px;
+
+}
+
+
+
+.services-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+
+  gap: 40px;
+
+  align-items: stretch;
+
+}
+
+
+
+/* CARD */
+
+.service-card {
+
+  background: var(--surface);
+
+  border: 1px solid var(--bdr);
+
+  border-radius: 24px;
+
+  padding: 42px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  transition: all .35s var(--ee);
+
+  box-shadow: 0 12px 40px rgba(0,0,0,0.06);
+
+  min-height: 320px;
+
+  display: flex;
+
+  flex-direction: column;
+
+}
+
+
+
+/* TOP ACCENT LINE */
+
+.service-card::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  height: 3px;
+
+  width: 100%;
+
+  background: linear-gradient(90deg, var(--A), var(--A2));
+
+  transform: scaleX(0);
+
+  transform-origin: left;
+
+  transition: transform .4s var(--ee);
+
+}
+
+
+
+/* HOVER */
+
+.service-card:hover {
+
+  transform: translateY(-12px);
+
+  border-color: rgba(249,115,22,0.3);
+
+  box-shadow: 0 25px 60px rgba(0,0,0,0.12),
+
+              0 0 40px var(--A-glow);
+
+}
+
+
+
+.service-card:hover::before {
+
+  transform: scaleX(1);
+
+}
+
+
+
+/* NUMBER */
+
+.service-number {
+
+  position: absolute;
+
+  top: 20px;
+
+  right: 24px;
+
+  font-family: var(--fd);
+
+  font-size: 48px;
+
+  font-weight: 800;
+
+  color: rgb(255 104 0);
+
+  line-height: 1;
+
+}
+
+
+
+/* ICON */
+
+.service-icon {
+
+  width: 72px;
+
+  height: 72px;
+
+  border-radius: 18px;
+
+  background: rgba(249,115,22,0.08);
+
+  border: 1px solid rgba(249,115,22,0.2);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin-bottom: 28px;
+
+  transition: all .3s var(--ee);
+
+}
+
+
+
+.service-card:hover .service-icon {
+
+  background: linear-gradient(135deg, var(--A), var(--A2));
+
+  box-shadow: 0 12px 35px var(--A-glow);
+
+  transform: scale(1.05);
+
+}
+
+
+
+.service-icon svg {
+
+  width: 32px;
+
+  height: 32px;
+
+  stroke: var(--A);
+
+  stroke-width: 1.8;
+
+  fill: none;
+
+  transition: all .3s;
+
+}
+
+
+
+.service-card:hover .service-icon svg {
+
+  stroke: #fff;
+
+  transform: scale(1.1);
+
+}
+
+
+
+/* TITLE */
+
+.service-card h3 {
+
+  font-family: var(--fd);
+
+  font-size: 24px;
+
+  font-weight: 700;
+
+  margin-bottom: 16px;
+
+  color: var(--T);
+
+  letter-spacing: .02em;
+
+  line-height: 1.3;
+
+}
+
+
+
+/* TEXT */
+
+.service-card p {
+
+  font-size: 15px;
+
+  color: var(--Ts);
+
+  line-height: 1.8;
+
+  margin-bottom: 24px;
+
+  flex: 1;
+
+}
+
+
+
+/* LINK */
+
+.service-link {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: .12em;
+
+  color: var(--A);
+
+  transition: all .3s var(--ee);
+
+  text-decoration: none;
+
+  margin-top: auto;
+
+}
+
+
+
+.service-link:hover {
+
+  color: var(--A2);
+
+  gap: 16px;
+
+  transform: translateX(4px);
+
+}
+
+
+
+/* REVEAL */
+
+.rv {
+
+  opacity: 0;
+
+  transform: translateY(30px);
+
+  transition: all .7s var(--ee);
+
+}
+
+
+
+.rv.visible {
+
+  opacity: 1;
+
+  transform: translateY(0);
+
+}
+
+
+
+/* HERO ALIGNMENT */
+
+.hero {
+
+  min-height: 70vh;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: left;
+
+  background: var(--bg3);
+
+  padding: 120px 60px 80px;
+
+  overflow-x: hidden;
+
+}
+
+
+
+.hero-container {
+
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 80px;
+
+  align-items: center;
+
+}
+
+
+
+.hcnt {
+
+  text-align: left;
+
+  max-width: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+}
+
+
+
+/* HERO VISUAL */
+
+.hero-visual {
+
+  position: relative;
+
+  width: 100%;
+
+  height: 400px;
+
+  overflow: visible;
+
+}
+
+
+
+.visual-main {
+
+  position: relative;
+
+  width: 100%;
+
+  height: 100%;
+
+  border-radius: 24px;
+
+  overflow: hidden;
+
+}
+
+
+
+.visual-main img {
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  opacity: 0.9;
+
+}
+
+
+
+.visual-glow {
+
+  position: absolute;
+
+  inset: 0;
+
+  background: linear-gradient(135deg, rgba(249,115,22,0.1) 0%, rgba(245,158,11,0.05) 100%);
+
+  pointer-events: none;
+
+}
+
+
+
+.visual-card {
+
+  position: absolute;
+
+  background: var(--surface);
+
+  border: 1px solid var(--bdr);
+
+  border-radius: 16px;
+
+  padding: 16px 20px;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+
+  backdrop-filter: blur(10px);
+
+  transition: all .3s var(--ee);
+
+}
+
+
+
+.visual-card:hover {
+
+  transform: translateY(-4px);
+
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+
+  border-color: rgba(249,115,22,0.3);
+
+}
+
+
+
+.card-1 {
+
+  top: 20px;
+
+  right: 10px;
+
+  transform: rotate(3deg);
+
+}
+
+
+
+.card-2 {
+
+  bottom: 40px;
+
+  left: 10px;
+
+  transform: rotate(-2deg);
+
+}
+
+
+
+
+
+.card-icon {
+
+  font-family: var(--fd);
+
+  font-size: 20px;
+
+  font-weight: 800;
+
+  color: var(--A);
+
+  margin-bottom: 4px;
+
+}
+
+
+
+.card-text {
+
+  display: flex;
+
+  flex-direction: column;
+
+}
+
+
+
+.card-label {
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  color: var(--Ts);
+
+  text-transform: uppercase;
+
+  letter-spacing: .1em;
+
+}
+
+
+
+.hh1 {
+
+  font-family: var(--fd);
+
+  font-size: clamp(64px, 10vw, 160px);
+
+  line-height: 1;
+
+  font-weight: 800;
+
+  letter-spacing: -.02em;
+
+  margin-bottom: 30px;
+
+}
+
+
+
+.hh1 .ln {
+
+  display: block;
+
+  opacity: 0;
+
+  transform: translateY(100%);
+
+  animation: lu .9s var(--ee) forwards;
+
+}
+
+
+
+.hh1 .ln:nth-child(1) { animation-delay: .3s }
+
+.hh1 .ln:nth-child(2) { animation-delay: .45s; background: linear-gradient(135deg,var(--A) 0%,var(--A2) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text }
+
+.hh1 .ln:nth-child(3) { animation-delay: .6s }
+
+.hh1 .ln:nth-child(4) { animation-delay: .75s }
+
+
+
+@keyframes lu { to{opacity:1;transform:translateY(0)} }
+
+
+
+.hsub {
+
+  color: var(--Ts);
+
+  max-width: 800px;
+
+  margin: 0 0 40px 0;
+
+  font-size: 18px;
+
+  line-height: 1.8;
+
+  opacity: 0;
+
+  animation: fu .8s var(--ee) .85s forwards;
+
+}
+
+
+
+@keyframes fu { to{opacity:1;transform:translateY(0)} }
+
+
+
+.hpill {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: .18em;
+
+  text-transform: uppercase;
+
+  color: var(--A);
+
+  background: rgba(249,115,22,.08);
+
+  border: 1px solid rgba(249,115,22,.25);
+
+  padding: 8px 18px;
+
+  border-radius: 30px;
+
+  margin-bottom: 30px;
+
+  opacity: 0;
+
+  animation: fu .8s var(--ee) .2s forwards;
+
+}
+
+
+
+.hpill .pd {
+
+  width: 8px;
+
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: var(--A);
+
+  animation: dp 1.5s ease-in-out infinite;
+
+}
+
+
+
+@keyframes dp { 0%,100%{transform:scale(1);opacity:1} 50%{transform:scale(1.5);opacity:.4} }
+
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1024px) {
+
+  .services-grid {
+
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+    gap: 30px;
+
+  }
+
+}
+
+
+
+@media (max-width: 1024px) {
+
+  .hero {
+
+    padding: 100px 40px 60px;
+
+  }
+
+
+
+  .hero-container {
+
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+
+    text-align: center;
+
+  }
+
+
+
+  .hcnt {
+
+    text-align: center;
+
+    align-items: center;
+
+  }
+
+
+
+  .hero-visual {
+
+    height: 400px;
+
+    max-width: 500px;
+
+    margin: 0 auto;
+
+    order: -1;
+
+  }
+
+}
+
+
+
+@media (max-width: 768px) {
+
+  .hero {
+
+    min-height: auto;
+
+    padding: 90px 20px 50px;
+
+    overflow-x: hidden;
+
+  }
+
+
+
+  .hero-container {
+
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+
+  }
+
+
+
+  .hcnt {
+
+    text-align: center;
+
+    align-items: center;
+
+  }
+
+
+
+  .hero-visual {
+
+    height: 320px;
+
+    max-width: 100%;
+
+    margin: 0 auto;
+
+    order: -1;
+
+    overflow: hidden;
+
+  }
+
+
+
+  .visual-card {
+
+    padding: 10px 14px;
+
+    max-width: 140px;
+
+  }
+
+
+
+  .card-1 {
+
+    top: 10px;
+
+    right: 5px;
+
+  }
+
+
+
+  .card-2 {
+
+    bottom: 20px;
+
+    left: 5px;
+
+  }
+
+
+
+  .card-3 {
+
+    right: 5px;
+
+    bottom: 5px;
+
+  }
+
+
+
+  .hh1 {
+
+    font-size: clamp(48px, 12vw, 120px);
+
+    margin-bottom: 25px;
+
+  }
+
+
+
+  .hsub {
+
+    font-size: 16px;
+
+    max-width: 600px;
+
+  }
+
+
+
+  .hpill {
+
+    font-size: 10px;
+
+    padding: 6px 14px;
+
+    margin-bottom: 25px;
+
+  }
+
+
+
+  #services {
+
+    padding: 100px 20px;
+
+  }
+
+
+
+  .services-container {
+
+    padding: 0;
+
+  }
+
+
+
+  .services-grid {
+
+    grid-template-columns: 1fr;
+
+    gap: 24px;
+
+  }
+
+
+
+  .service-card {
+
+    padding: 32px 28px;
+
+    min-height: 280px;
+
+  }
+
+
+
+  #services .st {
+
+    font-size: 38px;
+
+    margin-bottom: 40px;
+
+  }
+
+
+
+  .service-icon {
+
+    width: 64px;
+
+    height: 64px;
+
+    margin-bottom: 24px;
+
+  }
+
+
+
+  .service-icon svg {
+
+    width: 28px;
+
+    height: 28px;
+
+  }
+
+
+
+  .service-card h3 {
+
+    font-size: 22px;
+
+    margin-bottom: 14px;
+
+  }
+
+
+
+  .service-card p {
+
+    font-size: 14px;
+
+    margin-bottom: 20px;
+
+  }
+
+
+
+  .service-number {
+
+    font-size: 40px;
+
+    top: 16px;
+
+    right: 20px;
+
+  }
+
+}
+
+
+
+@media (max-width: 480px) {
+
+  .hero {
+
+    min-height: auto;
+
+    padding: 80px 16px 40px;
+
+    overflow-x: hidden;
+
+  }
+
+
+
+  .hero-container {
+
+    gap: 30px;
+
+  }
+
+
+
+  .hcnt {
+
+    text-align: center;
+
+    align-items: center;
+
+  }
+
+
+
+  .hero-visual {
+
+    height: 260px;
+
+    max-width: 100%;
+
+    order: -1;
+
+    overflow: hidden;
+
+  }
+
+
+
+  .visual-card {
+
+    padding: 8px 12px;
+
+    max-width: 120px;
+
+  }
+
+
+
+  .card-1 {
+
+    top: 5px;
+
+    right: 5px;
+
+  }
+
+
+
+  .card-2 {
+
+    bottom: 15px;
+
+    left: 5px;
+
+  }
+
+
+
+  .card-3 {
+
+    right: 5px;
+
+    bottom: 5px;
+
+  }
+
+
+
+  .card-icon {
+
+    font-size: 18px;
+
+  }
+
+
+
+  .card-label {
+
+    font-size: 10px;
+
+  }
+
+
+
+  .hh1 {
+
+    font-size: clamp(40px, 14vw, 100px);
+
+    margin-bottom: 20px;
+
+  }
+
+
+
+  .hsub {
+
+    font-size: 15px;
+
+    max-width: 500px;
+
+  }
+
+
+
+  .hpill {
+
+    font-size: 9px;
+
+    padding: 5px 12px;
+
+    margin-bottom: 20px;
+
+  }
+
+
+
+  #services {
+
+    padding: 80px 16px;
+
+  }
+
+
+
+  .service-card {
+
+    padding: 28px 24px;
+
+  }
+
+
+
+  #services .st {
+
+    font-size: 32px;
+
+  }
+
+
+
+  .service-icon {
+
+    width: 56px;
+
+    height: 56px;
+
+  }
+
+
+
+  .service-icon svg {
+
+    width: 24px;
+
+    height: 24px;
+
+  }
+
+
+
+  .service-card h3 {
+
+    font-size: 20px;
+
+  }
+
+}
+
+
+
+
+
+.sizeicon {
+
+  width: 18px;
+
+  height: 18px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: var(--A); /* your accent color */
+
+}
+
+
+
+.sizeicon svg {
+
+  width: 100%;
+
+  height: 100%;
+
+  stroke: currentColor;
+
+  fill: none;
+
+}
+
+  </style>
+
+</head>
+
+<body class="services-page">
+  <!-- MOBILE NAV -->
+  <div class="mnav" id="mobNav">
+    <div class="mnav-links">
+      <a href="index.html" onclick="closeMob()">Home</a>
+      <a href="about.html" onclick="closeMob()">About</a>
+      <a href="services.html" onclick="closeMob()">Services</a>
+      <a href="index.html#process" onclick="closeMob()">Process</a>
+      <a href="blogs.html" onclick="closeMob()">Blog</a>
+      <a href="reviews.html" onclick="closeMob()">Reviews</a>
+      <a href="index.html#contact" onclick="closeMob()">Contact</a>
+    </div>
+    <div class="mob-social" aria-label="Social media links">
+      <div class="mob-contact">Connect With Us</div>
+      <a href="https://wa.me/923092102705" title="WhatsApp" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg></a>
+      <a href="https://facebook.com/mrSoomro" title="Facebook" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+      <a href="https://linkedin.com/in/mrSoomro" title="LinkedIn" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+      <a href="https://instagram.com/mrSoomro" title="Instagram" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+      <a href="mailto:info@mr-soomro.com" title="Email" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+    </div>
+  </div>
+
+<!-- NAVBAR -->
+
+  <nav id="mainNav">
+
+    <a href="index.html" class="nlogo"><img src="images/websitelogo.jpeg" alt="MR. Soomro SEO" style="height:40px;width:auto;display:block;"></a>
+
+    <ul class="nlinks">
+
+      <li><a href="about.html">About</a></li>
+
+      <li><a href="services.html">Services</a></li>
+
+      <li><a href="index.html#process">Process</a></li>
+
+      <li><a href="blogs.html">Blog</a></li>
+
+      <li><a href="reviews.html">Reviews</a></li>
+
+      <li><a href="index.html#contact" class="ncta">Free SEO Audit</a></li>
+
+    </ul>
+
+    <button class="nbg" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+
+  </nav>
+
+
+
+  <!-- HERO -->
+
+  <section class="hero" id="hero" style="min-height:60vh">
+
+    <div class="hero-container">
+
+      <div class="hcnt">
+
+        <div class="hpill"><span class="pd"></span>Our Services &middot; Proven Results Since 2016</div>
+
+        <h1 class="hh1">
+
+          <span class="ln">SEO</span>
+
+          <span class="ln">Services</span>
+
+          <span class="ln">That</span>
+
+          <span class="ln">Work</span>
+
+        </h1>
+
+        <p class="hsub">Comprehensive SEO solutions designed to rank your website higher, drive organic traffic, and grow your business.</p>
+
+      </div>
+
+      
+
+      <div class="hero-visual" aria-hidden="true">
+
+        <div class="visual-main">
+
+          <img src="images/image-removebg-preview.png" alt="SEO Services">
+
+          <div class="visual-glow"></div>
+
+        </div>
+
+        <div class="visual-card card-1">
+
+          <div class="card-icon"><div class="sizeicon"><svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></div></div>
+
+          <div class="card-text"><span class="card-label">Search Engine Optimization</span></div>
+
+        </div>
+
+        <div class="visual-card card-2">
+
+          <div class="card-icon"><div class="sizeicon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div></div>
+
+          <div class="card-text"><span class="card-label">Organic Growth</span></div>
+
+        </div>
+
+        <div class="visual-card card-3">
+
+          <div class="card-icon"><div class="sizeicon"><svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div></div>
+
+          <div class="card-text"><span class="card-label">Keyword Ranking</span></div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- SERVICES -->
+
+  <section id="services">
+
+    <div style="max-width:1200px;margin:0 auto;text-align:center;margin-bottom:60px">
+
+      <div class="se">Our Services</div>
+
+      <h2 class="st">Comprehensive <em>SEO Solutions</em></h2>
+
+      <p style="font-size:18px;color:var(--Ts);max-width:600px;margin:0 auto">We offer a full range of SEO services to help your business dominate search results and drive sustainable growth.</p>
+
+    </div>
+
+    
+
+    <div class="services-container">
+
+  <div class="services-grid">
+
+    
+
+    <!-- Service 1 -->
+
+    <article class="service-card rv" itemscope itemtype="https://schema.org/Service">
+
+      <span class="service-number">01</span>
+
+      <div class="service-icon">  <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+
+</div>
+
+      <h3 itemprop="name">Reddit Post Removal</h3>
+
+      <p itemprop="description">Remove harmful Reddit content and protect your brand reputation. We use advanced deindexing techniques to suppress negative posts and restore your online presence.</p>
+
+      <a href="index.html" class="service-link">Get Started &rarr;</a>
+
+    </article>
+
+
+
+    <!-- Service 2 -->
+
+    <article class="service-card rv" itemscope itemtype="https://schema.org/Service">
+
+      <span class="service-number">02</span>
+
+      <div class="service-icon"> <svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+
+</div>
+
+      <h3 itemprop="name">Reputation Management</h3>
+
+      <p itemprop="description">Control your online reputation with strategic SEO and content placement. We promote positive search results and suppress negative content effectively.</p>
+
+      <a href="index.html" class="service-link">Get Started &rarr;</a>
+
+    </article>
+
+
+
+    <!-- Service 3 -->
+
+    <article class="service-card rv" itemscope itemtype="https://schema.org/Service">
+
+      <span class="service-number">03</span>
+
+      <div class="service-icon"> <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+
+      <h3 itemprop="name">Authority Backlinks</h3>
+
+      <p itemprop="description">Build high-quality backlinks from trusted websites to boost your rankings and drive consistent organic traffic to your site.</p>
+
+      <a href="index.html" class="service-link">Get Started &rarr;</a>
+
+    </article>
+
+
+
+    <!-- Service 4 -->
+
+    <article class="service-card rv" itemscope itemtype="https://schema.org/Service">
+
+      <span class="service-number">04</span>
+
+      <div class="service-icon"> <svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+
+</div>
+
+      <h3 itemprop="name">Reddit Marketing</h3>
+
+      <p itemprop="description">Drive targeted traffic from Reddit through strategic posting and community engagement in relevant subreddits.</p>
+
+      <a href="index.html" class="service-link">Get Started &rarr;</a>
+
+    </article>
+
+
+
+    <!-- Service 5 -->
+
+    <article class="service-card rv" itemscope itemtype="https://schema.org/Service">
+
+      <span class="service-number">05</span>
+
+      <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></div>
+
+      <h3 itemprop="name">Link Building</h3>
+
+      <p itemprop="description">Create powerful white-hat backlinks with editorial links, guest posts, and digital PR campaigns to boost your domain authority.</p>
+
+      <a href="index.html" class="service-link">Get Started &rarr;</a>
+
+    </article>
+
+
+
+    <!-- Service 6 -->
+
+    <article class="service-card rv" itemscope itemtype="https://schema.org/Service">
+
+      <span class="service-number">06</span>
+
+      <div class="service-icon"> <svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
+
+      </div>
+
+      <h3 itemprop="name">eCommerce SEO</h3>
+
+      <p itemprop="description">Specialised SEO for online stores. We optimise product pages, categories, and performance to increase sales and revenue.</p>
+
+      <a href="index.html" class="service-link">Get Started &rarr;</a>
+
+    </article>
+
+
+
+    <!-- Service 7 -->
+
+    <article class="service-card rv" itemscope itemtype="https://schema.org/Service">
+
+      <span class="service-number">07</span>
+
+      <div class="service-icon"> <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 110 20 10 10 0 010-20z"/><path d="M12 6v6l4 2"/></svg>
+
+</div>
+
+      <h3 itemprop="name">AI SEO & GEO</h3>
+
+      <p itemprop="description">Optimise for Google AI Overviews, ChatGPT, and voice search. Future-proof your visibility in 2026 and beyond.</p>
+
+      <a href="index.html" class="service-link">Get Started &rarr;</a>
+
+    </article>
+
+
+
+    <!-- Service 8 -->
+
+    <article class="service-card rv" itemscope itemtype="https://schema.org/Service">
+
+      <span class="service-number">08</span>
+
+      <div class="service-icon">  <svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+
+</div>
+
+      <h3 itemprop="name">SEO Audits</h3>
+
+      <p itemprop="description">Comprehensive 150-point SEO audit with actionable roadmap and quick wins to improve your rankings immediately.</p>
+
+      <a href="index.html" class="service-link">Get Started &rarr;</a>
+
+    </article>
+
+
+
+    <!-- Service 9 -->
+
+    <article class="service-card rv" itemscope itemtype="https://schema.org/Service">
+
+      <span class="service-number">09</span>
+
+      <div class="service-icon"><svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+
+</div>
+
+      <h3 itemprop="name">SEO Analytics</h3>
+
+      <p itemprop="description">Monthly dashboards with rank tracking, traffic trends, and ROI calculation for full transparency on your investment.</p>
+
+      <a href="index.html" class="service-link">Get Started &rarr;</a>
+
+    </article>
+
+
+
+  </div>
+
+</div>
+
+  </section>
+  <!-- FOOTER -->
+  <footer itemscope itemtype="https://schema.org/Organization">
+    <div class="ftt">
+      <div>
+        <span class="ftlo" itemprop="name">MR.<span>Soomro</span></span>
+        <p class="fttg" itemprop="description">Pakistan's trusted SEO agency helping businesses rank higher, attract more clients and grow sustainably with data-driven search strategies since 2016.</p>
+        <div class="ft-soc-row">
+          <a href="https://wa.me/923092102705" title="WhatsApp" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg></a>
+          <a href="https://facebook.com/mrSoomro" title="Facebook" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+          <a href="https://linkedin.com/in/mrSoomro" title="LinkedIn" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a href="https://instagram.com/mrSoomro" title="Instagram" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="mailto:info@mr-soomro.com" title="Email" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+        </div>
+      </div>
+      <div><div class="ftct">Services</div><ul class="ftlk"><li><strong>Technical SEO</strong></li><li><a href="services.html">Website Audit</a></li><li><a href="services.html">Core Web Vitals</a></li><li><a href="services.html">Schema Markup</a></li><li><a href="services.html">Crawl Error Fixes</a></li></ul></div>
+      <div><div class="ftct">Services</div><ul class="ftlk"><li><strong>On-Page SEO</strong></li><li><a href="services.html">Keyword Research</a></li><li><a href="services.html">Meta Optimization</a></li><li><a href="services.html">Internal Linking</a></li><li><strong>Off-Page SEO</strong></li><li><a href="services.html">Guest Posting</a></li><li><a href="services.html">Link Building</a></li><li><a href="services.html">Digital PR</a></li></ul></div>
+      <div><div class="ftct">More Services</div><ul class="ftlk"><li><strong>Local SEO</strong></li><li><a href="services.html">Google Business Profile</a></li><li><a href="services.html">Citation Building</a></li><li><strong>E-commerce SEO</strong></li><li><a href="services.html">Shopify SEO</a></li><li><a href="services.html">WooCommerce SEO</a></li><li><strong>SEO Consulting</strong></li><li><a href="services.html">Competitor Analysis</a></li><li><a href="services.html">Monthly Reporting</a></li></ul></div>
+      <div><div class="ftct">Quick Links</div><ul class="ftlk"><li><a href="index.html#about">Why Choose Us</a></li><li><a href="index.html#process">SEO Process</a></li><li><a href="reviews.html">Client Reviews</a></li><li><a href="blogs.html">Blog</a></li><li><a href="index.html#contact">Book Free Consultation</a></li></ul></div>
+      <div><div class="ftct">Contact</div><ul class="ftlk"><li><a href="mailto:info@mr-soomro.com">info@mr-soomro.com</a></li><li><a href="tel:+923092102705">0309 210 2705</a></li><li><a href="https://wa.me/923092102705">WhatsApp</a></li><li style="color:rgba(255,255,255,.28);font-size:13px;font-weight:300">House No G 209, Mohallah Humayoo, Masjid Al Fazal Town, Phuleli, Hyderabad, Sindh, Pakistan 71000</li></ul></div>
+    </div>
+    <div class="ftbt">
+      <div class="ftcp">-� 2026 <a href="index.html">Mr. Soomro SEO Agency</a>. All rights reserved.</div>
+      <div class="ftbl"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms &amp; Conditions</a><a href="cookie-policy.html">Cookie Policy</a></div>
+    </div>
+  </footer>
+
+
+
+  <script>
+
+    /* NAV */
+
+    const mainNav = document.getElementById('mainNav');
+
+    if (mainNav) {
+
+      window.addEventListener('scroll',()=>mainNav.classList.toggle('scr',scrollY>60));
+
+    }
+
+
+
+    const burger = document.getElementById('burger');
+
+    const mobNav = document.getElementById('mobNav');
+
+    
+
+    if (burger && mobNav) {
+
+      burger.addEventListener('click',function(){ 
+
+        this.classList.toggle('open'); 
+
+        mobNav.classList.toggle('open'); 
+
+      });
+
+    }
+
+
+
+    function closeMob(){ 
+
+      if (mobNav) mobNav.classList.remove('open'); 
+
+    }
+
+
+
+    /* HERO LINES */
+
+    const hl = document.getElementById('heroLines');
+
+    if (hl) {
+
+      hl.style.cssText='position:absolute;inset:0;display:flex;justify-content:space-between;pointer-events:none;z-index:1';
+
+      for(let i=0;i<12;i++){ 
+
+        const s=document.createElement('span'); 
+
+        s.style.cssText='display:block;width:1px;background:linear-gradient(180deg,transparent,rgba(249,115,22,.06) 30%,rgba(249,115,22,.06) 70%,transparent)'; 
+
+        hl.appendChild(s); 
+
+      }
+
+    }
+
+
+
+    /* PARTICLES */
+
+    const pc = document.getElementById('heroParticles');
+
+    if (pc) {
+
+      for(let i=0;i<18;i++){ 
+
+        const p=document.createElement('span'); 
+
+        p.style.left=Math.random()*100+'%'; 
+
+        p.style.animationDelay=Math.random()*15+'s'; 
+
+        p.style.animationDuration=(10+Math.random()*10)+'s'; 
+
+        pc.appendChild(p); 
+
+      }
+
+    }
+
+
+
+    /* MARQUEE */
+
+    const mq = document.getElementById('mqTrack');
+
+    if (mq) {
+
+      const words=['On-Page SEO','Technical SEO','Link Building','Local SEO','Content Marketing','eCommerce SEO','AI SEO & GEO','Keyword Research','SEO Audits','SEO Analytics','Reddit Marketing','Reputation Management'];
+
+      [...words,...words,...words,...words].forEach(w=>{ 
+
+        const d=document.createElement('div'); 
+
+        d.className='mqi'; 
+
+        d.textContent=w; 
+
+        mq.appendChild(d); 
+
+      });
+
+    }
+
+
+
+    /* CLIENTS - Static HTML already present */
+
+
+
+    /* SCROLL REVEAL */
+
+    const obs=new IntersectionObserver(entries=>{ 
+
+      entries.forEach((e,i)=>{ 
+
+        if(e.isIntersecting){ 
+
+          setTimeout(()=>e.target.classList.add('vis','visible'),i*80); 
+
+          obs.unobserve(e.target); 
+
+        } 
+
+      }); 
+
+    },{threshold:.1,rootMargin:'0px 0px -34px 0px'});
+
+    document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
+
+
+
+    /* STAT COUNTERS */
+
+    function animN(el,tg,sf,dur=1800){ 
+
+      const s=performance.now(); 
+
+      (function t(now){ 
+
+        const p=Math.min((now-s)/dur,1),e2=1-Math.pow(1-p,3); 
+
+        el.innerHTML=Math.round(tg*e2)+'<span>'+sf+'</span>'; 
+
+        if(p<1) requestAnimationFrame(t); 
+
+      })(s); 
+
+    }
+
+    
+
+    const sObs=new IntersectionObserver(e=>{ 
+
+      if(e[0].isIntersecting){ 
+
+        document.querySelectorAll('[data-target]').forEach(el=>{ 
+
+          const t=parseInt(el.dataset.target),sp=el.querySelector('span')?.textContent||''; 
+
+          animN(el,t,sp); 
+
+        }); 
+
+        sObs.unobserve(e[0].target); 
+
+      } 
+
+    },{threshold:.3});
+
+    
+
+    const sb=document.querySelector('.stbar'); 
+
+    if(sb) sObs.observe(sb);
+
+
+
+    /* TESTIMONIALS */
+
+    const slides=document.querySelectorAll('.tsl'); 
+
+    if (slides.length > 0) {
+
+      let cur=0;
+
+      const dw=document.getElementById('tcDots');
+
+      if (dw) {
+
+        slides.forEach((_,i)=>{ 
+
+          const d=document.createElement('div'); 
+
+          d.className='tdt'+(i===0?' act':''); 
+
+          d.addEventListener('click',()=>goTo(i)); 
+
+          dw.appendChild(d); 
+
+        });
+
+      }
+
+      
+
+      function goTo(n){ 
+
+        slides[cur].classList.remove('act'); 
+
+        document.querySelectorAll('.tdt')[cur].classList.remove('act'); 
+
+        cur=(n+slides.length)%slides.length; 
+
+        slides[cur].classList.add('act'); 
+
+        document.querySelectorAll('.tdt')[cur].classList.add('act'); 
+
+      }
+
+      
+
+      const tcPrev = document.getElementById('tcPrev');
+
+      const tcNext = document.getElementById('tcNext');
+
+      
+
+      if (tcPrev) tcPrev.addEventListener('click',()=>goTo(cur-1));
+
+      if (tcNext) tcNext.addEventListener('click',()=>goTo(cur+1));
+
+      setInterval(()=>goTo(cur+1),6000);
+
+    }
+
+
+
+    /* EMAIL BAND */
+
+    function handleEB(){ 
+
+      const ebEmail = document.getElementById('ebEmail');
+
+      const ebMsg = document.getElementById('ebMsg');
+
+      if (!ebEmail || !ebMsg) return;
+
+      
+
+      const v=ebEmail.value.trim();
+
+      if(!v){ 
+
+        ebMsg.style.cssText='display:block;color:#fff;background:rgba(0,0,0,.2);padding:8px 14px;border-radius:8px'; 
+
+        ebMsg.textContent='Please enter your email or website URL.'; 
+
+        return; 
+
+      } 
+
+      ebMsg.style.cssText='display:block;color:#fff;font-weight:600'; 
+
+      ebMsg.textContent="Thank you. We will send your free SEO audit within 24 hours."; 
+
+      ebEmail.value=''; 
+
+    }
+
+
+
+    /* FORM SELECT */
+
+    const fs = document.getElementById('fs');
+
+    if (fs) {
+
+      fs.addEventListener('change',function(){ 
+
+        this.classList.add('fl'); 
+
+      });
+
+    }
+
+
+
+    /* SMOOTH SCROLL */
+
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{ 
+
+      a.addEventListener('click',e=>{ 
+
+        const t=document.querySelector(a.getAttribute('href')); 
+
+        if(t){ 
+
+          e.preventDefault(); 
+
+          t.scrollIntoView({behavior:'smooth'}); 
+
+        } 
+
+      }); 
+
+    });
+
+
+
+    /* EMAILJS FORM */
+
+    const fSub = document.getElementById('fSub');
+
+    if (fSub) {
+
+      if (typeof emailjs !== "undefined") emailjs.init("hnD6svOG9ul9LoBqK");
+
+      
+
+      fSub.addEventListener("click", function(e) {
+
+        e.preventDefault();
+
+        const btn = this;
+
+        const msgBox = document.getElementById("fMsg");
+
+        if (!msgBox) return;
+
+        
+
+        const data = { 
+
+          first_name:document.getElementById("fn")?.value.trim() || '', 
+
+          last_name:document.getElementById("ln")?.value.trim() || '', 
+
+          email:document.getElementById("fe")?.value.trim() || '', 
+
+          phone:document.getElementById("fp")?.value.trim() || '', 
+
+          website:document.getElementById("fw")?.value.trim() || '', 
+
+          service:document.getElementById("fs")?.value.trim() || '', 
+
+          message:document.getElementById("fb2")?.value.trim() || '' 
+
+        };
+
+        
+
+        if (!data.first_name || !data.email || !data.message) { 
+
+          msgBox.style.display="block"; 
+
+          msgBox.style.color="red"; 
+
+          msgBox.textContent="❌ Please fill all required fields."; 
+
+          return; 
+
+        }
+
+        
+
+        btn.disabled=true; 
+
+        btn.querySelector("span").textContent="Sending...";
+
+        
+
+        typeof emailjs !== "undefined" ? emailjs.send("service_0vyg0cj","template_3fdrhag",data) : Promise.reject(new Error("EmailJS is not loaded"))
+
+          .then(()=>{ 
+
+            msgBox.style.display="block"; 
+
+            msgBox.style.color="var(--A)"; 
+
+            msgBox.textContent="✅ Message sent successfully!"; 
+
+            ["fn","ln","fe","fp","fw"].forEach(id=>{ 
+
+              const el = document.getElementById(id); 
+
+              if (el) el.value=''; 
+
+            }); 
+
+            const fsSelect = document.getElementById("fs"); 
+
+            if (fsSelect) fsSelect.selectedIndex=0; 
+
+            const fb2 = document.getElementById("fb2"); 
+
+            if (fb2) fb2.value=''; 
+
+            btn.disabled=false; 
+
+            btn.querySelector("span").textContent="Send Message & Get Free Audit"; 
+
+          })
+
+          .catch(()=>{ 
+
+            msgBox.style.display="block"; 
+
+            msgBox.style.color="red"; 
+
+            msgBox.textContent="❌ Failed to send. Try again."; 
+
+            btn.disabled=false; 
+
+            btn.querySelector("span").textContent="Send Message & Get Free Audit"; 
+
+          });
+
+      });
+
+    }
+
+  </script>
+
+</body>
+
+</html>
+
+
+

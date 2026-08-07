@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>On-Page SEO Checklist 2026 for Pakistani Businesses | Mr. Soomro SEO</title>
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta name="description"
+    content="30-point on-page SEO checklist to maximise visibility and conversion rates for Pakistani business websites.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    :root {
+      --bg: #fafaf7;
+      --bg2: #f2f0ea;
+      --bg3: #fffdf8;
+      --surface: #ffffff;
+      --A: #f97316;
+      --A2: #f59e0b;
+      --A-glow: rgba(249,115,22,0.18);
+      --T: #1a1714;
+      --Tm: #3d3833;
+      --Ts: #7a746d;
+      --Tmut: #b0a89e;
+      --bdr: rgba(26,23,20,0.1);
+      --fd: 'Inter', sans-serif;
+      --fb: 'Crimson Text', serif;
+      --ee: cubic-bezier(.16,1,.3,1);
+    }
+
+    body {
+      font-family: var(--fb);
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--T);
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--A);
+      transition: all 0.3s;
+    }
+
+    a:hover {
+      color: var(--A2);
+    }
+
+    h1, h2, h3 {
+      font-family: var(--fd);
+      margin: 0.5em 0;
+      letter-spacing: -0.02em;
+      font-weight: 800;
+    }
+
+    .rv {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s var(--ee), transform 0.8s var(--ee);
+    }
+
+    .rv.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .article-header {
+      padding: 140px 60px 60px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      background: var(--bg3);
+    }
+
+    .article-header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 20% 20%, rgba(249,115,22,0.08) 0%, transparent 50%), radial-gradient(ellipse at 80% 80%, rgba(245,158,11,0.06) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .article-header::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(rgba(249,115,22,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(249,115,22,0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+    }
+
+    .article-header .se {
+      color: var(--A);
+      letter-spacing: 2px;
+      font-weight: 600;
+      font-size: 1rem;
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .article-header .se::before {
+      content: '';
+      display: block;
+      width: 30px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--A), var(--A2));
+      border-radius: 2px;
+    }
+
+    .article-header h1 {
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      margin-top: 10px;
+      line-height: 1.1;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      z-index: 1;
+      color: var(--T);
+    }
+
+    .article-header h1 em {
+      font-style: normal;
+      background: linear-gradient(135deg, var(--A) 0%, var(--A2) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .article-meta {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-top: 30px;
+      color: var(--Ts);
+      font-size: 0.9rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .article-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 60px;
+    }
+
+    .article-content {
+      font-size: 1.1rem;
+      line-height: 1.9;
+      color: var(--Tm);
+    }
+
+    .article-content h2 {
+      font-size: 2rem;
+      color: var(--T);
+      margin-top: 48px;
+      margin-bottom: 24px;
+    }
+
+    .article-content h2 em {
+      font-style: normal;
+      background: linear-gradient(135deg, var(--A) 0%, var(--A2) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .article-content h3 {
+      font-size: 1.5rem;
+      color: var(--T);
+      margin-top: 36px;
+      margin-bottom: 16px;
+    }
+
+    .article-content p {
+      margin-bottom: 24px;
+    }
+
+    .article-content ul {
+      margin-bottom: 24px;
+      padding-left: 24px;
+    }
+
+    .article-content li {
+      margin-bottom: 12px;
+    }
+
+    .article-content strong {
+      color: var(--A);
+      font-weight: 600;
+    }
+
+    .article-image {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto 60px;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.1), 0 0 30px var(--A-glow);
+      border: 2px solid rgba(249,115,22,0.2);
+    }
+
+    .article-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .related-posts {
+      background: var(--bg2);
+      padding: 80px 60px;
+      border-top: 1px solid var(--bdr);
+    }
+
+    .related-posts h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 48px;
+      color: var(--T);
+    }
+
+    .related-posts h2 em {
+      font-style: normal;
+      background: linear-gradient(135deg, var(--A) 0%, var(--A2) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .related-card {
+      background: var(--surface);
+      border: 1px solid var(--bdr);
+      border-radius: 20px;
+      padding: 30px;
+      transition: all 0.35s var(--ee);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .related-card::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, var(--A), var(--A2));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s var(--ee);
+    }
+
+    .related-card:hover {
+      border-color: var(--A);
+      transform: translateY(-8px);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.08), 0 0 30px var(--A-glow);
+    }
+
+    .related-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .related-card .date {
+      color: var(--A);
+      font-size: 0.85rem;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    .related-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+      color: var(--T);
+    }
+
+    .related-card p {
+      color: var(--Ts);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 768px) {
+      .article-header {
+        padding: 120px 24px 40px;
+      }
+
+      .article-container {
+        padding: 40px 24px;
+      }
+
+      .related-posts {
+        padding: 60px 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-circle"><span class="loader-ms">MS</span></div>
+      <div class="loader-text">MR Soomro</div>
+    </div>
+  </div>
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+  <!-- Mobile Nav -->
+  <div class="mnav" id="mobNav">
+    <a href="index.html" onclick="closeMob()">Home</a>
+    <a href="index.html" onclick="closeMob()">About</a>
+    <a href="services.html" onclick="closeMob()">Services</a>
+    <a href="index.html" onclick="closeMob()">Process</a>
+    <a href="blogs.html" onclick="closeMob()">Blog</a>
+    <a href="reviews.html" onclick="closeMob()">Reviews</a>
+    <a href="index.html#contact" onclick="closeMob()">Contact</a>
+  </div>
+  <nav id="mainNav">
+    <a href="index.html" class="nlogo"><img src="images/websitelogo.jpeg" alt="MR. Soomro SEO" style="height:40px;width:auto;display:block;"></a>
+    <ul class="nlinks">
+      <li><a href="index.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="blogs.html">Blog</a></li>
+      <li><a href="reviews.html">Reviews</a></li>
+      <li><a href="index.html#contact" class="ncta">Free SEO Audit</a></li>
+    </ul>
+    <button class="nbg" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+
+  <header class="article-header">
+    <div class="se">On-Page SEO</div>
+    <h1>The On-Page SEO Checklist Every Pakistani Business Website Needs in 2026</h1>
+    <div class="article-meta"><span>Dec 5, 2025</span><span>6 min read</span></div>
+  </header>
+
+  <div class="article-image rv"><img
+      src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=1200&h=600&fit=crop"
+      alt="On-Page SEO Checklist"></div>
+
+  <article class="article-container">
+    <div class="article-content rv">
+      <p>A fully optimised page does more than just rank — it converts. Run through our 30-point on-page SEO checklist
+        to maximise both your visibility and your conversion rate.</p>
+
+      <h2>Content Optimization</h2>
+      <ul>
+        <li>Include target keyword in the first 100 words</li>
+        <li>Use keyword in at least one H2 heading</li>
+        <li>Write compelling title tags (50-60 characters)</li>
+        <li>Create unique meta descriptions (150-160 characters)</li>
+        <li>Include internal links to relevant pages</li>
+        <li>Add external links to authoritative sources</li>
+        <li>Use LSI keywords throughout content</li>
+        <li>Write at least 1,000 words for important pages</li>
+      </ul>
+
+      <h2>Technical Elements</h2>
+      <ul>
+        <li>Use one H1 tag per page</li>
+        <li>Structure content with H2-H6 hierarchy</li>
+        <li>Optimize images with alt text</li>
+        <li>Compress images for faster loading</li>
+        <li>Use descriptive URLs with keywords</li>
+        <li>Implement schema markup</li>
+        <li>Ensure mobile responsiveness</li>
+        <li>Fix broken links</li>
+      </ul>
+
+      <h2>User Experience</h2>
+      <ul>
+        <li>Improve page load speed (under 3 seconds)</li>
+        <li>Use short paragraphs (2-3 sentences)</li>
+        <li>Include bullet points and lists</li>
+        <li>Add relevant images and videos</li>
+        <li>Ensure clear call-to-action buttons</li>
+        <li>Make text readable (16px+ font size)</li>
+        <li>Use sufficient white space</li>
+        <li>Include table of contents for long posts</li>
+      </ul>
+
+      <h2>Advanced Optimization</h2>
+      <ul>
+        <li>Add FAQ schema for relevant content</li>
+        <li>Implement breadcrumb navigation</li>
+        <li>Use canonical tags to avoid duplicate content</li>
+        <li>Create XML sitemap</li>
+        <li>Optimize for featured snippets</li>
+        <li>Include social sharing buttons</li>
+      </ul>
+
+      <h2>Conclusion</h2>
+      <p>On-page SEO is the foundation of your search visibility. Use this checklist for every page you publish, and
+        you'll see steady improvements in both rankings and conversions.</p>
+    </div>
+  </article>
+
+  <section class="related-posts">
+    <h2>More Articles</h2>
+    <div class="related-grid">
+      <a href="blog-local-seo.html" class="related-card rv">
+        <div class="date">Dec 28, 2025</div>
+        <h3>Local SEO Playbook 2026</h3>
+        <p>Dominate Google Maps in Pakistan.</p>
+      </a>
+      <a href="blog-keyword-research.html" class="related-card rv">
+        <div class="date">Dec 15, 2025</div>
+        <h3>Keyword Research in 2026</h3>
+        <p>Find high-intent terms that convert.</p>
+      </a>
+    </div>
+  </section>
+  <!-- FOOTER -->
+  <footer itemscope itemtype="https://schema.org/Organization">
+    <div class="ftt">
+      <div>
+        <span class="ftlo" itemprop="name">MR.<span>Soomro</span></span>
+        <p class="fttg" itemprop="description">Pakistan's trusted SEO agency helping businesses rank higher, attract more clients and grow sustainably with data-driven search strategies since 2016.</p>
+        <div class="ft-soc-row">
+          <a href="https://wa.me/923092102705" title="WhatsApp" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg></a>
+          <a href="https://facebook.com/mrSoomro" title="Facebook" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+          <a href="https://linkedin.com/in/mrSoomro" title="LinkedIn" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a href="https://instagram.com/mrSoomro" title="Instagram" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="mailto:info@mr-soomro.com" title="Email" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+        </div>
+      </div>
+      <div><div class="ftct">Services</div><ul class="ftlk"><li><strong>Technical SEO</strong></li><li><a href="services.html">Website Audit</a></li><li><a href="services.html">Core Web Vitals</a></li><li><a href="services.html">Schema Markup</a></li><li><a href="services.html">Crawl Error Fixes</a></li></ul></div>
+      <div><div class="ftct">Services</div><ul class="ftlk"><li><strong>On-Page SEO</strong></li><li><a href="services.html">Keyword Research</a></li><li><a href="services.html">Meta Optimization</a></li><li><a href="services.html">Internal Linking</a></li><li><strong>Off-Page SEO</strong></li><li><a href="services.html">Guest Posting</a></li><li><a href="services.html">Link Building</a></li><li><a href="services.html">Digital PR</a></li></ul></div>
+      <div><div class="ftct">More Services</div><ul class="ftlk"><li><strong>Local SEO</strong></li><li><a href="services.html">Google Business Profile</a></li><li><a href="services.html">Citation Building</a></li><li><strong>E-commerce SEO</strong></li><li><a href="services.html">Shopify SEO</a></li><li><a href="services.html">WooCommerce SEO</a></li><li><strong>SEO Consulting</strong></li><li><a href="services.html">Competitor Analysis</a></li><li><a href="services.html">Monthly Reporting</a></li></ul></div>
+      <div><div class="ftct">Quick Links</div><ul class="ftlk"><li><a href="index.html#about">Why Choose Us</a></li><li><a href="index.html#process">SEO Process</a></li><li><a href="reviews.html">Client Reviews</a></li><li><a href="blogs.html">Blog</a></li><li><a href="index.html#contact">Book Free Consultation</a></li></ul></div>
+      <div><div class="ftct">Contact</div><ul class="ftlk"><li><a href="mailto:info@mr-soomro.com">info@mr-soomro.com</a></li><li><a href="tel:+923092102705">0309 210 2705</a></li><li><a href="https://wa.me/923092102705">WhatsApp</a></li><li style="color:rgba(255,255,255,.28);font-size:13px;font-weight:300">House No G 209, Mohallah Humayoo, Masjid Al Fazal Town, Phuleli, Hyderabad, Sindh, Pakistan 71000</li></ul></div>
+    </div>
+    <div class="ftbt">
+      <div class="ftcp">-� 2026 <a href="index.html">Mr. Soomro SEO Agency</a>. All rights reserved.</div>
+      <div class="ftbl"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms &amp; Conditions</a><a href="cookie-policy.html">Cookie Policy</a></div>
+    </div>
+  </footer>
+
+  <script>
+    function closeMob() {
+      document.getElementById('mobNav').classList.remove('open');
+    }
+    document.getElementById('burger').addEventListener('click', function () {
+      this.classList.toggle('open');
+      document.getElementById('mobNav').classList.toggle('open');
+    });
+    const obs = new IntersectionObserver((e) => { e.forEach(en => { if (en.isIntersecting) en.target.classList.add('visible'); }); }, { threshold: .1, rootMargin: '0px 0px -34px 0px' });
+    document.querySelectorAll('.rv').forEach(el => obs.observe(el));
+    window.addEventListener("load", () => { const l = document.getElementById('loader'); setTimeout(() => { l.style.opacity = '0'; l.style.transition = 'opacity 0.5s'; setTimeout(() => l.style.display = 'none', 500); }, 1000); });
+
+    // cursor - Premium Gold Glow Edition
+    const dot = document.querySelector('.cursor-dot'), ring = document.querySelector('.cursor-ring');
+    if (dot && ring && window.matchMedia('(hover: hover)').matches) {
+      let mouse = { x: 0, y: 0 }, ringPos = { x: 0, y: 0 }; const ease = 0.12;
+      document.addEventListener('mousemove', e => { mouse.x = e.clientX; mouse.y = e.clientY; dot.style.left = mouse.x + 'px'; dot.style.top = mouse.y + 'px'; });
+      function animate() { ringPos.x += (mouse.x - ringPos.x) * ease; ringPos.y += (mouse.y - ringPos.y) * ease; ring.style.left = ringPos.x + 'px'; ring.style.top = ringPos.y + 'px'; requestAnimationFrame(animate); }
+      animate();
+      document.querySelectorAll('a,button,input,textarea,select').forEach(el => {
+        el.addEventListener('mouseenter', () => { ring.classList.add('hover'); dot.classList.add('hover'); });
+        el.addEventListener('mouseleave', () => { ring.classList.remove('hover'); dot.classList.remove('hover'); });
+      });
+      document.addEventListener('mousedown', () => { dot.classList.add('clicking'); ring.classList.add('clicking'); });
+      document.addEventListener('mouseup', () => { dot.classList.remove('clicking'); ring.classList.remove('clicking'); });
+    }
+  </script>
+</body>
+
+</html>

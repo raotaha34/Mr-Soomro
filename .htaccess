@@ -1,0 +1,22 @@
+Options -MultiViews
+RewriteEngine On
+
+# Force HTTPS + non-www
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} ^www\.mr-soomro\.com$ [NC]
+RewriteRule ^ https://mr-soomro.com%{REQUEST_URI} [R=301,L]
+
+# Redirect /index or /index.html to /
+RewriteCond %{THE_REQUEST} \s/+index(?:\.html?)?[\s?] [NC]
+RewriteRule ^index(?:\.html?)?$ / [R=301,L]
+
+# Redirect .html pages to clean URLs
+RewriteCond %{THE_REQUEST} \s/([^.]+)\.html[\s?] [NC]
+RewriteRule ^ %1 [R=301,L]
+
+# Serve clean URLs from matching .html files
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^([^/]+)/?$ $1.html [L]
+
+DirectoryIndex index.html
