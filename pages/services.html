@@ -1,849 +1,428 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>SEO Services - MR Soomro | Professional SEO Agency</title>
-
   <meta name="description" content="Professional SEO services including keyword research, on-page optimization, link building, and Reddit marketing. Get results-driven SEO that actually works.">
-
   <link rel="icon" href="../assets/favicon.png" type="image/png">
-
   <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
-
   <link rel="stylesheet" href="../css/style.css">
-
   <style>
 
     :root {
-
   --bg: #fafaf7;
-
   --bg2: #f2f0ea;
-
   --bg3: #fffdf8;
-
   --surface: #ffffff;
-
   --surface-2: #fef9f0;
 
-
-
   /* Accent Palette */
-
   --A: #f97316;
-
   --A2: #f59e0b;
-
   --A3: #fbbf24;
-
   --A-glow: rgba(249,115,22,0.18);
-
   --A2-glow: rgba(245,158,11,0.2);
 
-
-
   /* Text */
-
   --T: #1a1714;
-
   --Tm: #3d3833;
-
   --Ts: #7a746d;
-
   --Tmut: #b0a89e;
 
-
-
   /* Borders */
-
   --bdr: rgba(26,23,20,0.1);
-
   --bdr2: rgba(249,115,22,0.25);
-
   --glass: rgba(255,255,255,0.8);
-
-
-
   /* Typography */
-
   --fd: 'Inter', sans-serif;
-
   --fb: 'Crimson Text', serif;
-
-
-
   /* Easing */
-
   --ee: cubic-bezier(.16,1,.3,1);
-
   --eb: cubic-bezier(.34,1.56,.64,1);
-
 }
-
-
 
 html, body {
-
   overflow-x: hidden;
-
   max-width: 100vw;
-
 }
-
-
 
 /* SECTION BASE */
 
 #services {
-
   padding: 140px 60px;
-
   background: var(--bg2);
-
   position: relative;
-
 }
-
-
-
 /* HEADER */
 
 #services .se {
-
   display: inline-flex;
-
   align-items: center;
-
   gap: 12px;
-
   font-size: 12px;
-
   font-weight: 700;
-
   letter-spacing: .2em;
-
   text-transform: uppercase;
-
   color: var(--A);
-
   margin-bottom: 20px;
-
 }
-
-
 
 #services .se::before {
-
   content: '';
-
   display: block;
-
   width: 28px;
-
   height: 2px;
-
   background: linear-gradient(90deg, var(--A), var(--A2));
-
   border-radius: 2px;
-
 }
-
-
 
 #services .st {
 
   font-family: var(--fd);
-
   font-size: clamp(48px, 6vw, 96px);
-
   font-weight: 800;
-
   letter-spacing: -.02em;
-
   line-height: .95;
-
   color: var(--T);
-
   margin-bottom: 50px;
-
 }
-
-
 
 #services .st em {
-
   font-style: normal;
-
   background: linear-gradient(135deg, var(--A) 0%, var(--A2) 100%);
-
   -webkit-background-clip: text;
-
   -webkit-text-fill-color: transparent;
-
   background-clip: text;
-
 }
-
-
 
 /* GRID */
-
 .services-container {
-
   max-width: 1400px;
-
   margin: 0 auto;
-
   padding: 0 20px;
-
 }
-
-
 
 .services-grid {
-
   display: grid;
-
   grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-
   gap: 40px;
-
   align-items: stretch;
-
 }
-
-
 
 /* CARD */
-
 .service-card {
-
   background: var(--surface);
-
   border: 1px solid var(--bdr);
-
   border-radius: 24px;
-
   padding: 42px;
-
   position: relative;
-
   overflow: hidden;
-
   transition: all .35s var(--ee);
-
   box-shadow: 0 12px 40px rgba(0,0,0,0.06);
-
   min-height: 320px;
-
   display: flex;
-
   flex-direction: column;
-
 }
-
-
 
 /* TOP ACCENT LINE */
-
 .service-card::before {
-
   content: "";
-
   position: absolute;
-
   top: 0;
-
   left: 0;
-
   height: 3px;
-
   width: 100%;
-
   background: linear-gradient(90deg, var(--A), var(--A2));
-
   transform: scaleX(0);
-
   transform-origin: left;
-
   transition: transform .4s var(--ee);
-
 }
-
-
 
 /* HOVER */
-
 .service-card:hover {
-
   transform: translateY(-12px);
-
   border-color: rgba(249,115,22,0.3);
-
   box-shadow: 0 25px 60px rgba(0,0,0,0.12),
-
               0 0 40px var(--A-glow);
-
 }
-
-
 
 .service-card:hover::before {
-
   transform: scaleX(1);
-
 }
-
-
 
 /* NUMBER */
-
 .service-number {
-
   position: absolute;
-
   top: 20px;
-
   right: 24px;
-
   font-family: var(--fd);
-
   font-size: 48px;
-
   font-weight: 800;
-
   color: rgb(255 104 0);
-
   line-height: 1;
-
 }
-
-
 
 /* ICON */
-
 .service-icon {
-
   width: 72px;
-
   height: 72px;
-
   border-radius: 18px;
-
   background: rgba(249,115,22,0.08);
-
   border: 1px solid rgba(249,115,22,0.2);
-
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
   margin-bottom: 28px;
-
   transition: all .3s var(--ee);
-
 }
-
-
 
 .service-card:hover .service-icon {
-
   background: linear-gradient(135deg, var(--A), var(--A2));
-
   box-shadow: 0 12px 35px var(--A-glow);
-
   transform: scale(1.05);
-
 }
-
-
 
 .service-icon svg {
-
   width: 32px;
-
   height: 32px;
-
   stroke: var(--A);
-
   stroke-width: 1.8;
-
   fill: none;
-
   transition: all .3s;
-
 }
-
-
 
 .service-card:hover .service-icon svg {
-
   stroke: #fff;
-
   transform: scale(1.1);
-
 }
-
-
 
 /* TITLE */
-
 .service-card h3 {
-
   font-family: var(--fd);
-
   font-size: 24px;
-
   font-weight: 700;
-
   margin-bottom: 16px;
-
   color: var(--T);
-
   letter-spacing: .02em;
-
   line-height: 1.3;
-
 }
-
 
 
 /* TEXT */
-
 .service-card p {
-
   font-size: 15px;
-
   color: var(--Ts);
-
   line-height: 1.8;
-
   margin-bottom: 24px;
-
   flex: 1;
-
 }
-
-
 
 /* LINK */
-
 .service-link {
-
   display: inline-flex;
-
   align-items: center;
-
   gap: 10px;
-
   font-size: 13px;
-
   font-weight: 700;
-
   text-transform: uppercase;
-
   letter-spacing: .12em;
-
   color: var(--A);
-
   transition: all .3s var(--ee);
-
   text-decoration: none;
-
   margin-top: auto;
-
 }
-
-
 
 .service-link:hover {
-
   color: var(--A2);
-
   gap: 16px;
-
   transform: translateX(4px);
-
 }
-
-
 
 /* REVEAL */
-
 .rv {
-
   opacity: 0;
-
   transform: translateY(30px);
-
   transition: all .7s var(--ee);
-
 }
-
-
 
 .rv.visible {
-
   opacity: 1;
-
   transform: translateY(0);
-
 }
-
-
 
 /* HERO ALIGNMENT */
-
 .hero {
-
   min-height: 70vh;
-
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
   text-align: left;
-
   background: var(--bg3);
-
   padding: 120px 60px 80px;
-
   overflow-x: hidden;
-
 }
-
-
 
 .hero-container {
-
   max-width: 1400px;
-
   margin: 0 auto;
-
   width: 100%;
-
   display: grid;
-
   grid-template-columns: 1fr 1fr;
-
   gap: 80px;
-
   align-items: center;
-
 }
-
-
 
 .hcnt {
-
   text-align: left;
-
   max-width: 100%;
-
   display: flex;
-
   flex-direction: column;
-
   justify-content: center;
-
 }
-
-
 
 /* HERO VISUAL */
-
 .hero-visual {
-
   position: relative;
-
   width: 100%;
-
   height: 400px;
-
   overflow: visible;
-
 }
-
-
 
 .visual-main {
-
   position: relative;
-
   width: 100%;
-
   height: 100%;
-
   border-radius: 24px;
-
   overflow: hidden;
-
 }
-
-
 
 .visual-main img {
-
   width: 100%;
-
   height: 100%;
-
-  object-fit: cover;
-
+  object-fit: contain;
+  object-position: center;
   opacity: 0.9;
-
 }
-
-
 
 .visual-glow {
-
   position: absolute;
-
   inset: 0;
-
   background: linear-gradient(135deg, rgba(249,115,22,0.1) 0%, rgba(245,158,11,0.05) 100%);
-
   pointer-events: none;
-
 }
-
-
 
 .visual-card {
-
   position: absolute;
-
   background: var(--surface);
-
   border: 1px solid var(--bdr);
-
   border-radius: 16px;
-
   padding: 16px 20px;
-
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-
   backdrop-filter: blur(10px);
-
   transition: all .3s var(--ee);
-
 }
-
-
 
 .visual-card:hover {
-
   transform: translateY(-4px);
-
   box-shadow: 0 15px 40px rgba(0,0,0,0.12);
-
   border-color: rgba(249,115,22,0.3);
-
 }
-
-
 
 .card-1 {
-
   top: 20px;
-
   right: 10px;
-
   transform: rotate(3deg);
-
 }
-
-
 
 .card-2 {
-
   bottom: 40px;
-
   left: 10px;
-
   transform: rotate(-2deg);
-
 }
-
-
-
-
 
 .card-icon {
-
   font-family: var(--fd);
-
   font-size: 20px;
-
   font-weight: 800;
-
   color: var(--A);
-
   margin-bottom: 4px;
-
 }
-
-
 
 .card-text {
-
   display: flex;
-
   flex-direction: column;
-
 }
-
-
 
 .card-label {
-
   font-size: 11px;
-
   font-weight: 600;
-
   color: var(--Ts);
-
   text-transform: uppercase;
-
   letter-spacing: .1em;
-
 }
-
-
 
 .hh1 {
-
   font-family: var(--fd);
-
   font-size: clamp(64px, 10vw, 160px);
-
   line-height: 1;
-
   font-weight: 800;
-
   letter-spacing: -.02em;
-
   margin-bottom: 30px;
-
 }
-
-
 
 .hh1 .ln {
-
   display: block;
-
   opacity: 0;
-
   transform: translateY(100%);
-
   animation: lu .9s var(--ee) forwards;
-
 }
 
-
-
 .hh1 .ln:nth-child(1) { animation-delay: .3s }
-
-.hh1 .ln:nth-child(2) { animation-delay: .45s; background: linear-gradient(135deg,var(--A) 0%,var(--A2) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text }
-
+.hh1 .ln:nth-child(2) { animation-delay: .45s }
 .hh1 .ln:nth-child(3) { animation-delay: .6s }
-
 .hh1 .ln:nth-child(4) { animation-delay: .75s }
-
-
+.hh1 .orange { background: linear-gradient(135deg,var(--A) 0%,var(--A2) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text }
+.hh1 .dark { color: #000000 !important; -webkit-text-fill-color: #000000 !important; background: none !important; background-image: none !important; }
 
 @keyframes lu { to{opacity:1;transform:translateY(0)} }
 
-
-
 .hsub {
-
   color: var(--Ts);
-
   max-width: 800px;
-
   margin: 0 0 40px 0;
-
   font-size: 18px;
-
   line-height: 1.8;
-
   opacity: 0;
-
   animation: fu .8s var(--ee) .85s forwards;
-
 }
-
-
-
 @keyframes fu { to{opacity:1;transform:translateY(0)} }
 
-
-
 .hpill {
-
   display: inline-flex;
-
   align-items: center;
-
   gap: 10px;
-
   font-size: 11px;
-
   font-weight: 700;
-
   letter-spacing: .18em;
-
   text-transform: uppercase;
-
   color: var(--A);
-
   background: rgba(249,115,22,.08);
-
   border: 1px solid rgba(249,115,22,.25);
-
   padding: 8px 18px;
-
   border-radius: 30px;
-
   margin-bottom: 30px;
-
   opacity: 0;
-
   animation: fu .8s var(--ee) .2s forwards;
-
 }
-
-
 
 .hpill .pd {
-
   width: 8px;
-
   height: 8px;
-
   border-radius: 50%;
-
   background: var(--A);
-
   animation: dp 1.5s ease-in-out infinite;
-
 }
-
-
-
 @keyframes dp { 0%,100%{transform:scale(1);opacity:1} 50%{transform:scale(1.5);opacity:.4} }
 
 
@@ -851,511 +430,256 @@ html, body {
 /* RESPONSIVE */
 
 @media (max-width: 1024px) {
-
   .services-grid {
-
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-
     gap: 30px;
-
   }
-
 }
-
-
 
 @media (max-width: 1024px) {
-
   .hero {
-
     padding: 100px 40px 60px;
-
   }
-
-
 
   .hero-container {
-
     grid-template-columns: 1fr;
-
     gap: 50px;
-
     text-align: center;
-
   }
-
-
 
   .hcnt {
-
     text-align: center;
-
     align-items: center;
-
   }
-
-
 
   .hero-visual {
-
     height: 400px;
-
     max-width: 500px;
-
     margin: 0 auto;
-
     order: -1;
-
   }
-
 }
-
-
 
 @media (max-width: 768px) {
-
   .hero {
-
     min-height: auto;
-
     padding: 90px 20px 50px;
-
     overflow-x: hidden;
-
   }
-
-
 
   .hero-container {
-
     grid-template-columns: 1fr;
-
     gap: 40px;
-
   }
-
-
 
   .hcnt {
-
     text-align: center;
-
     align-items: center;
-
   }
-
-
 
   .hero-visual {
-
     height: 320px;
-
     max-width: 100%;
-
     margin: 0 auto;
-
     order: -1;
-
     overflow: hidden;
-
   }
-
-
 
   .visual-card {
-
     padding: 10px 14px;
-
     max-width: 140px;
-
   }
-
-
-
   .card-1 {
-
     top: 10px;
-
     right: 5px;
-
   }
-
-
 
   .card-2 {
-
     bottom: 20px;
-
     left: 5px;
-
   }
-
-
 
   .card-3 {
-
     right: 5px;
-
     bottom: 5px;
-
   }
-
-
 
   .hh1 {
-
     font-size: clamp(48px, 12vw, 120px);
-
     margin-bottom: 25px;
-
   }
-
-
 
   .hsub {
-
     font-size: 16px;
-
     max-width: 600px;
-
   }
-
-
 
   .hpill {
-
     font-size: 10px;
-
     padding: 6px 14px;
-
     margin-bottom: 25px;
-
   }
-
-
 
   #services {
-
     padding: 100px 20px;
-
   }
-
-
 
   .services-container {
-
     padding: 0;
-
   }
-
-
 
   .services-grid {
-
     grid-template-columns: 1fr;
-
     gap: 24px;
-
   }
-
-
 
   .service-card {
-
     padding: 32px 28px;
-
     min-height: 280px;
-
   }
-
-
 
   #services .st {
-
     font-size: 38px;
-
     margin-bottom: 40px;
-
   }
-
-
 
   .service-icon {
-
     width: 64px;
-
     height: 64px;
-
     margin-bottom: 24px;
-
   }
-
-
 
   .service-icon svg {
-
     width: 28px;
-
     height: 28px;
-
   }
-
-
 
   .service-card h3 {
-
     font-size: 22px;
-
     margin-bottom: 14px;
-
   }
-
-
 
   .service-card p {
-
     font-size: 14px;
-
     margin-bottom: 20px;
-
   }
-
-
 
   .service-number {
-
     font-size: 40px;
-
     top: 16px;
-
     right: 20px;
-
   }
-
 }
-
-
 
 @media (max-width: 480px) {
-
   .hero {
-
     min-height: auto;
-
     padding: 80px 16px 40px;
-
     overflow-x: hidden;
-
   }
-
-
 
   .hero-container {
-
     gap: 30px;
-
   }
-
-
 
   .hcnt {
-
     text-align: center;
-
     align-items: center;
-
   }
-
-
 
   .hero-visual {
-
     height: 260px;
-
     max-width: 100%;
-
     order: -1;
-
     overflow: hidden;
-
   }
-
-
 
   .visual-card {
-
     padding: 8px 12px;
-
     max-width: 120px;
-
   }
-
-
 
   .card-1 {
-
     top: 5px;
-
     right: 5px;
-
   }
-
-
 
   .card-2 {
-
     bottom: 15px;
-
     left: 5px;
-
   }
-
-
 
   .card-3 {
-
     right: 5px;
-
     bottom: 5px;
-
   }
-
-
 
   .card-icon {
-
     font-size: 18px;
-
   }
-
-
 
   .card-label {
-
     font-size: 10px;
-
   }
-
-
 
   .hh1 {
-
     font-size: clamp(40px, 14vw, 100px);
-
     margin-bottom: 20px;
-
   }
-
-
 
   .hsub {
-
     font-size: 15px;
-
     max-width: 500px;
-
   }
-
-
 
   .hpill {
-
     font-size: 9px;
-
     padding: 5px 12px;
-
     margin-bottom: 20px;
-
   }
-
-
 
   #services {
-
     padding: 80px 16px;
-
   }
-
-
 
   .service-card {
-
     padding: 28px 24px;
-
   }
-
-
 
   #services .st {
-
     font-size: 32px;
-
   }
-
-
 
   .service-icon {
-
     width: 56px;
-
     height: 56px;
-
   }
-
-
 
   .service-icon svg {
-
     width: 24px;
-
     height: 24px;
-
   }
-
-
 
   .service-card h3 {
-
     font-size: 20px;
-
   }
-
 }
-
-
-
-
 
 .sizeicon {
-
   width: 18px;
-
   height: 18px;
-
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
   color: var(--A); /* your accent color */
-
 }
-
-
 
 .sizeicon svg {
-
   width: 100%;
-
   height: 100%;
-
   stroke: currentColor;
-
   fill: none;
-
 }
-
   </style>
 
 </head>
@@ -1422,60 +746,31 @@ html, body {
 
         <h1 class="hh1">
 
-          <span class="ln">SEO</span>
+<span class="ln"><span class="t">SEO</span> <span class="orange">Services</span></span>
 
-          <span class="ln">Services</span>
-
-          <span class="ln">That</span>
-
-          <span class="ln">Work</span>
-
+<span class="ln dark">That Work</span>
         </h1>
-
         <p class="hsub">Comprehensive SEO solutions designed to rank your website higher, drive organic traffic, and grow your business.</p>
-
       </div>
-
-      
-
       <div class="hero-visual" aria-hidden="true">
-
         <div class="visual-main">
-
-<img src="../images/serviceimage.png" alt="SEO Services">
-
+ <img src="../images/digitalmarketing-removebg-preview.png" alt="SEO Services">
           <div class="visual-glow"></div>
-
         </div>
-
         <div class="visual-card card-1">
-
           <div class="card-icon"><div class="sizeicon"><svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></div></div>
-
           <div class="card-text"><span class="card-label">Search Engine Optimization</span></div>
-
         </div>
-
         <div class="visual-card card-2">
-
           <div class="card-icon"><div class="sizeicon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div></div>
-
           <div class="card-text"><span class="card-label">Organic Growth</span></div>
-
         </div>
-
         <div class="visual-card card-3">
-
           <div class="card-icon"><div class="sizeicon"><svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div></div>
-
           <div class="card-text"><span class="card-label">Keyword Ranking</span></div>
-
         </div>
-
       </div>
-
     </div>
-
   </section>
 
 
@@ -1485,13 +780,9 @@ html, body {
   <section id="services">
 
     <div style="max-width:1200px;margin:0 auto;text-align:center;margin-bottom:60px">
-
       <div class="se">Our Services</div>
-
       <h2 class="st">Comprehensive <em>SEO Solutions</em></h2>
-
       <p style="font-size:18px;color:var(--Ts);max-width:600px;margin:0 auto">We offer a full range of SEO services to help your business dominate search results and drive sustainable growth.</p>
-
     </div>
 
     
@@ -1505,39 +796,26 @@ html, body {
     <!-- Service 1 -->
 
     <article class="service-card rv" itemscope itemtype="https://schema.org/Service">
-
       <span class="service-number">01</span>
-
       <div class="service-icon">  <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-
 </div>
 
       <h3 itemprop="name">Reddit Post Removal</h3>
-
       <p itemprop="description">Remove harmful Reddit content and protect your brand reputation. We use advanced deindexing techniques to suppress negative posts and restore your online presence.</p>
-
       <a href="index.html" class="service-link">Get Started &rarr;</a>
-
     </article>
 
 
 
     <!-- Service 2 -->
-
     <article class="service-card rv" itemscope itemtype="https://schema.org/Service">
-
       <span class="service-number">02</span>
-
       <div class="service-icon"> <svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-
 </div>
 
       <h3 itemprop="name">Reputation Management</h3>
-
       <p itemprop="description">Control your online reputation with strategic SEO and content placement. We promote positive search results and suppress negative content effectively.</p>
-
       <a href="index.html" class="service-link">Get Started &rarr;</a>
-
     </article>
 
 

@@ -89,8 +89,8 @@ nav.scr { background:rgba(255,255,255,.98);box-shadow:0 4px 30px rgba(249,115,22
 .hh1 { font-family:var(--fd);font-size:clamp(48px,7vw,96px);line-height:.9;letter-spacing:-.01em;color:var(--T);margin-bottom:28px;overflow:hidden;font-weight:800 }
 .hh1 .ln { display:block;opacity:1;transform:translateY(0);animation:lu .9s var(--ee) forwards }
 .hh1 .ln:nth-child(1) { animation-delay:.3s }
-.hh1 .ln:nth-child(2) { animation-delay:.45s;background:linear-gradient(135deg,var(--A) 0%,var(--A2) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text }
-.hh1 .ln:nth-child(3) { animation-delay:.6s }
+.hh1 .ln .t { color:var(--T) }
+.hh1 .ln .orange { background:linear-gradient(135deg,var(--A) 0%,var(--A2) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text }
 @keyframes lu { to{opacity:1;transform:translateY(0)} }
 .hsub { font-size:17px;font-weight:400;color:var(--Ts);line-height:1.9;max-width:540px;margin-bottom:38px;opacity:1;animation:fu .8s var(--ee) .85s forwards }
 @keyframes fu { to{opacity:1;transform:translateY(0)} }
@@ -364,7 +364,7 @@ footer::before { content:'';position:absolute;top:0;left:50%;transform:translate
 
 /* Services Grid */
 .services-container { max-width:1200px;margin:0 auto }
-.services-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:20px }
+.services-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:70px }
 .service-card { background:var(--surface);border:1px solid var(--bdr);border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:12px;transition:all .4s var(--ee);position:relative;overflow:hidden }
 .service-card::before { content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--A),var(--A2));opacity:0;transition:opacity .4s var(--ee) }
 .service-card:hover { transform:translateY(-4px);box-shadow:0 12px 32px rgba(26,23,20,.08),0 4px 12px rgba(249,115,22,.12);border-color:var(--bdr2) }
