@@ -1,0 +1,2219 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PBN Backlinks Services | Mr Soomro - Digital Marketing Expert</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+      <link rel="icon" href="../assets/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="../css/style.css">
+<script src="../pages/script.js" defer></script>
+    <style>
+        :root {
+            --primary-orange: #F5911E;
+            --dark-orange: #E07D0A;
+            --light-orange: #FFF3E0;
+            --pale-orange: #FFF9F0;
+            --white: #FFFFFF;
+            --dark: #1A1A1A;
+            --dark-gray: #333333;
+            --medium-gray: #666666;
+            --light-gray: #999999;
+            --border-gray: #E5E5E5;
+            --bg-light: #FAFAF8;
+            --success-green: #22C55E;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--dark-gray);
+            background: var(--white);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--bg-light);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-orange);
+            border-radius: 4px;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 40px 100px;
+            background: linear-gradient(135deg, var(--white) 0%, var(--pale-orange) 50%, var(--light-orange) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -200px;
+            right: -200px;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(245, 145, 30, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -100px;
+            left: -100px;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(245, 145, 30, 0.05) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--white);
+            border: 1px solid var(--border-gray);
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--medium-gray);
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+        }
+
+        .hero-badge i {
+            color: var(--primary-orange);
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 800;
+            line-height: 1.1;
+            color: var(--dark);
+            margin-bottom: 24px;
+            letter-spacing: -1.5px;
+        }
+
+        .hero h1 span {
+            color: var(--primary-orange);
+        }
+
+        .hero-description {
+            font-size: 18px;
+            color: var(--medium-gray);
+            line-height: 1.8;
+            margin-bottom: 40px;
+            max-width: 520px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 50px;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--primary-orange);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .btn-primary:hover {
+            background: var(--dark-orange);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(245, 145, 30, 0.3);
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--white);
+            color: var(--dark-gray);
+            padding: 16px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            border: 2px solid var(--border-gray);
+            transition: all 0.3s;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--primary-orange);
+            color: var(--primary-orange);
+            transform: translateY(-2px);
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+        }
+
+        .hero-stat-number {
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--primary-orange);
+            letter-spacing: -0.5px;
+        }
+
+        .hero-stat-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--light-gray);
+            font-weight: 500;
+        }
+
+        /* Hero Visual - PBN Network */
+        .hero-visual {
+            position: relative;
+        }
+
+        .hero-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 45px 40px;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.08);
+            position: relative;
+        }
+
+        .pbn-network {
+            position: relative;
+            height: 280px;
+            margin-bottom: 30px;
+        }
+
+        .pbn-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90px;
+            height: 90px;
+            background: linear-gradient(135deg, var(--primary-orange), var(--dark-orange));
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            box-shadow: 0 15px 40px rgba(245, 145, 30, 0.4);
+            z-index: 10;
+        }
+
+        .pbn-center i {
+            font-size: 26px;
+            margin-bottom: 4px;
+        }
+
+        .pbn-center span {
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .pbn-node {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background: var(--pale-orange);
+            border: 2px solid rgba(245, 145, 30, 0.2);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: var(--primary-orange);
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        .pbn-node.n1 { top: 0; left: 20%; animation-delay: 0s; }
+        .pbn-node.n2 { top: 0; right: 20%; animation-delay: 0.4s; }
+        .pbn-node.n3 { top: 50%; left: 0; transform: translateY(-50%); animation-delay: 0.8s; }
+        .pbn-node.n4 { top: 50%; right: 0; transform: translateY(-50%); animation-delay: 1.2s; }
+        .pbn-node.n5 { bottom: 0; left: 20%; animation-delay: 1.6s; }
+        .pbn-node.n6 { bottom: 0; right: 20%; animation-delay: 2s; }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); box-shadow: 0 4px 15px rgba(245, 145, 30, 0.15); }
+            50% { transform: scale(1.08); box-shadow: 0 8px 25px rgba(245, 145, 30, 0.3); }
+        }
+
+        .pbn-node.n3, .pbn-node.n4 {
+            animation-name: pulseY;
+        }
+
+        @keyframes pulseY {
+            0%, 100% { transform: translateY(-50%) scale(1); box-shadow: 0 4px 15px rgba(245, 145, 30, 0.15); }
+            50% { transform: translateY(-50%) scale(1.08); box-shadow: 0 8px 25px rgba(245, 145, 30, 0.3); }
+        }
+
+        .pbn-line {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100px;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary-orange), transparent);
+            transform-origin: 0 0;
+            opacity: 0.4;
+        }
+
+        .hero-card-metrics {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .metric-item {
+            background: var(--bg-light);
+            border-radius: 12px;
+            padding: 18px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .metric-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+
+        .metric-icon.orange { background: var(--light-orange); color: var(--primary-orange); }
+        .metric-icon.green { background: #E8F5E9; color: var(--success-green); }
+
+        .metric-text {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--dark-gray);
+        }
+
+        .metric-sub {
+            font-size: 11px;
+            color: var(--light-gray);
+        }
+
+        .floating-badge {
+            position: absolute;
+            background: white;
+            border-radius: 12px;
+            padding: 12px 18px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            animation: float 3s ease-in-out infinite;
+            z-index: 20;
+        }
+
+        .floating-badge.top-right {
+            top: -20px;
+            right: -20px;
+        }
+
+        .floating-badge.bottom-left {
+            bottom: -15px;
+            left: -15px;
+            animation-delay: 1.5s;
+        }
+
+        .floating-badge i {
+            color: var(--primary-orange);
+            font-size: 18px;
+        }
+
+        .floating-badge .badge-number {
+            font-weight: 800;
+            font-size: 20px;
+            color: var(--primary-orange);
+            letter-spacing: -0.5px;
+        }
+
+        .floating-badge .badge-label {
+            font-size: 9px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--light-gray);
+            font-weight: 600;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Section Common */
+        .section {
+            padding: 100px 40px;
+        }
+
+        .section-light { background: var(--bg-light); }
+        .section-white { background: var(--white); }
+        .section-dark { background: var(--dark); color: white; }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .section-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--light-orange);
+            color: var(--primary-orange);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 20px;
+        }
+
+        .section-dark .section-label {
+            background: rgba(245, 145, 30, 0.15);
+        }
+
+        .section-title {
+            font-size: 44px;
+            font-weight: 800;
+            color: var(--dark);
+            margin-bottom: 18px;
+            line-height: 1.15;
+            letter-spacing: -1px;
+        }
+
+        .section-dark .section-title { color: white; }
+
+        .section-title span {
+            color: var(--primary-orange);
+        }
+
+        .section-subtitle {
+            font-size: 17px;
+            color: var(--medium-gray);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .section-dark .section-subtitle {
+            color: rgba(255,255,255,0.65);
+        }
+
+        /* What Are PBN */
+        .what-section {
+            padding: 100px 40px;
+            background: var(--white);
+        }
+
+        .what-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .what-content h2 {
+            font-size: 40px;
+            font-weight: 800;
+            color: var(--dark);
+            margin-bottom: 24px;
+            line-height: 1.15;
+            letter-spacing: -1px;
+        }
+
+        .what-content h2 span { color: var(--primary-orange); }
+
+        .what-content p {
+            font-size: 16px;
+            color: var(--medium-gray);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .pbn-highlight {
+            background: var(--pale-orange);
+            border-left: 4px solid var(--primary-orange);
+            padding: 20px 24px;
+            border-radius: 0 12px 12px 0;
+            margin: 25px 0;
+        }
+
+        .pbn-highlight p {
+            font-size: 14px;
+            color: var(--dark-gray);
+            margin: 0;
+        }
+
+        .pbn-highlight strong {
+            color: var(--primary-orange);
+        }
+
+        .what-visual-card {
+            background: linear-gradient(135deg, var(--primary-orange), var(--dark-orange));
+            border-radius: 24px;
+            padding: 50px;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .what-visual-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+        }
+
+        .what-visual-card h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .what-list {
+            list-style: none;
+            position: relative;
+            z-index: 1;
+        }
+
+        .what-list li {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.15);
+            font-size: 15px;
+        }
+
+        .what-list li:last-child { border-bottom: none; }
+
+        .what-list li i {
+            width: 28px;
+            height: 28px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            flex-shrink: 0;
+        }
+
+        /* Stats Bar */
+        .stats-bar { background: var(--primary-orange); padding: 60px 40px; }
+
+        .stats-grid {
+            max-width: 1280px; margin: 0 auto;
+            display: grid; grid-template-columns: repeat(4, 1fr);
+            gap: 30px; text-align: center;
+        }
+
+        .stat-item { color: white; }
+
+        .stat-number {
+            font-size: 48px; font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .stat-label {
+            font-size: 12px; text-transform: uppercase;
+            letter-spacing: 2px; opacity: 0.8; font-weight: 500;
+        }
+
+        /* Card Grids */
+        .why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+
+        .why-card {
+            background: var(--white);
+            border: 1px solid var(--border-gray);
+            border-radius: 16px;
+            padding: 35px 28px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .why-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+            background: var(--primary-orange);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .why-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+            border-color: transparent;
+        }
+
+        .why-card:hover::before { transform: scaleX(1); }
+
+        .why-card-icon {
+            width: 56px; height: 56px;
+            background: var(--light-orange);
+            border-radius: 14px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 24px;
+            color: var(--primary-orange);
+            margin-bottom: 20px;
+        }
+
+        .why-card h3 {
+            font-size: 17px; font-weight: 700;
+            color: var(--dark); margin-bottom: 10px;
+        }
+
+        .why-card p { font-size: 14px; color: var(--light-gray); line-height: 1.7; }
+
+        .get-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+
+        .get-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 35px 28px;
+            border: 1px solid var(--border-gray);
+            text-align: center;
+            transition: all 0.4s ease;
+        }
+
+        .get-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+        }
+
+        .get-card-icon {
+            width: 64px; height: 64px;
+            background: var(--light-orange);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 26px;
+            color: var(--primary-orange);
+            margin: 0 auto 20px;
+        }
+
+        .get-card h3 {
+            font-size: 16px; font-weight: 700;
+            color: var(--dark); margin-bottom: 10px;
+        }
+
+        .get-card p { font-size: 13px; color: var(--light-gray); line-height: 1.7; }
+
+        /* Process */
+        .process-timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .process-timeline::before {
+            content: '';
+            position: absolute;
+            left: 40px; top: 0; bottom: 0;
+            width: 3px;
+            background: linear-gradient(to bottom, var(--primary-orange), var(--dark-orange));
+            border-radius: 2px;
+        }
+
+        .process-step {
+            display: flex; gap: 35px;
+            margin-bottom: 40px;
+            position: relative;
+            align-items: flex-start;
+        }
+
+        .process-step:last-child { margin-bottom: 0; }
+
+        .process-number {
+            width: 80px; height: 80px;
+            background: var(--primary-orange);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 28px; font-weight: 800; color: white;
+            flex-shrink: 0;
+            position: relative; z-index: 1;
+            box-shadow: 0 8px 25px rgba(245, 145, 30, 0.3);
+            letter-spacing: -1px;
+        }
+
+        .process-content {
+            background: var(--white);
+            border: 1px solid var(--border-gray);
+            border-radius: 16px;
+            padding: 30px 35px;
+            flex: 1;
+            transition: all 0.3s ease;
+        }
+
+        .process-content:hover { box-shadow: 0 10px 35px rgba(0,0,0,0.06); }
+
+        .process-content h3 {
+            font-size: 20px; font-weight: 700;
+            color: var(--dark); margin-bottom: 10px;
+        }
+
+        .process-content p { font-size: 14px; color: var(--medium-gray); line-height: 1.8; }
+
+        .process-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 15px; }
+
+        .process-tag {
+            background: var(--light-orange);
+            color: var(--primary-orange);
+            padding: 5px 14px;
+            border-radius: 50px;
+            font-size: 12px; font-weight: 500;
+        }
+
+        /* Pricing */
+        .pricing-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+
+        .pricing-card {
+            background: var(--white);
+            border: 2px solid var(--border-gray);
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pricing-card.featured {
+            border-color: var(--primary-orange);
+            transform: none;
+        }
+
+        .pricing-card.featured .pricing-badge { display: block; }
+
+        .pricing-badge {
+            display: none;
+            position: absolute;
+            top: -14px; left: 50%; transform: translateX(-50%);
+            background: var(--primary-orange);
+            color: white;
+            padding: 5px 22px;
+            border-radius: 50px;
+            font-size: 11px; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 1px;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.1);
+            border-color: var(--primary-orange);
+        }
+
+        .pricing-card.featured:hover { transform: translateY(-5px); }
+
+        .pricing-plan {
+            font-size: 13px; font-weight: 600;
+            text-transform: uppercase; letter-spacing: 2px;
+            color: var(--primary-orange); margin-bottom: 8px;
+        }
+
+        .pricing-links {
+            font-size: 18px; font-weight: 700;
+            color: var(--dark); margin-bottom: 10px;
+        }
+
+        .pricing-price {
+            font-size: 52px; font-weight: 800;
+            color: var(--dark); margin-bottom: 5px;
+            letter-spacing: -2px;
+        }
+
+        .pricing-best {
+            font-size: 13px; color: var(--light-gray);
+            font-style: italic; margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid var(--border-gray);
+        }
+
+        .pricing-features { list-style: none; text-align: left; margin: 0 0 30px; flex: 1; }
+
+        .pricing-features li {
+            display: flex; align-items: flex-start; gap: 10px;
+            padding: 8px 0; font-size: 13px; color: var(--medium-gray);
+        }
+
+        .pricing-features li i {
+            color: var(--primary-orange);
+            font-size: 14px; margin-top: 3px; flex-shrink: 0;
+        }
+
+        .pricing-btn {
+            width: 100%; padding: 14px; border-radius: 8px;
+            font-weight: 600; font-size: 14px;
+            text-transform: uppercase; letter-spacing: 1px;
+            cursor: pointer; transition: all 0.3s;
+            text-decoration: none; display: block; text-align: center;
+            font-family: 'Inter', sans-serif;
+            margin-top: auto;
+        }
+
+        .pricing-btn-primary {
+            background: var(--primary-orange); color: white;
+            border: 2px solid var(--primary-orange);
+        }
+
+        .pricing-btn-primary:hover { background: var(--dark-orange); border-color: var(--dark-orange); }
+
+        .pricing-btn-outline {
+            background: transparent; color: var(--primary-orange);
+            border: 2px solid var(--primary-orange);
+        }
+
+        .pricing-btn-outline:hover { background: var(--primary-orange); color: white; }
+
+        /* Custom Campaign */
+        .custom-section {
+            background: linear-gradient(135deg, var(--dark) 0%, #2a2a2a 100%);
+            padding: 80px 40px;
+        }
+
+        .custom-grid {
+            display: grid; grid-template-columns: 1fr 1fr;
+            gap: 80px; align-items: center;
+        }
+
+        .custom-content h2 {
+            font-size: 40px; font-weight: 800;
+            color: black; margin-bottom: 18px; line-height: 1.15;
+            letter-spacing: -1px;
+        }
+
+        .custom-content h2 span { color: var(--primary-orange); }
+
+        .custom-content p {
+            font-size: 16px; color:black;
+            line-height: 1.8; margin-bottom: 30px;
+        }
+
+        .custom-tags { display: flex; flex-wrap: wrap; gap: 10px; }
+
+        .custom-tag {
+            background: rgba(245, 145, 30, 0.12);
+            color: var(--primary-orange);
+            padding: 10px 20px; border-radius: 50px;
+            font-size: 13px; font-weight: 500;
+            border: 1px solid rgba(245, 145, 30, 0.2);
+        }
+
+        .custom-form-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 20px; padding: 40px;
+            backdrop-filter: blur(10px);
+        }
+
+        .custom-form-card h3 {
+            font-size: 22px; font-weight: 700;
+            color: rgb(0, 0, 0); margin-bottom: 25px;
+        }
+
+        .custom-form-card .form-group label,
+        .custom-form-card input,
+        .custom-form-card textarea,
+        .custom-form-card select,
+        .custom-form-card select option {
+            color: #000 !important;
+        }
+
+        .custom-form-card .form-group label { color: #000 !important; }
+        .custom-form-card input::placeholder,
+        .custom-form-card textarea::placeholder { color: rgba(0,0,0,.55) !important; }
+
+        .form-group { margin-bottom: 18px; }
+
+        .form-group label {
+            display: block; font-size: 12px; font-weight: 600;
+            text-transform: uppercase; letter-spacing: 1px;
+            color: rgba(255,255,255,0.85); margin-bottom: 8px;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%; padding: 14px 18px;
+            background: rgba(255,255,255,0.07);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 10px; color: white;
+            font-size: 14px; font-family: 'Inter', sans-serif;
+            transition: all 0.3s;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder { color: rgba(255,255,255,0.6); }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-orange);
+            background: rgba(255,255,255,0.1);
+        }
+
+        .form-group select option { background: var(--dark); color: white; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+
+        .custom-form-card {
+            background: linear-gradient(145deg, #fffdf8 0%, #fff7ea 100%);
+            border: 2px solid rgba(245,145,30,.5);
+            box-shadow: 0 18px 45px rgba(0,0,0,.18);
+        }
+
+        .custom-form-card input,
+        .custom-form-card textarea,
+        .custom-form-card select {
+            background: #fff;
+            border: 1px solid #d8d8d8;
+        }
+
+        .custom-form-card input:focus,
+        .custom-form-card textarea:focus,
+        .custom-form-card select:focus {
+            background: #fff;
+            border-color: var(--primary-orange);
+            box-shadow: 0 0 0 3px rgba(245,145,30,.15);
+        }
+
+        /* Quality Factors */
+        .quality-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+
+        .quality-card {
+            background: var(--white);
+            border: 1px solid var(--border-gray);
+            border-radius: 16px; padding: 35px 28px;
+            transition: all 0.4s ease;
+            position: relative;
+        }
+
+        .quality-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+            border-color: var(--primary-orange);
+        }
+
+        .quality-card-icon {
+            width: 55px; height: 55px;
+            background: linear-gradient(135deg, var(--primary-orange), var(--dark-orange));
+            border-radius: 14px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 24px; color: white; margin-bottom: 20px;
+            box-shadow: 0 8px 20px rgba(245, 145, 30, 0.2);
+        }
+
+        .quality-card h3 {
+            font-size: 18px; font-weight: 700;
+            color: var(--dark); margin-bottom: 12px;
+        }
+
+        .quality-card p { font-size: 14px; color: var(--medium-gray); line-height: 1.7; }
+
+        /* Industries */
+        .industries-grid {
+            display: flex; flex-wrap: wrap; gap: 12px; justify-content: center;
+        }
+
+        .industry-tag {
+            background: var(--white);
+            border: 1px solid var(--border-gray);
+            padding: 12px 24px; border-radius: 50px;
+            font-size: 14px; font-weight: 500;
+            color: var(--dark-gray); transition: all 0.3s;
+            display: flex; align-items: center; gap: 8px;
+        }
+
+        .industry-tag i {
+            color: var(--primary-orange);
+        }
+
+        .industry-tag:hover {
+            background: var(--primary-orange); color: white;
+            border-color: var(--primary-orange);
+            transform: translateY(-2px);
+        }
+
+        .industry-tag:hover i {
+            color: white;
+        }
+
+        /* Comparison */
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .comparison-card {
+            background: var(--white);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 2px solid var(--border-gray);
+            transition: all 0.4s ease;
+        }
+
+        .comparison-card:hover {
+            box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+        }
+
+        .comparison-card.highlight {
+            border-color: var(--primary-orange);
+        }
+
+        .comparison-header-c {
+            padding: 25px;
+            text-align: center;
+            background: var(--bg-light);
+        }
+
+        .comparison-card.highlight .comparison-header-c {
+            background: var(--primary-orange);
+            color: white;
+        }
+
+        .comparison-header-c i {
+            font-size: 30px;
+            margin-bottom: 10px;
+            color: var(--primary-orange);
+        }
+
+        .comparison-card.highlight .comparison-header-c i {
+            color: white;
+        }
+
+        .comparison-header-c h3 {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .comparison-body {
+            padding: 25px;
+        }
+
+        .comparison-body p {
+            font-size: 13px;
+            color: var(--medium-gray);
+            line-height: 1.7;
+        }
+
+        /* Benefits Dark */
+        .benefits-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+
+        .benefit-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px; padding: 35px 28px;
+            transition: all 0.4s ease;
+        }
+
+        .benefit-card:hover {
+            background: rgba(255,255,255,0.08);
+            transform: translateY(-5px);
+        }
+
+        .benefit-card-icon {
+            width: 50px; height: 50px;
+            background: rgba(245, 145, 30, 0.15); border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 22px; color: var(--primary-orange); margin-bottom: 18px;
+        }
+
+        .benefit-card h3 {
+            font-size: 17px; font-weight: 700;
+            color: white; margin-bottom: 10px;
+        }
+
+        .benefit-card p { font-size: 14px; color: rgba(255,255,255,0.55); line-height: 1.7; }
+
+        /* FAQ */
+        .faq-container { max-width: 850px; margin: 0 auto; }
+
+        .faq-item {
+            background: var(--white);
+            border: 1px solid var(--border-gray);
+            border-radius: 14px; margin-bottom: 14px;
+            overflow: hidden; transition: all 0.3s ease;
+        }
+
+        .faq-item:hover { box-shadow: 0 5px 20px rgba(0,0,0,0.04); }
+        .faq-item.active { border-color: var(--primary-orange); }
+
+        .faq-question {
+            padding: 22px 28px;
+            display: flex; align-items: center; justify-content: space-between;
+            cursor: pointer; transition: all 0.3s;
+        }
+
+        .faq-question:hover { background: var(--pale-orange); }
+
+        .faq-question h3 {
+            font-size: 16px; font-weight: 600;
+            color: var(--dark); flex: 1; padding-right: 20px;
+        }
+
+        .faq-toggle {
+            width: 36px; height: 36px;
+            background: var(--light-orange); border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            color: var(--primary-orange); font-size: 14px;
+            transition: all 0.3s; flex-shrink: 0;
+        }
+
+        .faq-item.active .faq-toggle {
+            background: var(--primary-orange); color: white;
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0; overflow: hidden;
+            transition: max-height 0.4s ease;
+        }
+
+        .faq-answer-inner {
+            padding: 0 28px 22px;
+            font-size: 14px; color: var(--medium-gray); line-height: 1.8;
+        }
+
+        /* CTA */
+        .cta-section {
+            padding: 120px 40px;
+            background: linear-gradient(135deg, var(--primary-orange), var(--dark-orange));
+            text-align: center; position: relative; overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -200px; right: -200px;
+            width: 500px; height: 500px;
+            background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .cta-section::after {
+            content: '';
+            position: absolute;
+            bottom: -200px; left: -200px;
+            width: 500px; height: 500px;
+            background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .cta-content { position: relative; z-index: 1; }
+
+        .cta-content h2 {
+            font-size: 48px; font-weight: 800;
+            color: white; margin-bottom: 20px; line-height: 1.15;
+            letter-spacing: -1.5px;
+        }
+
+        .cta-content p {
+            font-size: 18px; color: rgba(255,255,255,0.85);
+            max-width: 700px; margin: 0 auto 25px; line-height: 1.8;
+        }
+
+        .cta-details {
+            display: flex; flex-wrap: wrap; justify-content: center;
+            gap: 12px; margin-bottom: 40px;
+        }
+
+        .cta-detail {
+            background: rgba(255,255,255,0.15);
+            padding: 8px 20px; border-radius: 50px;
+            color: white; font-size: 13px; font-weight: 500;
+        }
+
+        .cta-buttons { display: flex; gap: 16px; justify-content: center; }
+
+        .btn-white {
+            display: inline-flex; align-items: center; gap: 10px;
+            background: white; color: var(--primary-orange);
+            padding: 16px 36px; border-radius: 8px;
+            text-decoration: none; font-weight: 700; font-size: 15px;
+            text-transform: uppercase; letter-spacing: 1px;
+            transition: all 0.3s; border: none; cursor: pointer;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .btn-white:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .btn-outline-white {
+            display: inline-flex; align-items: center; gap: 10px;
+            background: transparent; color: white;
+            padding: 16px 36px; border-radius: 8px;
+            text-decoration: none; font-weight: 600; font-size: 15px;
+            border: 2px solid rgba(255,255,255,0.4);
+            transition: all 0.3s; cursor: pointer;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .btn-outline-white:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: white; transform: translateY(-2px);
+        }
+
+        /* Animations */
+        .animate-on-scroll {
+            opacity: 0; transform: translateY(30px);
+            transition: all 0.7s ease;
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1; transform: translateY(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero-container { grid-template-columns: 1fr; gap: 50px; }
+            .hero h1 { font-size: 44px; }
+            .hero-visual { max-width: 550px; }
+            .what-grid { grid-template-columns: 1fr; gap: 50px; }
+            .why-grid { grid-template-columns: repeat(2, 1fr); }
+            .get-grid { grid-template-columns: repeat(2, 1fr); }
+            .pricing-grid { grid-template-columns: repeat(2, 1fr); }
+            .custom-grid { grid-template-columns: 1fr; gap: 50px; }
+            .quality-grid { grid-template-columns: repeat(2, 1fr); }
+            .comparison-grid { grid-template-columns: repeat(2, 1fr); }
+            .benefits-grid { grid-template-columns: repeat(2, 1fr); }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 30px; }
+        }
+
+        @media (max-width: 768px) {
+            .section { padding: 70px 20px; }
+            .hero { padding: 60px 20px 70px; }
+            .hero h1 { font-size: 36px; }
+            .hero-description { font-size: 16px; }
+            .hero-buttons { flex-direction: column; }
+            .hero-stats { gap: 25px; }
+            .hero-stat-number { font-size: 26px; }
+            .section-title { font-size: 32px; }
+            .what-content h2 { font-size: 32px; }
+            .pricing-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
+            .pricing-card.featured { transform: none; }
+            .pricing-card.featured:hover { transform: translateY(-5px); }
+            .comparison-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
+            .quality-grid { grid-template-columns: 1fr; }
+            .benefits-grid { grid-template-columns: 1fr; }
+            .why-grid { grid-template-columns: 1fr; }
+            .get-grid { grid-template-columns: 1fr; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .cta-content h2 { font-size: 32px; }
+            .cta-buttons { flex-direction: column; align-items: center; }
+            .custom-content h2 { font-size: 32px; }
+            .form-row { grid-template-columns: 1fr; }
+            .process-timeline::before { left: 20px; }
+            .process-number { width: 60px; height: 60px; font-size: 22px; }
+            .process-step { gap: 20px; }
+            .stats-bar { padding: 40px 20px; }
+            .custom-section { padding: 60px 20px; }
+            .pbn-network { height: 240px; }
+            .pbn-center { width: 75px; height: 75px; }
+            .pbn-node { width: 50px; height: 50px; font-size: 16px; }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 { font-size: 30px; }
+            .section-title { font-size: 28px; }
+            .hero-stat-number { font-size: 22px; }
+            .hero-stats { flex-wrap: wrap; }
+            .stat-number { font-size: 36px; }
+            .process-number { width: 50px; height: 50px; font-size: 18px; }
+            .process-content { padding: 20px; }
+            .pricing-price { font-size: 42px; }
+        }
+    </style>
+</head>
+<body data-shared-mobile-nav>
+ <!-- MOBILE NAV -->
+  <div class="mnav" id="mobNav">
+    <div class="mnav-links">
+<a href="../index.html" onclick="closeMob()">Home</a>
+      <a href="about.html" onclick="closeMob()">About</a>
+      <a href="services.html" onclick="closeMob()">Services</a>
+<a href="../index.html#process" onclick="closeMob()">Process</a>
+      <a href="blogs.html" onclick="closeMob()">Blog</a>
+      <a href="reviews.html" onclick="closeMob()">Reviews</a>
+<a href="../index.html#contact" onclick="closeMob()">Contact</a>
+    </div>
+    <div class="mob-social" aria-label="Social media links">
+      <div class="mob-contact">Connect With Us</div>
+      <a href="https://wa.me/923092102705" title="WhatsApp" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg></a>
+      <a href="https://facebook.com/mrSoomro" title="Facebook" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+      <a href="https://linkedin.com/in/mrSoomro" title="LinkedIn" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+      <a href="https://instagram.com/mrSoomro" title="Instagram" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+      <a href="mailto:info@mr-soomro.com" title="Email" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+    </div>
+  </div>
+
+<!-- NAVBAR -->
+
+  <nav id="mainNav">
+
+<a href="../index.html" class="nlogo"><img src="../images/websitelogo.jpeg" alt="MR. Soomro SEO" style="height:40px;width:auto;display:block;"></a>
+    <ul class="nlinks">
+      <li><a href="../pages/about.html">About</a></li>
+      <li><a href="../pages/services.html">Services</a></li>
+<li><a href="../index.html#process">Process</a></li>
+      <li><a href="../pages/blogs.html">Blog</a></li>
+      <li><a href="../pages/reviews.html">Reviews</a></li>
+<li><a href="../index.html#contact" class="ncta">Free SEO Audit</a></li>
+    </ul>
+    <button class="nbg" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+    <!-- Hero Section -->
+    <section class="hero" id="about">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge animate-on-scroll">
+                    <i class="fas fa-network-wired"></i>
+                    Powerful PBN Link-Building
+                </div>
+                <h1 class="animate-on-scroll">PBN Backlinks <span>Services.</span></h1>
+                <p class="hero-description animate-on-scroll">
+                    Build stronger rankings with powerful PBN backlinks from carefully selected, niche-relevant websites. Strengthen your website's backlink profile with high-quality private blog network placements.
+                </p>
+                <div class="hero-buttons animate-on-scroll">
+                    <a href="#pricing" class="btn-primary">
+                        <i class="fas fa-rocket"></i> View Packages
+                    </a>
+                    <a href="#contact" class="btn-secondary">
+                        <i class="fas fa-envelope"></i> Contact Us
+                    </a>
+                </div>
+                <div class="hero-stats animate-on-scroll">
+                    <div class="hero-stat">
+                        <div class="hero-stat-number">100+</div>
+                        <div class="hero-stat-label">Clients Served</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-number">91%</div>
+                        <div class="hero-stat-label">Retention Rate</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-number">8+</div>
+                        <div class="hero-stat-label">Years Experience</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual animate-on-scroll">
+                <div class="hero-card">
+                    <div class="floating-badge top-right">
+                        <i class="fas fa-arrow-trend-up"></i>
+                        <div>
+                            <div class="badge-number">Aged</div>
+                            <div class="badge-label">Domains</div>
+                        </div>
+                    </div>
+                    <div class="floating-badge bottom-left">
+                        <i class="fas fa-shield-alt"></i>
+                        <div>
+                            <div class="badge-number">100%</div>
+                            <div class="badge-label">Dofollow</div>
+                        </div>
+                    </div>
+                    <div class="pbn-network">
+                        <div class="pbn-center">
+                            <i class="fas fa-globe"></i>
+                            <span>Your Site</span>
+                        </div>
+                        <div class="pbn-node n1"><i class="fas fa-server"></i></div>
+                        <div class="pbn-node n2"><i class="fas fa-link"></i></div>
+                        <div class="pbn-node n3"><i class="fas fa-database"></i></div>
+                        <div class="pbn-node n4"><i class="fas fa-sitemap"></i></div>
+                        <div class="pbn-node n5"><i class="fas fa-cloud"></i></div>
+                        <div class="pbn-node n6"><i class="fas fa-cog"></i></div>
+                    </div>
+                    <div class="hero-card-metrics">
+                        <div class="metric-item">
+                            <div class="metric-icon orange"><i class="fas fa-award"></i></div>
+                            <div>
+                                <div class="metric-text">High DA/DR</div>
+                                <div class="metric-sub">Quality metrics</div>
+                            </div>
+                        </div>
+                        <div class="metric-item">
+                            <div class="metric-icon green"><i class="fas fa-check-circle"></i></div>
+                            <div>
+                                <div class="metric-text">Fully Indexed</div>
+                                <div class="metric-sub">Google approved</div>
+                            </div>
+                        </div>
+                        <div class="metric-item">
+                            <div class="metric-icon orange"><i class="fas fa-bullseye"></i></div>
+                            <div>
+                                <div class="metric-text">Niche Relevant</div>
+                                <div class="metric-sub">Topical match</div>
+                            </div>
+                        </div>
+                        <div class="metric-item">
+                            <div class="metric-icon green"><i class="fas fa-clock"></i></div>
+                            <div>
+                                <div class="metric-text">5-14 Days</div>
+                                <div class="metric-sub">Fast delivery</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <div class="stats-bar">
+        <div class="stats-grid">
+            <div class="stat-item animate-on-scroll">
+                <div class="stat-number" data-target="100">0+</div>
+                <div class="stat-label">Happy Clients</div>
+            </div>
+            <div class="stat-item animate-on-scroll">
+                <div class="stat-number" data-target="500">0+</div>
+                <div class="stat-label">Projects Delivered</div>
+            </div>
+            <div class="stat-item animate-on-scroll">
+                <div class="stat-number" data-target="95">0%</div>
+                <div class="stat-label">First-Page Success Rate</div>
+            </div>
+            <div class="stat-item animate-on-scroll">
+                <div class="stat-number" data-target="8">0+</div>
+                <div class="stat-label">Years of Expertise</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- What Are PBN Backlinks -->
+    <section class="what-section" id="services">
+        <div class="container">
+            <div class="what-grid">
+                <div class="what-content">
+                    <div class="section-label"><i class="fas fa-info-circle"></i> Understanding PBN</div>
+                    <h2>What Are <span>PBN</span> Backlinks?</h2>
+                    <p>
+                        PBN stands for <strong>Private Blog Network</strong>. PBN backlinks are links placed on a network of websites that are used for SEO purposes.
+                    </p>
+                    <p>
+                        A properly managed PBN campaign can give you greater control over link placement, anchor text, target URLs, and the overall structure of your backlink campaign.
+                    </p>
+                    <div class="pbn-highlight">
+                        <p>
+                            <strong>Our Approach:</strong> We focus on relevance, domain quality, indexing, authority metrics, and natural-looking placements rather than simply delivering a large number of links.
+                        </p>
+                    </div>
+                    <p>Our approach focuses on selecting websites with useful SEO signals and placing links in relevant content.</p>
+                </div>
+                <div class="what-visual animate-on-scroll">
+                    <div class="what-visual-card">
+                        <h3><i class="fas fa-check-double"></i> Why Choose PBN Backlinks</h3>
+                        <ul class="what-list">
+                            <li><i class="fas fa-check"></i> High-authority backlink opportunities</li>
+                            <li><i class="fas fa-check"></i> Relevant link placements</li>
+                            <li><i class="fas fa-check"></i> Greater control over anchor text</li>
+                            <li><i class="fas fa-check"></i> Targeted links to specific URLs</li>
+                            <li><i class="fas fa-check"></i> Support for competitive keywords</li>
+                            <li><i class="fas fa-check"></i> Additional authority signals</li>
+                            <li><i class="fas fa-check"></i> Faster than traditional outreach</li>
+                            <li><i class="fas fa-check"></i> Flexible link-building campaigns</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What You Get -->
+    <section class="section section-light">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label"><i class="fas fa-gift"></i> Deliverables</div>
+                <h2 class="section-title">What You Get With Our <span>PBN Backlinks</span></h2>
+                <p class="section-subtitle">Every PBN backlink campaign includes these key features as standard.</p>
+            </div>
+            <div class="get-grid">
+                <div class="get-card animate-on-scroll">
+                    <div class="get-card-icon"><i class="fas fa-history"></i></div>
+                    <h3>Aged & Established Domains</h3>
+                    <p>We focus on domains with established history and SEO signals where suitable inventory is available.</p>
+                </div>
+                <div class="get-card animate-on-scroll">
+                    <div class="get-card-icon"><i class="fas fa-bullseye"></i></div>
+                    <h3>Niche-Relevant Websites</h3>
+                    <p>Backlinks are placed on websites relevant to your industry or target topic whenever possible.</p>
+                </div>
+                <div class="get-card animate-on-scroll">
+                    <div class="get-card-icon"><i class="fas fa-award"></i></div>
+                    <h3>Authority-Focused Domains</h3>
+                    <p>We evaluate domains using multiple SEO metrics instead of relying on a single authority score.</p>
+                </div>
+                <div class="get-card animate-on-scroll">
+                    <div class="get-card-icon"><i class="fas fa-search"></i></div>
+                    <h3>Indexed Websites</h3>
+                    <p>We prioritize websites and pages that are properly indexed with established presence in search engines.</p>
+                </div>
+                <div class="get-card animate-on-scroll">
+                    <div class="get-card-icon"><i class="fas fa-external-link-alt"></i></div>
+                    <h3>Dofollow Backlinks</h3>
+                    <p>Our PBN placements are generally provided as dofollow backlinks, subject to the specific placement.</p>
+                </div>
+                <div class="get-card animate-on-scroll">
+                    <div class="get-card-icon"><i class="fas fa-pencil-alt"></i></div>
+                    <h3>Targeted Anchor Text</h3>
+                    <p>Provide your preferred anchor text, brand terms, URLs, or keyword targets for the campaign.</p>
+                </div>
+                <div class="get-card animate-on-scroll">
+                    <div class="get-card-icon"><i class="fas fa-crosshairs"></i></div>
+                    <h3>Target URL Selection</h3>
+                    <p>Direct links to homepage, service pages, category pages, product pages, or specific landing pages.</p>
+                </div>
+                <div class="get-card animate-on-scroll">
+                    <div class="get-card-icon"><i class="fas fa-infinity"></i></div>
+                    <h3>Permanent Placement</h3>
+                    <p>We aim to provide long-term placements, subject to website and network conditions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="section section-white" id="process">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label"><i class="fas fa-cogs"></i> Our Process</div>
+                <h2 class="section-title">Our PBN Link-Building <span>Process</span></h2>
+                <p class="section-subtitle">A systematic, quality-focused approach to building PBN backlinks for your website.</p>
+            </div>
+            <div class="process-timeline">
+                <div class="process-step animate-on-scroll">
+                    <div class="process-number">1</div>
+                    <div class="process-content">
+                        <h3>Website & Keyword Analysis</h3>
+                        <p>We review your website, target URLs, keywords, niche, competitors, and existing backlink profile.</p>
+                    </div>
+                </div>
+                <div class="process-step animate-on-scroll">
+                    <div class="process-number">2</div>
+                    <div class="process-content">
+                        <h3>Domain Selection</h3>
+                        <p>We identify suitable PBN domains based on available inventory, relevance, authority, history, and other SEO signals.</p>
+                    </div>
+                </div>
+                <div class="process-step animate-on-scroll">
+                    <div class="process-number">3</div>
+                    <div class="process-content">
+                        <h3>Quality Review</h3>
+                        <p>Domains are reviewed based on multiple quality factors.</p>
+                        <div class="process-tags">
+                            <span class="process-tag">Domain History</span>
+                            <span class="process-tag">Indexing Status</span>
+                            <span class="process-tag">Topical Relevance</span>
+                            <span class="process-tag">Authority Metrics</span>
+                            <span class="process-tag">Organic Visibility</span>
+                            <span class="process-tag">Content Quality</span>
+                            <span class="process-tag">Backlink Profile</span>
+                            <span class="process-tag">Spam Indicators</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="process-step animate-on-scroll">
+                    <div class="process-number">4</div>
+                    <div class="process-content">
+                        <h3>Content Creation</h3>
+                        <p>Relevant content is prepared for the placement, with your target link integrated naturally.</p>
+                    </div>
+                </div>
+                <div class="process-step animate-on-scroll">
+                    <div class="process-number">5</div>
+                    <div class="process-content">
+                        <h3>Link Placement</h3>
+                        <p>Your backlink is placed within relevant content on the selected PBN website.</p>
+                    </div>
+                </div>
+                <div class="process-step animate-on-scroll">
+                    <div class="process-number">6</div>
+                    <div class="process-content">
+                        <h3>Final Verification</h3>
+                        <p>We check the published URL and backlink details before completing the campaign.</p>
+                    </div>
+                </div>
+                <div class="process-step animate-on-scroll">
+                    <div class="process-number">7</div>
+                    <div class="process-content">
+                        <h3>Report Delivery</h3>
+                        <p>You receive a report containing the completed placements and relevant link information.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section section-light" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label"><i class="fas fa-tags"></i> Pricing</div>
+                <h2 class="section-title">PBN Backlink <span>Packages</span></h2>
+                <p class="section-subtitle">Choose the package that fits your SEO goals and budget. All packages include quality-checked, aged domain placements.</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card animate-on-scroll">
+                    <div class="pricing-plan">Starter</div>
+                    <div class="pricing-links">5 PBN Backlinks</div>
+                    <div class="pricing-price">$50</div>
+                    <div class="pricing-best">Best for: Testing the service or new campaigns</div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> 5 PBN placements</li>
+                        <li><i class="fas fa-check"></i> Niche-relevant domains</li>
+                        <li><i class="fas fa-check"></i> Aged/established domains</li>
+                        <li><i class="fas fa-check"></i> Dofollow backlinks</li>
+                        <li><i class="fas fa-check"></i> Target URL selection</li>
+                        <li><i class="fas fa-check"></i> Anchor text customization</li>
+                        <li><i class="fas fa-check"></i> Quality checks</li>
+                        <li><i class="fas fa-check"></i> Placement report</li>
+                    </ul>
+                    <a href="#contact" class="pricing-btn pricing-btn-outline">Get Started</a>
+                </div>
+                <div class="pricing-card animate-on-scroll">
+                    <div class="pricing-plan">Growth</div>
+                    <div class="pricing-links">10 PBN Backlinks</div>
+                    <div class="pricing-price">$90</div>
+                    <div class="pricing-best">Best for: Stronger backlink campaigns</div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> 10 PBN placements</li>
+                        <li><i class="fas fa-check"></i> Relevant domain selection</li>
+                        <li><i class="fas fa-check"></i> Aged/established domains</li>
+                        <li><i class="fas fa-check"></i> Dofollow backlinks</li>
+                        <li><i class="fas fa-check"></i> Custom anchor text</li>
+                        <li><i class="fas fa-check"></i> Target URL selection</li>
+                        <li><i class="fas fa-check"></i> Quality verification</li>
+                        <li><i class="fas fa-check"></i> Complete report</li>
+                    </ul>
+                    <a href="#contact" class="pricing-btn pricing-btn-outline">Get Started</a>
+                </div>
+                <div class="pricing-card featured animate-on-scroll">
+                    <div class="pricing-badge">Most Popular</div>
+                    <div class="pricing-plan">Pro</div>
+                    <div class="pricing-links">20 PBN Backlinks</div>
+                    <div class="pricing-price">$160</div>
+                    <div class="pricing-best">Best for: Competitive keywords & ongoing SEO</div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> 20 PBN placements</li>
+                        <li><i class="fas fa-check"></i> Niche-relevant domains</li>
+                        <li><i class="fas fa-check"></i> Quality-focused selection</li>
+                        <li><i class="fas fa-check"></i> Aged/established websites</li>
+                        <li><i class="fas fa-check"></i> Dofollow backlinks</li>
+                        <li><i class="fas fa-check"></i> Custom anchor text</li>
+                        <li><i class="fas fa-check"></i> Multiple target URLs</li>
+                        <li><i class="fas fa-check"></i> Quality checks</li>
+                        <li><i class="fas fa-check"></i> Detailed report</li>
+                    </ul>
+                    <a href="#contact" class="pricing-btn pricing-btn-primary">Get Started</a>
+                </div>
+                <div class="pricing-card animate-on-scroll">
+                    <div class="pricing-plan">Advanced</div>
+                    <div class="pricing-links">40 PBN Backlinks</div>
+                    <div class="pricing-price">$300</div>
+                    <div class="pricing-best">Best for: Larger sites & aggressive SEO</div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> 40 PBN placements</li>
+                        <li><i class="fas fa-check"></i> Niche-relevant domains</li>
+                        <li><i class="fas fa-check"></i> Authority-focused selection</li>
+                        <li><i class="fas fa-check"></i> Aged/established websites</li>
+                        <li><i class="fas fa-check"></i> Dofollow backlinks</li>
+                        <li><i class="fas fa-check"></i> Custom anchor text</li>
+                        <li><i class="fas fa-check"></i> Multiple target URLs</li>
+                        <li><i class="fas fa-check"></i> Comprehensive quality checks</li>
+                        <li><i class="fas fa-check"></i> Complete backlink report</li>
+                    </ul>
+                    <a href="#contact" class="pricing-btn pricing-btn-outline">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Custom Campaign -->
+    <section class="custom-section" id="contact">
+        <div class="container">
+            <div class="custom-grid">
+                <div class="custom-content">
+                    <div class="section-label"><i class="fas fa-sliders-h"></i> Custom</div>
+                    <h2>Custom <span>PBN</span> Campaign</h2>
+                    <p>Need more than 40 backlinks or have specific requirements? We can create a custom campaign based on your SEO goals and target requirements.</p>
+                    <div class="custom-tags">
+                        <span class="custom-tag"><i class="fas fa-globe"></i> Target Country</span>
+                        <span class="custom-tag"><i class="fas fa-industry"></i> Niche</span>
+                        <span class="custom-tag"><i class="fas fa-key"></i> Keywords</span>
+                        <span class="custom-tag"><i class="fas fa-link"></i> Target URLs</span>
+                        <span class="custom-tag"><i class="fas fa-pencil-alt"></i> Anchor Text</span>
+                        <span class="custom-tag"><i class="fas fa-chart-bar"></i> Minimum DA/DR</span>
+                        <span class="custom-tag"><i class="fas fa-chart-line"></i> Traffic Requirements</span>
+                        <span class="custom-tag"><i class="fas fa-list-ol"></i> Link Quantity</span>
+                        <span class="custom-tag"><i class="fas fa-calendar-alt"></i> Monthly Plans</span>
+                    </div>
+                </div>
+                <div class="custom-form-card">
+                    <h3><i class="fas fa-paper-plane"></i> Get a Custom Quote</h3>
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Your Name</label>
+                                <input type="text" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Email Address</label>
+                                <input type="email" placeholder="john@example.com" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Website URL</label>
+                            <input type="url" placeholder="https://yourwebsite.com">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Industry / Niche</label>
+                                <input type="text" placeholder="e.g., SaaS, Finance, Tech">
+                            </div>
+                            <div class="form-group">
+                                <label>Number of PBN Links</label>
+                                <select>
+                                    <option>5 Links</option>
+                                    <option>10 Links</option>
+                                    <option>20 Links</option>
+                                    <option>40 Links</option>
+                                    <option>50+ Links</option>
+                                    <option>Custom Amount</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Target Keywords & Requirements</label>
+                            <textarea rows="3" placeholder="Target keywords, anchor text preferences, DA/DR requirements..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary" style="width:100%; justify-content:center;">
+                            <i class="fas fa-paper-plane"></i> Send Request
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quality Factors -->
+    <section class="section section-white">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label"><i class="fas fa-award"></i> Quality Factors</div>
+                <h2 class="section-title">PBN Backlink <span>Quality Factors</span></h2>
+                <p class="section-subtitle">We don't recommend choosing PBNs based only on DA or DR. Our domain evaluation includes multiple factors to ensure quality.</p>
+            </div>
+            <div class="quality-grid">
+                <div class="quality-card animate-on-scroll">
+                    <div class="quality-card-icon"><i class="fas fa-history"></i></div>
+                    <h3>Domain History</h3>
+                    <p>We check the available history and overall background of domains before considering them for placement in campaigns.</p>
+                </div>
+                <div class="quality-card animate-on-scroll">
+                    <div class="quality-card-icon"><i class="fas fa-bullseye"></i></div>
+                    <h3>Topical Relevance</h3>
+                    <p>Relevant websites can provide a stronger topical connection between the linking page and your website's niche.</p>
+                </div>
+                <div class="quality-card animate-on-scroll">
+                    <div class="quality-card-icon"><i class="fas fa-chart-bar"></i></div>
+                    <h3>Authority Metrics</h3>
+                    <p>We consider available third-party metrics such as DA, DR, TF, or similar authority indicators as part of the evaluation.</p>
+                </div>
+                <div class="quality-card animate-on-scroll">
+                    <div class="quality-card-icon"><i class="fas fa-search"></i></div>
+                    <h3>Indexing Status</h3>
+                    <p>We prioritize websites and pages with a healthy presence in search engine indexes for maximum SEO value.</p>
+                </div>
+                <div class="quality-card animate-on-scroll">
+                    <div class="quality-card-icon"><i class="fas fa-link"></i></div>
+                    <h3>Backlink Profile</h3>
+                    <p>The domain's existing backlink profile is reviewed for obvious quality signals and any spam concerns.</p>
+                </div>
+                <div class="quality-card animate-on-scroll">
+                    <div class="quality-card-icon"><i class="fas fa-file-alt"></i></div>
+                    <h3>Content Quality</h3>
+                    <p>We look for websites with useful, readable content rather than pages created purely for link building purposes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who Can Use -->
+    <section class="section section-light">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label"><i class="fas fa-users"></i> Industries</div>
+                <h2 class="section-title">Who Can Use Our <span>PBN Backlinks?</span></h2>
+                <p class="section-subtitle">Our PBN campaigns can be customized for many industries and specialized niches.</p>
+            </div>
+            <div class="industries-grid animate-on-scroll">
+                <div class="industry-tag"><i class="fas fa-cloud"></i> SaaS & Software</div>
+                <div class="industry-tag"><i class="fas fa-microchip"></i> Technology</div>
+                <div class="industry-tag"><i class="fas fa-search"></i> SEO & Digital Marketing</div>
+                <div class="industry-tag"><i class="fas fa-shopping-cart"></i> E-commerce</div>
+                <div class="industry-tag"><i class="fas fa-briefcase"></i> Business</div>
+                <div class="industry-tag"><i class="fas fa-coins"></i> Finance</div>
+                <div class="industry-tag"><i class="fas fa-plane"></i> Travel</div>
+                <div class="industry-tag"><i class="fas fa-home"></i> Real Estate</div>
+                <div class="industry-tag"><i class="fas fa-car"></i> Automotive</div>
+                <div class="industry-tag"><i class="fas fa-graduation-cap"></i> Education</div>
+                <div class="industry-tag"><i class="fas fa-couch"></i> Lifestyle</div>
+                <div class="industry-tag"><i class="fas fa-dice"></i> iGaming & Casino</div>
+                <div class="industry-tag"><i class="fab fa-bitcoin"></i> Crypto & Blockchain</div>
+                <div class="industry-tag"><i class="fas fa-handshake"></i> Affiliate Websites</div>
+                <div class="industry-tag"><i class="fas fa-star"></i> Specialized Niches</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison -->
+    <section class="section section-white">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label"><i class="fas fa-exchange-alt"></i> Comparison</div>
+                <h2 class="section-title">PBN vs. <span>Other Methods</span></h2>
+                <p class="section-subtitle">Different link-building methods serve different SEO purposes. A balanced strategy uses multiple approaches.</p>
+            </div>
+            <div class="comparison-grid">
+                <div class="comparison-card highlight animate-on-scroll">
+                    <div class="comparison-header-c">
+                        <i class="fas fa-network-wired"></i>
+                        <h3>PBN Backlinks</h3>
+                    </div>
+                    <div class="comparison-body">
+                        <p>Offer greater control over placement, anchor text, target URLs, and campaign speed. Perfect for competitive keywords.</p>
+                    </div>
+                </div>
+                <div class="comparison-card animate-on-scroll">
+                    <div class="comparison-header-c">
+                        <i class="fas fa-pen-nib"></i>
+                        <h3>Guest Posts</h3>
+                    </div>
+                    <div class="comparison-body">
+                        <p>Provide editorial placements on third-party websites and may also generate referral traffic to your site.</p>
+                    </div>
+                </div>
+                <div class="comparison-card animate-on-scroll">
+                    <div class="comparison-header-c">
+                        <i class="fas fa-edit"></i>
+                        <h3>Niche Edits</h3>
+                    </div>
+                    <div class="comparison-body">
+                        <p>Allow links to be added to existing relevant content when suitable placement opportunities are available.</p>
+                    </div>
+                </div>
+                <div class="comparison-card animate-on-scroll">
+                    <div class="comparison-header-c">
+                        <i class="fas fa-newspaper"></i>
+                        <h3>Editorial Backlinks</h3>
+                    </div>
+                    <div class="comparison-body">
+                        <p>Are earned or placed within content that provides strong topical context and natural relevance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Our Service (Dark) -->
+    <section class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label"><i class="fas fa-trophy"></i> Why Us</div>
+                <h2 class="section-title">Why Choose Our <span>PBN Service?</span></h2>
+                <p class="section-subtitle">A quality-focused approach to PBN link building with transparency, relevance, and flexibility.</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card animate-on-scroll">
+                    <div class="benefit-card-icon"><i class="fas fa-hand-pointer"></i></div>
+                    <h3>Manual Domain Selection</h3>
+                    <p>We don't send bulk links from random websites. Domains are reviewed based on multiple SEO factors.</p>
+                </div>
+                <div class="benefit-card animate-on-scroll">
+                    <div class="benefit-card-icon"><i class="fas fa-bullseye"></i></div>
+                    <h3>Niche Relevance</h3>
+                    <p>We prioritize relevant websites whenever suitable inventory is available for your industry.</p>
+                </div>
+                <div class="benefit-card animate-on-scroll">
+                    <div class="benefit-card-icon"><i class="fas fa-pencil-alt"></i></div>
+                    <h3>Custom Anchors</h3>
+                    <p>Provide your preferred keyword, brand, URL, or anchor-text strategy for maximum SEO impact.</p>
+                </div>
+                <div class="benefit-card animate-on-scroll">
+                    <div class="benefit-card-icon"><i class="fas fa-crosshairs"></i></div>
+                    <h3>Targeted Link Building</h3>
+                    <p>Links can be distributed across different pages rather than pointing everything to your homepage.</p>
+                </div>
+                <div class="benefit-card animate-on-scroll">
+                    <div class="benefit-card-icon"><i class="fas fa-file-invoice"></i></div>
+                    <h3>Transparent Reporting</h3>
+                    <p>You receive the published URLs and relevant backlink details after every campaign completion.</p>
+                </div>
+                <div class="benefit-card animate-on-scroll">
+                    <div class="benefit-card-icon"><i class="fas fa-boxes"></i></div>
+                    <h3>Flexible Packages</h3>
+                    <p>Start with 5 backlinks or choose a larger campaign based on your specific SEO requirements.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section section-light" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label"><i class="fas fa-question-circle"></i> FAQ</div>
+                <h2 class="section-title">Frequently Asked <span>Questions</span></h2>
+                <p class="section-subtitle">Common questions about our PBN backlink service answered.</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item active">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>What is a PBN backlink?</h3>
+                        <div class="faq-toggle"><i class="fas fa-plus"></i></div>
+                    </div>
+                    <div class="faq-answer" style="max-height: 200px;">
+                        <div class="faq-answer-inner">
+                            A PBN backlink is a backlink placed on a website within a privately managed network of sites used for SEO purposes.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Are your PBN backlinks dofollow?</h3>
+                        <div class="faq-toggle"><i class="fas fa-plus"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Yes, our standard PBN placements are generally provided as dofollow links, subject to the specific website and placement.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Are the PBN domains aged?</h3>
+                        <div class="faq-toggle"><i class="fas fa-plus"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            We prioritize aged or established domains where suitable domains are available for your campaign.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Can I choose the anchor text?</h3>
+                        <div class="faq-toggle"><i class="fas fa-plus"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Yes. You can provide your preferred anchor text, brand terms, URLs, or keyword targets for each backlink.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Can you target specific pages?</h3>
+                        <div class="faq-toggle"><i class="fas fa-plus"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Yes. You can provide specific URLs for your homepage, service pages, product pages, category pages, or other landing pages.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Can you target a specific niche?</h3>
+                        <div class="faq-toggle"><i class="fas fa-plus"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Yes. We prioritize niche-relevant PBN domains whenever suitable domains are available in your industry.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Can you target specific countries?</h3>
+                        <div class="faq-toggle"><i class="fas fa-plus"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Yes. Country-specific requirements can be included in custom campaigns, depending on available inventory.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Are PBN backlinks permanent?</h3>
+                        <div class="faq-toggle"><i class="fas fa-plus"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            We aim for long-term placements, but no third-party website placement can be guaranteed to remain online indefinitely.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Do you guarantee Google rankings?</h3>
+                        <div class="faq-toggle"><i class="fas fa-plus"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            No. We do not guarantee specific rankings. SEO performance depends on many factors including competition, content, technical SEO, website authority, search intent, and overall backlink profile.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>How quickly will my backlinks be delivered?</h3>
+                        <div class="faq-toggle"><i class="fas fa-plus"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Standard campaigns generally take around 5–14 days, depending on the package and available domains. Larger or highly specific campaigns may require additional time.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Can I order only 5 backlinks?</h3>
+                        <div class="faq-toggle"><i class="fas fa-plus"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Yes. Our Starter package includes 5 PBN backlinks for $50, making it suitable for testing the service before moving to a larger campaign.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2 class="animate-on-scroll">Ready to Strengthen Your<br>Backlink Profile?</h2>
+            <p class="animate-on-scroll">
+                Build a stronger off-page SEO foundation with niche-relevant PBN backlinks designed around your target keywords and pages. Choose a package and send us your requirements to get started today.
+            </p>
+            <div class="cta-details animate-on-scroll">
+                <span class="cta-detail"><i class="fas fa-globe"></i> Website URL</span>
+                <span class="cta-detail"><i class="fas fa-key"></i> Target Keywords</span>
+                <span class="cta-detail"><i class="fas fa-link"></i> Target Pages</span>
+                <span class="cta-detail"><i class="fas fa-industry"></i> Niche</span>
+                <span class="cta-detail"><i class="fas fa-pencil-alt"></i> Anchor Text</span>
+            </div>
+            <div class="cta-buttons animate-on-scroll">
+                <a href="#contact" class="btn-white">
+                    <i class="fas fa-rocket"></i> Start Your Campaign
+                </a>
+                <a href="#pricing" class="btn-outline-white">
+                    <i class="fas fa-tags"></i> View Packages
+                </a>
+            </div>
+        </div>
+    </section>
+
+ <footer itemscope itemtype="https://schema.org/Organization">
+    <div class="ftt">
+      <div>
+        <span class="ftlo" itemprop="name">MR.<span>Soomro</span></span>
+        <p class="fttg" itemprop="description">Pakistan's trusted SEO agency helping businesses rank higher, attract more clients and grow sustainably with data-driven search strategies since 2016.</p>
+        <div class="ft-soc-row">
+          <a href="https://wa.me/923092102705" title="WhatsApp" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg></a>
+          <a href="https://facebook.com/mrSoomro" title="Facebook" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+          <a href="https://linkedin.com/in/mrSoomro" title="LinkedIn" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a href="https://instagram.com/mrSoomro" title="Instagram" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="mailto:info@mr-soomro.com" title="Email" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+        </div>
+      </div>
+      <div><div class="ftct">Services</div><ul class="ftlk"><li><strong>Technical SEO</strong></li><li><a href="services.html">Website Audit</a></li><li><a href="services.html">Core Web Vitals</a></li><li><a href="services.html">Schema Markup</a></li><li><a href="services.html">Crawl Error Fixes</a></li></ul></div>
+      <div><div class="ftct">Services</div><ul class="ftlk"><li><strong>On-Page SEO</strong></li><li><a href="services.html">Keyword Research</a></li><li><a href="services.html">Meta Optimization</a></li><li><a href="services.html">Internal Linking</a></li><li><strong>Off-Page SEO</strong></li><li><a href="services.html">Guest Posting</a></li><li><a href="services.html">Link Building</a></li><li><a href="services.html">Digital PR</a></li></ul></div>
+      <div><div class="ftct">More Services</div><ul class="ftlk"><li><strong>Local SEO</strong></li><li><a href="services.html">Google Business Profile</a></li><li><a href="services.html">Citation Building</a></li><li><strong>E-commerce SEO</strong></li><li><a href="services.html">Shopify SEO</a></li><li><a href="services.html">WooCommerce SEO</a></li><li><strong>SEO Consulting</strong></li><li><a href="services.html">Competitor Analysis</a></li><li><a href="services.html">Monthly Reporting</a></li></ul></div>
+<div><div class="ftct">Quick Links</div><ul class="ftlk"><li><a href="../index.html#about">Why Choose Us</a></li><li><a href="../index.html#process">SEO Process</a></li><li><a href="reviews.html">Client Reviews</a></li><li><a href="blogs.html">Blog</a></li><li><a href="../index.html#contact">Book Free Consultation</a></li></ul></div>
+      <div><div class="ftct">Contact</div><ul class="ftlk"><li><a href="mailto:info@mr-soomro.com">info@mr-soomro.com</a></li><li><a href="tel:+923092102705">0309 210 2705</a></li><li><a href="https://wa.me/923092102705">WhatsApp</a></li><li style="color:rgba(255,255,255,.28);font-size:13px;font-weight:300">House No G 209, Mohallah Humayoo, Masjid Al Fazal Town, Phuleli, Hyderabad, Sindh, Pakistan 71000</li></ul></div>
+    </div>
+    <div class="ftbt">
+      <div class="ftcp">&copy; 2026 <a href="../index.html">Mr. Soomro SEO Agency</a>. All rights reserved.</div>
+<div class="ftbl"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms &amp; Conditions</a><a href="cookie-policy.html">Cookie Policy</a></div>
+    </div>
+  </footer>
+
+  <!-- ==================== SCROLL TO TOP ==================== -->
+    <button class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></button>
+
+
+    <script>
+        // FAQ toggle
+        function toggleFaq(element) {
+            const item = element.parentElement;
+            const answer = item.querySelector('.faq-answer');
+            const isActive = item.classList.contains('active');
+
+            document.querySelectorAll('.faq-item').forEach(faq => {
+                faq.classList.remove('active');
+                faq.querySelector('.faq-answer').style.maxHeight = '0';
+            });
+
+            if (!isActive) {
+                item.classList.add('active');
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+            }
+        }
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('visible');
+                    }, index * 100);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+
+        // Counter animation
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-number[data-target]');
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                const suffix = counter.textContent.includes('%') ? '%' : '+';
+                let current = 0;
+                const increment = target / 60;
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        current = target;
+                        clearInterval(timer);
+                    }
+                    counter.textContent = Math.floor(current) + suffix;
+                }, 25);
+            });
+        }
+
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
+
+        const statsBar = document.querySelector('.stats-bar');
+        if (statsBar) statsObserver.observe(statsBar);
+
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = e.target.querySelector('button[type="submit"]');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<i class="fas fa-check"></i> Request Sent!';
+            btn.style.background = '#22C55E';
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+                btn.style.background = '';
+                e.target.reset();
+            }, 3000);
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    const offsetTop = target.offsetTop - 20;
+                    window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+```

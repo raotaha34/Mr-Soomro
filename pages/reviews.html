@@ -1,129 +1,3120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Client Reviews - Mr. Soomro SEO Agency</title>
-  <meta name="description" content="Read client reviews for Mr. Soomro SEO Agency and see how our SEO, reputation management, and growth strategies help businesses rank higher.">
-  <link rel="icon" href="../assets/favicon.png" type="image/png">
-  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews - Mr Soomro | Digital Marketing Expert</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --orange-primary: #F5A623;
+            --orange-dark: #E8961E;
+            --orange-light: #FDB94D;
+            --orange-bg: #F9A825;
+            --dark-text: #1a1a1a;
+            --body-text: #555555;
+            --light-bg: #FFFDF7;
+            --white: #ffffff;
+            --star-color: #F5A623;
+            --section-cream: #FFF8EE;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--light-bg);
+            color: var(--dark-text);
+            overflow-x: hidden;
+        }
+
+        /* ==================== NAVBAR ==================== */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 60px;
+            background: var(--white);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+            transition: all 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            padding: 10px 60px;
+            box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--orange-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+        }
+
+        .logo-text {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--dark-text);
+        }
+
+        .logo-text span {
+            color: var(--orange-primary);
+        }
+
+        .logo-subtitle {
+            font-size: 9px;
+            color: var(--body-text);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: -4px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 35px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-text);
+            font-size: 13px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--orange-primary);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--orange-primary);
+        }
+
+        .nav-cta {
+            background: var(--orange-primary) !important;
+            color: var(--white) !important;
+            padding: 10px 22px;
+            border-radius: 5px;
+            font-size: 12px !important;
+            font-weight: 600 !important;
+            letter-spacing: 1px !important;
+            transition: background 0.3s ease, transform 0.3s ease !important;
+        }
+
+        .nav-cta::after {
+            display: none !important;
+        }
+
+        .nav-cta:hover {
+            background: var(--orange-dark) !important;
+            transform: translateY(-2px);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .hamburger span {
+            width: 28px;
+            height: 3px;
+            background: var(--dark-text);
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+
+        /* ==================== HERO SECTION ==================== */
+        .review-hero {
+            padding: 160px 60px 100px;
+            text-align: center;
+            background: linear-gradient(180deg, var(--white) 0%, var(--section-cream) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .review-hero::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(245,166,35,0.08) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .review-hero::after {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            left: -50px;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(245,166,35,0.06) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(245,166,35,0.1);
+            color: var(--orange-dark);
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+            animation: fadeInDown 0.8s ease;
+        }
+
+        .review-hero h1 {
+            font-size: 56px;
+            font-weight: 900;
+            color: var(--dark-text);
+            line-height: 1.15;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .review-hero h1 span {
+            color: var(--orange-primary);
+        }
+
+        .review-hero p {
+            font-size: 18px;
+            color: var(--body-text);
+            max-width: 650px;
+            margin: 0 auto 40px;
+            line-height: 1.7;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero-stats-row {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin-top: 40px;
+            animation: fadeInUp 1.2s ease;
+        }
+
+        .hero-stat {
+            text-align: center;
+        }
+
+        .hero-stat-number {
+            font-size: 48px;
+            font-weight: 900;
+            color: var(--orange-primary);
+            line-height: 1;
+        }
+
+        .hero-stat-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--body-text);
+            margin-top: 5px;
+            font-weight: 500;
+        }
+
+        /* ==================== OVERALL RATING SECTION ==================== */
+        .overall-rating-section {
+            padding: 80px 60px;
+            background: var(--white);
+        }
+
+        .overall-rating-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .overall-left {
+            text-align: center;
+        }
+
+        .big-rating {
+            font-size: 120px;
+            font-weight: 900;
+            color: var(--orange-primary);
+            line-height: 1;
+        }
+
+        .big-rating-stars {
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            margin: 15px 0;
+        }
+
+        .big-rating-stars i {
+            font-size: 28px;
+            color: var(--star-color);
+        }
+
+        .big-rating-text {
+            font-size: 16px;
+            color: var(--body-text);
+            font-weight: 500;
+        }
+
+        .overall-right {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .rating-bar-row {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .rating-bar-label {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--dark-text);
+            min-width: 50px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .rating-bar-label i {
+            color: var(--star-color);
+            font-size: 12px;
+        }
+
+        .rating-bar-track {
+            flex: 1;
+            height: 12px;
+            background: #f0ebe3;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .rating-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--orange-primary), var(--orange-light));
+            border-radius: 10px;
+            width: 0;
+            transition: width 1.5s ease;
+        }
+
+        .rating-bar-count {
+            font-size: 14px;
+            color: var(--body-text);
+            min-width: 30px;
+            text-align: right;
+            font-weight: 500;
+        }
+
+        /* ==================== FILTER SECTION ==================== */
+        .filter-section {
+            padding: 40px 60px;
+            background: var(--section-cream);
+        }
+
+        .filter-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .filter-tabs {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .filter-tab {
+            padding: 10px 24px;
+            border: 2px solid #e0d9cf;
+            border-radius: 30px;
+            background: var(--white);
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--body-text);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .filter-tab:hover,
+        .filter-tab.active {
+            background: var(--orange-primary);
+            color: var(--white);
+            border-color: var(--orange-primary);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(245,166,35,0.3);
+        }
+
+        .sort-select {
+            padding: 10px 20px;
+            border: 2px solid #e0d9cf;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--dark-text);
+            background: var(--white);
+            cursor: pointer;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .sort-select:focus {
+            border-color: var(--orange-primary);
+        }
+
+        /* ==================== REVIEWS GRID ==================== */
+        .reviews-section {
+            padding: 80px 60px;
+            background: var(--light-bg);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 42px;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: var(--dark-text);
+            letter-spacing: -0.5px;
+        }
+
+        .section-header h2 span {
+            color: var(--orange-primary);
+        }
+
+        .section-header p {
+            font-size: 16px;
+            color: var(--body-text);
+            margin-top: 10px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .reviews-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .review-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 35px 30px;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.04);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .review-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .review-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--orange-primary), var(--orange-light));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .review-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 50px rgba(245,166,35,0.12);
+        }
+
+        .review-card:hover::before {
+            opacity: 1;
+        }
+
+        .review-card-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .reviewer-avatar {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--white);
+            flex-shrink: 0;
+        }
+
+        .reviewer-info h4 {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--dark-text);
+            margin-bottom: 2px;
+        }
+
+        .reviewer-info .company {
+            font-size: 12px;
+            color: var(--body-text);
+            font-weight: 500;
+        }
+
+        .review-stars {
+            display: flex;
+            gap: 3px;
+            margin-bottom: 15px;
+        }
+
+        .review-stars i {
+            font-size: 15px;
+            color: var(--star-color);
+        }
+
+        .review-stars i.empty {
+            color: #e0d9cf;
+        }
+
+        .review-service-tag {
+            display: inline-block;
+            background: rgba(245,166,35,0.1);
+            color: var(--orange-dark);
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 15px;
+        }
+
+        .review-text {
+            font-size: 14px;
+            color: var(--body-text);
+            line-height: 1.75;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .review-text::before {
+            content: '\201C';
+            font-size: 60px;
+            color: rgba(245,166,35,0.15);
+            position: absolute;
+            top: -25px;
+            left: -5px;
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+
+        .review-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 15px;
+            border-top: 1px solid #f5f0e8;
+        }
+
+        .review-date {
+            font-size: 12px;
+            color: #aaa;
+            font-weight: 500;
+        }
+
+        .review-platform {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 12px;
+            color: #aaa;
+            font-weight: 500;
+        }
+
+        .review-platform i {
+            color: var(--orange-primary);
+        }
+
+        .verified-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 11px;
+            color: #4CAF50;
+            font-weight: 600;
+        }
+
+        .verified-badge i {
+            font-size: 13px;
+        }
+
+        /* ==================== FEATURED TESTIMONIAL ==================== */
+        .featured-testimonial {
+            padding: 100px 60px;
+            background: linear-gradient(135deg, var(--orange-primary) 0%, var(--orange-dark) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .featured-testimonial::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 50%;
+        }
+
+        .featured-testimonial::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 400px;
+            height: 400px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 50%;
+        }
+
+        .featured-container {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .featured-quote-icon {
+            font-size: 60px;
+            color: rgba(255,255,255,0.3);
+            margin-bottom: 30px;
+        }
+
+        .featured-text {
+            font-size: 26px;
+            color: var(--white);
+            line-height: 1.6;
+            font-weight: 400;
+            font-style: italic;
+            margin-bottom: 35px;
+        }
+
+        .featured-author {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .featured-author-avatar {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            border: 3px solid rgba(255,255,255,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255,255,255,0.15);
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--white);
+        }
+
+        .featured-author-info h4 {
+            color: var(--white);
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .featured-author-info p {
+            color: rgba(255,255,255,0.7);
+            font-size: 14px;
+        }
+
+        .featured-stars {
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            margin-bottom: 25px;
+        }
+
+        .featured-stars i {
+            font-size: 22px;
+            color: var(--white);
+        }
+
+        /* ==================== TESTIMONIAL SLIDER ==================== */
+        .slider-section {
+            padding: 100px 60px;
+            background: var(--white);
+        }
+
+        .slider-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .testimonial-slider {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .slider-track {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .slider-slide {
+            min-width: 100%;
+            padding: 0 60px;
+        }
+
+        .slider-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .slider-quote {
+            font-size: 22px;
+            color: var(--dark-text);
+            line-height: 1.7;
+            font-style: italic;
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .slider-quote::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(180deg, var(--orange-primary), var(--orange-light));
+            border-radius: 4px;
+        }
+
+        .slider-author-section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .slider-author-card {
+            background: var(--section-cream);
+            padding: 30px;
+            border-radius: 16px;
+        }
+
+        .slider-author-top {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .slider-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--white);
+        }
+
+        .slider-author-name {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--dark-text);
+        }
+
+        .slider-author-role {
+            font-size: 13px;
+            color: var(--body-text);
+        }
+
+        .slider-stars {
+            display: flex;
+            gap: 3px;
+        }
+
+        .slider-stars i {
+            color: var(--star-color);
+            font-size: 16px;
+        }
+
+        .slider-result {
+            display: flex;
+            gap: 30px;
+            margin-top: 10px;
+        }
+
+        .slider-result-item {
+            text-align: center;
+        }
+
+        .slider-result-number {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--orange-primary);
+        }
+
+        .slider-result-label {
+            font-size: 11px;
+            color: var(--body-text);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .slider-nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 40px;
+        }
+
+        .slider-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid var(--orange-primary);
+            background: transparent;
+            color: var(--orange-primary);
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slider-btn:hover {
+            background: var(--orange-primary);
+            color: var(--white);
+            transform: scale(1.1);
+        }
+
+        .slider-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 25px;
+        }
+
+        .slider-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #e0d9cf;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .slider-dot.active {
+            background: var(--orange-primary);
+            width: 30px;
+            border-radius: 10px;
+        }
+
+        /* ==================== VIDEO TESTIMONIALS ==================== */
+        .video-section {
+            padding: 100px 60px;
+            background: var(--section-cream);
+        }
+
+        .video-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .video-card {
+            border-radius: 16px;
+            overflow: hidden;
+            background: var(--white);
+            box-shadow: 0 5px 30px rgba(0,0,0,0.05);
+            transition: all 0.4s ease;
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+
+        .video-thumbnail {
+            position: relative;
+            height: 200px;
+            background: linear-gradient(135deg, #2c2c2c, #1a1a1a);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .play-btn {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: var(--orange-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 24px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 25px rgba(245,166,35,0.4);
+        }
+
+        .video-card:hover .play-btn {
+            transform: scale(1.15);
+            box-shadow: 0 8px 35px rgba(245,166,35,0.5);
+        }
+
+        .video-info {
+            padding: 25px;
+        }
+
+        .video-info h4 {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--dark-text);
+            margin-bottom: 5px;
+        }
+
+        .video-info p {
+            font-size: 13px;
+            color: var(--body-text);
+        }
+
+        .video-info .video-stars {
+            display: flex;
+            gap: 3px;
+            margin-top: 10px;
+        }
+
+        .video-info .video-stars i {
+            font-size: 14px;
+            color: var(--star-color);
+        }
+
+        /* ==================== PLATFORMS ==================== */
+        .platforms-section {
+            padding: 80px 60px;
+            background: var(--white);
+        }
+
+        .platforms-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .platforms-grid {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 50px;
+            flex-wrap: wrap;
+        }
+
+        .platform-card {
+            background: var(--light-bg);
+            padding: 40px 35px;
+            border-radius: 16px;
+            min-width: 200px;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .platform-card:hover {
+            border-color: var(--orange-primary);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(245,166,35,0.1);
+        }
+
+        .platform-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 15px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+        }
+
+        .platform-icon.google {
+            background: #E8F5E9;
+            color: #4CAF50;
+        }
+
+        .platform-icon.trustpilot {
+            background: #E8F5E9;
+            color: #00B67A;
+        }
+
+        .platform-icon.clutch {
+            background: #FFF3E0;
+            color: var(--orange-primary);
+        }
+
+        .platform-icon.upwork {
+            background: #E8F5E9;
+            color: #6FDA44;
+        }
+
+        .platform-rating {
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--dark-text);
+        }
+
+        .platform-name {
+            font-size: 14px;
+            color: var(--body-text);
+            font-weight: 600;
+            margin-top: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .platform-reviews {
+            font-size: 12px;
+            color: #aaa;
+            margin-top: 5px;
+        }
+
+        /* ==================== CTA SECTION ==================== */
+        .cta-section {
+            padding: 100px 60px;
+            background: linear-gradient(135deg, var(--orange-bg) 0%, var(--orange-dark) 100%);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            left: -100px;
+            width: 500px;
+            height: 500px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 50%;
+        }
+
+        .cta-container {
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-section h2 {
+            font-size: 44px;
+            font-weight: 900;
+            color: var(--white);
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 18px;
+            color: rgba(255,255,255,0.85);
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .cta-btn-primary {
+            background: var(--white);
+            color: var(--orange-primary);
+            padding: 16px 40px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .cta-btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .cta-btn-secondary {
+            background: transparent;
+            color: var(--white);
+            padding: 16px 40px;
+            border: 2px solid rgba(255,255,255,0.4);
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .cta-btn-secondary:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: var(--white);
+            transform: translateY(-3px);
+        }
+
+        /* ==================== FOOTER ==================== */
+        .footer {
+            background: #1a1a1a;
+            padding: 70px 60px 30px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 50px;
+        }
+
+        .footer-brand h3 {
+            font-size: 24px;
+            color: var(--white);
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .footer-brand h3 span {
+            color: var(--orange-primary);
+        }
+
+        .footer-brand p {
+            color: #888;
+            font-size: 14px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 12px;
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            background: var(--orange-primary);
+            color: var(--white);
+            transform: translateY(-3px);
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .footer-col a {
+            display: block;
+            color: #888;
+            text-decoration: none;
+            font-size: 14px;
+            margin-bottom: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-col a:hover {
+            color: var(--orange-primary);
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 50px auto 0;
+            padding-top: 25px;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-bottom p {
+            color: #666;
+            font-size: 13px;
+        }
+
+        .footer-bottom p span {
+            color: var(--orange-primary);
+        }
+
+        /* ==================== ANIMATIONS ==================== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .counter-animate {
+            animation: pulse 0.3s ease;
+        }
+
+        /* ==================== SCROLL TO TOP ==================== */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--orange-primary);
+            color: var(--white);
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(245,166,35,0.3);
+            z-index: 999;
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .scroll-top:hover {
+            background: var(--orange-dark);
+            transform: translateY(-3px);
+        }
+
+        /* ==================== RESPONSIVE ==================== */
+        @media (max-width: 1024px) {
+            .reviews-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .video-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .overall-rating-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .slider-content {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 15px 25px;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 280px;
+                height: 100vh;
+                background: var(--white);
+                flex-direction: column;
+                padding: 80px 30px 30px;
+                gap: 20px;
+                box-shadow: -5px 0 30px rgba(0,0,0,0.1);
+                transition: right 0.3s ease;
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .hamburger.active span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 6px);
+            }
+
+            .hamburger.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburger.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(5px, -6px);
+            }
+
+            .review-hero {
+                padding: 130px 25px 70px;
+            }
+
+            .review-hero h1 {
+                font-size: 34px;
+            }
+
+            .review-hero p {
+                font-size: 15px;
+            }
+
+            .hero-stats-row {
+                gap: 30px;
+                flex-wrap: wrap;
+            }
+
+            .hero-stat-number {
+                font-size: 36px;
+            }
+
+            .reviews-section,
+            .video-section,
+            .slider-section,
+            .platforms-section,
+            .overall-rating-section,
+            .filter-section {
+                padding: 60px 25px;
+            }
+
+            .reviews-grid,
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-header h2 {
+                font-size: 30px;
+            }
+
+            .featured-testimonial {
+                padding: 70px 25px;
+            }
+
+            .featured-text {
+                font-size: 18px;
+            }
+
+            .cta-section {
+                padding: 70px 25px;
+            }
+
+            .cta-section h2 {
+                font-size: 30px;
+            }
+
+            .big-rating {
+                font-size: 80px;
+            }
+
+            .slider-slide {
+                padding: 0 20px;
+            }
+
+            .slider-quote {
+                font-size: 17px;
+            }
+
+            .filter-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .platforms-grid {
+                gap: 20px;
+            }
+
+            .platform-card {
+                min-width: 150px;
+            }
+
+            .footer {
+                padding: 50px 25px 20px;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .review-hero h1 {
+                font-size: 28px;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
 </head>
 <body>
-  <!-- MOBILE NAV -->
-  <div class="mnav" id="mobNav">
-    <div class="mnav-links">
-      <a href="../index.html" onclick="closeMob()">Home</a>
-      <a href="about.html" onclick="closeMob()">About</a>
-      <a href="services.html" onclick="closeMob()">Services</a>
-      <a href="../index.html#process" onclick="closeMob()">Process</a>
-      <a href="blogs.html" onclick="closeMob()">Blog</a>
-      <a href="reviews.html" onclick="closeMob()">Reviews</a>
-      <a href="../index.html#contact" onclick="closeMob()">Contact</a>
-    </div>
-    <div class="mob-social" aria-label="Social media links">
-      <div class="mob-contact">Connect With Us</div>
-      <a href="https://wa.me/923092102705" title="WhatsApp" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg></a>
-      <a href="https://facebook.com/mrSoomro" title="Facebook" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
-      <a href="https://linkedin.com/in/mrSoomro" title="LinkedIn" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
-      <a href="https://instagram.com/mrSoomro" title="Instagram" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
-      <a href="mailto:info@mr-soomro.com" title="Email" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
-    </div>
-  </div>
 
-  <!-- NAVBAR -->
-  <nav id="mainNav">
-<a href="../index.html" class="nlogo"><img src="../images/websitelogo.jpeg" alt="MR. Soomro SEO" style="height:40px;width:auto;display:block;"></a>
-    <ul class="nlinks">
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="../index.html#process">Process</a></li>
-      <li><a href="blogs.html">Blog</a></li>
-      <li><a href="reviews.html">Reviews</a></li>
-      <li><a href="../index.html#contact" class="ncta">Free SEO Audit</a></li>
-    </ul>
-    <button class="nbg" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
-  </nav>
-
-  <header class="reviews-hero">
-    <div class="reviews-hero-inner rv">
-      <div class="se" style="justify-content:center">Client Reviews</div>
-      <h1 class="st">What Our <em>Clients Say</em></h1>
-      <p>Real feedback from businesses that trusted Mr. Soomro SEO Agency for search growth, stronger rankings, reputation management, and measurable organic results.</p>
-    </div>
-  </header>
-
-  <main class="reviews-page">
-    <div class="reviews-grid">
-      <article class="review-card rv">
-        <div class="tst"><span></span><span></span><span></span><span></span><span></span></div>
-        <p class="tq">"Mr. Soomro took our website from page 5 to position #1 for our main keyword in just 4 months. Our organic leads tripled and cost per lead dropped by 43%."</p>
-        <div class="tau"><div class="tav"><div class="dummy-avatar">AH</div></div><div><div class="tnm">Ali Hassan</div><div class="trl">CEO, TechSpark Solutions - Karachi</div></div></div>
-      </article>
-      <article class="review-card rv">
-        <div class="tst"><span></span><span></span><span></span><span></span><span></span></div>
-        <p class="tq">"The technical SEO audit alone was worth every penny. They found 47 critical issues we had no idea about. Our site speed went from 3.8s to 1.1s."</p>
-        <div class="tau"><div class="tav"><div class="dummy-avatar">RH</div></div><div><div class="tnm">Rahim</div><div class="trl">Founder, BloomBoutique Online Store</div></div></div>
-      </article>
-      <article class="review-card rv">
-        <div class="tst"><span></span><span></span><span></span><span></span><span></span></div>
-        <p class="tq">"Professional, transparent and results-driven. We saw 180% increase in organic traffic in 6 months. The monthly reporting is exceptional."</p>
-        <div class="tau"><div class="tav"><div class="dummy-avatar">FM</div></div><div><div class="tnm">Fatima</div><div class="trl">Marketing Director, Nexus Retail Group</div></div></div>
-      </article>
-      <article class="review-card rv">
-        <div class="tst"><span></span><span></span><span></span><span></span><span></span></div>
-        <p class="tq">"Our local business was completely invisible online. After just 3 months with Mr. Soomro, we rank in the top 3 in Google Maps for all our main services."</p>
-        <div class="tau"><div class="tav"><div class="dummy-avatar">SK</div></div><div><div class="tnm">Huzaifa </div><div class="trl">Owner, ZB Dental Clinic - Lahore</div></div></div>
-      </article>
-      <article class="review-card rv">
-        <div class="tst"><span></span><span></span><span></span><span></span><span></span></div>
-        <p class="tq">"Their content strategy transformed our blog into a lead machine. 300% more organic visitors, 40% lower bounce rate, and a clear path for growth."</p>
-        <div class="tau"><div class="tav"><div class="dummy-avatar">KR</div></div><div><div class="tnm">Kareem</div><div class="trl">Co-Founder, FinanceWiz Pakistan</div></div></div>
-      </article>
-      <article class="review-card rv">
-        <div class="tst"><span></span><span></span><span></span><span></span><span></span></div>
-        <p class="tq">"The team understood our goals quickly, cleaned up our search presence, and gave us clear weekly progress. We finally feel in control of our online reputation."</p>
-        <div class="tau"><div class="tav"><div class="dummy-avatar">NA</div></div><div><div class="tnm">Nadia Ahmed</div><div class="trl">Operations Lead, Prime Auto Care</div></div></div>
-      </article>
-    </div>
-  </main>
-
-  <!-- FOOTER -->
-  <footer itemscope itemtype="https://schema.org/Organization">
-    <div class="ftt">
-      <div>
-        <span class="ftlo" itemprop="name">MR.<span>Soomro</span></span>
-        <p class="fttg" itemprop="description">Pakistan's trusted SEO agency helping businesses rank higher, attract more clients and grow sustainably with data-driven search strategies since 2016.</p>
-        <div class="ft-soc-row">
-          <a href="https://wa.me/923092102705" title="WhatsApp" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg></a>
-          <a href="https://facebook.com/mrSoomro" title="Facebook" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
-          <a href="https://linkedin.com/in/mrSoomro" title="LinkedIn" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
-          <a href="https://instagram.com/mrSoomro" title="Instagram" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
-          <a href="mailto:info@mr-soomro.com" title="Email" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <a href="../index.html" class="logo">
+            <div class="logo-icon">
+                <i class="fas fa-chart-line"></i>
+            </div>
+            <div>
+                <div class="logo-text">Mr <span>Soomro</span></div>
+                <div class="logo-subtitle">Digital Marketing Expert</div>
+            </div>
+        </a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="../index.html#process">Process</a></li>
+            <li><a href="blogs.html">Blog</a></li>
+            <li><a href="reviews.html" class="active">Reviews</a></li>
+            <li><a href="../index.html#contact" class="nav-cta">Free SEO Audit</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-      </div>
-      <div><div class="ftct">Services</div><ul class="ftlk"><li><strong>Technical SEO</strong></li><li><a href="services.html">Website Audit</a></li><li><a href="services.html">Core Web Vitals</a></li><li><a href="services.html">Schema Markup</a></li><li><a href="services.html">Crawl Error Fixes</a></li></ul></div>
-      <div><div class="ftct">Services</div><ul class="ftlk"><li><strong>On-Page SEO</strong></li><li><a href="services.html">Keyword Research</a></li><li><a href="services.html">Meta Optimization</a></li><li><a href="services.html">Internal Linking</a></li><li><strong>Off-Page SEO</strong></li><li><a href="services.html">Guest Posting</a></li><li><a href="services.html">Link Building</a></li><li><a href="services.html">Digital PR</a></li></ul></div>
-      <div><div class="ftct">More Services</div><ul class="ftlk"><li><strong>Local SEO</strong></li><li><a href="services.html">Google Business Profile</a></li><li><a href="services.html">Citation Building</a></li><li><strong>E-commerce SEO</strong></li><li><a href="services.html">Shopify SEO</a></li><li><a href="services.html">WooCommerce SEO</a></li><li><strong>SEO Consulting</strong></li><li><a href="services.html">Competitor Analysis</a></li><li><a href="services.html">Monthly Reporting</a></li></ul></div>
-      <div><div class="ftct">Quick Links</div><ul class="ftlk"><li><a href="../index.html#about">Why Choose Us</a></li><li><a href="../index.html#process">SEO Process</a></li><li><a href="reviews.html">Client Reviews</a></li><li><a href="blogs.html">Blog</a></li><li><a href="../index.html#contact">Book Free Consultation</a></li></ul></div>
-      <div><div class="ftct">Contact</div><ul class="ftlk"><li><a href="mailto:info@mr-soomro.com">info@mr-soomro.com</a></li><li><a href="tel:+923092102705">0309 210 2705</a></li><li><a href="https://wa.me/923092102705">WhatsApp</a></li><li style="color:rgba(255,255,255,.28);font-size:13px;font-weight:300">House No G 209, Mohallah Humayoo, Masjid Al Fazal Town, Phuleli, Hyderabad, Sindh, Pakistan 71000</li></ul></div>
-    </div>
-    <div class="ftbt">
-      <div class="ftcp">&copy; 2026 <a href="../index.html">Mr. Soomro SEO Agency</a>. All rights reserved.</div>
-      <div class="ftbl"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms &amp; Conditions</a><a href="cookie-policy.html">Cookie Policy</a></div>
-    </div>
-  </footer>
+    </nav>
 
-  <script>
-    const mainNav = document.getElementById('mainNav');
-    if (mainNav) window.addEventListener('scroll',()=>mainNav.classList.toggle('scr',scrollY>60));
-    const burger = document.getElementById('burger'), mobNav = document.getElementById('mobNav');
-    if (burger && mobNav) burger.addEventListener('click',function(){ this.classList.toggle('open'); mobNav.classList.toggle('open'); });
-    function closeMob(){ if (mobNav) mobNav.classList.remove('open'); if (burger) burger.classList.remove('open'); }
-    const obs = new IntersectionObserver(entries=>{ entries.forEach((e,i)=>{ if(e.isIntersecting){ setTimeout(()=>e.target.classList.add('vis','visible'),i*70); obs.unobserve(e.target); } }); },{threshold:.1,rootMargin:'0px 0px -34px 0px'});
-    document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
-  </script>
+    <!-- HERO SECTION -->
+    <section class="review-hero">
+        <div class="hero-badge">
+            <i class="fas fa-star"></i>
+            Trusted by 100+ Businesses
+        </div>
+        <h1>What Our <span>Clients</span><br>Say About Us</h1>
+        <p>Real results, real stories. See how we've helped businesses rank higher, grow faster, and dominate their market with proven SEO strategies.</p>
+        <div class="hero-stats-row">
+            <div class="hero-stat">
+                <div class="hero-stat-number" data-target="50">0</div>
+                <div class="hero-stat-label">5-Star Reviews</div>
+            </div>
+            <div class="hero-stat">
+                <div class="hero-stat-number" data-target="4.9" data-decimal="true">0</div>
+                <div class="hero-stat-label">Average Rating</div>
+            </div>
+            <div class="hero-stat">
+                <div class="hero-stat-number" data-target="100">0</div>
+                <div class="hero-stat-label">Happy Clients</div>
+            </div>
+            <div class="hero-stat">
+                <div class="hero-stat-number" data-target="95" data-suffix="%">0</div>
+                <div class="hero-stat-label">Satisfaction Rate</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OVERALL RATING -->
+    <section class="overall-rating-section">
+        <div class="overall-rating-container">
+            <div class="overall-left">
+                <div class="big-rating">4.9</div>
+                <div class="big-rating-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="big-rating-text">Based on 50+ verified reviews</div>
+            </div>
+            <div class="overall-right">
+                <div class="rating-bar-row">
+                    <span class="rating-bar-label">5 <i class="fas fa-star"></i></span>
+                    <div class="rating-bar-track">
+                        <div class="rating-bar-fill" data-width="88%"></div>
+                    </div>
+                    <span class="rating-bar-count">44</span>
+                </div>
+                <div class="rating-bar-row">
+                    <span class="rating-bar-label">4 <i class="fas fa-star"></i></span>
+                    <div class="rating-bar-track">
+                        <div class="rating-bar-fill" data-width="8%"></div>
+                    </div>
+                    <span class="rating-bar-count">4</span>
+                </div>
+                <div class="rating-bar-row">
+                    <span class="rating-bar-label">3 <i class="fas fa-star"></i></span>
+                    <div class="rating-bar-track">
+                        <div class="rating-bar-fill" data-width="4%"></div>
+                    </div>
+                    <span class="rating-bar-count">2</span>
+                </div>
+                <div class="rating-bar-row">
+                    <span class="rating-bar-label">2 <i class="fas fa-star"></i></span>
+                    <div class="rating-bar-track">
+                        <div class="rating-bar-fill" data-width="0%"></div>
+                    </div>
+                    <span class="rating-bar-count">0</span>
+                </div>
+                <div class="rating-bar-row">
+                    <span class="rating-bar-label">1 <i class="fas fa-star"></i></span>
+                    <div class="rating-bar-track">
+                        <div class="rating-bar-fill" data-width="0%"></div>
+                    </div>
+                    <span class="rating-bar-count">0</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FILTER SECTION -->
+    <section class="filter-section">
+        <div class="filter-container">
+            <div class="filter-tabs">
+                <button class="filter-tab active" data-filter="all">All Reviews</button>
+                <button class="filter-tab" data-filter="seo">SEO</button>
+                <button class="filter-tab" data-filter="reputation">Reputation</button>
+                <button class="filter-tab" data-filter="backlinks">Backlinks</button>
+                <button class="filter-tab" data-filter="reddit">Reddit Marketing</button>
+                <button class="filter-tab" data-filter="content">Content</button>
+            </div>
+            <select class="sort-select" id="sortSelect">
+                <option value="newest">Newest First</option>
+                <option value="highest">Highest Rated</option>
+                <option value="lowest">Lowest Rated</option>
+            </select>
+        </div>
+    </section>
+
+    <!-- REVIEWS GRID -->
+    <section class="reviews-section">
+        <div class="section-header">
+            <h2>Client <span>Reviews</span></h2>
+            <p>Honest feedback from businesses we've helped grow</p>
+        </div>
+        <div class="reviews-grid" id="reviewsGrid">
+            <!-- Review 1 -->
+            <div class="review-card" data-category="seo" data-rating="5" data-date="2024-12-15">
+                <div class="review-card-header">
+                    <div class="reviewer-avatar" style="background: linear-gradient(135deg, #F5A623, #E8961E);">AH</div>
+                    <div class="reviewer-info">
+                        <h4>Ahmed Hassan</h4>
+                        <span class="company">CEO, TechVista Solutions</span>
+                    </div>
+                </div>
+                <div class="review-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <span class="review-service-tag">SEO Services</span>
+                <p class="review-text">Mr Soomro transformed our online presence completely. Our organic traffic increased by 287% in just 6 months. The ROI has been incredible and the team is extremely professional and responsive.</p>
+                <div class="review-footer">
+                    <span class="review-date">Dec 15, 2024</span>
+                    <span class="verified-badge"><i class="fas fa-check-circle"></i> Verified</span>
+                </div>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="review-card" data-category="reputation" data-rating="5" data-date="2024-11-28">
+                <div class="review-card-header">
+                    <div class="reviewer-avatar" style="background: linear-gradient(135deg, #6C63FF, #3F3D56);">RH</div>
+                    <div class="reviewer-info">
+                        <h4>Rachel Henderson</h4>
+                        <span class="company">Marketing Director, BrightPath</span>
+                    </div>
+                </div>
+                <div class="review-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <span class="review-service-tag">Reputation Management</span>
+                <p class="review-text">They successfully removed several harmful articles about our brand and replaced them with positive content. Our reputation score went from 2.8 to 4.7 stars. Absolutely phenomenal work!</p>
+                <div class="review-footer">
+                    <span class="review-date">Nov 28, 2024</span>
+                    <span class="verified-badge"><i class="fas fa-check-circle"></i> Verified</span>
+                </div>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="review-card" data-category="backlinks" data-rating="5" data-date="2024-11-10">
+                <div class="review-card-header">
+                    <div class="reviewer-avatar" style="background: linear-gradient(135deg, #00C9A7, #008B74);">FM</div>
+                    <div class="reviewer-info">
+                        <h4>Frank Morrison</h4>
+                        <span class="company">Founder, Morrison Legal</span>
+                    </div>
+                </div>
+                <div class="review-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <span class="review-service-tag">Backlink Strategy</span>
+                <p class="review-text">The backlink strategy they implemented was top-notch. We went from page 5 to page 1 for our main keywords within 4 months. Domain authority increased from 15 to 42. Highly recommend!</p>
+                <div class="review-footer">
+                    <span class="review-date">Nov 10, 2024</span>
+                    <span class="verified-badge"><i class="fas fa-check-circle"></i> Verified</span>
+                </div>
+            </div>
+
+            <!-- Review 4 -->
+            <div class="review-card" data-category="reddit" data-rating="5" data-date="2024-10-22">
+                <div class="review-card-header">
+                    <div class="reviewer-avatar" style="background: linear-gradient(135deg, #FF6B6B, #EE5A24);">SK</div>
+                    <div class="reviewer-info">
+                        <h4>Sarah Kim</h4>
+                        <span class="company">CMO, NovaTech Inc.</span>
+                    </div>
+                </div>
+                <div class="review-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <span class="review-service-tag">Reddit Marketing</span>
+                <p class="review-text">The Reddit marketing strategy was genius! We got authentic engagement and real traffic from targeted subreddits. Our brand awareness in the tech community skyrocketed. This team really knows what they're doing.</p>
+                <div class="review-footer">
+                    <span class="review-date">Oct 22, 2024</span>
+                    <span class="verified-badge"><i class="fas fa-check-circle"></i> Verified</span>
+                </div>
+            </div>
+
+            <!-- Review 5 -->
+            <div class="review-card" data-category="seo" data-rating="4" data-date="2024-10-05">
+                <div class="review-card-header">
+                    <div class="reviewer-avatar" style="background: linear-gradient(135deg, #A29BFE, #6C5CE7);">DW</div>
+                    <div class="reviewer-info">
+                        <h4>David Williams</h4>
+                        <span class="company">Owner, Urban Fitness Co.</span>
+                    </div>
+                </div>
+                <div class="review-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star empty"></i>
+                </div>
+                <span class="review-service-tag">SEO Services</span>
+                <p class="review-text">Great results for our local SEO. We now rank #1 for "fitness center" in our city. The only reason for 4 stars is the timeline was slightly longer than expected, but the results speak for themselves.</p>
+                <div class="review-footer">
+                    <span class="review-date">Oct 5, 2024</span>
+                    <span class="verified-badge"><i class="fas fa-check-circle"></i> Verified</span>
+                </div>
+            </div>
+
+            <!-- Review 6 -->
+            <div class="review-card" data-category="content" data-rating="5" data-date="2024-09-18">
+                <div class="review-card-header">
+                    <div class="reviewer-avatar" style="background: linear-gradient(135deg, #FD79A8, #E84393);">LP</div>
+                    <div class="reviewer-info">
+                        <h4>Lisa Patel</h4>
+                        <span class="company">Director, GreenLeaf Health</span>
+                    </div>
+                </div>
+                <div class="review-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <span class="review-service-tag">Content Strategy</span>
+                <p class="review-text">The content removal and positive content creation service was exactly what we needed. They handled everything professionally and kept us updated throughout. Our search results are now spotless.</p>
+                <div class="review-footer">
+                    <span class="review-date">Sep 18, 2024</span>
+                    <span class="verified-badge"><i class="fas fa-check-circle"></i> Verified</span>
+                </div>
+            </div>
+
+            <!-- Review 7 -->
+            <div class="review-card" data-category="seo" data-rating="5" data-date="2024-09-02">
+                <div class="review-card-header">
+                    <div class="reviewer-avatar" style="background: linear-gradient(135deg, #FDCB6E, #F39C12);">MJ</div>
+                    <div class="reviewer-info">
+                        <h4>Michael Johnson</h4>
+                        <span class="company">CEO, BlueStar Ventures</span>
+                    </div>
+                </div>
+                <div class="review-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <span class="review-service-tag">SEO Services</span>
+                <p class="review-text">We've worked with 3 SEO agencies before and Mr Soomro is by far the best. Transparent reporting, real results, and the team actually cares about your business. We saw 180% traffic increase.</p>
+                <div class="review-footer">
+                    <span class="review-date">Sep 2, 2024</span>
+                    <span class="verified-badge"><i class="fas fa-check-circle"></i> Verified</span>
+                </div>
+            </div>
+
+            <!-- Review 8 -->
+            <div class="review-card" data-category="reputation" data-rating="5" data-date="2024-08-20">
+                <div class="review-card-header">
+                    <div class="reviewer-avatar" style="background: linear-gradient(135deg, #74B9FF, #0984E3);">EC</div>
+                    <div class="reviewer-info">
+                        <h4>Emily Chen</h4>
+                        <span class="company">Manager, Pacific Hotels</span>
+                    </div>
+                </div>
+                <div class="review-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <span class="review-service-tag">Reputation Management</span>
+                <p class="review-text">Our hotel had a PR crisis and Mr Soomro's team handled it masterfully. Within 3 months, the negative articles were pushed down and our booking rate recovered completely. Lifesavers!</p>
+                <div class="review-footer">
+                    <span class="review-date">Aug 20, 2024</span>
+                    <span class="verified-badge"><i class="fas fa-check-circle"></i> Verified</span>
+                </div>
+            </div>
+
+            <!-- Review 9 -->
+            <div class="review-card" data-category="backlinks" data-rating="5" data-date="2024-08-05">
+                <div class="review-card-header">
+                    <div class="reviewer-avatar" style="background: linear-gradient(135deg, #55EFC4, #00B894);">JR</div>
+                    <div class="reviewer-info">
+                        <h4>James Rodriguez</h4>
+                        <span class="company">Founder, CryptoSafe</span>
+                    </div>
+                </div>
+                <div class="review-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <span class="review-service-tag">Backlink Strategy</span>
+                <p class="review-text">The quality of backlinks they build is exceptional. No spammy links, everything is from high DA sites relevant to our niche. Our rankings improved dramatically and sustainably. Worth every penny.</p>
+                <div class="review-footer">
+                    <span class="review-date">Aug 5, 2024</span>
+                    <span class="verified-badge"><i class="fas fa-check-circle"></i> Verified</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Load More Button -->
+        <div style="text-align: center; margin-top: 50px;">
+            <button class="cta-btn-primary" id="loadMoreBtn" style="background: var(--orange-primary); color: white; border: none; cursor: pointer;">
+                Load More Reviews
+            </button>
+        </div>
+    </section>
+
+    <!-- FEATURED TESTIMONIAL -->
+    <section class="featured-testimonial">
+        <div class="featured-container">
+            <div class="featured-quote-icon">
+                <i class="fas fa-quote-left"></i>
+            </div>
+            <div class="featured-stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <p class="featured-text">"Working with Mr Soomro was a game-changer for our business. They didn't just promise results — they delivered beyond our expectations. Our revenue increased by 340% within the first year, and we now dominate the first page of Google for all our target keywords."</p>
+            <div class="featured-author">
+                <div class="featured-author-avatar">AK</div>
+                <div class="featured-author-info" style="text-align: left;">
+                    <h4>Alexander Knight</h4>
+                    <p>CEO, KnightShield Security</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIAL SLIDER -->
+    <section class="slider-section">
+        <div class="section-header">
+            <h2>Success <span>Stories</span></h2>
+            <p>Detailed case studies from our top clients</p>
+        </div>
+        <div class="slider-container">
+            <div class="testimonial-slider">
+                <div class="slider-track" id="sliderTrack">
+                    <!-- Slide 1 -->
+                    <div class="slider-slide">
+                        <div class="slider-content">
+                            <div class="slider-quote">
+                                "Before working with Mr Soomro, we were invisible online. Now we rank #1 for 15+ keywords in our industry. The team's strategic approach to SEO and content marketing completely transformed our digital presence and lead generation."
+                            </div>
+                            <div class="slider-author-section">
+                                <div class="slider-author-card">
+                                    <div class="slider-author-top">
+                                        <div class="slider-avatar" style="background: linear-gradient(135deg, #F5A623, #E8961E);">NP</div>
+                                        <div>
+                                            <div class="slider-author-name">Natasha Phillips</div>
+                                            <div class="slider-author-role">VP Marketing, DataFlow Inc.</div>
+                                            <div class="slider-stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slider-result">
+                                        <div class="slider-result-item">
+                                            <div class="slider-result-number">+312%</div>
+                                            <div class="slider-result-label">Organic Traffic</div>
+                                        </div>
+                                        <div class="slider-result-item">
+                                            <div class="slider-result-number">#1</div>
+                                            <div class="slider-result-label">Google Ranking</div>
+                                        </div>
+                                        <div class="slider-result-item">
+                                            <div class="slider-result-number">+180%</div>
+                                            <div class="slider-result-label">Lead Gen</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="slider-slide">
+                        <div class="slider-content">
+                            <div class="slider-quote">
+                                "The reputation management service saved our business. After a competitor launched a smear campaign, Mr Soomro's team cleaned up our search results and built a fortress of positive content. Our customer trust scores are now at an all-time high."
+                            </div>
+                            <div class="slider-author-section">
+                                <div class="slider-author-card">
+                                    <div class="slider-author-top">
+                                        <div class="slider-avatar" style="background: linear-gradient(135deg, #6C63FF, #3F3D56);">RB</div>
+                                        <div>
+                                            <div class="slider-author-name">Robert Brooks</div>
+                                            <div class="slider-author-role">Founder, Brooks & Associates</div>
+                                            <div class="slider-stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slider-result">
+                                        <div class="slider-result-item">
+                                            <div class="slider-result-number">100%</div>
+                                            <div class="slider-result-label">Content Removed</div>
+                                        </div>
+                                        <div class="slider-result-item">
+                                            <div class="slider-result-number">4.8★</div>
+                                            <div class="slider-result-label">Rating Restored</div>
+                                        </div>
+                                        <div class="slider-result-item">
+                                            <div class="slider-result-number">+95%</div>
+                                            <div class="slider-result-label">Trust Score</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="slider-slide">
+                        <div class="slider-content">
+                            <div class="slider-quote">
+                                "The Reddit and community marketing strategy was unlike anything we'd seen. Genuine engagement, authentic conversations, and real traffic that converted. Our SaaS product got featured in multiple subreddits organically. Brilliant execution."
+                            </div>
+                            <div class="slider-author-section">
+                                <div class="slider-author-card">
+                                    <div class="slider-author-top">
+                                        <div class="slider-avatar" style="background: linear-gradient(135deg, #FF6B6B, #EE5A24);">TM</div>
+                                        <div>
+                                            <div class="slider-author-name">Tina Martinez</div>
+                                            <div class="slider-author-role">Growth Lead, CloudSync SaaS</div>
+                                            <div class="slider-stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slider-result">
+                                        <div class="slider-result-item">
+                                            <div class="slider-result-number">+450%</div>
+                                            <div class="slider-result-label">Referral Traffic</div>
+                                        </div>
+                                        <div class="slider-result-item">
+                                            <div class="slider-result-number">2.3K</div>
+                                            <div class="slider-result-label">New Signups</div>
+                                        </div>
+                                        <div class="slider-result-item">
+                                            <div class="slider-result-number">+200%</div>
+                                            <div class="slider-result-label">Brand Mentions</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-nav">
+                <button class="slider-btn" id="prevBtn"><i class="fas fa-arrow-left"></i></button>
+                <button class="slider-btn" id="nextBtn"><i class="fas fa-arrow-right"></i></button>
+            </div>
+            <div class="slider-dots" id="sliderDots">
+                <div class="slider-dot active" data-slide="0"></div>
+                <div class="slider-dot" data-slide="1"></div>
+                <div class="slider-dot" data-slide="2"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VIDEO TESTIMONIALS -->
+    <section class="video-section">
+        <div class="section-header">
+            <h2>Video <span>Testimonials</span></h2>
+            <p>Hear directly from our satisfied clients</p>
+        </div>
+        <div class="video-grid">
+            <div class="video-card">
+                <div class="video-thumbnail">
+                    <div class="play-btn"><i class="fas fa-play" style="margin-left: 3px;"></i></div>
+                </div>
+                <div class="video-info">
+                    <h4>Ahmed Hassan</h4>
+                    <p>How we achieved 287% traffic growth</p>
+                    <div class="video-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="video-card">
+                <div class="video-thumbnail">
+                    <div class="play-btn"><i class="fas fa-play" style="margin-left: 3px;"></i></div>
+                </div>
+                <div class="video-info">
+                    <h4>Sarah Kim</h4>
+                    <p>Reddit marketing success story</p>
+                    <div class="video-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="video-card">
+                <div class="video-thumbnail">
+                    <div class="play-btn"><i class="fas fa-play" style="margin-left: 3px;"></i></div>
+                </div>
+                <div class="video-info">
+                    <h4>Emily Chen</h4>
+                    <p>Reputation recovery case study</p>
+                    <div class="video-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PLATFORMS SECTION -->
+    <section class="platforms-section">
+        <div class="platforms-container">
+            <div class="section-header">
+                <h2>Rated On <span>Top Platforms</span></h2>
+                <p>Consistently excellent reviews across the web</p>
+            </div>
+            <div class="platforms-grid">
+                <div class="platform-card">
+                    <div class="platform-icon google"><i class="fab fa-google"></i></div>
+                    <div class="platform-rating">4.9</div>
+                    <div class="platform-name">Google</div>
+                    <div class="platform-reviews">50+ Reviews</div>
+                </div>
+                <div class="platform-card">
+                    <div class="platform-icon trustpilot"><i class="fas fa-star"></i></div>
+                    <div class="platform-rating">4.8</div>
+                    <div class="platform-name">Trustpilot</div>
+                    <div class="platform-reviews">35+ Reviews</div>
+                </div>
+                <div class="platform-card">
+                    <div class="platform-icon clutch"><i class="fas fa-award"></i></div>
+                    <div class="platform-rating">5.0</div>
+                    <div class="platform-name">Clutch</div>
+                    <div class="platform-reviews">20+ Reviews</div>
+                </div>
+                <div class="platform-card">
+                    <div class="platform-icon upwork"><i class="fas fa-briefcase"></i></div>
+                    <div class="platform-rating">4.9</div>
+                    <div class="platform-name">Upwork</div>
+                    <div class="platform-reviews">45+ Reviews</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="cta-section">
+        <div class="cta-container">
+            <h2>Ready To <br>Grow Your Business?</h2>
+            <p>Join 100+ businesses that trust Mr Soomro for their digital marketing success. Get your free SEO audit today.</p>
+            <div class="cta-buttons">
+                <a href="../index.html#contact" class="cta-btn-primary">Get Free SEO Audit</a>
+                <a href="services.html" class="cta-btn-secondary">View Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h3>Mr <span>Soomro</span></h3>
+                <p>We help brands control their online reputation, remove harmful content, and generate real traffic using advanced SEO and backlink strategies.</p>
+                <div class="footer-social">
+                    <a href="https://facebook.com/mrSoomro" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/mrSoomro" aria-label="X"><i class="fab fa-twitter"></i></a>
+                    <a href="https://linkedin.com/in/mrSoomro" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://instagram.com/mrSoomro" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Services</h4>
+                <a href="services.html">SEO Services</a>
+                <a href="../Services/service-review-management.html">Reputation Mgmt</a>
+                <a href="../Services/service-authority-backlinks.html">Backlink Building</a>
+                <a href="../Services/service-reddit-marketing.html">Reddit Marketing</a>
+                <a href="services.html">Content Strategy</a>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <a href="about.html">About Us</a>
+                <a href="../index.html#process">Our Process</a>
+                <a href="reviews.html">Case Studies</a>
+                <a href="reviews.html">Reviews</a>
+                <a href="blogs.html">Blog</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <a href="mailto:info@mr-soomro.com">info@mr-soomro.com</a>
+                <a href="tel:+923092102705">0309 210 2705</a>
+                <a href="../index.html#contact">Free Consultation</a>
+                <a href="mailto:info@mr-soomro.com">Support</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Mr <span>Soomro</span>. All rights reserved.</p>
+            <p>Designed with <span>♥</span> for growth</p>
+        </div>
+    </footer>
+
+    <!-- SCROLL TO TOP -->
+    <button class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // ==================== NAVBAR SCROLL ====================
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // ==================== MOBILE MENU ====================
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu on link click
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // ==================== COUNTER ANIMATION ====================
+        function animateCounters() {
+            const counters = document.querySelectorAll('.hero-stat-number');
+            counters.forEach(counter => {
+                const target = parseFloat(counter.getAttribute('data-target'));
+                const isDecimal = counter.getAttribute('data-decimal') === 'true';
+                const suffix = counter.getAttribute('data-suffix') || '+';
+                const duration = 2000;
+                const startTime = Date.now();
+
+                function update() {
+                    const elapsed = Date.now() - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    // Ease out cubic
+                    const easeOut = 1 - Math.pow(1 - progress, 3);
+                    const current = target * easeOut;
+
+                    if (isDecimal) {
+                        counter.textContent = current.toFixed(1);
+                    } else {
+                        counter.textContent = Math.floor(current) + (progress >= 1 ? suffix : '');
+                    }
+
+                    if (progress < 1) {
+                        requestAnimationFrame(update);
+                    }
+                }
+                update();
+            });
+        }
+
+        // ==================== RATING BARS ANIMATION ====================
+        function animateRatingBars() {
+            const bars = document.querySelectorAll('.rating-bar-fill');
+            bars.forEach(bar => {
+                const width = bar.getAttribute('data-width');
+                setTimeout(() => {
+                    bar.style.width = width;
+                }, 300);
+            });
+        }
+
+        // ==================== REVIEW CARDS ANIMATION ====================
+        function animateCards() {
+            const cards = document.querySelectorAll('.review-card');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.classList.add('visible');
+                        }, index * 100);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            cards.forEach(card => observer.observe(card));
+        }
+
+        // ==================== FILTER FUNCTIONALITY ====================
+        const filterTabs = document.querySelectorAll('.filter-tab');
+        const reviewCards = document.querySelectorAll('.review-card');
+
+        filterTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Update active tab
+                filterTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+
+                const filter = tab.getAttribute('data-filter');
+
+                reviewCards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'block';
+                        setTimeout(() => {
+                            card.classList.add('visible');
+                        }, 100);
+                    } else {
+                        card.classList.remove('visible');
+                        setTimeout(() => {
+                            card.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // ==================== SORT FUNCTIONALITY ====================
+        const sortSelect = document.getElementById('sortSelect');
+        const reviewsGrid = document.getElementById('reviewsGrid');
+
+        sortSelect.addEventListener('change', () => {
+            const cards = Array.from(reviewsGrid.querySelectorAll('.review-card'));
+            const sortValue = sortSelect.value;
+
+            cards.sort((a, b) => {
+                if (sortValue === 'newest') {
+                    return new Date(b.dataset.date) - new Date(a.dataset.date);
+                } else if (sortValue === 'highest') {
+                    return parseInt(b.dataset.rating) - parseInt(a.dataset.rating);
+                } else if (sortValue === 'lowest') {
+                    return parseInt(a.dataset.rating) - parseInt(b.dataset.rating);
+                }
+            });
+
+            cards.forEach(card => {
+                card.classList.remove('visible');
+                reviewsGrid.appendChild(card);
+                setTimeout(() => {
+                    card.classList.add('visible');
+                }, 100);
+            });
+        });
+
+        // ==================== TESTIMONIAL SLIDER ====================
+        let currentSlide = 0;
+        const sliderTrack = document.getElementById('sliderTrack');
+        const slides = document.querySelectorAll('.slider-slide');
+        const totalSlides = slides.length;
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const dots = document.querySelectorAll('.slider-dot');
+
+        function goToSlide(index) {
+            if (index < 0) index = totalSlides - 1;
+            if (index >= totalSlides) index = 0;
+            currentSlide = index;
+            sliderTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+            dots.forEach(dot => dot.classList.remove('active'));
+            dots[currentSlide].classList.add('active');
+        }
+
+        prevBtn.addEventListener('click', () => goToSlide(currentSlide - 1));
+        nextBtn.addEventListener('click', () => goToSlide(currentSlide + 1));
+
+        dots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                goToSlide(parseInt(dot.getAttribute('data-slide')));
+            });
+        });
+
+        // Auto-slide
+        let autoSlide = setInterval(() => goToSlide(currentSlide + 1), 5000);
+
+        // Pause on hover
+        const sliderContainer = document.querySelector('.slider-container');
+        sliderContainer.addEventListener('mouseenter', () => clearInterval(autoSlide));
+        sliderContainer.addEventListener('mouseleave', () => {
+            autoSlide = setInterval(() => goToSlide(currentSlide + 1), 5000);
+        });
+
+        // ==================== SCROLL TO TOP ====================
+        const scrollTopBtn = document.getElementById('scrollTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // ==================== LOAD MORE BUTTON ====================
+        const loadMoreBtn = document.getElementById('loadMoreBtn');
+        let loadMoreClicked = false;
+
+        loadMoreBtn.addEventListener('click', () => {
+            if (!loadMoreClicked) {
+                const newReviews = [
+                    {
+                        initials: 'OP',
+                        name: 'Oliver Park',
+                        company: 'COO, NextGen AI',
+                        color: 'linear-gradient(135deg, #00CEC9, #0984E3)',
+                        stars: 5,
+                        tag: 'SEO Services',
+                        category: 'seo',
+                        text: 'Incredible results! Our SaaS platform went from barely visible to ranking on the first page for 20+ competitive keywords. The technical SEO audit alone was worth the investment.',
+                        date: 'Jul 15, 2024'
+                    },
+                    {
+                        initials: 'KL',
+                        name: 'Karen Lee',
+                        company: 'Owner, Lee\'s Dental Practice',
+                        color: 'linear-gradient(135deg, #E17055, #D63031)',
+                        stars: 5,
+                        tag: 'Reputation Management',
+                        category: 'reputation',
+                        text: 'After a disgruntled former employee left fake reviews everywhere, Mr Soomro\'s team helped us recover our online reputation. Patient bookings are back to normal. Forever grateful!',
+                        date: 'Jul 2, 2024'
+                    },
+                    {
+                        initials: 'WS',
+                        name: 'William Scott',
+                        company: 'Director, EcoGreen Solutions',
+                        color: 'linear-gradient(135deg, #00B894, #00CEC9)',
+                        stars: 5,
+                        tag: 'Content Strategy',
+                        category: 'content',
+                        text: 'The content strategy they developed for us was comprehensive and results-driven. Blog traffic increased 400% and our thought leadership in the green energy space is now well established.',
+                        date: 'Jun 18, 2024'
+                    }
+                ];
+
+                newReviews.forEach((review, index) => {
+                    const card = document.createElement('div');
+                    card.className = 'review-card';
+                    card.setAttribute('data-category', review.category);
+                    card.setAttribute('data-rating', review.stars);
+
+                    let starsHTML = '';
+                    for (let i = 0; i < 5; i++) {
+                        starsHTML += i < review.stars
+                            ? '<i class="fas fa-star"></i>'
+                            : '<i class="far fa-star empty"></i>';
+                    }
+
+                    card.innerHTML = `
+                        <div class="review-card-header">
+                            <div class="reviewer-avatar" style="background: ${review.color};">${review.initials}</div>
+                            <div class="reviewer-info">
+                                <h4>${review.name}</h4>
+                                <span class="company">${review.company}</span>
+                            </div>
+                        </div>
+                        <div class="review-stars">${starsHTML}</div>
+                        <span class="review-service-tag">${review.tag}</span>
+                        <p class="review-text">${review.text}</p>
+                        <div class="review-footer">
+                            <span class="review-date">${review.date}</span>
+                            <span class="verified-badge"><i class="fas fa-check-circle"></i> Verified</span>
+                        </div>
+                    `;
+
+                    reviewsGrid.appendChild(card);
+
+                    setTimeout(() => {
+                        card.classList.add('visible');
+                    }, (index + 1) * 200);
+                });
+
+                loadMoreBtn.textContent = 'All Reviews Loaded';
+                loadMoreBtn.style.opacity = '0.6';
+                loadMoreBtn.style.cursor = 'default';
+                loadMoreClicked = true;
+            }
+        });
+
+        // ==================== INTERSECTION OBSERVER FOR SECTIONS ====================
+        const observerOptions = {
+            threshold: 0.2,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    if (entry.target.classList.contains('review-hero')) {
+                        animateCounters();
+                    }
+                    if (entry.target.classList.contains('overall-rating-section')) {
+                        animateRatingBars();
+                    }
+                }
+            });
+        }, observerOptions);
+
+        document.querySelector('.review-hero') && sectionObserver.observe(document.querySelector('.review-hero'));
+        document.querySelector('.overall-rating-section') && sectionObserver.observe(document.querySelector('.overall-rating-section'));
+
+        // ==================== INITIALIZE ====================
+        document.addEventListener('DOMContentLoaded', () => {
+            animateCards();
+
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+        });
+
+        // ==================== VIDEO PLAY BUTTON EFFECT ====================
+        document.querySelectorAll('.video-thumbnail').forEach(thumb => {
+            thumb.addEventListener('click', () => {
+                const playBtn = thumb.querySelector('.play-btn');
+                playBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+                setTimeout(() => {
+                    playBtn.innerHTML = '<i class="fas fa-play" style="margin-left: 3px;"></i>';
+                    alert('Video testimonial player would open here in the full version.');
+                }, 1000);
+            });
+        });
+
+        // ==================== TOUCH SWIPE FOR SLIDER ====================
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        const slider = document.querySelector('.testimonial-slider');
+
+        slider.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        slider.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            const diff = touchStartX - touchEndX;
+            if (Math.abs(diff) > 50) {
+                if (diff > 0) {
+                    goToSlide(currentSlide + 1);
+                } else {
+                    goToSlide(currentSlide - 1);
+                }
+            }
+        }
+    </script>
+    <script src="script.js"></script>
 </body>
 </html>
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Client Reviews — Mr. Soomro SEO Agency</title>
+<meta name="description" content="Read client reviews for Mr. Soomro SEO Agency and see how our SEO, reputation management, and growth strategies help businesses rank higher.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#fdf9f3;
+    --surface:#ffffff;
+    --surface-2:#f5efe4;
+    --border:rgba(26,26,26,0.08);
+    --text:#1a1a1a;
+    --text-2:#6b6459;
+    --accent:#f5811f;
+    --accent-2:#f7b733;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Plus Jakarta Sans',sans-serif;
+    font-weight:400;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,.display{
+    font-family:'Fraunces',serif;
+    font-optical-sizing:auto;
+    letter-spacing:-0.02em;
+  }
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+ 
+  /* ---------- background texture ---------- */
+  .grain{
+    position:fixed;inset:0;pointer-events:none;z-index:2;
+    background-image:radial-gradient(rgba(255,255,255,0.025) 1px, transparent 1px);
+    background-size:3px 3px;
+    opacity:0.5;
+  }
+ 
+  /* ---------- hero ---------- */
+  header.hero{
+    position:relative;
+    padding:clamp(4rem,10vw,6rem) clamp(1.5rem,6vw,6rem) clamp(5rem,10vw,7rem);
+    display:grid;
+    grid-template-columns:1.3fr 1fr;
+    gap:3rem;
+    align-items:end;
+    border-bottom:1px solid var(--border);
+  }
+  header.hero::before{
+    content:'';
+    position:absolute;
+    top:-10%;right:-10%;
+    width:40vw;height:40vw;
+    background:radial-gradient(circle, rgba(245,129,31,0.10), transparent 65%);
+    pointer-events:none;
+  }
+  .eyebrow{
+    display:flex;align-items:center;gap:0.6rem;
+    font-size:0.78rem;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--accent);
+    margin-bottom:1.6rem;
+  }
+  .eyebrow::before{
+    content:'';
+    width:28px;height:1px;
+    background:var(--accent);
+  }
+  h1.hero-title{
+    font-size:clamp(2.8rem,6.4vw,5.4rem);
+    font-weight:500;
+    line-height:0.98;
+  }
+  h1.hero-title em{
+    font-style:italic;
+    color:var(--text-2);
+  }
+  .hero-sub{
+    color:var(--text-2);
+    font-size:clamp(1rem,1.4vw,1.15rem);
+    line-height:1.6;
+    max-width:34ch;
+    justify-self:end;
+    text-align:left;
+  }
+  .hero-stats{
+    grid-column:1 / -1;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:1px;
+    background:var(--border);
+    border:1px solid var(--border);
+    border-radius:1rem;
+    overflow:hidden;
+    margin-top:clamp(2.5rem,5vw,4rem);
+  }
+  .stat{
+    background:var(--surface);
+    padding:1.6rem clamp(1rem,2vw,1.8rem);
+  }
+  .stat .num{
+    font-family:'Fraunces',serif;
+    font-size:clamp(1.8rem,3vw,2.6rem);
+    color:var(--accent);
+  }
+  .stat .lbl{
+    color:var(--text-2);
+    font-size:0.8rem;
+    margin-top:0.3rem;
+  }
+  @media (max-width:900px){
+    header.hero{grid-template-columns:1fr;}
+    .hero-sub{justify-self:start;}
+    .hero-stats{grid-template-columns:repeat(2,1fr);}
+  }
+ 
+  /* ---------- reviews section ---------- */
+  main{
+    padding:clamp(4rem,8vw,6rem) clamp(1.5rem,6vw,6rem) clamp(7rem,12vw,10rem);
+  }
+  .section-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    gap:2rem;
+    margin-bottom:clamp(2.5rem,5vw,4rem);
+    flex-wrap:wrap;
+  }
+  .section-head h2{
+    font-size:clamp(1.9rem,3.4vw,2.8rem);
+    font-weight:500;
+  }
+  .section-head p{
+    color:var(--text-2);
+    max-width:34ch;
+    font-size:0.95rem;
+    line-height:1.6;
+  }
+ 
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:1.25rem;
+  }
+  .card{
+    position:relative;
+    overflow:hidden;
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:1.1rem;
+    padding:1.9rem;
+    display:flex;
+    flex-direction:column;
+    gap:1.4rem;
+    opacity:0;
+    transform:translateY(28px);
+    transition:opacity 0.7s cubic-bezier(0.22,1,0.36,1), transform 0.7s cubic-bezier(0.22,1,0.36,1), border-color 0.3s ease;
+  }
+  .card.visible{opacity:1;transform:translateY(0);}
+  .card::before{
+    content:'';
+    position:absolute;inset:0;
+    background:radial-gradient(280px circle at var(--mx,50%) var(--my,50%), rgba(245,129,31,0.10), transparent 70%);
+    opacity:0;
+    transition:opacity 0.35s ease;
+    pointer-events:none;
+  }
+  .card:hover::before{opacity:1;}
+  .card:hover{border-color:rgba(245,129,31,0.35);}
+ 
+  .card:nth-child(2){transition-delay:70ms;}
+  .card:nth-child(3){transition-delay:140ms;}
+  .card:nth-child(4){transition-delay:210ms;}
+  .card:nth-child(5){transition-delay:280ms;}
+  .card:nth-child(6){transition-delay:350ms;}
+ 
+  .stars{display:flex;gap:0.25rem;}
+  .stars svg{width:15px;height:15px;fill:var(--accent);}
+ 
+  .quote{
+    font-size:1.02rem;
+    line-height:1.62;
+    color:var(--text);
+    flex:1;
+  }
+  .quote::before{content:'"';color:var(--accent);}
+  .quote::after{content:'"';color:var(--accent);}
+ 
+  .metric{
+    display:inline-flex;
+    align-self:flex-start;
+    align-items:center;
+    gap:0.4rem;
+    background:rgba(245,129,31,0.10);
+    color:var(--accent);
+    border:1px solid rgba(245,129,31,0.22);
+    font-size:0.76rem;
+    font-weight:600;
+    padding:0.3rem 0.7rem;
+    border-radius:999px;
+  }
+ 
+  .author{
+    display:flex;
+    align-items:center;
+    gap:0.85rem;
+    padding-top:1.2rem;
+    border-top:1px solid var(--border);
+  }
+  .avatar{
+    width:42px;height:42px;
+    border-radius:50%;
+    background:var(--surface-2);
+    border:1px solid var(--border);
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Fraunces',serif;
+    font-size:0.85rem;
+    color:var(--accent);
+    flex-shrink:0;
+  }
+  .a-name{font-size:0.92rem;font-weight:600;}
+  .a-role{font-size:0.78rem;color:var(--text-2);}
+ 
+  @media (max-width:960px){
+    .grid{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width:640px){
+    .grid{grid-template-columns:1fr;}
+  }
+ 
+  /* ---------- CTA band ---------- */
+  .cta-band{
+    margin:0 clamp(1.5rem,6vw,6rem) clamp(6rem,10vw,8rem);
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:1.4rem;
+    padding:clamp(2.5rem,6vw,4rem);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:2rem;
+    flex-wrap:wrap;
+    position:relative;
+    overflow:hidden;
+  }
+  .cta-band::before{
+    content:'';
+    position:absolute;
+    bottom:-40%;left:-10%;
+    width:30vw;height:30vw;
+    background:radial-gradient(circle, rgba(247,183,51,0.16), transparent 65%);
+  }
+  .cta-band h3{
+    font-family:'Fraunces',serif;
+    font-weight:500;
+    font-size:clamp(1.6rem,3vw,2.3rem);
+    max-width:20ch;
+  }
+  .btn-primary{
+    background:var(--accent);
+    color:#0e1011;
+    font-weight:600;
+    font-size:0.9rem;
+    padding:0.95rem 1.9rem;
+    border-radius:999px;
+    display:inline-block;
+    transition:transform 0.45s cubic-bezier(0.34,1.56,0.64,1);
+  }
+ 
+  /* ---------- footer ---------- */
+  footer{
+    padding:clamp(3rem,6vw,4.5rem) clamp(1.5rem,6vw,6rem) 2.5rem;
+    border-top:1px solid var(--border);
+  }
+  .ft-top{
+    display:grid;
+    grid-template-columns:1.4fr repeat(4,1fr);
+    gap:2.5rem;
+    margin-bottom:3rem;
+  }
+  .ft-logo{
+    font-family:'Fraunces',serif;
+    font-size:1.3rem;
+    font-weight:600;
+  }
+  .ft-logo span{color:var(--accent);}
+  .ft-desc{
+    color:var(--text-2);
+    font-size:0.88rem;
+    line-height:1.65;
+    margin-top:0.9rem;
+    max-width:32ch;
+  }
+  .ft-social{display:flex;gap:0.6rem;margin-top:1.4rem;}
+  .ft-social a{
+    width:36px;height:36px;
+    border:1px solid var(--border);
+    border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    transition:border-color 0.3s ease, transform 0.4s cubic-bezier(0.34,1.56,0.64,1);
+  }
+  .ft-social a:hover{border-color:var(--accent);transform:translateY(-3px);}
+  .ft-social svg{width:15px;height:15px;fill:none;stroke:var(--text-2);stroke-width:1.8;}
+  .ft-col h4{
+    font-size:0.78rem;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    color:var(--text-2);
+    margin-bottom:1rem;
+  }
+  .ft-col ul{list-style:none;display:flex;flex-direction:column;gap:0.6rem;}
+  .ft-col ul li a{font-size:0.86rem;color:var(--text);opacity:0.85;transition:opacity 0.25s ease;}
+  .ft-col ul li a:hover{opacity:1;color:var(--accent);}
+  .ft-addr{color:var(--text-2);font-size:0.78rem;line-height:1.5;}
+  .ft-bottom{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:1rem;
+    padding-top:1.6rem;
+    border-top:1px solid var(--border);
+    font-size:0.8rem;
+    color:var(--text-2);
+  }
+  .ft-bottom a{color:var(--text-2);}
+  .ft-bottom a:hover{color:var(--accent);}
+  .ft-links{display:flex;gap:1.4rem;}
+  @media (max-width:860px){
+    .ft-top{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width:520px){
+    .ft-top{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+ 
+<div class="grain"></div>
+ 
+<header class="hero">
+  <div>
+    <div class="eyebrow">Client Reviews</div>
+    <h1 class="hero-title">What our<br><em>clients</em> say</h1>
+  </div>
+  <p class="hero-sub">Real feedback from businesses that trusted Mr. Soomro SEO Agency for search growth, stronger rankings, reputation management, and measurable organic results.</p>
+ 
+  <div class="hero-stats">
+    <div class="stat"><div class="num">180%</div><div class="lbl">avg. organic traffic growth</div></div>
+    <div class="stat"><div class="num">47</div><div class="lbl">avg. issues fixed per audit</div></div>
+    <div class="stat"><div class="num">4.9/5</div><div class="lbl">average client rating</div></div>
+    <div class="stat"><div class="num">2016</div><div class="lbl">serving Pakistan since</div></div>
+  </div>
+</header>
+ 
+<main>
+  <div class="section-head">
+    <h2>Straight from the source</h2>
+    <p>No filtered testimonials — this is what happens when the strategy is right and the reporting is honest.</p>
+  </div>
+ 
+  <div class="grid">
+ 
+    <article class="card" data-spotlight>
+      <div class="stars">
+        <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.9 4.2 1.5 6.3L10 14.9 4.4 18l1.5-6.3L1 7.5l6.4-.6z"/></svg>
+        <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.9 4.2 1.5 6.3L10 14.9 4.4 18l1.5-6.3L1 7.5l6.4-.6z"/></svg>
+        <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.9 4.2 1.5 6.3L10 14.9 4.4 18l1.5-6.3L1 7.5l6.4-.6z"/></svg>
+        <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.9 4.2 1.5 6.3L10 14.9 4.4 18l1.5-6.3L1 7.5l6.4-.6z"/></svg>
+        <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.9 4.2 1.5 6.3L10 14.9 4.4 18l1.5-6.3L1 7.5l6.4-.6z"/></svg>
+      </div>
+      <div class="metric">↑ 4 months to #1 ranking</div>
+      <p class="quote">Mr. Soomro took our website from page 5 to position #1 for our main keyword in just 4 months. Our organic leads tripled and cost per lead dropped by 43%.</p>
+      <div class="author">
+        <div class="avatar">SA</div>
+        <div>
+          <div class="a-name">Sufiyan Ali</div>
+          <div class="a-role">CEO, TechSpark Solutions — Karachi</div>
+        </div>
+      </div>
+    </article>
+ 
+    <article class="card" data-spotlight>
+      <div class="stars">
+        <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.9 4.2 1.5 6.3L10 14.9 4.4 18l1.5-6.3L1 7.5l6.4-.6z"/></svg>
+        <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.9 4.2 1.5 6.3L10 14.9 4.4 18l1.5-6.3L1 7.5l6.4-.6z"/></svg>
+        <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.9 4.2 1.5 6.3L10 14.9 4.4 18l1.5-6.3L1 7.5l6.4-.6z"/></svg>
+        <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.9 4.2 1.5 6.3L10 14.9 4.4 18l1.5-6.3L1 7.5l6.4-.6z"/></svg>
+        <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.9 4.2 1.5 6.3L10 14.9 4.4 18l1.5-6.3L1 7.5l6.4-.6z"/></svg>
+      </div>
+      <div class="metric">↓ 3.8s → 1.1s load time</div>
+      <p class="quote">The technical SEO audit alone was worth every penny. They found 47 critical issues we had no idea about. Our site speed went from 3.8s to 1.1s.</p>
+      <div class="author">
+        <div class="avatar">RA</div>
+        <div>
+          <div class="a-name">Rahim Ali</div>
+          <div class="a-role">Founder, BloomBoutique Online Store</div>
+        </div>
+      </div>
+    </article>
+ 
+    <article class="card" data-spotlight>
+      <div class="stars">
+        <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.9 4.2 1.5 6.3L10 14.9 4.4 18l1.5-6.3L1 7.5l6.4-.6z"/></svg>
+        <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.9 4.2 1.5 6.3L10 14.9 4.4 18l1.5-6.3L1 7.5l6.4-.6z"/></svg>
+        <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.9 4.2 1.5 6.3L10 14.9 4.4 18l1.5-6.3L1 7.5l6.4-.6z"/></svg>
+        <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.9 4.2 1.5 6.3L10 14.9 4.4 18l1.5-6.3L1 7.5l6.4-.6z"/></svg>
+        <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.9 4.2 1.5 6.3L10 14.9 4.4 18l1.5-6.3L1 7.5l6.4-.6z"/></svg>
+      </div>
+      <div class="metric">↑ 180% organic traffic</div>
+      <p class="quote">Professional, transparent and results-driven. We saw a 180% increase in organic traffic in 6 months. The monthly reporting is exceptional.</p>
+      <div class="author">
+        <div class="avatar">FS</div>
+        <div>
+          <div class="a-name">Fatima Sohail</div>
+          <div class="a-role">Marketing Director, Nexus Retail Group</div>
+        </div>
+      </div>
+    </article>
+ 
+    <article class="card" data-spotlight>
+      <div class="stars">
+        <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.9 4.2 1.5 6.3L10 14.9 4.4 18l1.5-6.3L1 7.5l6.4-.6z"/></svg>
+        <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.9 4.2 1.5 6.3L10 14.9 4.4 18l1.5-6.3L1 7.5l6.4-.6z"/></svg>
+        <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.9 4.2 1.5 6.3L10 14.9 4.4 18l1.5-6.3L1 7.5l6.4-.6z"/></svg>
+        <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.9 4.2 1.5 6.3L10 14.9 4.4 18l1.5-6.3L1 7.5l6.4-.6z"/></svg>
+        <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.9 4.2 1.5 6.3L10 14.9 4.4 18l1.5-6.3L1 7.5l6.4-.6z"/></svg>
+      </div>
+      <div class="metric">Top 3 on Google Maps</div>
+      <p class="quote">Our local business was completely invisible online. After just 3 months with Mr. Soomro, we rank in the top 3 in Google Maps for all our main services.</p>
+      <div class="author">
+        <div class="avatar">HK</div>
+        <div>
+          <div class="a-name">Huzaifa Khan</div>
+          <div class="a-role">Owner, ZB Dental Clinic — Lahore</div>
+        </div>
+      </div>
+    </article>
+ 
+    <article class="card" data-spotlight>
+      <div class="stars">
+        <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.9 4.2 1.5 6.3L10 14.9 4.4 18l1.5-6.3L1 7.5l6.4-.6z"/></svg>
+        <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.9 4.2 1.5 6.3L10 14.9 4.4 18l1.5-6.3L1 7.5l6.4-.6z"/></svg>
+        <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.9 4.2 1.5 6.3L10 14.9 4.4 18l1.5-6.3L1 7.5l6.4-.6z"/></svg>
+        <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.9 4.2 1.5 6.3L10 14.9 4.4 18l1.5-6.3L1 7.5l6.4-.6z"/></svg>
+        <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.9 4.2 1.5 6.3L10 14.9 4.4 18l1.5-6.3L1 7.5l6.4-.6z"/></svg>
+      </div>
+      <div class="metric">↑ 300% blog visitors</div>
+      <p class="quote">Their content strategy transformed our blog into a lead machine. 300% more organic visitors, 40% lower bounce rate, and a clear path for growth.</p>
+      <div class="author">
+        <div class="avatar">FA</div>
+        <div>
+          <div class="a-name">Faraz Ahmed</div>
+          <div class="a-role">Co-Founder, FinanceWiz Pakistan</div>
+        </div>
+      </div>
+    </article>
+ 
+    <article class="card" data-spotlight>
+      <div class="stars">
+        <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.9 4.2 1.5 6.3L10 14.9 4.4 18l1.5-6.3L1 7.5l6.4-.6z"/></svg>
+        <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.9 4.2 1.5 6.3L10 14.9 4.4 18l1.5-6.3L1 7.5l6.4-.6z"/></svg>
+        <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.9 4.2 1.5 6.3L10 14.9 4.4 18l1.5-6.3L1 7.5l6.4-.6z"/></svg>
+        <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.9 4.2 1.5 6.3L10 14.9 4.4 18l1.5-6.3L1 7.5l6.4-.6z"/></svg>
+        <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.9 6.4.6-4.9 4.2 1.5 6.3L10 14.9 4.4 18l1.5-6.3L1 7.5l6.4-.6z"/></svg>
+      </div>
+      <div class="metric">Weekly transparent reporting</div>
+      <p class="quote">The team understood our goals quickly, cleaned up our search presence, and gave us clear weekly progress. We finally feel in control of our online reputation.</p>
+      <div class="author">
+        <div class="avatar">NR</div>
+        <div>
+          <div class="a-name">Nadia Rizwan</div>
+          <div class="a-role">Operations Lead, Prime Auto Care</div>
+        </div>
+      </div>
+    </article>
+
+    
+</div>
+
+  <div style="margin-top:clamp(4rem,8vw,6rem)"> </div>
+
+  <div class="cta-band">
+    <h3>Ready to see your business rank where clients actually look?</h3>
+    <a href="../index.html#contact" class="btn-primary">Get a free SEO audit</a>
+  </div>
+</main>
+ 
+<footer itemscope itemtype="https://schema.org/Organization">
+  <div class="ft-top">
+    <div>
+      <div class="ft-logo">MR.<span>Soomro</span></div>
+      <p class="ft-desc" itemprop="description">Pakistan's trusted SEO agency helping businesses rank higher, attract more clients and grow sustainably with data-driven search strategies since 2016.</p>
+      <div class="ft-social">
+        <a href="https://wa.me/923092102705" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg></a>
+        <a href="https://facebook.com/mrSoomro" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+        <a href="https://linkedin.com/in/mrSoomro" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        <a href="https://instagram.com/mrSoomro" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+        <a href="mailto:info@mr-soomro.com" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+      </div>
+    </div>
+    <div class="ft-col">
+      <h4>Technical SEO</h4>
+      <ul>
+        <li><a href="services.html">Website Audit</a></li>
+        <li><a href="services.html">Core Web Vitals</a></li>
+        <li><a href="services.html">Schema Markup</a></li>
+        <li><a href="services.html">Crawl Error Fixes</a></li>
+      </ul>
+    </div>
+    <div class="ft-col">
+      <h4>On-Page / Off-Page</h4>
+      <ul>
+        <li><a href="services.html">Keyword Research</a></li>
+        <li><a href="services.html">Meta Optimization</a></li>
+        <li><a href="services.html">Link Building</a></li>
+        <li><a href="services.html">Digital PR</a></li>
+      </ul>
+    </div>
+    <div class="ft-col">
+      <h4>Local / E-commerce</h4>
+      <ul>
+        <li><a href="services.html">Google Business Profile</a></li>
+        <li><a href="services.html">Citation Building</a></li>
+        <li><a href="services.html">Shopify SEO</a></li>
+        <li><a href="services.html">WooCommerce SEO</a></li>
+      </ul>
+    </div>
+    <div class="ft-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="mailto:info@mr-soomro.com">info@mr-soomro.com</a></li>
+        <li><a href="tel:+923092102705">0309 210 2705</a></li>
+        <li><a href="https://wa.me/923092102705">WhatsApp</a></li>
+      </ul>
+      <p class="ft-addr" style="margin-top:0.9rem;">House No G 209, Mohallah Humayoo, Masjid Al Fazal Town, Phuleli, Hyderabad, Sindh, Pakistan 71000</p>
+    </div>
+  </div>
+  <div class="ft-bottom">
+    <div>&copy; 2026 <a href="../index.html">Mr. Soomro SEO Agency</a>. All rights reserved.</div>
+    <div class="ft-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms &amp; Conditions</a>
+      <a href="cookie-policy.html">Cookie Policy</a>
+    </div>
+  </div>
+</footer>
+ 
+<script>
+  // scroll-reveal for cards
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.card').forEach(el => io.observe(el));
+ 
+  // spotlight cursor tracking
+  document.querySelectorAll('[data-spotlight]').forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const r = card.getBoundingClientRect();
+      card.style.setProperty('--mx', `${e.clientX - r.left}px`);
+      card.style.setProperty('--my', `${e.clientY - r.top}px`);
+    });
+  });
+</script>
+
+</body>
+</html> -->

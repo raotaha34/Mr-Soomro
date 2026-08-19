@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Authority Backlinks Services | High-Quality SEO Link Building</title>
+<meta name="description" content="Build high-quality authority backlinks from trusted, relevant websites to improve search rankings, strengthen domain authority, and drive consistent organic traffic.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="icon" href="assets/favicon.png" type="image/png">
+ <link rel="icon" href="../assets/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+
+<style>
+  :root{
+    --orange:#F5811F;
+    --amber:#F7B733;
+    --grad: linear-gradient(135deg, var(--orange), var(--amber));
+    --cream:#FDF9F3;
+    --cream-deep:#FBF1E4;
+    --ink:#171412;
+    --ink-soft:#4a453f;
+    --gray:#8a8479;
+    --line:#EDE4D6;
+    --white:#ffffff;
+    --shadow: 0 20px 50px -20px rgba(23,20,18,0.18);
+    --shadow-sm: 0 10px 25px -12px rgba(23,20,18,0.14);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Inter', sans-serif;
+    color:var(--ink);
+    background:var(--cream);
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  img{max-width:100%; display:block;}
+  a{text-decoration:none; color:inherit;}
+  ul{list-style:none;}
+  button{font-family:inherit; cursor:pointer;}
+  .wrap{max-width:1200px; margin:0 auto; padding:0 32px;}
+  h1,h2,h3,h4{font-family:'Plus Jakarta Sans', sans-serif; letter-spacing:-0.02em; line-height:1.08;}
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:9px;
+    background:#fff; border:1px solid var(--line);
+    padding:8px 18px; border-radius:100px;
+    font-size:12px; font-weight:700; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--ink-soft);
+    box-shadow:var(--shadow-sm);
+  }
+  .eyebrow .dot{width:7px; height:7px; border-radius:50%; background:var(--grad); flex-shrink:0;}
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:8px;
+    padding:15px 30px; border-radius:12px; font-weight:700; font-size:15px;
+    border:none; transition:transform .25s ease, box-shadow .25s ease, background .25s ease;
+    white-space:nowrap;
+  }
+  .btn-primary{ background:var(--grad); color:#fff; box-shadow:0 12px 24px -8px rgba(245,129,31,0.55);}
+  .btn-primary:hover{ transform:translateY(-2px); box-shadow:0 16px 30px -8px rgba(245,129,31,0.65);}
+  .btn-outline{ background:#fff; color:var(--ink); border:1.5px solid var(--line);}
+  .btn-outline:hover{ border-color:var(--orange); color:var(--orange); transform:translateY(-2px);}
+  .btn-outline-light{ background:transparent; color:#fff; border:1.5px solid rgba(255,255,255,.4);}
+  .btn-outline-light:hover{ background:rgba(255,255,255,.12); border-color:#fff;}
+  section{position:relative;}
+  .section-pad{ padding:110px 0; }
+  .kicker{
+    font-size:12px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:var(--orange); margin-bottom:16px; display:block;
+  }
+  .section-head{ max-width:640px; margin-bottom:56px; }
+  .section-head.center{ margin-left:auto; margin-right:auto; text-align:center; }
+  .section-head h2{ font-size:clamp(30px,4vw,44px); font-weight:800; margin-bottom:18px; }
+  .section-head p{ font-size:17px; color:var(--ink-soft); line-height:1.65; }
+
+  /* reveal */
+  .reveal{ opacity:0; transform:translateY(26px); transition:opacity .7s ease, transform .7s ease; }
+  .reveal.in{ opacity:1; transform:translateY(0); }
+
+  /* HEADER */
+  header{
+    position:sticky; top:0; z-index:100;
+    background:rgba(253,249,243,0.85); backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{ display:flex; align-items:center; justify-content:space-between; padding:16px 32px; max-width:1200px; margin:0 auto;}
+  .logo{ display:flex; align-items:center; gap:11px; font-weight:800; font-size:17px; font-family:'Plus Jakarta Sans',sans-serif;}
+  .logo-mark{
+    width:36px; height:36px; border-radius:10px; background:var(--grad);
+    display:flex; align-items:center; justify-content:center; color:#fff; font-size:17px; flex-shrink:0;
+    box-shadow:0 8px 16px -6px rgba(245,129,31,.55);
+  }
+  .logo small{ display:block; font-weight:500; font-size:10.5px; color:var(--gray); letter-spacing:.02em; font-family:'Inter',sans-serif;}
+  nav.links{ display:flex; align-items:center; gap:34px; }
+  nav.links a{ font-size:14.5px; font-weight:600; color:var(--ink-soft); transition:color .2s; position:relative; padding:4px 0;}
+  nav.links a:hover{ color:var(--ink); }
+  nav.links a.active{ color:var(--orange); }
+  nav.links a.active::after{
+    content:''; position:absolute; left:0; right:0; bottom:-4px; height:2px; background:var(--grad); border-radius:2px;
+  }
+  .nav-cta{ display:flex; align-items:center; gap:22px; }
+  .menu-btn{ display:none; background:none; border:none; }
+
+  /* HERO */
+  .hero{ padding:76px 0 60px; background:
+      radial-gradient(circle at 85% 10%, rgba(247,183,51,0.20), transparent 45%),
+      radial-gradient(circle at 10% 90%, rgba(245,129,31,0.10), transparent 45%),
+      var(--cream);
+    overflow:hidden;
+  }
+  .hero-grid{ display:grid; grid-template-columns:1.05fr .95fr; gap:60px; align-items:center; }
+  .hero h1.tag{ font-size:13px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--gray); margin:26px 0 10px;}
+  .hero-headline{ font-size:clamp(38px,4.6vw,58px); font-weight:800; margin-bottom:22px; }
+  .hero-headline .accent{
+    background:var(--grad); -webkit-background-clip:text; background-clip:text; color:transparent;
+  }
+  .hero-desc{ font-size:17.5px; line-height:1.7; color:var(--ink-soft); max-width:520px; margin-bottom:14px;}
+  .hero-sub{ font-size:14.5px; line-height:1.6; color:var(--gray); max-width:520px; margin-bottom:34px;}
+  .hero-actions{ display:flex; gap:14px; flex-wrap:wrap; margin-bottom:0; }
+  .hero-visual{ position:relative; }
+  .hero-panel{
+    background:linear-gradient(160deg,#20201d,#0f0e0c);
+    border-radius:26px; padding:34px; box-shadow:var(--shadow);
+    color:#fff; position:relative; overflow:hidden;
+  }
+  .hero-panel::before{
+    content:''; position:absolute; inset:0;
+    background:radial-gradient(circle at 30% 20%, rgba(247,183,51,0.18), transparent 55%);
+  }
+  .hero-panel-head{ display:flex; align-items:center; justify-content:space-between; margin-bottom:26px; position:relative;}
+  .hero-panel-head .lab{ font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:rgba(255,255,255,.5); font-weight:700;}
+  .link-node{
+    display:flex; align-items:center; justify-content:space-between;
+    background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.09);
+    border-radius:14px; padding:14px 16px; margin-bottom:10px; position:relative;
+  }
+  .link-node .site{ display:flex; align-items:center; gap:11px; font-size:13.5px; font-weight:600;}
+  .site-ico{ width:30px; height:30px; border-radius:8px; background:var(--grad); display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:800; color:#171412;}
+  .link-node .metric{ font-size:12px; color:#F7B733; font-weight:700; }
+  .float-card{
+    position:absolute; background:#fff; color:var(--ink); border-radius:16px; padding:14px 18px;
+    box-shadow:var(--shadow); display:flex; align-items:center; gap:12px; z-index:5;
+  }
+  .float-card .fc-ico{ width:38px; height:38px; border-radius:10px; background:var(--cream-deep); display:flex; align-items:center; justify-content:center; color:var(--orange); flex-shrink:0;}
+  .float-card .fc-num{ font-size:17px; font-weight:800; font-family:'Plus Jakarta Sans',sans-serif; line-height:1.1;}
+  .float-card .fc-lab{ font-size:10.5px; color:var(--gray); font-weight:600; text-transform:uppercase; letter-spacing:.05em;}
+  .float-1{ top:-18px; left:-24px; }
+  .float-2{ bottom:-20px; right:-18px; }
+
+  .hero-stats{ display:flex; gap:44px; margin-top:44px; padding-top:30px; border-top:1px solid var(--line); flex-wrap:wrap;}
+  .hero-stats .stat b{ display:block; font-size:30px; font-weight:800; font-family:'Plus Jakarta Sans',sans-serif;
+    background:var(--grad); -webkit-background-clip:text; background-clip:text; color:transparent;}
+  .hero-stats .stat span{ font-size:12px; color:var(--gray); font-weight:600; text-transform:uppercase; letter-spacing:.06em;}
+
+  /* WHY IT MATTERS - checklist */
+  .why-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:18px; }
+  .why-card{
+    background:#fff; border:1px solid var(--line); border-radius:18px; padding:26px 22px;
+    transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+  }
+  .why-card:hover{ transform:translateY(-5px); box-shadow:var(--shadow-sm); border-color:transparent; }
+  .why-ico{ width:44px; height:44px; border-radius:12px; background:var(--cream-deep); color:var(--orange); display:flex; align-items:center; justify-content:center; margin-bottom:16px;}
+  .why-card h3{ font-size:15.5px; font-weight:700; line-height:1.4; }
+
+  /* FEATURE CARDS - what you get */
+  .alt-bg{ background:var(--cream-deep); }
+  .feat-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+  .feat-card{ background:#fff; border-radius:20px; padding:32px 28px; box-shadow:var(--shadow-sm); }
+  .feat-num{ font-family:'Plus Jakarta Sans',sans-serif; font-weight:800; font-size:13px; color:var(--orange); letter-spacing:.06em; margin-bottom:14px; display:block;}
+  .feat-card h3{ font-size:19px; font-weight:700; margin-bottom:10px;}
+  .feat-card p{ font-size:14.5px; color:var(--ink-soft); line-height:1.65;}
+
+  /* PROCESS TIMELINE */
+  .process-list{ position:relative; }
+  .process-list::before{
+    content:''; position:absolute; left:27px; top:14px; bottom:14px; width:2px;
+    background:linear-gradient(var(--orange), var(--amber)); opacity:.35;
+  }
+  .process-item{ display:flex; gap:26px; position:relative; padding-bottom:44px;}
+  .process-item:last-child{ padding-bottom:0; }
+  .process-step-num{
+    width:56px; height:56px; border-radius:16px; background:var(--grad); color:#fff;
+    font-family:'Plus Jakarta Sans',sans-serif; font-weight:800; font-size:19px;
+    display:flex; align-items:center; justify-content:center; flex-shrink:0; position:relative; z-index:2;
+    box-shadow:0 10px 20px -8px rgba(245,129,31,.5);
+  }
+  .process-body{ background:#fff; border:1px solid var(--line); border-radius:16px; padding:22px 26px; flex:1; }
+  .process-body h3{ font-size:17px; font-weight:700; margin-bottom:7px;}
+  .process-body p{ font-size:14.5px; color:var(--ink-soft); line-height:1.65;}
+
+  /* PRICING */
+  .pricing-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; align-items:stretch;}
+  .price-card{
+    background:#fff; border:1.5px solid var(--line); border-radius:22px; padding:36px 30px;
+    display:flex; flex-direction:column; transition:transform .3s ease, box-shadow .3s ease;
+  }
+  .price-card:hover{ transform:translateY(-6px); box-shadow:var(--shadow); }
+  .price-card.popular{
+    background:linear-gradient(165deg,#1c1a17,#0d0c0a); color:#fff; border:none;
+    position:relative; transform:scale(1.045); box-shadow:var(--shadow);
+  }
+  .price-card.popular:hover{ transform:scale(1.045) translateY(-6px); }
+  .popular-tag{
+    position:absolute; top:-14px; left:50%; transform:translateX(-50%);
+    background:var(--grad); color:#fff; font-size:11.5px; font-weight:800; letter-spacing:.08em; text-transform:uppercase;
+    padding:7px 18px; border-radius:100px; box-shadow:0 8px 18px -6px rgba(245,129,31,.6);
+  }
+  .price-name{ font-size:13px; font-weight:700; text-transform:uppercase; letter-spacing:.1em; color:var(--gray); margin-bottom:14px;}
+  .price-card.popular .price-name{ color:rgba(255,255,255,.55); }
+  .price-amt{ font-family:'Plus Jakarta Sans',sans-serif; font-size:44px; font-weight:800; margin-bottom:4px;}
+  .price-qty{ font-size:15px; font-weight:600; color:var(--ink-soft); margin-bottom:24px;}
+  .price-card.popular .price-qty{ color:rgba(255,255,255,.75); }
+  .price-feats{ margin-bottom:26px; flex:1; }
+  .price-feats li{ display:flex; align-items:flex-start; gap:10px; font-size:14.5px; padding:8px 0; color:var(--ink-soft); line-height:1.5;}
+  .price-card.popular .price-feats li{ color:rgba(255,255,255,.85); }
+  .price-feats li svg{ flex-shrink:0; margin-top:2px; color:var(--orange); }
+  .price-card.popular .price-feats li svg{ color:var(--amber); }
+  .price-best{ font-size:13px; color:var(--gray); margin-bottom:20px; line-height:1.5;}
+  .price-card.popular .price-best{ color:rgba(255,255,255,.6); }
+  .price-best b{ color:var(--ink); font-weight:700;}
+  .price-card.popular .price-best b{ color:#fff; }
+  .price-card .btn{ width:100%; }
+  .price-card:not(.popular) .btn-primary{ background:var(--ink); box-shadow:none; }
+  .price-card:not(.popular) .btn-primary:hover{ background:var(--orange); }
+
+  /* CUSTOM CAMPAIGN BANNER */
+  .custom-banner{
+    background:linear-gradient(120deg,#1c1a17,#0d0c0a);
+    border-radius:28px; padding:56px 60px; color:#fff;
+    display:flex; align-items:center; justify-content:space-between; gap:48px;
+    position:relative; overflow:hidden;
+  }
+  .custom-banner::before{
+    content:''; position:absolute; right:-80px; top:-80px; width:320px; height:320px; border-radius:50%;
+    background:radial-gradient(circle, rgba(247,183,51,0.24), transparent 70%);
+  }
+  .custom-banner .cb-text{ max-width:600px; position:relative;}
+  .custom-banner h2{ font-size:clamp(24px,3vw,32px); font-weight:800; margin-bottom:14px;}
+  .custom-banner p{ font-size:15px; color:rgba(255,255,255,.75); line-height:1.7; margin-bottom:16px;}
+  .custom-banner ul{ display:flex; flex-wrap:wrap; gap:10px; margin-bottom:0;}
+  .custom-banner ul li{
+    font-size:12.5px; font-weight:600; color:rgba(255,255,255,.85);
+    background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.14);
+    padding:7px 14px; border-radius:100px;
+  }
+  .custom-banner .cb-cta{ flex-shrink:0; position:relative; }
+
+  /* INDUSTRIES */
+  .ind-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
+  .ind-card{
+    background:#fff; border:1px solid var(--line); border-radius:16px; padding:22px 18px;
+    display:flex; align-items:center; gap:13px; transition:all .25s ease;
+  }
+  .ind-card:hover{ border-color:var(--orange); box-shadow:var(--shadow-sm); transform:translateY(-3px); }
+  .ind-ico{ width:38px; height:38px; border-radius:10px; background:var(--cream-deep); color:var(--orange); display:flex; align-items:center; justify-content:center; flex-shrink:0;}
+  .ind-card span{ font-size:14px; font-weight:600;}
+
+  /* DIFFERENT / 4 cards */
+  .diff-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:22px;}
+  .diff-card{ background:#fff; border-radius:20px; padding:32px; border:1px solid var(--line);}
+  .diff-mark{ font-family:'Plus Jakarta Sans',sans-serif; font-weight:800; font-size:15px; color:var(--orange); margin-bottom:14px; display:inline-block;}
+  .diff-card h3{ font-size:19px; font-weight:700; margin-bottom:10px;}
+  .diff-card p{ font-size:14.5px; color:var(--ink-soft); line-height:1.7;}
+
+  /* WHY CHOOSE */
+  .why2-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:0 40px; }
+  .why2-item{ display:flex; gap:18px; padding:24px 0; border-bottom:1px solid var(--line); }
+  .why2-item:nth-last-child(1), .why2-item:nth-last-child(2){ border-bottom:none; }
+  .why2-ico{ width:46px; height:46px; border-radius:13px; background:var(--grad); color:#fff; display:flex; align-items:center; justify-content:center; flex-shrink:0;}
+  .why2-item h3{ font-size:16.5px; font-weight:700; margin-bottom:6px;}
+  .why2-item p{ font-size:14px; color:var(--ink-soft); line-height:1.6;}
+
+  /* FAQ */
+  .faq-wrap{ max-width:800px; margin:0 auto; }
+  .faq-item{ border-bottom:1px solid var(--line); }
+  .faq-q{
+    width:100%; background:none; border:none; padding:24px 4px; display:flex; align-items:center; justify-content:space-between;
+    text-align:left; font-size:16.5px; font-weight:700; font-family:'Plus Jakarta Sans',sans-serif; color:var(--ink);
+  }
+  .faq-q .plus{ width:26px; height:26px; border-radius:8px; background:var(--cream-deep); color:var(--orange); flex-shrink:0; display:flex; align-items:center; justify-content:center; transition:transform .3s ease; margin-left:16px;}
+  .faq-item.open .faq-q .plus{ transform:rotate(45deg); background:var(--grad); color:#fff;}
+  .faq-a{ max-height:0; overflow:hidden; transition:max-height .35s ease; }
+  .faq-a p{ padding:0 4px 24px; font-size:14.5px; color:var(--ink-soft); line-height:1.7; max-width:680px;}
+
+  /* FINAL CTA */
+  .final-cta{
+    background:linear-gradient(120deg,#1c1a17,#0d0c0a); color:#fff; border-radius:28px; padding:70px 60px; text-align:center;
+    position:relative; overflow:hidden;
+  }
+  .final-cta::before{
+    content:''; position:absolute; inset:0;
+    background:radial-gradient(circle at 50% 0%, rgba(247,183,51,0.22), transparent 55%);
+  }
+  .final-cta h2{ font-size:clamp(28px,4vw,42px); font-weight:800; margin-bottom:16px; position:relative;}
+  .final-cta > p.lead{ font-size:16px; color:rgba(255,255,255,.72); max-width:600px; margin:0 auto 26px; line-height:1.7; position:relative;}
+  .final-cta .sub{ font-size:13px; font-weight:700; text-transform:uppercase; letter-spacing:.12em; color:var(--amber); margin-bottom:8px; position:relative;}
+  .final-cta .desc{ font-size:14.5px; color:rgba(255,255,255,.65); max-width:540px; margin:0 auto 34px; line-height:1.7; position:relative;}
+  .final-actions{ display:flex; gap:14px; justify-content:center; flex-wrap:wrap; position:relative;}
+
+  /* FOOTER */
+  footer{ background:#12100e; color:rgba(255,255,255,.65); padding:64px 0 26px; }
+  .foot-grid{ display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:40px; margin-bottom:50px;}
+  .foot-logo{ display:flex; align-items:center; gap:11px; color:#fff; font-weight:800; font-size:17px; font-family:'Plus Jakarta Sans',sans-serif; margin-bottom:16px;}
+  .foot-desc{ font-size:14px; line-height:1.7; max-width:280px;}
+  .foot-col h4{ color:#fff; font-size:13.5px; font-weight:700; margin-bottom:16px; text-transform:uppercase; letter-spacing:.06em;}
+  .foot-col li{ margin-bottom:11px; }
+  .foot-col a{ font-size:14px; transition:color .2s;}
+  .foot-col a:hover{ color:var(--amber); }
+  .foot-bottom{ border-top:1px solid rgba(255,255,255,.1); padding-top:24px; display:flex; justify-content:space-between; font-size:13px; flex-wrap:wrap; gap:12px;}
+
+  /* RESPONSIVE */
+  @media (max-width:980px){
+    nav.links{ display:none; }
+    .menu-btn{ display:block; }
+    .hero-grid{ grid-template-columns:1fr; }
+    .hero-visual{ order:-1; max-width:440px; margin:0 auto 20px; }
+    .why-grid{ grid-template-columns:repeat(2,1fr); }
+    .feat-grid{ grid-template-columns:repeat(2,1fr); }
+    .pricing-grid{ grid-template-columns:1fr; max-width:440px; margin:0 auto;}
+    .price-card.popular{ transform:scale(1); order:-1; }
+    .price-card.popular:hover{ transform:translateY(-6px); }
+    .ind-grid{ grid-template-columns:repeat(2,1fr); }
+    .diff-grid{ grid-template-columns:1fr; }
+    .why2-grid{ grid-template-columns:1fr; }
+    .why2-item{ border-bottom:1px solid var(--line) !important; }
+    .custom-banner{ flex-direction:column; text-align:center; align-items:center; padding:44px 32px;}
+    .custom-banner ul{ justify-content:center; }
+    .foot-grid{ grid-template-columns:1fr 1fr; }
+  }
+  @media (max-width:640px){
+    .wrap{ padding:0 20px; }
+    .section-pad{ padding:70px 0; }
+    .why-grid{ grid-template-columns:1fr; }
+    .feat-grid{ grid-template-columns:1fr; }
+    .ind-grid{ grid-template-columns:1fr; }
+    .foot-grid{ grid-template-columns:1fr; gap:32px;}
+    .hero-stats{ gap:28px; }
+    .final-cta{ padding:52px 24px; }
+    .process-item{ gap:16px; }
+    .process-step-num{ width:46px; height:46px; font-size:16px; border-radius:13px;}
+    .process-list::before{ left:22px; }
+  }
+</style>
+</head>
+<body data-shared-mobile-nav>
+
+<header>
+ <!-- MOBILE NAV -->
+  <div class="mnav" id="mobNav">
+    <div class="mnav-links">
+      <a href="../index.html" onclick="closeMob()">Home</a>
+      <a href="about.html" onclick="closeMob()">About</a>
+      <a href="services.html" onclick="closeMob()">Services</a>
+      <a href="../index.html#process" onclick="closeMob()">Process</a>
+      <a href="blogs.html" onclick="closeMob()">Blog</a>
+      <a href="reviews.html" onclick="closeMob()">Reviews</a>
+      <a href="../index.html#contact" onclick="closeMob()">Contact</a>
+    </div>
+    <div class="mob-social" aria-label="Social media links">
+      <div class="mob-contact">Connect With Us</div>
+      <a href="https://wa.me/923092102705" title="WhatsApp" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg></a>
+      <a href="https://facebook.com/mrSoomro" title="Facebook" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+      <a href="https://linkedin.com/in/mrSoomro" title="LinkedIn" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+      <a href="https://instagram.com/mrSoomro" title="Instagram" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+      <a href="mailto:info@mr-soomro.com" title="Email" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+    </div>
+  </div>
+<!-- NAVBAR -->
+<nav id="mainNav">
+<a href="../index.html" class="nlogo"><img src="../images/websitelogo.jpeg" alt="MR. Soomro SEO" style="height:40px;width:auto;display:block;"></a>
+<ul class="nlinks">
+<li><a href="about.html">About</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="../index.html#process">Process</a></li>
+<li><a href="blogs.html">Blog</a></li>
+<li><a href="reviews.html">Reviews</a></li>
+<li><a href="../index.html#contact" class="ncta">Free SEO Audit</a></li>
+    </ul>
+    <button class="nbg" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow reveal"><span class="dot"></span> Quality-First Link Building · Est. 2016</span>
+      <h1 class="hero-headline reveal">Build <span class="accent">Authority.</span> Improve Rankings. Grow Organic Traffic.</h1>
+      <p class="hero-desc reveal">Strengthen your website's SEO with high-quality authority backlinks from trusted, relevant websites. Our link-building campaigns focus on acquiring valuable backlinks that support your website's authority, improve search visibility, and help you attract consistent organic traffic.</p>
+      <p class="hero-sub reveal">We focus on relevance, website quality, organic traffic, contextual placement, and long-term SEO value rather than simply delivering a large number of links.</p>
+      <div class="hero-actions reveal">
+        <a href="#pricing" class="btn btn-primary">Get Started</a>
+        <a href="#pricing" class="btn btn-outline">View Packages</a>
+      </div>
+      <div class="hero-stats reveal">
+        <div class="stat"><b>Relevant</b><span>Niche-Matched Sites</span></div>
+        <div class="stat"><b>Manual</b><span>Site Review Process</span></div>
+        <div class="stat"><b>7&ndash;21 Days</b><span>Typical Delivery</span></div>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal">
+      <div class="hero-panel">
+        <div class="hero-panel-head">
+          <span class="lab">Live Placement Feed</span>
+          <span class="lab">This Week</span>
+        </div>
+        <div class="link-node">
+          <div class="site"><span class="site-ico">T</span> techinsight.com</div>
+          <span class="metric">Contextual · Dofollow</span>
+        </div>
+        <div class="link-node">
+          <div class="site"><span class="site-ico">F</span> financereview.co</div>
+          <span class="metric">Editorial Placement</span>
+        </div>
+        <div class="link-node">
+          <div class="site"><span class="site-ico">S</span> saasjournal.io</div>
+          <span class="metric">Niche-Relevant</span>
+        </div>
+      </div>
+      <div class="float-card float-1">
+        <div class="fc-ico">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.07 0l1.93-1.93a5 5 0 00-7.07-7.07L10.5 5.5"/><path d="M14 11a5 5 0 00-7.07 0L5 12.93a5 5 0 007.07 7.07L13.5 18.5"/></svg>
+        </div>
+        <div><div class="fc-num">Quality</div><div class="fc-lab">Verified Sites</div></div>
+      </div>
+      <div class="float-card float-2">
+        <div class="fc-ico">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 15l4-6 4 3 5-8"/></svg>
+        </div>
+        <div><div class="fc-num">Organic</div><div class="fc-lab">Traffic-Focused</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY IT MATTERS -->
+<section class="section-pad">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker">Why It Matters</span>
+      <h2>Why Authority Backlinks Matter</h2>
+      <p>Search engines use links as one of the signals for understanding the authority and relevance of a website. A backlink from a trustworthy and relevant website can help strengthen your site's overall SEO profile.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="why-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M18.7 8l-5.1 5.1-4-4L3 15.5"/></svg></div>
+        <h3>Improve keyword rankings</h3>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-5.6 4.2L18.5 21 12 16.8 5.5 21l2.1-7.8L2 9h7z"/></svg></div>
+        <h3>Strengthen your website's authority</h3>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div>
+        <h3>Increase organic search visibility</h3>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.07 0l1.93-1.93a5 5 0 00-7.07-7.07L10.5 5.5"/><path d="M14 11a5 5 0 00-7.07 0L5 12.93a5 5 0 007.07 7.07L13.5 18.5"/></svg></div>
+        <h3>Build a more natural backlink profile</h3>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
+        <h3>Earn relevant referral traffic</h3>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h7l-1 8 11-14h-7z"/></svg></div>
+        <h3>Support competitive keywords</h3>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9 9h6v6H9z"/></svg></div>
+        <h3>Improve your website's overall SEO foundation</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT YOU GET -->
+<section class="section-pad alt-bg">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker">The Details</span>
+      <h2>What You Get With Our Authority Backlinks</h2>
+      <p>Every campaign is built around quality rather than unnecessary link volume.</p>
+    </div>
+    <div class="feat-grid">
+      <div class="feat-card reveal">
+        <span class="feat-num">01</span>
+        <h3>Relevant Websites</h3>
+        <p>We prioritize websites that are relevant to your industry, niche, audience, or target keywords.</p>
+      </div>
+      <div class="feat-card reveal">
+        <span class="feat-num">02</span>
+        <h3>Contextual Placement</h3>
+        <p>Where possible, backlinks are placed naturally within relevant editorial content instead of isolated pages or low-value link lists.</p>
+      </div>
+      <div class="feat-card reveal">
+        <span class="feat-num">03</span>
+        <h3>Quality-Focused Websites</h3>
+        <p>We review potential websites using multiple quality signals, including domain authority, organic visibility, relevance, content quality, and backlink profile.</p>
+      </div>
+      <div class="feat-card reveal">
+        <span class="feat-num">04</span>
+        <h3>Dofollow Backlinks</h3>
+        <p>Dofollow links are available depending on the publisher and placement.</p>
+      </div>
+      <div class="feat-card reveal">
+        <span class="feat-num">05</span>
+        <h3>Permanent Placements</h3>
+        <p>We aim for long-term placements rather than temporary links. Final retention depends on the publisher's policies.</p>
+      </div>
+      <div class="feat-card reveal">
+        <span class="feat-num">06</span>
+        <h3>Real Organic Visibility</h3>
+        <p>We prioritize websites with established search visibility and genuine content rather than relying solely on third-party authority metrics.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section-pad">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker">How It Works</span>
+      <h2>Our Authority Backlink Process</h2>
+      <p>A structured, six-step process designed around relevance and quality at every stage.</p>
+    </div>
+    <div class="process-list">
+      <div class="process-item reveal">
+        <div class="process-step-num">1</div>
+        <div class="process-body"><h3>Website &amp; Keyword Analysis</h3><p>We review your website, target pages, keywords, industry, competitors, and existing backlink profile.</p></div>
+      </div>
+      <div class="process-item reveal">
+        <div class="process-step-num">2</div>
+        <div class="process-body"><h3>Site Selection</h3><p>We identify relevant websites that match your niche and campaign requirements.</p></div>
+      </div>
+      <div class="process-item reveal">
+        <div class="process-step-num">3</div>
+        <div class="process-body"><h3>Quality Verification</h3><p>Potential publishers are evaluated based on relevance, content quality, organic visibility, authority metrics, and overall website quality.</p></div>
+      </div>
+      <div class="process-item reveal">
+        <div class="process-step-num">4</div>
+        <div class="process-body"><h3>Content &amp; Placement</h3><p>We create or prepare relevant content and place your backlink naturally within the appropriate context.</p></div>
+      </div>
+      <div class="process-item reveal">
+        <div class="process-step-num">5</div>
+        <div class="process-body"><h3>Quality Check</h3><p>Before reporting the placement, we check the published page and backlink details.</p></div>
+      </div>
+      <div class="process-item reveal">
+        <div class="process-step-num">6</div>
+        <div class="process-body"><h3>Report Delivery</h3><p>You receive a campaign report containing the completed placements and relevant link information.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="section-pad alt-bg" id="pricing">
+  <div class="wrap">
+    <div class="section-head center reveal" style="margin-left:auto;margin-right:auto;">
+      <span class="kicker">Packages</span>
+      <h2>Authority Backlink Packages</h2>
+      <p>Choose the package that fits your campaign, or request a custom build below.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="price-card reveal">
+        <div class="price-name">Starter</div>
+        <div class="price-amt">$99</div>
+        <div class="price-qty">5 Authority Backlinks</div>
+        <ul class="price-feats">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> 5 relevant website placements</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Contextual backlinks</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Niche-relevant sites</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Quality-checked publishers</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Dofollow where available</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Permanent placement target</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Completion report</li>
+        </ul>
+        <p class="price-best">Best for: <b>New websites and small SEO campaigns.</b></p>
+        <a href="#" class="btn btn-primary">Get Started</a>
+      </div>
+
+      <div class="price-card popular reveal">
+        <span class="popular-tag">Most Popular</span>
+        <div class="price-name">Growth</div>
+        <div class="price-amt">$179</div>
+        <div class="price-qty">10 Authority Backlinks</div>
+        <ul class="price-feats">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> 10 quality backlinks</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Relevant contextual placements</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Organic-traffic-focused websites</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Niche relevance</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Dofollow where available</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Permanent placement target</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Detailed backlink report</li>
+        </ul>
+        <p class="price-best">Best for: <b>Businesses targeting consistent ranking growth.</b></p>
+        <a href="#" class="btn btn-primary">Get Started</a>
+      </div>
+
+      <div class="price-card reveal">
+        <div class="price-name">Authority</div>
+        <div class="price-amt">$299</div>
+        <div class="price-qty">20 Authority Backlinks</div>
+        <ul class="price-feats">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> 20 authority backlinks</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Strong niche relevance</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Contextual placements</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Organic visibility-focused publishers</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Quality verification</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Dofollow where available</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Permanent placement target</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Complete campaign report</li>
+        </ul>
+        <p class="price-best">Best for: <b>Competitive websites and established SEO campaigns.</b></p>
+        <a href="#" class="btn btn-primary">Get Started</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CUSTOM CAMPAIGN -->
+<section class="section-pad">
+  <div class="wrap">
+    <div class="custom-banner reveal">
+      <div class="cb-text">
+        <h2>Need More Backlinks or Specific Website Requirements?</h2>
+        <p>We can create a custom authority link-building campaign based on your requirements.</p>
+        <ul>
+          <li>Target country</li>
+          <li>Industry / niche</li>
+          <li>Keywords</li>
+          <li>Required authority metrics</li>
+          <li>Organic traffic requirements</li>
+          <li>Target URLs</li>
+          <li>Monthly link-building goals</li>
+        </ul>
+      </div>
+      <div class="cb-cta">
+        <a href="#" class="btn btn-primary">Contact Us for a Custom Quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section class="section-pad alt-bg">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker">Industries</span>
+      <h2>Industries We Can Work With</h2>
+      <p>Our authority backlink campaigns can be customized for a wide range of industries, including:</p>
+    </div>
+    <div class="ind-grid">
+      <div class="ind-card reveal"><span class="ind-ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg></span><span>SaaS &amp; Software</span></div>
+      <div class="ind-card reveal"><span class="ind-ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4"/></svg></span><span>Technology</span></div>
+      <div class="ind-card reveal"><span class="ind-ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M10 21v-6h4v6"/></svg></span><span>Business</span></div>
+      <div class="ind-card reveal"><span class="ind-ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9 9.5c0-1.4 1.3-2.5 3-2.5s3 1.1 3 2.5-1.3 2-3 2.5c-1.7.5-3 1.1-3 2.5s1.3 2.5 3 2.5 3-1.1 3-2.5"/></svg></span><span>Finance</span></div>
+      <div class="ind-card reveal"><span class="ind-ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12h20M12 2c2.5 2.5 4 6 4 10s-1.5 7.5-4 10c-2.5-2.5-4-6-4-10s1.5-7.5 4-10z"/></svg></span><span>Travel</span></div>
+      <div class="ind-card reveal"><span class="ind-ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V10l7-6 7 6v11"/><path d="M9 21v-6h6v6"/></svg></span><span>Real Estate</span></div>
+      <div class="ind-card reveal"><span class="ind-ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 002 1.6h9.7a2 2 0 002-1.6L23 6H6"/></svg></span><span>E-commerce</span></div>
+      <div class="ind-card reveal"><span class="ind-ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg></span><span>Education</span></div>
+      <div class="ind-card reveal"><span class="ind-ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 17h14M5 17a2 2 0 01-2-2v-2l2-5h14l2 5v2a2 2 0 01-2 2M5 17v2a1 1 0 001 1h1a1 1 0 001-1v-2m8 0v2a1 1 0 001 1h1a1 1 0 001-1v-2"/><circle cx="7.5" cy="14" r="1"/><circle cx="16.5" cy="14" r="1"/></svg></span><span>Automotive</span></div>
+      <div class="ind-card reveal"><span class="ind-ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 10-16 0"/></svg></span><span>Lifestyle</span></div>
+      <div class="ind-card reveal"><span class="ind-ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span><span>Marketing &amp; SEO</span></div>
+      <div class="ind-card reveal"><span class="ind-ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="3"/></svg></span><span>iGaming &amp; Casino</span></div>
+      <div class="ind-card reveal"><span class="ind-ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></span><span>Crypto &amp; Blockchain</span></div>
+      <div class="ind-card reveal"><span class="ind-ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg></span><span>Other Specialized Niches</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT MAKES DIFFERENT -->
+<section class="section-pad">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker">Our Approach</span>
+      <h2>What Makes Our Backlinks Different?</h2>
+    </div>
+    <div class="diff-grid">
+      <div class="diff-card reveal">
+        <span class="diff-mark">Quality Over Quantity</span>
+        <h3>Fewer links, real value</h3>
+        <p>We don't believe that hundreds of low-quality links automatically create better SEO results. Our approach focuses on acquiring fewer, more useful links from websites that can provide genuine SEO value.</p>
+      </div>
+      <div class="diff-card reveal">
+        <span class="diff-mark">Relevance First</span>
+        <h3>Topical relevance matters</h3>
+        <p>A relevant backlink can be more meaningful than a link from an unrelated website with a high authority metric. We therefore consider niche and topical relevance during site selection.</p>
+      </div>
+      <div class="diff-card reveal">
+        <span class="diff-mark">Multiple Quality Signals</span>
+        <h3>Beyond DA or DR alone</h3>
+        <p>We don't select websites based on DA or DR alone. We also consider organic traffic, indexing, content quality, topical relevance, website history, and overall backlink profile.</p>
+      </div>
+      <div class="diff-card reveal">
+        <span class="diff-mark">Natural Link Placement</span>
+        <h3>Editorial, not forced</h3>
+        <p>Our goal is to make backlinks look and function like genuine editorial references within useful content.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE -->
+<section class="section-pad alt-bg">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker">Why Us</span>
+      <h2>Why Choose Our Authority Backlink Service?</h2>
+    </div>
+    <div class="why2-grid">
+      <div class="why2-item reveal">
+        <div class="why2-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-5.6 4.2L18.5 21 12 16.8 5.5 21l2.1-7.8L2 9h7z"/></svg></div>
+        <div><h3>Experienced SEO Team</h3><p>Our campaigns are handled with an SEO-focused approach rather than automated bulk link building.</p></div>
+      </div>
+      <div class="why2-item reveal">
+        <div class="why2-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div>
+        <div><h3>Manual Website Selection</h3><p>Potential websites are reviewed before being included in a campaign.</p></div>
+      </div>
+      <div class="why2-item reveal">
+        <div class="why2-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.07 0l1.93-1.93a5 5 0 00-7.07-7.07L10.5 5.5"/><path d="M14 11a5 5 0 00-7.07 0L5 12.93a5 5 0 007.07 7.07L13.5 18.5"/></svg></div>
+        <div><h3>Niche-Relevant Placements</h3><p>We prioritize websites relevant to your business whenever suitable publishers are available.</p></div>
+      </div>
+      <div class="why2-item reveal">
+        <div class="why2-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></div>
+        <div><h3>Transparent Reporting</h3><p>You receive the details of completed placements after the campaign.</p></div>
+      </div>
+      <div class="why2-item reveal">
+        <div class="why2-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4v6h6M20 20v-6h-6"/><path d="M20 10a8 8 0 00-14.9-3M4 14a8 8 0 0014.9 3"/></svg></div>
+        <div><h3>Flexible Campaigns</h3><p>Choose a standard package or request a custom campaign based on your SEO goals.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section-pad">
+  <div class="wrap">
+    <div class="section-head center reveal" style="margin-left:auto;margin-right:auto;">
+      <span class="kicker">FAQ</span>
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-wrap">
+      <div class="faq-item reveal">
+        <button class="faq-q">Are these backlinks permanent?<span class="plus"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></span></button>
+        <div class="faq-a"><p>We target permanent placements, but no third-party publisher can guarantee lifetime availability. Publisher policies and website changes may affect link retention.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">Are all backlinks dofollow?<span class="plus"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></span></button>
+        <div class="faq-a"><p>We prioritize dofollow placements where available. The link attribute depends on the individual publisher.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">Do you guarantee ranking improvements?<span class="plus"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></span></button>
+        <div class="faq-a"><p>No. SEO rankings depend on many factors, including competition, website quality, technical SEO, content, search intent, and the existing backlink profile. We focus on building quality links that support your broader SEO strategy.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">Can you target specific countries?<span class="plus"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></span></button>
+        <div class="faq-a"><p>Yes. We can target publishers and websites based on your preferred country or audience where suitable websites are available.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">Can you work with difficult niches?<span class="plus"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></span></button>
+        <div class="faq-a"><p>We can review specialized and competitive niches and determine suitable publisher options before starting the campaign.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">Can I provide my target keywords and URLs?<span class="plus"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></span></button>
+        <div class="faq-a"><p>Yes. You can provide your target keywords, landing pages, preferred anchor text, and other campaign requirements.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">Do you provide a backlink report?<span class="plus"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></span></button>
+        <div class="faq-a"><p>Yes. A report is provided after the completed placements, including the relevant backlink information.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">How long does the campaign take?<span class="plus"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></span></button>
+        <div class="faq-a"><p>Typical delivery depends on publisher availability and the package selected. Most campaigns can take approximately 7&ndash;21 days, while larger or highly specific campaigns may require additional time.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="section-pad">
+  <div class="wrap">
+    <div class="final-cta reveal">
+      <h2>Ready to Build Stronger Website Authority?</h2>
+      <p class="lead">Stop relying on low-quality bulk backlinks. Build a stronger SEO foundation with relevant, contextual authority backlinks designed around your website and target market.</p>
+      <div class="sub">Get Started Today</div>
+      <p class="desc">Contact us with your website URL, target keywords, niche, and preferred package. We'll review your requirements and recommend the most suitable authority backlink campaign.</p>
+      <div class="final-actions">
+        <a href="#pricing" class="btn btn-primary">Get Started</a>
+        <a href="#" class="btn btn-outline-light">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <footer itemscope itemtype="https://schema.org/Organization">
+    <div class="ftt">
+      <div>
+        <span class="ftlo" itemprop="name">MR.<span>Soomro</span></span>
+        <p class="fttg" itemprop="description">Pakistan's trusted SEO agency helping businesses rank higher, attract more clients and grow sustainably with data-driven search strategies since 2016.</p>
+        <div class="ft-soc-row">
+          <a href="https://wa.me/923092102705" title="WhatsApp" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg></a>
+          <a href="https://facebook.com/mrSoomro" title="Facebook" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+          <a href="https://linkedin.com/in/mrSoomro" title="LinkedIn" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a href="https://instagram.com/mrSoomro" title="Instagram" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="mailto:info@mr-soomro.com" title="Email" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+        </div>
+      </div>
+      <div><div class="ftct">Services</div><ul class="ftlk"><li><strong>Technical SEO</strong></li><li><a href="pages/services.html">Website Audit</a></li><li><a href="pages/services.html">Core Web Vitals</a></li><li><a href="pages/services.html">Schema Markup</a></li><li><a href="pages/services.html">Crawl Error Fixes</a></li></ul></div>
+      <div><div class="ftct">Services</div><ul class="ftlk"><li><strong>On-Page SEO</strong></li><li><a href="pages/services.html">Keyword Research</a></li><li><a href="pages/services.html">Meta Optimization</a></li><li><a href="pages/services.html">Internal Linking</a></li><li><strong>Off-Page SEO</strong></li><li><a href="pages/services.html">Guest Posting</a></li><li><a href="pages/services.html">Link Building</a></li><li><a href="pages/services.html">Digital PR</a></li></ul></div>
+      <div><div class="ftct">More Services</div><ul class="ftlk"><li><strong>Local SEO</strong></li><li><a href="pages/services.html">Google Business Profile</a></li><li><a href="pages/services.html">Citation Building</a></li><li><strong>E-commerce SEO</strong></li><li><a href="pages/services.html">Shopify SEO</a></li><li><a href="pages/services.html">WooCommerce SEO</a></li><li><strong>SEO Consulting</strong></li><li><a href="pages/services.html">Competitor Analysis</a></li><li><a href="pages/services.html">Monthly Reporting</a></li></ul></div>
+      <div><div class="ftct">Quick Links</div><ul class="ftlk"><li><a href="index.html#about">Why Choose Us</a></li><li><a href="index.html#process">SEO Process</a></li><li><a href="pages/reviews.html">Client Reviews</a></li><li><a href="pages/blogs.html">Blog</a></li><li><a href="index.html#contact">Book Free Consultation</a></li></ul></div>
+      <div><div class="ftct">Contact</div><ul class="ftlk"><li><a href="mailto:info@mr-soomro.com">info@mr-soomro.com</a></li><li><a href="tel:+923092102705">0309 210 2705</a></li><li><a href="https://wa.me/923092102705">WhatsApp</a></li><li style="color:rgba(255,255,255,.28);font-size:13px;font-weight:300">House No G 209, Mohallah Humayoo, Masjid Al Fazal Town, Phuleli, Hyderabad, Sindh, Pakistan 71000</li></ul></div>
+    </div>
+    <div class="ftbt">
+      <div class="ftcp">© 2026 <a href="index.html">Mr. Soomro SEO Agency</a>. All rights reserved.</div>
+      <div class="ftbl"><a href="pages/privacy.html">Privacy Policy</a><a href="pages/terms.html">Terms &amp; Conditions</a><a href="pages/cookie-policy.html">Cookie Policy</a></div>
+    </div>
+  </footer>
+ 
+ <!-- ==================== SCROLL TO TOP ==================== -->
+    <button class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></button>
+
+
+<script>
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  revealEls.forEach(el=>io.observe(el));
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-item').forEach(item=>{
+    const q = item.querySelector('.faq-q');
+    const a = item.querySelector('.faq-a');
+    q.addEventListener('click', ()=>{
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(o=>{
+        if(o!==item){ o.classList.remove('open'); o.querySelector('.faq-a').style.maxHeight = null; }
+      });
+      if(isOpen){
+        item.classList.remove('open');
+        a.style.maxHeight = null;
+      } else {
+        item.classList.add('open');
+        a.style.maxHeight = a.scrollHeight + 'px';
+      }
+    });
+  });
+</script>
+
+  <script src="../pages/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,3212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guest Post Backlinks - Mr Soomro | Digital Marketing Expert</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+    <style>
+        /* ==================== RESET & VARIABLES ==================== */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --orange-primary: #F5A623;
+            --orange-dark: #E8961E;
+            --orange-light: #FDB94D;
+            --orange-bg: #F9A825;
+            --orange-glow: rgba(245, 166, 35, 0.15);
+            --dark-text: #1a1a1a;
+            --heading-text: #111111;
+            --body-text: #555555;
+            --light-text: #888888;
+            --light-bg: #FFFDF7;
+            --cream-bg: #FFF8EE;
+            --white: #ffffff;
+            --border-light: #f0ebe3;
+            --green-accent: #4CAF50;
+            --red-accent: #e74c3c;
+            --card-shadow: 0 5px 30px rgba(0, 0, 0, 0.04);
+            --card-hover-shadow: 0 15px 50px rgba(245, 166, 35, 0.12);
+            --section-padding: 100px 60px;
+            --container-max: 1200px;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--light-bg);
+            color: var(--dark-text);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* ==================== NAVBAR ==================== */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 60px;
+            background: var(--white);
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+        }
+
+        .navbar.scrolled { padding: 10px 60px; box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); }
+
+        .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+
+        .logo-icon {
+            width: 42px; height: 42px;
+            background: var(--orange-primary);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            color: white; font-size: 18px;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover .logo-icon { transform: rotate(15deg); }
+
+        .logo-text-wrap { display: flex; flex-direction: column; }
+
+        .logo-text {
+            font-size: 22px; font-weight: 700;
+            color: var(--dark-text); line-height: 1.1;
+        }
+
+        .logo-text span { color: var(--orange-primary); }
+
+        .logo-subtitle {
+            font-size: 9px; color: var(--body-text);
+            text-transform: uppercase; letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex; align-items: center;
+            gap: 35px; list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none; color: var(--dark-text);
+            font-size: 13px; font-weight: 500;
+            text-transform: uppercase; letter-spacing: 1.5px;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px; left: 0;
+            width: 0; height: 2px;
+            background: var(--orange-primary);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
+        .nav-links a:hover, .nav-links a.active { color: var(--orange-primary); }
+
+        .nav-cta {
+            background: var(--orange-primary) !important;
+            color: var(--white) !important;
+            padding: 10px 22px;
+            border-radius: 5px;
+            font-size: 12px !important;
+            font-weight: 600 !important;
+            letter-spacing: 1px !important;
+            transition: background 0.3s ease, transform 0.3s ease !important;
+        }
+
+        .nav-cta::after { display: none !important; }
+        .nav-cta:hover {
+            background: var(--orange-dark) !important;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(245, 166, 35, 0.3);
+        }
+
+        .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; z-index: 1001; }
+        .hamburger span {
+            width: 28px; height: 3px;
+            background: var(--dark-text);
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+
+        /* ==================== HERO ==================== */
+        .hero {
+            padding: 160px 60px 120px;
+            background: linear-gradient(180deg, var(--white) 0%, var(--cream-bg) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -150px; right: -150px;
+            width: 500px; height: 500px;
+            background: radial-gradient(circle, rgba(245, 166, 35, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -80px; left: -80px;
+            width: 350px; height: 350px;
+            background: radial-gradient(circle, rgba(245, 166, 35, 0.06) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero-container {
+            max-width: var(--container-max);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content { animation: fadeInUp 0.8s ease; }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--orange-glow);
+            color: var(--orange-dark);
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 900;
+            color: var(--heading-text);
+            line-height: 1.12;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+
+        .hero h1 span { color: var(--orange-primary); display: block; }
+
+        .hero-subtitle {
+            font-size: 19px;
+            font-weight: 600;
+            color: var(--dark-text);
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        .hero p {
+            font-size: 15px;
+            color: var(--body-text);
+            line-height: 1.75;
+            margin-bottom: 35px;
+            max-width: 520px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--orange-primary);
+            color: var(--white);
+            padding: 15px 32px;
+            border: none;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .btn-primary:hover {
+            background: var(--orange-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(245, 166, 35, 0.35);
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: transparent;
+            color: var(--dark-text);
+            padding: 15px 32px;
+            border: 2px solid var(--border-light);
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--orange-primary);
+            color: var(--orange-primary);
+            transform: translateY(-3px);
+        }
+
+        .hero-highlights {
+            display: flex;
+            gap: 30px;
+            padding-top: 30px;
+            border-top: 1px solid var(--border-light);
+        }
+
+        .hero-highlight {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .highlight-number {
+            font-size: 26px;
+            font-weight: 900;
+            color: var(--orange-primary);
+            line-height: 1;
+        }
+
+        .highlight-label {
+            font-size: 11px;
+            color: var(--body-text);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 5px;
+            font-weight: 500;
+        }
+
+        /* Hero Visual - Guest Post Preview */
+        .hero-visual {
+            position: relative;
+            animation: fadeInRight 1s ease;
+        }
+
+        .article-preview {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+            position: relative;
+        }
+
+        .article-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--border-light);
+            margin-bottom: 18px;
+        }
+
+        .article-site {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--dark-text);
+        }
+
+        .article-site .site-dot {
+            width: 8px; height: 8px;
+            background: var(--green-accent);
+            border-radius: 50%;
+        }
+
+        .article-badge {
+            font-size: 9px;
+            background: var(--orange-glow);
+            color: var(--orange-dark);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .article-image {
+            width: 100%;
+            height: 130px;
+            background: linear-gradient(135deg, var(--orange-glow), rgba(245, 166, 35, 0.05));
+            border-radius: 10px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--orange-primary);
+            font-size: 40px;
+        }
+
+        .article-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--dark-text);
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        .article-meta {
+            display: flex;
+            gap: 12px;
+            font-size: 10px;
+            color: var(--light-text);
+            margin-bottom: 12px;
+        }
+
+        .article-meta span { display: flex; align-items: center; gap: 4px; }
+
+        .article-text {
+            font-size: 11px;
+            color: var(--body-text);
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+
+        .article-text .backlink-highlight {
+            background: var(--orange-glow);
+            color: var(--orange-dark);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 700;
+            text-decoration: none;
+            border-bottom: 2px solid var(--orange-primary);
+        }
+
+        .article-tags {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+            padding-top: 12px;
+            border-top: 1px dashed var(--border-light);
+        }
+
+        .article-tag {
+            font-size: 10px;
+            background: var(--light-bg);
+            color: var(--body-text);
+            padding: 4px 10px;
+            border-radius: 20px;
+        }
+
+        .hero-floating-badge {
+            position: absolute;
+            background: var(--white);
+            border-radius: 14px;
+            padding: 12px 18px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .hero-floating-badge.top-right { top: -20px; right: -20px; }
+        .hero-floating-badge.bottom-left { bottom: -15px; left: -15px; animation-delay: 1.5s; }
+
+        .floating-icon {
+            width: 38px; height: 38px;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 16px;
+        }
+
+        .floating-icon.green { background: #E8F5E9; color: var(--green-accent); }
+        .floating-icon.orange { background: var(--orange-glow); color: var(--orange-primary); }
+
+        .floating-text .floating-number {
+            font-size: 15px;
+            font-weight: 800;
+            color: var(--orange-primary);
+        }
+
+        .floating-text .floating-label {
+            font-size: 9px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--light-text);
+            font-weight: 600;
+        }
+
+        /* ==================== SECTION COMMONS ==================== */
+        .section-header { text-align: center; margin-bottom: 60px; }
+
+        .section-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--orange-glow);
+            color: var(--orange-dark);
+            padding: 7px 18px;
+            border-radius: 30px;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .section-header h2 {
+            font-size: 40px;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: var(--heading-text);
+            letter-spacing: -0.5px;
+            line-height: 1.15;
+        }
+
+        .section-header h2 span { color: var(--orange-primary); }
+
+        .section-header p {
+            font-size: 16px;
+            color: var(--body-text);
+            margin-top: 12px;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+        }
+
+        .container { max-width: var(--container-max); margin: 0 auto; }
+
+        /* ==================== WHAT ARE GUEST POSTS ==================== */
+        .what-are-section {
+            padding: var(--section-padding);
+            background: var(--white);
+        }
+
+        .what-are-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .what-are-visual {
+            background: linear-gradient(135deg, var(--cream-bg), rgba(245, 166, 35, 0.05));
+            border-radius: 20px;
+            padding: 40px;
+            position: relative;
+        }
+
+        .flow-diagram {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .flow-step {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 18px 20px;
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.04);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .flow-step:hover {
+            transform: translateX(8px);
+            box-shadow: 0 8px 25px rgba(245, 166, 35, 0.15);
+        }
+
+        .flow-step-icon {
+            width: 42px; height: 42px;
+            min-width: 42px;
+            background: var(--orange-glow);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--orange-primary);
+            font-size: 18px;
+        }
+
+        .flow-step-content h5 {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--dark-text);
+            margin-bottom: 2px;
+        }
+
+        .flow-step-content p {
+            font-size: 11px;
+            color: var(--body-text);
+            line-height: 1.5;
+        }
+
+        .flow-arrow {
+            text-align: center;
+            color: var(--orange-primary);
+            font-size: 18px;
+            margin: -8px 0;
+        }
+
+        .what-are-content .section-badge { margin-bottom: 12px; }
+
+        .what-are-content h2 {
+            font-size: 36px;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: var(--heading-text);
+            margin-bottom: 15px;
+            line-height: 1.15;
+        }
+
+        .what-are-content h2 span { color: var(--orange-primary); }
+
+        .what-are-content > p {
+            font-size: 15px;
+            color: var(--body-text);
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .what-are-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .what-are-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 14px;
+            color: var(--body-text);
+            line-height: 1.6;
+        }
+
+        .what-are-list li i {
+            color: var(--orange-primary);
+            font-size: 16px;
+            margin-top: 3px;
+            min-width: 20px;
+        }
+
+        /* ==================== BENEFITS SECTION ==================== */
+        .benefits-section {
+            padding: var(--section-padding);
+            background: var(--cream-bg);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .benefit-card {
+            background: var(--white);
+            border-radius: 14px;
+            padding: 30px 25px;
+            box-shadow: var(--card-shadow);
+            transition: all 0.4s ease;
+            border: 2px solid transparent;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(245, 166, 35, 0.2);
+            box-shadow: var(--card-hover-shadow);
+        }
+
+        .benefit-icon {
+            width: 55px; height: 55px;
+            background: var(--orange-glow);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .benefit-icon i {
+            font-size: 22px;
+            color: var(--orange-primary);
+        }
+
+        .benefit-card:hover .benefit-icon { background: var(--orange-primary); }
+        .benefit-card:hover .benefit-icon i { color: white; }
+
+        .benefit-card h4 {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--dark-text);
+            margin-bottom: 8px;
+        }
+
+        .benefit-card p {
+            font-size: 13px;
+            color: var(--body-text);
+            line-height: 1.65;
+        }
+
+        /* ==================== WHAT YOU GET ==================== */
+        .whatyouget-section {
+            padding: var(--section-padding);
+            background: var(--white);
+        }
+
+        .whatyouget-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .feature-card {
+            background: var(--light-bg);
+            border-radius: 14px;
+            padding: 28px 22px;
+            transition: all 0.4s ease;
+            border: 1px solid var(--border-light);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--orange-primary), var(--orange-light));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            background: var(--white);
+            box-shadow: var(--card-hover-shadow);
+        }
+
+        .feature-card:hover::before { transform: scaleX(1); }
+
+        .feature-num {
+            font-size: 32px;
+            font-weight: 900;
+            color: var(--orange-primary);
+            opacity: 0.15;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .feature-icon {
+            width: 45px; height: 45px;
+            background: var(--orange-glow);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 12px;
+        }
+
+        .feature-icon i {
+            font-size: 20px;
+            color: var(--orange-primary);
+        }
+
+        .feature-card h4 {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--dark-text);
+            margin-bottom: 6px;
+        }
+
+        .feature-card p {
+            font-size: 12px;
+            color: var(--body-text);
+            line-height: 1.6;
+        }
+
+        /* ==================== PROCESS ==================== */
+        .process-section {
+            padding: var(--section-padding);
+            background: var(--cream-bg);
+        }
+
+        .process-timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .process-timeline::before {
+            content: '';
+            position: absolute;
+            left: 30px;
+            top: 0; bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, var(--orange-primary), var(--orange-light), var(--border-light));
+            border-radius: 3px;
+        }
+
+        .process-step {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 35px;
+            position: relative;
+            opacity: 0;
+            transform: translateX(-30px);
+            transition: all 0.6s ease;
+        }
+
+        .process-step.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .process-step:last-child { margin-bottom: 0; }
+
+        .step-number {
+            width: 60px; height: 60px; min-width: 60px;
+            background: var(--orange-primary);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: 800;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 5px 20px rgba(245, 166, 35, 0.3);
+        }
+
+        .step-content {
+            background: var(--white);
+            border-radius: 14px;
+            padding: 22px 28px;
+            flex: 1;
+            border: 1px solid var(--border-light);
+            transition: all 0.3s ease;
+        }
+
+        .step-content:hover {
+            border-color: rgba(245, 166, 35, 0.3);
+            box-shadow: var(--card-hover-shadow);
+        }
+
+        .step-content h3 {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--dark-text);
+            margin-bottom: 6px;
+        }
+
+        .step-content p {
+            font-size: 13px;
+            color: var(--body-text);
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+
+        .step-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .step-tag {
+            background: var(--orange-glow);
+            color: var(--orange-dark);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        /* ==================== PRICING ==================== */
+        .pricing-section {
+            padding: var(--section-padding);
+            background: linear-gradient(180deg, var(--white) 0%, var(--cream-bg) 100%);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .pricing-card {
+            background: var(--white);
+            border-radius: 18px;
+            padding: 40px 28px;
+            box-shadow: var(--card-shadow);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid transparent;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pricing-card.popular {
+            border-color: var(--orange-primary);
+            transform: scale(1.03);
+        }
+
+        .pricing-card.popular::before {
+            content: 'MOST POPULAR';
+            position: absolute;
+            top: 20px;
+            right: -32px;
+            background: var(--orange-primary);
+            color: var(--white);
+            padding: 5px 40px;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            transform: rotate(45deg);
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(245, 166, 35, 0.15);
+        }
+
+        .pricing-card.popular:hover {
+            transform: scale(1.03) translateY(-10px);
+        }
+
+        .pricing-tier {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--orange-primary);
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .pricing-name {
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--dark-text);
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .pricing-price {
+            display: flex;
+            align-items: baseline;
+            gap: 5px;
+            margin-bottom: 5px;
+        }
+
+        .price-currency {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--orange-primary);
+        }
+
+        .price-amount {
+            font-size: 48px;
+            font-weight: 900;
+            color: var(--orange-primary);
+            line-height: 1;
+        }
+
+        .price-per {
+            font-size: 12px;
+            color: var(--light-text);
+            font-weight: 500;
+            margin-top: 5px;
+        }
+
+        .pricing-highlight {
+            background: linear-gradient(135deg, var(--orange-glow), rgba(245, 166, 35, 0.05));
+            border-left: 3px solid var(--orange-primary);
+            padding: 10px 14px;
+            border-radius: 6px;
+            margin: 15px 0;
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--dark-text);
+        }
+
+        .pricing-highlight span { color: var(--orange-primary); font-size: 18px; }
+
+        .pricing-divider {
+            width: 100%;
+            height: 1px;
+            background: var(--border-light);
+            margin: 15px 0;
+        }
+
+        .pricing-features {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 11px;
+            margin-bottom: 25px;
+            flex: 1;
+        }
+
+        .pricing-features li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 13px;
+            color: var(--body-text);
+            line-height: 1.5;
+        }
+
+        .pricing-features li i {
+            color: var(--orange-primary);
+            font-size: 14px;
+            margin-top: 3px;
+            min-width: 16px;
+        }
+
+        .pricing-best {
+            font-size: 12px;
+            color: var(--light-text);
+            font-style: italic;
+            margin-bottom: 20px;
+            padding: 10px;
+            background: var(--cream-bg);
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .pricing-btn {
+            width: 100%;
+            padding: 14px;
+            background: var(--orange-primary);
+            color: var(--white);
+            border: none;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+        }
+
+        .pricing-btn:hover {
+            background: var(--orange-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(245, 166, 35, 0.35);
+        }
+
+        .pricing-btn.outline {
+            background: transparent;
+            color: var(--orange-primary);
+            border: 2px solid var(--orange-primary);
+        }
+
+        .pricing-btn.outline:hover {
+            background: var(--orange-primary);
+            color: var(--white);
+        }
+
+        /* ==================== CUSTOM CAMPAIGN ==================== */
+        .custom-section {
+            padding: 80px 60px;
+            background: var(--white);
+        }
+
+        .custom-container {
+            max-width: var(--container-max);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .custom-content h2 {
+            font-size: 36px;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: var(--heading-text);
+            margin-bottom: 15px;
+            line-height: 1.15;
+        }
+
+        .custom-content h2 span { color: var(--orange-primary); }
+
+        .custom-content > p {
+            font-size: 15px;
+            color: var(--body-text);
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .custom-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .custom-list li {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            color: var(--body-text);
+        }
+
+        .custom-list li i {
+            color: var(--orange-primary);
+            font-size: 14px;
+        }
+
+        .custom-visual {
+            background: linear-gradient(135deg, var(--cream-bg), #fff3d9);
+            border-radius: 20px;
+            padding: 50px;
+            text-align: center;
+        }
+
+        .custom-visual-icon {
+            width: 90px; height: 90px;
+            background: var(--orange-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+
+        .custom-visual-icon i {
+            font-size: 36px;
+            color: var(--white);
+        }
+
+        .custom-visual h3 {
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--dark-text);
+            margin-bottom: 10px;
+        }
+
+        .custom-visual p {
+            font-size: 14px;
+            color: var(--body-text);
+            margin-bottom: 25px;
+        }
+
+        /* ==================== QUALITY CRITERIA ==================== */
+        .quality-section {
+            padding: var(--section-padding);
+            background: var(--cream-bg);
+        }
+
+        .quality-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .quality-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: var(--card-shadow);
+            transition: all 0.4s ease;
+            display: flex;
+            gap: 18px;
+            align-items: flex-start;
+        }
+
+        .quality-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--card-hover-shadow);
+        }
+
+        .quality-num {
+            width: 50px; height: 50px;
+            min-width: 50px;
+            background: linear-gradient(135deg, var(--orange-primary), var(--orange-light));
+            color: var(--white);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: 800;
+            box-shadow: 0 5px 15px rgba(245, 166, 35, 0.25);
+        }
+
+        .quality-info h4 {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--dark-text);
+            margin-bottom: 6px;
+        }
+
+        .quality-info p {
+            font-size: 13px;
+            color: var(--body-text);
+            line-height: 1.65;
+        }
+
+        /* ==================== CONTENT TYPES ==================== */
+        .content-types-section {
+            padding: var(--section-padding);
+            background: var(--white);
+        }
+
+        .content-types-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .content-types-visual {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .content-type-card {
+            background: var(--light-bg);
+            padding: 20px 18px;
+            border-radius: 12px;
+            border: 1px solid var(--border-light);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .content-type-card:hover {
+            background: var(--white);
+            border-color: var(--orange-primary);
+            transform: translateY(-3px);
+            box-shadow: var(--card-hover-shadow);
+        }
+
+        .content-type-icon {
+            width: 40px; height: 40px;
+            min-width: 40px;
+            background: var(--orange-glow);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--orange-primary);
+            font-size: 16px;
+        }
+
+        .content-type-card span {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--dark-text);
+        }
+
+        .content-types-content .section-badge { margin-bottom: 12px; }
+
+        .content-types-content h2 {
+            font-size: 36px;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: var(--heading-text);
+            margin-bottom: 15px;
+            line-height: 1.15;
+        }
+
+        .content-types-content h2 span { color: var(--orange-primary); }
+
+        .content-types-content > p {
+            font-size: 15px;
+            color: var(--body-text);
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .content-types-note {
+            background: var(--cream-bg);
+            border-left: 3px solid var(--orange-primary);
+            padding: 15px 20px;
+            border-radius: 8px;
+            font-size: 13px;
+            color: var(--body-text);
+            font-style: italic;
+        }
+
+        /* ==================== INDUSTRIES ==================== */
+        .industries-section {
+            padding: var(--section-padding);
+            background: var(--cream-bg);
+        }
+
+        .industries-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+        }
+
+        .industry-tag {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 20px 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-light);
+            cursor: default;
+        }
+
+        .industry-tag:hover {
+            background: var(--orange-glow);
+            border-color: var(--orange-primary);
+            transform: translateY(-3px);
+        }
+
+        .industry-tag i {
+            font-size: 24px;
+            color: var(--orange-primary);
+            margin-bottom: 10px;
+        }
+
+        .industry-tag span {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--dark-text);
+            display: block;
+        }
+
+        .industries-note {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 13px;
+            color: var(--light-text);
+            font-style: italic;
+        }
+
+        /* ==================== WHY CHOOSE US ==================== */
+        .why-choose-section {
+            padding: var(--section-padding);
+            background: linear-gradient(135deg, var(--orange-primary) 0%, var(--orange-dark) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .why-choose-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px; height: 600px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+        }
+
+        .why-choose-section .section-header h2 { color: var(--white); }
+        .why-choose-section .section-header h2 span { color: rgba(255, 255, 255, 0.8); }
+        .why-choose-section .section-header p { color: rgba(255, 255, 255, 0.75); }
+
+        .why-choose-section .section-badge {
+            background: rgba(255, 255, 255, 0.15);
+            color: var(--white);
+        }
+
+        .why-choose-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .why-choose-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 30px 25px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            transition: all 0.3s ease;
+        }
+
+        .why-choose-card:hover {
+            background: rgba(255, 255, 255, 0.18);
+            transform: translateY(-5px);
+        }
+
+        .why-choose-icon {
+            width: 55px; height: 55px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+
+        .why-choose-icon i {
+            font-size: 22px;
+            color: var(--white);
+        }
+
+        .why-choose-card h4 {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 8px;
+        }
+
+        .why-choose-card p {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.65;
+        }
+
+        /* ==================== COMPARISON ==================== */
+        .compare-section {
+            padding: var(--section-padding);
+            background: var(--white);
+        }
+
+        .compare-grid {
+            display: grid;
+            grid-template-columns: 1fr 60px 1fr;
+            gap: 25px;
+            align-items: center;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .compare-card {
+            background: var(--light-bg);
+            border-radius: 18px;
+            padding: 35px;
+            border: 2px solid var(--border-light);
+            transition: all 0.4s ease;
+        }
+
+        .compare-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--orange-primary);
+            box-shadow: var(--card-hover-shadow);
+        }
+
+        .compare-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .compare-icon {
+            width: 55px; height: 55px;
+            background: var(--orange-primary);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 22px;
+        }
+
+        .compare-card h3 {
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--dark-text);
+        }
+
+        .compare-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .compare-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 14px;
+            color: var(--body-text);
+            line-height: 1.5;
+        }
+
+        .compare-list li i {
+            color: var(--orange-primary);
+            font-size: 14px;
+            margin-top: 3px;
+            min-width: 16px;
+        }
+
+        .compare-vs {
+            width: 60px; height: 60px;
+            background: linear-gradient(135deg, var(--orange-primary), var(--orange-dark));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            font-weight: 900;
+            box-shadow: 0 5px 20px rgba(245, 166, 35, 0.4);
+        }
+
+        /* ==================== FAQ ==================== */
+        .faq-section {
+            padding: var(--section-padding);
+            background: var(--cream-bg);
+        }
+
+        .faq-container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--white);
+            border-radius: 12px;
+            margin-bottom: 12px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            border: 1px solid var(--border-light);
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            border-color: rgba(245, 166, 35, 0.3);
+        }
+
+        .faq-item.active {
+            border-color: var(--orange-primary);
+        }
+
+        .faq-question {
+            padding: 22px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: rgba(245, 166, 35, 0.03);
+        }
+
+        .faq-question h4 {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--dark-text);
+            flex: 1;
+            padding-right: 20px;
+        }
+
+        .faq-toggle {
+            width: 36px; height: 36px;
+            min-width: 36px;
+            background: var(--orange-glow);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .faq-toggle i {
+            font-size: 14px;
+            color: var(--orange-primary);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-toggle {
+            background: var(--orange-primary);
+        }
+
+        .faq-item.active .faq-toggle i {
+            color: var(--white);
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+        }
+
+        .faq-answer-content {
+            padding: 0 30px 22px;
+            font-size: 14px;
+            color: var(--body-text);
+            line-height: 1.75;
+        }
+
+        /* ==================== STATS BAR ==================== */
+        .stats-bar {
+            padding: 60px;
+            background: linear-gradient(135deg, var(--orange-bg) 0%, var(--orange-dark) 100%);
+        }
+
+        .stats-bar-container {
+            max-width: var(--container-max);
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .stat-item { text-align: center; }
+
+        .stat-number {
+            font-size: 52px;
+            font-weight: 900;
+            color: var(--white);
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: rgba(255, 255, 255, 0.8);
+            margin-top: 8px;
+            font-weight: 600;
+        }
+
+        /* ==================== CTA ==================== */
+        .cta-section {
+            padding: 110px 60px;
+            background: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-container {
+            max-width: 850px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-section h2 {
+            font-size: 42px;
+            font-weight: 900;
+            color: var(--heading-text);
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            line-height: 1.15;
+        }
+
+        .cta-section h2 span { color: var(--orange-primary); }
+
+        .cta-section > .cta-container > p {
+            font-size: 17px;
+            color: var(--body-text);
+            margin-bottom: 15px;
+            line-height: 1.7;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-sub-text {
+            font-size: 14px;
+            color: var(--light-text);
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        .cta-info-box {
+            background: var(--cream-bg);
+            border-radius: 14px;
+            padding: 25px 30px;
+            margin: 30px 0;
+            text-align: left;
+        }
+
+        .cta-info-box h4 {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--dark-text);
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .cta-info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+
+        .cta-info-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 12px;
+            color: var(--body-text);
+        }
+
+        .cta-info-item i {
+            color: var(--orange-primary);
+            font-size: 12px;
+        }
+
+        .cta-form-strip {
+            max-width: 650px;
+            margin: 0 auto;
+            display: flex;
+            gap: 10px;
+        }
+
+        .cta-input {
+            flex: 1;
+            padding: 15px 20px;
+            border: 2px solid var(--border-light);
+            border-radius: 8px;
+            font-size: 14px;
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark-text);
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .cta-input:focus { border-color: var(--orange-primary); }
+
+        .cta-submit {
+            padding: 15px 30px;
+            background: var(--orange-primary);
+            color: var(--white);
+            border: none;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Poppins', sans-serif;
+            white-space: nowrap;
+        }
+
+        .cta-submit:hover {
+            background: var(--orange-dark);
+            transform: translateY(-2px);
+        }
+
+        /* ==================== FOOTER ==================== */
+        .footer {
+            background: #1a1a1a;
+            padding: 70px 60px 30px;
+        }
+
+        .footer-container {
+            max-width: var(--container-max);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 50px;
+        }
+
+        .footer-brand h3 {
+            font-size: 24px;
+            color: var(--white);
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .footer-brand h3 span { color: var(--orange-primary); }
+
+        .footer-brand p {
+            color: #888;
+            font-size: 14px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .footer-social { display: flex; gap: 12px; }
+
+        .footer-social a {
+            width: 40px; height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            background: var(--orange-primary);
+            color: var(--white);
+            transform: translateY(-3px);
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .footer-col a {
+            display: block;
+            color: #888;
+            text-decoration: none;
+            font-size: 14px;
+            margin-bottom: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-col a:hover { color: var(--orange-primary); }
+
+        .footer-bottom {
+            max-width: var(--container-max);
+            margin: 50px auto 0;
+            padding-top: 25px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-bottom p { color: #666; font-size: 13px; }
+        .footer-bottom p span { color: var(--orange-primary); }
+
+        /* ==================== SCROLL TO TOP ==================== */
+        /* .scroll-top {
+            position: fixed;
+            bottom: 30px; right: 30px;
+            width: 50px; height: 50px;
+            border-radius: 50%;
+            background: var(--orange-primary);
+            color: var(--white);
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(245, 166, 35, 0.3);
+            z-index: 999;
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .scroll-top:hover {
+            background: var(--orange-dark);
+            transform: translateY(-3px) !important;
+        } */
+
+        /* ==================== ANIMATIONS ==================== */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInRight {
+            from { opacity: 0; transform: translateX(40px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ==================== RESPONSIVE ==================== */
+        @media (max-width: 1200px) {
+            .pricing-grid { grid-template-columns: repeat(2, 1fr); }
+            .whatyouget-grid { grid-template-columns: repeat(2, 1fr); }
+            .industries-grid { grid-template-columns: repeat(4, 1fr); }
+        }
+
+        @media (max-width: 1024px) {
+            .hero-container { grid-template-columns: 1fr; gap: 50px; }
+            .hero-visual { max-width: 500px; margin: 0 auto; }
+
+            .what-are-container,
+            .content-types-container,
+            .custom-container {
+                grid-template-columns: 1fr;
+            }
+
+            .benefits-grid,
+            .quality-grid,
+            .why-choose-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .industries-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .compare-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .compare-vs {
+                margin: 0 auto;
+            }
+
+            .footer-container { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            :root { --section-padding: 70px 25px; }
+
+            .navbar { padding: 15px 25px; }
+
+            .nav-links {
+                position: fixed;
+                top: 0; right: -100%;
+                width: 280px;
+                height: 100vh;
+                background: var(--white);
+                flex-direction: column;
+                padding: 80px 30px 30px;
+                gap: 20px;
+                box-shadow: -5px 0 30px rgba(0, 0, 0, 0.1);
+                transition: right 0.3s ease;
+            }
+
+            .nav-links.active { right: 0; }
+
+            .hamburger { display: flex; }
+            .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 6px); }
+            .hamburger.active span:nth-child(2) { opacity: 0; }
+            .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -6px); }
+
+            .hero { padding: 130px 25px 80px; }
+            .hero h1 { font-size: 30px; }
+            .hero p { font-size: 14px; }
+
+            .hero-buttons { flex-direction: column; }
+            .hero-floating-badge { display: none; }
+            .hero-highlights { flex-wrap: wrap; gap: 20px; }
+
+            .benefits-grid,
+            .whatyouget-grid,
+            .quality-grid,
+            .why-choose-grid,
+            .pricing-grid,
+            .custom-list,
+            .cta-info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .content-types-visual,
+            .industries-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .pricing-card.popular { transform: none; }
+            .pricing-card.popular:hover { transform: translateY(-10px); }
+
+            .section-header h2 { font-size: 28px; }
+
+            .stats-bar { padding: 40px 25px; }
+            .stat-number { font-size: 38px; }
+
+            .cta-section { padding: 70px 25px; }
+            .cta-section h2 { font-size: 28px; }
+            .cta-form-strip { flex-direction: column; }
+
+            .process-timeline::before { left: 28px; }
+
+            .footer { padding: 50px 25px 20px; }
+            .footer-container { grid-template-columns: 1fr; gap: 30px; }
+            .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
+        }
+
+        @media (max-width: 480px) {
+            .industries-grid { grid-template-columns: 1fr; }
+            .content-types-visual { grid-template-columns: 1fr; }
+            .quality-card { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ==================== NAVBAR ==================== -->
+   
+
+  <!-- MOBILE NAV -->
+  <div class="mnav" id="mobNav">
+    <div class="mnav-links">
+<a href="../index.html" onclick="closeMob()">Home</a>
+      <a href="about.html" onclick="closeMob()">About</a>
+      <a href="services.html" onclick="closeMob()">Services</a>
+<a href="../index.html#process" onclick="closeMob()">Process</a>
+      <a href="blogs.html" onclick="closeMob()">Blog</a>
+      <a href="reviews.html" onclick="closeMob()">Reviews</a>
+<a href="../index.html#contact" onclick="closeMob()">Contact</a>
+    </div>
+    <div class="mob-social" aria-label="Social media links">
+      <div class="mob-contact">Connect With Us</div>
+      <a href="https://wa.me/923092102705" title="WhatsApp" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg></a>
+      <a href="https://facebook.com/mrSoomro" title="Facebook" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+      <a href="https://linkedin.com/in/mrSoomro" title="LinkedIn" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+      <a href="https://instagram.com/mrSoomro" title="Instagram" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+      <a href="mailto:info@mr-soomro.com" title="Email" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+    </div>
+  </div>
+
+<!-- NAVBAR -->
+
+  <nav id="mainNav">
+
+<a href="../index.html" class="nlogo"><img src="../images/websitelogo.jpeg" alt="MR. Soomro SEO" style="height:40px;width:auto;display:block;"></a>
+    <ul class="nlinks">
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+<li><a href="../index.html#process">Process</a></li>
+      <li><a href="blogs.html">Blog</a></li>
+      <li><a href="reviews.html">Reviews</a></li>
+<li><a href="../index.html#contact" class="ncta">Free SEO Audit</a></li>
+    </ul>
+    <button class="nbg" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+    <!-- ==================== HERO ==================== -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge"><i class="fas fa-pen-nib"></i> Guest Post Backlinks</div>
+                <h1>Guest Post<br><span>Backlinks Service</span></h1>
+                <p class="hero-subtitle">Build Quality Backlinks Through Relevant Guest Posts</p>
+                <p>Grow your website's authority and search visibility with high-quality guest post backlinks published on relevant, niche-specific websites with real organic traffic.</p>
+                <div class="hero-buttons">
+                    <a href="#pricing" class="btn-primary"><i class="fas fa-rocket"></i> View Packages</a>
+                    <a href="#contact" class="btn-secondary"><i class="fas fa-envelope"></i> Get Started</a>
+                </div>
+                <div class="hero-highlights">
+                    <div class="hero-highlight">
+                        <div class="highlight-number">100%</div>
+                        <div class="highlight-label">Original Content</div>
+                    </div>
+                    <div class="hero-highlight">
+                        <div class="highlight-number">Niche</div>
+                        <div class="highlight-label">Relevant Sites</div>
+                    </div>
+                    <div class="hero-highlight">
+                        <div class="highlight-number">Dofollow</div>
+                        <div class="highlight-label">Where Available</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="article-preview">
+                    <div class="article-header">
+                        <div class="article-site">
+                            <span class="site-dot"></span>
+                            <span>industry-blog.com</span>
+                        </div>
+                        <span class="article-badge"><i class="fas fa-check"></i> Live</span>
+                    </div>
+                    <div class="article-image">
+                        <i class="fas fa-newspaper"></i>
+                    </div>
+                    <div class="article-title">The Complete Guide to Modern SEO Strategies in 2025</div>
+                    <div class="article-meta">
+                        <span><i class="far fa-user"></i> Guest Author</span>
+                        <span><i class="far fa-calendar"></i> Recent</span>
+                        <span><i class="far fa-clock"></i> 8 min read</span>
+                    </div>
+                    <div class="article-text">
+                        Modern SEO combines multiple strategies including quality backlinks, content optimization, and technical improvements. Learn more from <a href="#" class="backlink-highlight">expert SEO service</a> that delivers real results...
+                    </div>
+                    <div class="article-tags">
+                        <span class="article-tag">SEO</span>
+                        <span class="article-tag">Marketing</span>
+                        <span class="article-tag">Guest Post</span>
+                    </div>
+                    <div class="hero-floating-badge top-right">
+                        <div class="floating-icon green"><i class="fas fa-link"></i></div>
+                        <div class="floating-text">
+                            <div class="floating-number">DoFollow</div>
+                            <div class="floating-label">Contextual</div>
+                        </div>
+                    </div>
+                    <div class="hero-floating-badge bottom-left">
+                        <div class="floating-icon orange"><i class="fas fa-chart-line"></i></div>
+                        <div class="floating-text">
+                            <div class="floating-number">Real Traffic</div>
+                            <div class="floating-label">Publishers</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== STATS BAR ==================== -->
+    <section class="stats-bar">
+        <div class="stats-bar-container">
+            <div class="stat-item">
+                <div class="stat-number" data-target="500">0+</div>
+                <div class="stat-label">Guest Posts Published</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="200">0+</div>
+                <div class="stat-label">Publisher Network</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="20">0+</div>
+                <div class="stat-label">Industries Covered</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="100">0%</div>
+                <div class="stat-label">Original Content</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== WHAT ARE GUEST POSTS ==================== -->
+    <section class="what-are-section">
+        <div class="container">
+            <div class="what-are-container">
+                <div class="what-are-visual">
+                    <div class="flow-diagram">
+                        <div class="flow-step">
+                            <div class="flow-step-icon"><i class="fas fa-search"></i></div>
+                            <div class="flow-step-content">
+                                <h5>Research Publisher</h5>
+                                <p>Find relevant, high-quality websites in your niche</p>
+                            </div>
+                        </div>
+                        <div class="flow-arrow"><i class="fas fa-arrow-down"></i></div>
+                        <div class="flow-step">
+                            <div class="flow-step-icon"><i class="fas fa-edit"></i></div>
+                            <div class="flow-step-content">
+                                <h5>Create Original Content</h5>
+                                <p>Write custom article for the publisher's audience</p>
+                            </div>
+                        </div>
+                        <div class="flow-arrow"><i class="fas fa-arrow-down"></i></div>
+                        <div class="flow-step">
+                            <div class="flow-step-icon"><i class="fas fa-link"></i></div>
+                            <div class="flow-step-content">
+                                <h5>Insert Contextual Link</h5>
+                                <p>Naturally integrate your backlink in the content</p>
+                            </div>
+                        </div>
+                        <div class="flow-arrow"><i class="fas fa-arrow-down"></i></div>
+                        <div class="flow-step">
+                            <div class="flow-step-icon"><i class="fas fa-check-circle"></i></div>
+                            <div class="flow-step-content">
+                                <h5>Publish & Report</h5>
+                                <p>Article goes live, report delivered with URL</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="what-are-content">
+                    <div class="section-badge"><i class="fas fa-info-circle"></i> Overview</div>
+                    <h2>What Are <span>Guest Post Backlinks?</span></h2>
+                    <p>A guest post backlink is a link to your website included naturally within an article that is published on another website.</p>
+                    <p>A properly planned guest post can provide more than just a backlink. It can also help your brand reach a relevant audience, build topical authority, and generate referral traffic.</p>
+                    <ul class="what-are-list">
+                        <li><i class="fas fa-check-circle"></i> Backlink placed within original, useful content</li>
+                        <li><i class="fas fa-check-circle"></i> Published on relevant third-party websites</li>
+                        <li><i class="fas fa-check-circle"></i> Provides genuine SEO and traffic value</li>
+                        <li><i class="fas fa-check-circle"></i> Publisher research based on your niche</li>
+                        <li><i class="fas fa-check-circle"></i> Natural, contextual link integration</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== WHY USE GUEST POSTS (BENEFITS) ==================== -->
+    <section class="benefits-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge"><i class="fas fa-lightbulb"></i> Benefits</div>
+                <h2>Why Use <span>Guest Post Backlinks?</span></h2>
+                <p>Guest posting can support your off-page SEO strategy in multiple valuable ways.</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card animate-on-scroll">
+                    <div class="benefit-icon"><i class="fas fa-globe"></i></div>
+                    <h4>Build Referring Domains</h4>
+                    <p>Add new relevant referring domains to strengthen your backlink profile diversity.</p>
+                </div>
+                <div class="benefit-card animate-on-scroll">
+                    <div class="benefit-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h4>Strengthen Authority</h4>
+                    <p>Boost website authority through contextual links from established websites.</p>
+                </div>
+                <div class="benefit-card animate-on-scroll">
+                    <div class="benefit-icon"><i class="fas fa-bullseye"></i></div>
+                    <h4>Support Rankings</h4>
+                    <p>Target specific keywords with strategic anchor text and page targeting.</p>
+                </div>
+                <div class="benefit-card animate-on-scroll">
+                    <div class="benefit-icon"><i class="fas fa-eye"></i></div>
+                    <h4>Improve Visibility</h4>
+                    <p>Increase search engine visibility for your target keywords and topics.</p>
+                </div>
+                <div class="benefit-card animate-on-scroll">
+                    <div class="benefit-icon"><i class="fas fa-sitemap"></i></div>
+                    <h4>Topical Relevance</h4>
+                    <p>Build stronger topical authority through niche-relevant placements.</p>
+                </div>
+                <div class="benefit-card animate-on-scroll">
+                    <div class="benefit-icon"><i class="fas fa-users"></i></div>
+                    <h4>Referral Traffic</h4>
+                    <p>Generate qualified referral visitors from active publisher audiences.</p>
+                </div>
+                <div class="benefit-card animate-on-scroll">
+                    <div class="benefit-icon"><i class="fas fa-star"></i></div>
+                    <h4>Promote Key Pages</h4>
+                    <p>Direct authority to your most important service, product, or landing pages.</p>
+                </div>
+                <div class="benefit-card animate-on-scroll">
+                    <div class="benefit-icon"><i class="fas fa-bullhorn"></i></div>
+                    <h4>Brand Exposure</h4>
+                    <p>Increase brand awareness through visibility on trusted industry websites.</p>
+                </div>
+                <div class="benefit-card animate-on-scroll">
+                    <div class="benefit-icon"><i class="fas fa-layer-group"></i></div>
+                    <h4>Diversified Profile</h4>
+                    <p>Develop a natural, diversified backlink profile that search engines trust.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== WHAT YOU GET ==================== -->
+    <section class="whatyouget-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge"><i class="fas fa-gift"></i> Deliverables</div>
+                <h2>What You <span>Get</span></h2>
+                <p>Every guest post placement includes comprehensive features designed for maximum SEO value.</p>
+            </div>
+            <div class="whatyouget-grid">
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-num">01</div>
+                    <div class="feature-icon"><i class="fas fa-crosshairs"></i></div>
+                    <h4>Niche-Relevant Publishers</h4>
+                    <p>Websites related to your industry, topic, or target audience.</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-num">02</div>
+                    <div class="feature-icon"><i class="fas fa-pen-fancy"></i></div>
+                    <h4>Original Content</h4>
+                    <p>Articles created specifically for the selected publisher and campaign.</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-num">03</div>
+                    <div class="feature-icon"><i class="fas fa-link"></i></div>
+                    <h4>Contextual Backlinks</h4>
+                    <p>Your backlink naturally integrated into relevant content.</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-num">04</div>
+                    <div class="feature-icon"><i class="fas fa-arrow-right"></i></div>
+                    <h4>Dofollow Opportunities</h4>
+                    <p>Priority given to dofollow placements where available.</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-num">05</div>
+                    <div class="feature-icon"><i class="fas fa-crosshairs"></i></div>
+                    <h4>Target URL Selection</h4>
+                    <p>Provide the exact page you want to promote through links.</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-num">06</div>
+                    <div class="feature-icon"><i class="fas fa-anchor"></i></div>
+                    <h4>Anchor Text Customization</h4>
+                    <p>Provide preferred anchor or request natural anchor strategy.</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-num">07</div>
+                    <div class="feature-icon"><i class="fas fa-award"></i></div>
+                    <h4>Quality-Focused Sites</h4>
+                    <p>Publishers evaluated on relevance, authority, and traffic.</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-num">08</div>
+                    <div class="feature-icon"><i class="fas fa-file-alt"></i></div>
+                    <h4>Placement Report</h4>
+                    <p>Published article URL and backlink details after completion.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PROCESS ==================== -->
+    <section class="process-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge"><i class="fas fa-cogs"></i> Our Process</div>
+                <h2>Our Guest Post <span>Process</span></h2>
+                <p>A structured, quality-focused approach to every guest post campaign we handle.</p>
+            </div>
+            <div class="process-timeline">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Website & Keyword Review</h3>
+                        <p>We review your website, target keywords, landing pages, niche, and campaign objectives to build the right strategy.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Publisher Research</h3>
+                        <p>We identify websites that are relevant to your industry and suitable for guest post placement based on your requirements.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Website Quality Check</h3>
+                        <p>Potential publishers are evaluated using multiple quality signals to ensure only high-value sites are selected.</p>
+                        <div class="step-tags">
+                            <span class="step-tag">Topical Relevance</span>
+                            <span class="step-tag">Domain Authority</span>
+                            <span class="step-tag">Organic Traffic</span>
+                            <span class="step-tag">Content Quality</span>
+                            <span class="step-tag">Website History</span>
+                            <span class="step-tag">Backlink Profile</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Topic Selection</h3>
+                        <p>We select an article topic that is relevant to both your website and the target publisher's audience.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Content Creation</h3>
+                        <p>We create original, useful content designed to fit the publisher's audience and editorial style requirements.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">6</div>
+                    <div class="step-content">
+                        <h3>Guest Post Publication</h3>
+                        <p>The article is submitted and published on the selected website with your backlink included naturally.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">7</div>
+                    <div class="step-content">
+                        <h3>Verification & Reporting</h3>
+                        <p>We verify the published article and backlink before adding the placement to your final report.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PRICING ==================== -->
+    <section class="pricing-section" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge"><i class="fas fa-tags"></i> Packages</div>
+                <h2>Guest Post <span>Backlink Packages</span></h2>
+                <p>Choose the package that matches your budget and link-building goals. All plans include original content.</p>
+            </div>
+            <div class="pricing-grid">
+                <!-- Starter -->
+                <div class="pricing-card animate-on-scroll">
+                    <div class="pricing-tier">Starter</div>
+                    <div class="pricing-name">2 Guest Posts</div>
+                    <div class="pricing-price">
+                        <span class="price-currency">$</span>
+                        <span class="price-amount">70</span>
+                    </div>
+                    <div class="price-per">$35 per post</div>
+                    <div class="pricing-highlight"><span>2</span> Guest Post Articles</div>
+                    <div class="pricing-divider"></div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> 2 guest post articles</li>
+                        <li><i class="fas fa-check"></i> 2 relevant publisher placements</li>
+                        <li><i class="fas fa-check"></i> Original content</li>
+                        <li><i class="fas fa-check"></i> Contextual backlink</li>
+                        <li><i class="fas fa-check"></i> Dofollow where available</li>
+                        <li><i class="fas fa-check"></i> Target URL selection</li>
+                        <li><i class="fas fa-check"></i> Anchor text customization</li>
+                        <li><i class="fas fa-check"></i> Published URL report</li>
+                    </ul>
+                    <div class="pricing-best"><i class="fas fa-info-circle"></i> Best for: Testing guest post link building</div>
+                    <a href="#contact" class="pricing-btn outline">Get Started</a>
+                </div>
+
+                <!-- Growth -->
+                <div class="pricing-card animate-on-scroll">
+                    <div class="pricing-tier">Growth</div>
+                    <div class="pricing-name">5 Guest Posts</div>
+                    <div class="pricing-price">
+                        <span class="price-currency">$</span>
+                        <span class="price-amount">150</span>
+                    </div>
+                    <div class="price-per">$30 per post — Save 14%</div>
+                    <div class="pricing-highlight"><span>5</span> Guest Post Articles</div>
+                    <div class="pricing-divider"></div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> 5 guest post placements</li>
+                        <li><i class="fas fa-check"></i> Niche-relevant publishers</li>
+                        <li><i class="fas fa-check"></i> Original content</li>
+                        <li><i class="fas fa-check"></i> Contextual backlinks</li>
+                        <li><i class="fas fa-check"></i> Dofollow where available</li>
+                        <li><i class="fas fa-check"></i> Custom target URLs</li>
+                        <li><i class="fas fa-check"></i> Anchor text strategy</li>
+                        <li><i class="fas fa-check"></i> Quality checks</li>
+                        <li><i class="fas fa-check"></i> Detailed report</li>
+                    </ul>
+                    <div class="pricing-best"><i class="fas fa-info-circle"></i> Best for: Small businesses and growing sites</div>
+                    <a href="#contact" class="pricing-btn outline">Get Started</a>
+                </div>
+
+                <!-- Pro - Popular -->
+                <div class="pricing-card popular animate-on-scroll">
+                    <div class="pricing-tier">Pro</div>
+                    <div class="pricing-name">10 Guest Posts</div>
+                    <div class="pricing-price">
+                        <span class="price-currency">$</span>
+                        <span class="price-amount">250</span>
+                    </div>
+                    <div class="price-per">$25 per post — Save 29%</div>
+                    <div class="pricing-highlight"><span>10</span> Guest Post Articles</div>
+                    <div class="pricing-divider"></div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> 10 guest post placements</li>
+                        <li><i class="fas fa-check"></i> Relevant website research</li>
+                        <li><i class="fas fa-check"></i> Quality-focused publishers</li>
+                        <li><i class="fas fa-check"></i> Original articles</li>
+                        <li><i class="fas fa-check"></i> Contextual backlinks</li>
+                        <li><i class="fas fa-check"></i> Dofollow where available</li>
+                        <li><i class="fas fa-check"></i> Custom anchor text</li>
+                        <li><i class="fas fa-check"></i> Multiple target URLs</li>
+                        <li><i class="fas fa-check"></i> Placement verification</li>
+                        <li><i class="fas fa-check"></i> Complete report</li>
+                    </ul>
+                    <div class="pricing-best"><i class="fas fa-info-circle"></i> Best for: Established SEO campaigns</div>
+                    <a href="#contact" class="pricing-btn">Get Started</a>
+                </div>
+
+                <!-- Authority -->
+                <div class="pricing-card animate-on-scroll">
+                    <div class="pricing-tier">Authority</div>
+                    <div class="pricing-name">20 Guest Posts</div>
+                    <div class="pricing-price">
+                        <span class="price-currency">$</span>
+                        <span class="price-amount">450</span>
+                    </div>
+                    <div class="price-per">$22.50 per post — Save 36%</div>
+                    <div class="pricing-highlight"><span>20</span> Guest Post Articles</div>
+                    <div class="pricing-divider"></div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> 20 guest post placements</li>
+                        <li><i class="fas fa-check"></i> Strong niche relevance</li>
+                        <li><i class="fas fa-check"></i> Authority-focused publishers</li>
+                        <li><i class="fas fa-check"></i> Organic visibility consideration</li>
+                        <li><i class="fas fa-check"></i> Original content</li>
+                        <li><i class="fas fa-check"></i> Contextual backlinks</li>
+                        <li><i class="fas fa-check"></i> Dofollow where available</li>
+                        <li><i class="fas fa-check"></i> Custom anchor strategy</li>
+                        <li><i class="fas fa-check"></i> Multiple target URLs</li>
+                        <li><i class="fas fa-check"></i> Comprehensive report</li>
+                    </ul>
+                    <div class="pricing-best"><i class="fas fa-info-circle"></i> Best for: Agencies and large campaigns</div>
+                    <a href="#contact" class="pricing-btn outline">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CUSTOM ==================== -->
+    <section class="custom-section">
+        <div class="custom-container">
+            <div class="custom-content animate-on-scroll">
+                <div class="section-badge"><i class="fas fa-cog"></i> Custom Solution</div>
+                <h2>Custom <span>Guest Post Campaign</span></h2>
+                <p>Need specific publisher requirements? We can build a custom guest post campaign tailored to your exact needs and preferences.</p>
+                <ul class="custom-list">
+                    <li><i class="fas fa-check-circle"></i> Target country</li>
+                    <li><i class="fas fa-check-circle"></i> Specific niche</li>
+                    <li><i class="fas fa-check-circle"></i> Industry vertical</li>
+                    <li><i class="fas fa-check-circle"></i> Minimum DA/DR</li>
+                    <li><i class="fas fa-check-circle"></i> Minimum organic traffic</li>
+                    <li><i class="fas fa-check-circle"></i> Target keywords</li>
+                    <li><i class="fas fa-check-circle"></i> Target URLs</li>
+                    <li><i class="fas fa-check-circle"></i> Preferred anchor text</li>
+                    <li><i class="fas fa-check-circle"></i> Number of guest posts</li>
+                    <li><i class="fas fa-check-circle"></i> Monthly requirements</li>
+                </ul>
+                <a href="#contact" class="btn-primary"><i class="fas fa-paper-plane"></i> Request Custom Quote</a>
+            </div>
+            <div class="custom-visual animate-on-scroll">
+                <div class="custom-visual-icon"><i class="fas fa-puzzle-piece"></i></div>
+                <h3>Tailored Campaigns</h3>
+                <p>Every business is unique. Get a guest post campaign designed specifically for your niche, goals, and publisher requirements.</p>
+                <a href="#contact" class="btn-secondary" style="border-color: var(--orange-primary); color: var(--orange-primary);"><i class="fas fa-comments"></i> Let's Talk</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== QUALITY CRITERIA ==================== -->
+    <section class="quality-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge"><i class="fas fa-medal"></i> Quality Standards</div>
+                <h2>Website Quality <span>Criteria</span></h2>
+                <p>We don't select publishers based on a single metric. Every website is evaluated against multiple quality factors.</p>
+            </div>
+            <div class="quality-grid">
+                <div class="quality-card animate-on-scroll">
+                    <div class="quality-num">01</div>
+                    <div class="quality-info">
+                        <h4>Topical Relevance</h4>
+                        <p>Meaningful connection to your niche or target audience whenever possible.</p>
+                    </div>
+                </div>
+                <div class="quality-card animate-on-scroll">
+                    <div class="quality-num">02</div>
+                    <div class="quality-info">
+                        <h4>Authority Metrics</h4>
+                        <p>Consider metrics such as DA, DR, TF, and other available SEO indicators.</p>
+                    </div>
+                </div>
+                <div class="quality-card animate-on-scroll">
+                    <div class="quality-num">03</div>
+                    <div class="quality-info">
+                        <h4>Organic Visibility</h4>
+                        <p>Consider search visibility and organic traffic when evaluating publishers.</p>
+                    </div>
+                </div>
+                <div class="quality-card animate-on-scroll">
+                    <div class="quality-num">04</div>
+                    <div class="quality-info">
+                        <h4>Content Quality</h4>
+                        <p>Look for websites that publish useful, readable content rather than link farms.</p>
+                    </div>
+                </div>
+                <div class="quality-card animate-on-scroll">
+                    <div class="quality-num">05</div>
+                    <div class="quality-info">
+                        <h4>Website History</h4>
+                        <p>Available domain history and overall website development are considered.</p>
+                    </div>
+                </div>
+                <div class="quality-card animate-on-scroll">
+                    <div class="quality-num">06</div>
+                    <div class="quality-info">
+                        <h4>Backlink Profile</h4>
+                        <p>Review the publisher's backlink profile for quality and spam concerns.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTENT TYPES ==================== -->
+    <section class="content-types-section">
+        <div class="container">
+            <div class="content-types-container">
+                <div class="content-types-visual">
+                    <div class="content-type-card">
+                        <div class="content-type-icon"><i class="fas fa-book"></i></div>
+                        <span>Informational Guides</span>
+                    </div>
+                    <div class="content-type-card">
+                        <div class="content-type-icon"><i class="fas fa-industry"></i></div>
+                        <span>Industry Insights</span>
+                    </div>
+                    <div class="content-type-card">
+                        <div class="content-type-icon"><i class="fas fa-tools"></i></div>
+                        <span>How-To Articles</span>
+                    </div>
+                    <div class="content-type-card">
+                        <div class="content-type-icon"><i class="fas fa-user-tie"></i></div>
+                        <span>Expert Articles</span>
+                    </div>
+                    <div class="content-type-card">
+                        <div class="content-type-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <span>Educational Content</span>
+                    </div>
+                    <div class="content-type-card">
+                        <div class="content-type-icon"><i class="fas fa-list-ol"></i></div>
+                        <span>List-Based Articles</span>
+                    </div>
+                    <div class="content-type-card">
+                        <div class="content-type-icon"><i class="fas fa-balance-scale"></i></div>
+                        <span>Comparison Articles</span>
+                    </div>
+                    <div class="content-type-card">
+                        <div class="content-type-icon"><i class="fas fa-lightbulb"></i></div>
+                        <span>Problem-Solving</span>
+                    </div>
+                    <div class="content-type-card">
+                        <div class="content-type-icon"><i class="fas fa-chart-line"></i></div>
+                        <span>Industry Trends</span>
+                    </div>
+                    <div class="content-type-card">
+                        <div class="content-type-icon"><i class="fas fa-magic"></i></div>
+                        <span>Custom Formats</span>
+                    </div>
+                </div>
+                <div class="content-types-content">
+                    <div class="section-badge"><i class="fas fa-pen-fancy"></i> Content Types</div>
+                    <h2>Guest Post <span>Content Types</span></h2>
+                    <p>Our guest post content is designed to provide value to the publisher's audience rather than functioning as a simple advertisement.</p>
+                    <p>Articles are strategically structured to fit the publisher's editorial style while naturally incorporating your backlink in a contextually relevant way.</p>
+                    <div class="content-types-note">
+                        <i class="fas fa-info-circle"></i> The exact format depends on the publisher and niche. We choose the most appropriate content type for each placement.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== INDUSTRIES ==================== -->
+    <section class="industries-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge"><i class="fas fa-building"></i> Industries</div>
+                <h2>Industries <span>We Cover</span></h2>
+                <p>We provide guest post campaigns for a wide range of industries and niches.</p>
+            </div>
+            <div class="industries-grid">
+                <div class="industry-tag animate-on-scroll">
+                    <i class="fas fa-cloud"></i>
+                    <span>SaaS</span>
+                </div>
+                <div class="industry-tag animate-on-scroll">
+                    <i class="fas fa-microchip"></i>
+                    <span>Technology</span>
+                </div>
+                <div class="industry-tag animate-on-scroll">
+                    <i class="fas fa-robot"></i>
+                    <span>AI</span>
+                </div>
+                <div class="industry-tag animate-on-scroll">
+                    <i class="fas fa-code"></i>
+                    <span>Software</span>
+                </div>
+                <div class="industry-tag animate-on-scroll">
+                    <i class="fas fa-search"></i>
+                    <span>SEO & Marketing</span>
+                </div>
+                <div class="industry-tag animate-on-scroll">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>E-commerce</span>
+                </div>
+                <div class="industry-tag animate-on-scroll">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Business</span>
+                </div>
+                <div class="industry-tag animate-on-scroll">
+                    <i class="fas fa-university"></i>
+                    <span>Finance</span>
+                </div>
+                <div class="industry-tag animate-on-scroll">
+                    <i class="fas fa-plane"></i>
+                    <span>Travel</span>
+                </div>
+                <div class="industry-tag animate-on-scroll">
+                    <i class="fas fa-home"></i>
+                    <span>Real Estate</span>
+                </div>
+                <div class="industry-tag animate-on-scroll">
+                    <i class="fas fa-car"></i>
+                    <span>Automotive</span>
+                </div>
+                <div class="industry-tag animate-on-scroll">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Education</span>
+                </div>
+                <div class="industry-tag animate-on-scroll">
+                    <i class="fas fa-tshirt"></i>
+                    <span>Lifestyle</span>
+                </div>
+                <div class="industry-tag animate-on-scroll">
+                    <i class="fas fa-heartbeat"></i>
+                    <span>Health & Wellness</span>
+                </div>
+                <div class="industry-tag animate-on-scroll">
+                    <i class="fas fa-dice"></i>
+                    <span>iGaming & Casino</span>
+                </div>
+                <div class="industry-tag animate-on-scroll">
+                    <i class="fab fa-bitcoin"></i>
+                    <span>Crypto & Blockchain</span>
+                </div>
+                <div class="industry-tag animate-on-scroll">
+                    <i class="fas fa-link"></i>
+                    <span>Affiliate</span>
+                </div>
+                <div class="industry-tag animate-on-scroll">
+                    <i class="fas fa-handshake"></i>
+                    <span>B2B Services</span>
+                </div>
+                <div class="industry-tag animate-on-scroll">
+                    <i class="fas fa-star"></i>
+                    <span>Specialized Niches</span>
+                </div>
+                <div class="industry-tag animate-on-scroll">
+                    <i class="fas fa-plus-circle"></i>
+                    <span>& More</span>
+                </div>
+            </div>
+            <p class="industries-note"><i class="fas fa-info-circle"></i> Publisher availability varies by niche. Contact us for niche-specific inventory.</p>
+        </div>
+    </section>
+
+    <!-- ==================== WHY CHOOSE US ==================== -->
+    <section class="why-choose-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge"><i class="fas fa-award"></i> Advantages</div>
+                <h2>Why Choose Our <span>Guest Post Service?</span></h2>
+                <p>A quality-focused approach that prioritizes relevance, authority, and long-term value over quick numbers.</p>
+            </div>
+            <div class="why-choose-grid">
+                <div class="why-choose-card animate-on-scroll">
+                    <div class="why-choose-icon"><i class="fas fa-search"></i></div>
+                    <h4>Relevant Publisher Research</h4>
+                    <p>We focus on finding websites that make sense for your industry and campaign goals.</p>
+                </div>
+                <div class="why-choose-card animate-on-scroll">
+                    <div class="why-choose-icon"><i class="fas fa-pen-fancy"></i></div>
+                    <h4>Original Content</h4>
+                    <p>Articles created specifically for placement rather than using spun or duplicated content.</p>
+                </div>
+                <div class="why-choose-card animate-on-scroll">
+                    <div class="why-choose-icon"><i class="fas fa-link"></i></div>
+                    <h4>Natural Link Placement</h4>
+                    <p>Backlinks integrated into relevant content in a natural and contextual way.</p>
+                </div>
+                <div class="why-choose-card animate-on-scroll">
+                    <div class="why-choose-icon"><i class="fas fa-medal"></i></div>
+                    <h4>Quality Over Quantity</h4>
+                    <p>Focus on useful publishers rather than delivering large volumes of low-value posts.</p>
+                </div>
+                <div class="why-choose-card animate-on-scroll">
+                    <div class="why-choose-icon"><i class="fas fa-sliders-h"></i></div>
+                    <h4>Flexible Targeting</h4>
+                    <p>Specify countries, authority metrics, traffic requirements, niches, and target URLs.</p>
+                </div>
+                <div class="why-choose-card animate-on-scroll">
+                    <div class="why-choose-icon"><i class="fas fa-clipboard-check"></i></div>
+                    <h4>Transparent Reporting</h4>
+                    <p>You receive published URLs and relevant backlink details after every campaign completion.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== COMPARISON ==================== -->
+    <section class="compare-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge"><i class="fas fa-balance-scale"></i> Comparison</div>
+                <h2>Guest Posts vs. <span>PBN Backlinks</span></h2>
+                <p>Both can be used in an SEO campaign, but they work differently. Understanding each helps you choose the right option.</p>
+            </div>
+            <div class="compare-grid">
+                <div class="compare-card">
+                    <div class="compare-header">
+                        <div class="compare-icon"><i class="fas fa-pen-nib"></i></div>
+                        <h3>Guest Post Backlinks</h3>
+                    </div>
+                    <ul class="compare-list">
+                        <li><i class="fas fa-check"></i> Published on third-party websites</li>
+                        <li><i class="fas fa-check"></i> Original, custom-written content</li>
+                        <li><i class="fas fa-check"></i> Greater editorial context</li>
+                        <li><i class="fas fa-check"></i> Potential referral traffic</li>
+                        <li><i class="fas fa-check"></i> Strong niche relevance opportunities</li>
+                        <li><i class="fas fa-check"></i> Natural link integration</li>
+                        <li><i class="fas fa-check"></i> Real website audiences</li>
+                    </ul>
+                </div>
+                <div class="compare-vs">VS</div>
+                <div class="compare-card">
+                    <div class="compare-header">
+                        <div class="compare-icon"><i class="fas fa-network-wired"></i></div>
+                        <h3>PBN Backlinks</h3>
+                    </div>
+                    <ul class="compare-list">
+                        <li><i class="fas fa-check"></i> Placements through private networks</li>
+                        <li><i class="fas fa-check"></i> Greater control over placement</li>
+                        <li><i class="fas fa-check"></i> Faster implementation</li>
+                        <li><i class="fas fa-check"></i> Custom anchor targeting</li>
+                        <li><i class="fas fa-check"></i> Custom URL targeting</li>
+                        <li><i class="fas fa-check"></i> Direct control of content</li>
+                        <li><i class="fas fa-check"></i> Flexible placement options</li>
+                    </ul>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 40px; font-size: 14px; color: var(--body-text); font-style: italic; max-width: 700px; margin-left: auto; margin-right: auto;">
+                <i class="fas fa-info-circle" style="color: var(--orange-primary);"></i>
+                The right option depends on your website, competition, budget, and SEO strategy. We can help you choose or combine both approaches.
+            </p>
+        </div>
+    </section>
+
+    <!-- ==================== FAQ ==================== -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge"><i class="fas fa-question-circle"></i> FAQ</div>
+                <h2>Frequently Asked <span>Questions</span></h2>
+                <p>Common questions about our guest post backlink service.</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item active">
+                    <div class="faq-question">
+                        <h4>What is a guest post backlink?</h4>
+                        <div class="faq-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">It is a backlink placed within an article published on a third-party website. The article is written specifically for that publisher and includes a natural, contextual link back to your site.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Do you write the guest post?</h4>
+                        <div class="faq-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">Yes. Original content is created for the publisher and campaign, designed to fit their audience and editorial standards.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Are guest posts permanent?</h4>
+                        <div class="faq-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">We target permanent placements, but the publisher ultimately controls the website and published content. We select established, quality publishers to minimize this risk.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Are guest post links dofollow?</h4>
+                        <div class="faq-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">We prioritize dofollow placements where available. The final link attribute depends on the publisher's editorial policies.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Can I choose the website?</h4>
+                        <div class="faq-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">You can provide preferred websites or publisher requirements. We can also research suitable publishers based on your niche and criteria.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Can I choose the anchor text?</h4>
+                        <div class="faq-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">Yes. You can provide your preferred anchor text, although we recommend maintaining a natural and diversified anchor profile for long-term SEO health.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Can I choose the target URL?</h4>
+                        <div class="faq-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">Yes. You can specify the exact page you want the backlink to point to — whether it's your homepage, service page, product page, or blog post.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Can you target websites from a specific country?</h4>
+                        <div class="faq-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">Yes. Country targeting is available subject to publisher inventory availability in your requested region.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Can you provide websites with real organic traffic?</h4>
+                        <div class="faq-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">Yes. Organic visibility and traffic can be included in publisher selection criteria. Additional metrics may affect pricing.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Do you guarantee rankings?</h4>
+                        <div class="faq-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">No. We don't guarantee specific search engine rankings. Guest posts are one part of an overall SEO strategy that also depends on content, technical SEO, and competition.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>How long does delivery take?</h4>
+                        <div class="faq-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">Most campaigns take approximately <strong>7–21 days</strong>, depending on publisher availability, content requirements, and campaign size.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Can you handle difficult niches?</h4>
+                        <div class="faq-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">Yes. We can research specialized and competitive niches, although publisher availability and pricing may vary based on the specific niche requirements.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CTA ==================== -->
+    <section class="cta-section" id="contact">
+        <div class="cta-container">
+            <div class="section-badge"><i class="fas fa-rocket"></i> Get Started</div>
+            <h2>Build Authority With <span>Strategic Guest Posts</span></h2>
+            <p>A quality guest post should do more than place a link. It should provide useful content, fit the publisher's audience, and create a relevant connection to your website.</p>
+            <p class="cta-sub-text">Build your backlink profile with niche-relevant guest posts, quality content, and strategic publisher selection.</p>
+
+            <div class="cta-info-box">
+                <h4><i class="fas fa-clipboard-list"></i> Send Us Your Details:</h4>
+                <div class="cta-info-grid">
+                    <div class="cta-info-item"><i class="fas fa-globe"></i>Website URL</div>
+                    <div class="cta-info-item"><i class="fas fa-industry"></i>Niche</div>
+                    <div class="cta-info-item"><i class="fas fa-key"></i>Target keywords</div>
+                    <div class="cta-info-item"><i class="fas fa-file"></i>Target pages</div>
+                    <div class="cta-info-item"><i class="fas fa-flag"></i>Preferred countries</div>
+                    <div class="cta-info-item"><i class="fas fa-cog"></i>Publisher requirements</div>
+                </div>
+            </div>
+
+            <div class="cta-form-strip">
+                <input type="url" class="cta-input" placeholder="Enter your website URL..." id="websiteInput">
+                <button class="cta-submit" id="ctaSubmit"><i class="fas fa-paper-plane"></i> Start Campaign</button>
+            </div>
+            <p style="font-size: 12px; color: var(--light-text); margin-top: 15px;">We'll review your requirements and recommend the most suitable guest post campaign.</p>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+   <!-- FOOTER -->
+  <footer itemscope itemtype="https://schema.org/Organization">
+    <div class="ftt">
+      <div>
+        <span class="ftlo" itemprop="name">MR.<span>Soomro</span></span>
+        <p class="fttg" itemprop="description">Pakistan's trusted SEO agency helping businesses rank higher, attract more clients and grow sustainably with data-driven search strategies since 2016.</p>
+        <div class="ft-soc-row">
+          <a href="https://wa.me/923092102705" title="WhatsApp" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg></a>
+          <a href="https://facebook.com/mrSoomro" title="Facebook" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+          <a href="https://linkedin.com/in/mrSoomro" title="LinkedIn" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a href="https://instagram.com/mrSoomro" title="Instagram" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="mailto:info@mr-soomro.com" title="Email" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+        </div>
+      </div>
+      <div><div class="ftct">Services</div><ul class="ftlk"><li><strong>Technical SEO</strong></li><li><a href="services.html">Website Audit</a></li><li><a href="services.html">Core Web Vitals</a></li><li><a href="services.html">Schema Markup</a></li><li><a href="services.html">Crawl Error Fixes</a></li></ul></div>
+      <div><div class="ftct">Services</div><ul class="ftlk"><li><strong>On-Page SEO</strong></li><li><a href="services.html">Keyword Research</a></li><li><a href="services.html">Meta Optimization</a></li><li><a href="services.html">Internal Linking</a></li><li><strong>Off-Page SEO</strong></li><li><a href="services.html">Guest Posting</a></li><li><a href="services.html">Link Building</a></li><li><a href="services.html">Digital PR</a></li></ul></div>
+      <div><div class="ftct">More Services</div><ul class="ftlk"><li><strong>Local SEO</strong></li><li><a href="services.html">Google Business Profile</a></li><li><a href="services.html">Citation Building</a></li><li><strong>E-commerce SEO</strong></li><li><a href="services.html">Shopify SEO</a></li><li><a href="services.html">WooCommerce SEO</a></li><li><strong>SEO Consulting</strong></li><li><a href="services.html">Competitor Analysis</a></li><li><a href="services.html">Monthly Reporting</a></li></ul></div>
+<div><div class="ftct">Quick Links</div><ul class="ftlk"><li><a href="../index.html#about">Why Choose Us</a></li><li><a href="../index.html#process">SEO Process</a></li><li><a href="reviews.html">Client Reviews</a></li><li><a href="blogs.html">Blog</a></li><li><a href="../index.html#contact">Book Free Consultation</a></li></ul></div>
+      <div><div class="ftct">Contact</div><ul class="ftlk"><li><a href="mailto:info@mr-soomro.com">info@mr-soomro.com</a></li><li><a href="tel:+923092102705">0309 210 2705</a></li><li><a href="https://wa.me/923092102705">WhatsApp</a></li><li style="color:rgba(255,255,255,.28);font-size:13px;font-weight:300">House No G 209, Mohallah Humayoo, Masjid Al Fazal Town, Phuleli, Hyderabad, Sindh, Pakistan 71000</li></ul></div>
+    </div>
+    <div class="ftbt">
+      <div class="ftcp">&copy; 2026 <a href="../index.html">Mr. Soomro SEO Agency</a>. All rights reserved.</div>
+<div class="ftbl"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms & Conditions</a><a href="cookie-policy.html">Cookie Policy</a></div>
+    </div>
+  </footer>
+
+    <!-- ==================== SCROLL TO TOP ==================== -->
+    <button class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- ==================== JAVASCRIPT ==================== -->
+    <script>
+        // ========== NAVBAR SCROLL ==========
+        const navbar = document.getElementById('mainNav');
+        if (navbar) {
+            window.addEventListener('scroll', () => {
+                navbar.classList.toggle('scr', window.scrollY > 50);
+            });
+        }
+
+        // ========== MOBILE MENU ==========
+        const hamburger = document.getElementById('burger');
+        const navLinks = document.getElementById('mobNav');
+
+        if (hamburger && navLinks) {
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('open');
+                navLinks.classList.toggle('open');
+            });
+
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('open');
+                    navLinks.classList.remove('open');
+                });
+            });
+        }
+
+        function closeMob() {
+            const mob = document.getElementById('mobNav');
+            if (mob) mob.classList.remove('open');
+        }
+
+        // ========== SCROLL TO TOP ==========
+        // const scrollTopBtn = document.getElementById('scrollTop');
+        // window.addEventListener('scroll', () => {
+        //     scrollTopBtn.classList.toggle('visible', window.scrollY > 500);
+        // });
+        // scrollTopBtn.addEventListener('click', () => {
+        //     window.scrollTo({ top: 0, behavior: 'smooth' });
+        // });
+
+        // ========== COUNTER ANIMATION ==========
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-number');
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                const duration = 2000;
+                const startTime = Date.now();
+                const originalText = counter.textContent;
+                const suffix = originalText.includes('%') ? '%' : '+';
+
+                function update() {
+                    const elapsed = Date.now() - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    const easeOut = 1 - Math.pow(1 - progress, 3);
+                    const current = Math.floor(target * easeOut);
+                    counter.textContent = current + suffix;
+                    if (progress < 1) requestAnimationFrame(update);
+                }
+                update();
+            });
+        }
+
+        // ========== INTERSECTION OBSERVER ==========
+        const animateObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const parent = entry.target.parentElement;
+                    const siblings = parent ? Array.from(parent.querySelectorAll('.animate-on-scroll')) : [];
+                    const idx = siblings.indexOf(entry.target);
+                    const delay = idx >= 0 ? idx * 70 : 0;
+
+                    setTimeout(() => {
+                        entry.target.classList.add('visible');
+                    }, delay);
+
+                    animateObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            animateObserver.observe(el);
+        });
+
+        // Process steps observer
+        const processObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const steps = document.querySelectorAll('.process-step');
+                    const idx = Array.from(steps).indexOf(entry.target);
+                    setTimeout(() => {
+                        entry.target.classList.add('visible');
+                    }, idx * 120);
+                    processObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.2 });
+
+        document.querySelectorAll('.process-step').forEach(step => {
+            processObserver.observe(step);
+        });
+
+        // Stats bar counter trigger
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
+
+        const statsBar = document.querySelector('.stats-bar');
+        if (statsBar) statsObserver.observe(statsBar);
+
+        // ========== FAQ ACCORDION ==========
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                const answer = item.querySelector('.faq-answer');
+                const content = answer.querySelector('.faq-answer-content');
+                const isActive = item.classList.contains('active');
+
+                document.querySelectorAll('.faq-item').forEach(faq => {
+                    faq.classList.remove('active');
+                    faq.querySelector('.faq-answer').style.maxHeight = '0';
+                });
+
+                if (!isActive) {
+                    item.classList.add('active');
+                    answer.style.maxHeight = content.scrollHeight + 30 + 'px';
+                }
+            });
+        });
+
+        // ========== SMOOTH SCROLL ==========
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const navHeight = navbar.offsetHeight;
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 20;
+                    window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+                }
+            });
+        });
+
+        // ========== CTA FORM ==========
+        const ctaSubmit = document.getElementById('ctaSubmit');
+        const websiteInput = document.getElementById('websiteInput');
+
+        ctaSubmit.addEventListener('click', () => {
+            const url = websiteInput.value.trim();
+            if (!url) {
+                websiteInput.style.borderColor = '#e74c3c';
+                websiteInput.setAttribute('placeholder', 'Please enter your website URL...');
+                setTimeout(() => {
+                    websiteInput.style.borderColor = 'var(--border-light)';
+                    websiteInput.setAttribute('placeholder', 'Enter your website URL...');
+                }, 2000);
+                return;
+            }
+
+            ctaSubmit.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            ctaSubmit.disabled = true;
+
+            setTimeout(() => {
+                ctaSubmit.innerHTML = '<i class="fas fa-check"></i> Request Sent!';
+                ctaSubmit.style.background = '#4CAF50';
+                websiteInput.value = '';
+
+                setTimeout(() => {
+                    ctaSubmit.innerHTML = '<i class="fas fa-paper-plane"></i> Start Campaign';
+                    ctaSubmit.style.background = 'var(--orange-primary)';
+                    ctaSubmit.disabled = false;
+                }, 3000);
+            }, 1500);
+        });
+
+        websiteInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') ctaSubmit.click();
+        });
+
+        // ========== PRICING CARD TILT ==========
+        document.querySelectorAll('.pricing-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = (y - centerY) / 30;
+                const rotateY = (centerX - x) / 30;
+
+                card.style.transform = card.classList.contains('popular')
+                    ? `scale(1.03) perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`
+                    : `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = card.classList.contains('popular') ? 'scale(1.03)' : '';
+            });
+        });
+
+        // ========== INITIALIZE ==========
+        document.addEventListener('DOMContentLoaded', () => {
+            const firstFaq = document.querySelector('.faq-item.active .faq-answer');
+            if (firstFaq) {
+                const content = firstFaq.querySelector('.faq-answer-content');
+                firstFaq.style.maxHeight = content.scrollHeight + 30 + 'px';
+            }
+        });
+    </script>
+    <script src="../pages/script.js"></script>
+</body>
+</html>

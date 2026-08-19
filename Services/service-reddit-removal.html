@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reddit Post Removal & Online Reputation Management</title>
+<meta name="description" content="Professional Reddit post removal assessment and reputation-management support. Case-by-case strategy, policy-focused approach, no guaranteed outcomes.">
+<meta property="og:title" content="Reddit Post Removal & Online Reputation Management">
+<meta property="og:description" content="Case assessment, removal strategy, and reputation-management support for unwanted Reddit content.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="../css/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Reddit Post Removal & Online Reputation Management",
+  "name": "Reddit Post Removal Service",
+  "description": "Case assessment, removal strategy preparation, and reputation-management support for unwanted Reddit content.",
+  "offers": [
+    {"@type": "Offer", "name": "Basic", "price": "600", "priceCurrency": "USD"},
+    {"@type": "Offer", "name": "Professional", "price": "1500", "priceCurrency": "USD"},
+    {"@type": "Offer", "name": "Advanced", "price": "2500", "priceCurrency": "USD"}
+  ]
+}
+</script>
+<style>
+/* ===== Tokens ===== */
+:root{
+  --color-primary:#1A1A1A;
+  --color-accent:#F5811F;
+  --color-accent-end:#F7B733;
+  --color-bg:#FDF9F3;
+  --color-surface:#FFFFFF;
+  --color-text-muted:#6B6B6B;
+  --color-border:#E9E3D8;
+  --shadow-sm:0 2px 8px rgba(26,20,10,.06);
+  --shadow-md:0 12px 32px rgba(26,20,10,.10);
+  --shadow-lg:0 24px 60px rgba(26,20,10,.14);
+  --radius-sm:10px;
+  --radius-md:16px;
+  --radius-lg:24px;
+  --container:1200px;
+  --ease:cubic-bezier(.2,.8,.2,1);
+}
+
+*,*::before,*::after{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto;}
+  *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important;}
+}
+
+body{
+  margin:0;
+  font-family:'Inter',system-ui,-apple-system,sans-serif;
+  background:var(--color-bg);
+  color:var(--color-primary);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+ul,ol{margin:0;padding:0;list-style:none;}
+button{font:inherit;cursor:pointer;background:none;border:none;color:inherit;}
+h1,h2,h3{margin:0 0 .5em;font-weight:800;letter-spacing:-.02em;line-height:1.08;}
+p{margin:0 0 1em;color:var(--color-text-muted);}
+
+.container{max-width:var(--container);margin:0 auto;padding:0 24px;}
+.container--narrow{max-width:820px;}
+
+.skip-link{
+  position:absolute;left:-999px;top:0;background:var(--color-primary);color:#fff;
+  padding:12px 20px;z-index:2000;border-radius:0 0 8px 0;
+}
+.skip-link:focus{left:0;}
+
+:focus-visible{outline:3px solid var(--color-accent);outline-offset:3px;}
+
+/* ===== Buttons ===== */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:16px 28px;border-radius:999px;font-weight:700;font-size:.95rem;
+  transition:transform .25s var(--ease),box-shadow .25s var(--ease),background .25s var(--ease);
+  white-space:nowrap;
+}
+.btn--sm{padding:11px 20px;font-size:.875rem;}
+.btn--block{width:100%;}
+.btn--primary{
+  background:linear-gradient(135deg,var(--color-accent),var(--color-accent-end));
+  color:#fff;box-shadow:var(--shadow-sm);
+}
+.btn--primary:hover{transform:translateY(-2px);box-shadow:var(--shadow-md);}
+.btn--outline{
+  background:transparent;color:var(--color-primary);border:1.5px solid var(--color-border);
+}
+.btn--outline:hover{border-color:var(--color-accent);color:var(--color-accent);transform:translateY(-2px);}
+.btn--on-dark{border-color:rgba(255,255,255,.35);color:#fff;}
+.btn--on-dark:hover{border-color:#fff;color:#fff;}
+
+/* ===== Reveal ===== */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease),transform .7s var(--ease);}
+.reveal.is-visible{opacity:1;transform:translateY(0);}
+
+/* ===== Hero ===== */
+.hero{padding:88px 0 64px;overflow:hidden;}
+.hero__inner{max-width:760px;}
+.eyebrow{
+  font-size:.78rem;font-weight:800;letter-spacing:.12em;color:var(--color-accent);
+  margin:0 0 16px;text-transform:uppercase;
+}
+.hero__title{font-size:clamp(2.2rem,4.4vw,3.2rem);margin-bottom:20px;}
+.hero__title .accent{color:var(--color-accent);}
+.hero__desc{font-size:1.08rem;max-width:60ch;margin-bottom:16px;}
+.hero__desc--sm{font-size:.98rem;}
+.hero__actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:24px;}
+.hero__actions--center{justify-content:center;}
+.hero__price-tag{
+  display:inline-block;margin-top:28px;font-weight:700;font-size:.9rem;
+  background:var(--color-surface);border:1px solid var(--color-border);
+  padding:10px 18px;border-radius:999px;box-shadow:var(--shadow-sm);
+}
+.hero__price-tag strong{color:var(--color-accent);}
+
+/* ===== Sections ===== */
+.section{padding:96px 0;}
+.section--alt{background:var(--color-surface);}
+.section-head{max-width:680px;margin:0 auto 48px;text-align:center;}
+.section-head h2{font-size:clamp(1.9rem,3.4vw,2.5rem);}
+.lead{font-size:1.08rem;color:var(--color-primary);font-weight:500;}
+
+.split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
+.split h2{font-size:clamp(1.8rem,3.2vw,2.3rem);}
+
+.callout{
+  background:var(--color-bg);border-left:3px solid var(--color-accent);padding:14px 18px;border-radius:0 10px 10px 0;
+  color:var(--color-primary);
+}
+.section--alt .callout{background:var(--color-bg);}
+
+/* ===== Card grid ===== */
+.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.feature-card{
+  background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-md);
+  padding:30px;transition:transform .25s var(--ease),box-shadow .25s var(--ease),border-color .25s var(--ease);
+}
+.feature-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:var(--color-accent);}
+.feature-card h3{font-size:1.05rem;margin-bottom:8px;}
+.feature-card p{font-size:.9rem;margin:0;}
+.section--alt .feature-card{background:var(--color-bg);}
+
+/* ===== Timeline ===== */
+.timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;position:relative;}
+.timeline__item{
+  background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-md);
+  padding:28px;position:relative;transition:transform .25s var(--ease),box-shadow .25s var(--ease);
+}
+.timeline__item:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);}
+.timeline__num{
+  display:inline-block;font-size:.85rem;font-weight:800;color:var(--color-accent);
+  border:1.5px solid var(--color-accent);border-radius:999px;padding:4px 12px;margin-bottom:14px;
+}
+.timeline__item h3{font-size:1.1rem;margin-bottom:8px;}
+.timeline__item p{font-size:.9rem;margin:0;}
+
+/* ===== Pricing ===== */
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;align-items:stretch;}
+.price-card{
+  background:var(--color-bg);border:1px solid var(--color-border);border-radius:var(--radius-lg);
+  padding:36px 30px;display:flex;flex-direction:column;position:relative;
+  transition:transform .3s var(--ease),box-shadow .3s var(--ease);
+}
+.price-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-md);}
+.price-card h3{font-size:1.15rem;margin-bottom:6px;}
+.price-card__timeline{font-size:.78rem;font-weight:700;color:var(--color-accent);text-transform:uppercase;letter-spacing:.04em;margin-bottom:14px;display:block;}
+.price-card__price{font-size:2.1rem;font-weight:800;margin-bottom:14px;}
+.price-card .check-list{margin:20px 0 28px;flex-grow:1;}
+.check-list li{position:relative;padding-left:28px;margin-bottom:12px;color:var(--color-primary);font-size:.92rem;}
+.check-list li::before{content:"✓";position:absolute;left:0;color:var(--color-accent);font-weight:800;}
+.price-card--featured{
+  background:var(--color-primary);color:#fff;border-color:var(--color-primary);
+  transform:scale(1.045);box-shadow:var(--shadow-lg);
+}
+.price-card--featured:hover{transform:scale(1.045) translateY(-6px);}
+.price-card--featured h3,.price-card--featured .price-card__price{color:#fff;}
+.price-card--featured .price-card__timeline{color:var(--color-accent-end);}
+.price-card--featured .muted{color:rgba(255,255,255,.65);}
+.price-card--featured .check-list li{color:#fff;}
+.price-card--featured .check-list li::before{color:var(--color-accent-end);}
+.price-card__badge{
+  position:absolute;top:-14px;left:50%;transform:translateX(-50%);
+  background:linear-gradient(135deg,var(--color-accent),var(--color-accent-end));
+  color:#fff;font-size:.72rem;font-weight:800;letter-spacing:.06em;padding:6px 16px;border-radius:999px;
+  box-shadow:var(--shadow-sm);
+}
+.muted{color:var(--color-text-muted);font-size:.85rem;}
+
+/* ===== Notice ===== */
+.notice{padding:0 0 96px;}
+.notice__box{
+  max-width:760px;margin:0 auto;background:var(--color-surface);border:1px solid var(--color-border);
+  border-left:4px solid var(--color-accent);border-radius:var(--radius-md);padding:32px 36px;
+}
+.notice__box h2{font-size:1.15rem;}
+.notice__box p{color:var(--color-text-muted);font-size:.92rem;}
+.notice__box strong{color:var(--color-primary);}
+
+/* ===== FAQ ===== */
+.accordion__item{border-bottom:1px solid var(--color-border);}
+.accordion__trigger{
+  width:100%;display:flex;justify-content:space-between;align-items:center;gap:16px;
+  padding:22px 4px;font-weight:700;font-size:1.02rem;text-align:left;
+}
+.accordion__icon{
+  flex-shrink:0;width:22px;height:22px;position:relative;
+}
+.accordion__icon::before,.accordion__icon::after{
+  content:"";position:absolute;background:var(--color-accent);border-radius:2px;
+  top:50%;left:50%;transform:translate(-50%,-50%);
+}
+.accordion__icon::before{width:14px;height:2px;}
+.accordion__icon::after{width:2px;height:14px;transition:transform .25s var(--ease);}
+.accordion__trigger[aria-expanded="true"] .accordion__icon::after{transform:translate(-50%,-50%) rotate(90deg) scaleX(0);}
+.accordion__panel{max-height:0;overflow:hidden;transition:max-height .35s var(--ease);}
+.accordion__panel p{padding:0 4px 22px;margin:0;}
+
+/* ===== Final CTA ===== */
+.final-cta{background:var(--color-primary);padding:96px 0;color:#fff;}
+.final-cta__inner{max-width:680px;margin:0 auto;text-align:center;}
+.final-cta h2{color:#fff;font-size:clamp(1.9rem,3.6vw,2.5rem);}
+.final-cta p{color:rgba(255,255,255,.75);}
+.final-cta__price{color:#fff;font-weight:700;font-size:1.05rem;margin-bottom:8px;}
+
+/* ===== Footer ===== */
+.footer{background:var(--color-primary);color:rgba(255,255,255,.7);padding:48px 0 24px;}
+.footer__inner{text-align:center;}
+.footer__logo{color:#fff;font-size:1.1rem;font-weight:800;margin-bottom:10px;display:inline-block;}
+.footer__logo span{color:var(--color-accent);}
+.footer .muted{color:rgba(255,255,255,.55);font-size:.85rem;}
+
+/* ===== Back to top =====
+.back-to-top{
+  position:fixed;
+  bottom:28px;
+  right:28px;
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  background:var(--color-primary);
+  color:#fff;font-size:1.1rem;
+  box-shadow:var(--shadow-md);
+  display:flex;align-items:center;
+  justify-content:center;opacity:0;pointer-events:none;
+  transform:translateY(10px);transition:opacity .25s var(--ease),transform .25s var(--ease);
+  z-index:900;
+}
+.back-to-top.is-visible{opacity:1;pointer-events:auto;transform:translateY(0);}
+.back-to-top:hover{background:var(--color-accent);} */
+
+/* ===== Responsive ===== */
+@media (max-width:1024px){
+  .split{grid-template-columns:1fr;gap:36px;}
+  .timeline{grid-template-columns:repeat(2,1fr);}
+  .pricing-grid{grid-template-columns:1fr;max-width:440px;margin:0 auto;}
+  .price-card--featured{transform:none;}
+  .price-card--featured:hover{transform:translateY(-6px);}
+  .card-grid{grid-template-columns:repeat(2,1fr);}
+}
+
+@media (max-width:768px){
+  .section{padding:72px 0;}
+  .timeline{grid-template-columns:1fr;}
+  .card-grid{grid-template-columns:1fr;}
+}
+
+@media (max-width:480px){
+  .container{padding:0 18px;}
+  .hero{padding:56px 0 40px;}
+  .hero__actions .btn{width:100%;}
+  .price-card--featured{transform:none;}
+}
+</style>
+</head>
+<body data-shared-mobile-nav>
+<!-- MOBILE NAV -->
+  <div class="mnav" id="mobNav">
+    <div class="mnav-links">
+      <a href="index.html" onclick="closeMob()">Home</a>
+      <a href="pages/about.html" onclick="closeMob()">About</a>
+      <a href="pages/services.html" onclick="closeMob()">Services</a>
+      <a href="index.html#process" onclick="closeMob()">Process</a>
+      <a href="pages/blogs.html" onclick="closeMob()">Blog</a>
+      <a href="pages/reviews.html" onclick="closeMob()">Reviews</a>
+      <a href="index.html#contact" onclick="closeMob()">Contact</a>
+    </div>
+    <div class="mob-social" aria-label="Social media links">
+      <div class="mob-contact">Connect With Us</div>
+      <a href="https://wa.me/923092102705" title="WhatsApp" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg></a>
+      <a href="https://facebook.com/mrSoomro" title="Facebook" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+      <a href="https://linkedin.com/in/mrSoomro" title="LinkedIn" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+      <a href="https://instagram.com/mrSoomro" title="Instagram" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+      <a href="mailto:info@mr-soomro.com" title="Email" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+    </div>
+  </div>
+
+<!-- NAVBAR -->
+  <nav id="mainNav">
+    <a href="../index.html" class="nlogo"><img src="../images/websitelogo.jpeg" alt="MR. Soomro SEO" style="height:40px;width:auto;display:block;"></a>
+    <ul class="nlinks">
+      <li><a href="pages/about.html">About</a></li>
+      <li><a href="pages/services.html">Services</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="pages/blogs.html">Blog</a></li>
+      <li><a href="pages/reviews.html">Reviews</a></li>
+      <li><a href="#contact" class="ncta">Free SEO Audit</a></li>
+    </ul>
+    <button class="nbg" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+<a href="#main" class="skip-link">Skip to main content</a>
+<main id="main">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero__inner reveal">
+      <p class="eyebrow">REDDIT POST REMOVAL</p>
+      <h1 class="hero__title">Reddit Post Removal & <span class="accent">Online Reputation Management</span></h1>
+      <p class="hero__desc">Have an unwanted Reddit post affecting your personal or business reputation? Our Reddit Post Removal service helps individuals, businesses, and brands assess unwanted Reddit content and pursue appropriate removal or reporting options. We review each case individually and develop a suitable approach based on the nature of the content, Reddit's policies, and the circumstances surrounding the post.</p>
+      <p class="hero__desc hero__desc--sm">Whether you are dealing with privacy concerns, misleading information, reputation-damaging content, or other problematic posts, our team can help you navigate the appropriate process professionally and confidentially.</p>
+      <div class="hero__actions">
+        <a href="mailto:info@mr-soomro.com?subject=Reddit%20Case%20Assessment" class="btn btn--primary">Request a Case Assessment</a>
+      </div>
+      <div class="hero__price-tag">Starting From <strong>$600</strong></div>
+    </div>
+  </section>
+
+  <!-- WHAT IS THIS -->
+  <section class="section section--alt">
+    <div class="container container--narrow reveal">
+      <p class="eyebrow">THE BASICS</p>
+      <h2>What Is Reddit Post Removal?</h2>
+      <p class="lead">Reddit posts can sometimes remain visible for years and may appear in search results when people search for your name, company, or brand.</p>
+      <p>Our service focuses on identifying legitimate options for addressing unwanted Reddit content. Depending on the circumstances, this may include reviewing Reddit's rules, identifying applicable reporting categories, preparing removal requests, and assisting with appropriate follow-up.</p>
+      <p class="callout"><strong>Every case is different, and the final decision to remove content remains with Reddit or the relevant moderators.</strong></p>
+    </div>
+  </section>
+
+  <!-- WHAT WE CAN HELP WITH -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">SCOPE OF SUPPORT</p>
+        <h2>What We Can Help With</h2>
+      </div>
+      <div class="card-grid">
+        <div class="feature-card reveal">
+          <h3>Privacy & Personal Information</h3>
+          <p>If a Reddit post contains private or sensitive personal information, we can assess the situation and help identify the appropriate reporting or removal route.</p>
+        </div>
+        <div class="feature-card reveal">
+          <h3>Reputation-Damaging Content</h3>
+          <p>We can review posts that may be negatively affecting your personal, professional, or business reputation and determine whether there are legitimate options for addressing them.</p>
+        </div>
+        <div class="feature-card reveal">
+          <h3>Copyright Concerns</h3>
+          <p>Where applicable, we can assist with understanding and preparing a copyright-related removal request.</p>
+        </div>
+        <div class="feature-card reveal">
+          <h3>Harassment & Targeted Content</h3>
+          <p>If content involves harassment, targeted abuse, or other potentially policy-violating behavior, we can assess the post and identify the appropriate reporting process.</p>
+        </div>
+        <div class="feature-card reveal">
+          <h3>Misleading or False Information</h3>
+          <p>We can review potentially misleading or inaccurate content and advise you on the available options for addressing the issue.</p>
+        </div>
+        <div class="feature-card reveal">
+          <h3>Search Reputation Issues</h3>
+          <p>When unwanted Reddit content appears in Google or other search results, we can also provide reputation-management recommendations to help reduce its impact.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">HOW IT WORKS</p>
+        <h2>Our Reddit Removal Process</h2>
+      </div>
+      <ol class="timeline">
+        <li class="timeline__item reveal">
+          <span class="timeline__num">01</span>
+          <h3>Submit Your Reddit URL</h3>
+          <p>Send us the Reddit post URL along with a brief explanation of why you want the content reviewed.</p>
+        </li>
+        <li class="timeline__item reveal">
+          <span class="timeline__num">02</span>
+          <h3>Case Assessment</h3>
+          <p>We examine the content and circumstances surrounding the post to determine whether a legitimate removal or reporting option may apply.</p>
+        </li>
+        <li class="timeline__item reveal">
+          <span class="timeline__num">03</span>
+          <h3>Strategy & Request Preparation</h3>
+          <p>Based on our assessment, we prepare the appropriate approach and supporting information for the relevant reporting or moderation process.</p>
+        </li>
+        <li class="timeline__item reveal">
+          <span class="timeline__num">04</span>
+          <h3>Submission & Communication</h3>
+          <p>Where appropriate, we assist with submitting the request and provide guidance regarding communication with the relevant Reddit moderators or platform channels.</p>
+        </li>
+        <li class="timeline__item reveal">
+          <span class="timeline__num">05</span>
+          <h3>Follow-Up</h3>
+          <p>We monitor the case and provide appropriate follow-up assistance during the agreed service period.</p>
+        </li>
+        <li class="timeline__item reveal">
+          <span class="timeline__num">06</span>
+          <h3>Reputation Management</h3>
+          <p>If removal is not available, we can recommend alternative reputation-management strategies designed to reduce the visibility and impact of unwanted content.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="section" id="pricing">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">PRICING</p>
+        <h2>Reddit Post Removal Packages</h2>
+        <p class="lead">Choose the level of support that fits your case.</p>
+      </div>
+
+      <div class="pricing-grid">
+        <div class="price-card reveal">
+          <h3>Basic</h3>
+          <span class="price-card__timeline">Timeline: 2–5 Business Days</span>
+          <div class="price-card__price">$600</div>
+          <p class="muted">A focused service for one Reddit post requiring professional assessment and removal assistance.</p>
+          <ul class="check-list">
+            <li>1 Reddit URL</li>
+            <li>Detailed content assessment</li>
+            <li>Reddit policy review</li>
+            <li>Removal eligibility assessment</li>
+            <li>Appropriate reporting/removal strategy</li>
+            <li>Request preparation assistance</li>
+            <li>Submission guidance</li>
+            <li>Basic follow-up</li>
+            <li>Case status update</li>
+          </ul>
+          <a href="mailto:info@mr-soomro.com?subject=Reddit%20Case%20Assessment" class="btn btn--outline btn--block">Get Started</a>
+        </div>
+
+        <div class="price-card price-card--featured reveal">
+          <span class="price-card__badge">MOST POPULAR</span>
+          <h3>Professional</h3>
+          <span class="price-card__timeline">Timeline: 5–7 Business Days</span>
+          <div class="price-card__price">$1,500</div>
+          <p class="muted">Designed for individuals and businesses dealing with multiple URLs or a more complex Reddit reputation issue.</p>
+          <ul class="check-list">
+            <li>Up to 3 Reddit URLs</li>
+            <li>Detailed case assessment</li>
+            <li>Policy and reporting review</li>
+            <li>Removal strategy for each URL</li>
+            <li>Request preparation assistance</li>
+            <li>Reporting/removal assistance</li>
+            <li>Follow-up support</li>
+            <li>Moderator communication guidance</li>
+            <li>Basic reputation-management recommendations</li>
+            <li>Case progress updates</li>
+          </ul>
+          <a href="mailto:info@mr-soomro.com?subject=Reddit%20Case%20Assessment" class="btn btn--primary btn--block">Choose Professional</a>
+        </div>
+
+        <div class="price-card reveal">
+          <h3>Advanced</h3>
+          <span class="price-card__timeline">Timeline: 7–14 Business Days</span>
+          <div class="price-card__price">$2,500</div>
+          <p class="muted">A comprehensive option for businesses, brands, and individuals dealing with multiple unwanted Reddit posts or a broader online reputation issue.</p>
+          <ul class="check-list">
+            <li>Up to 5 Reddit URLs</li>
+            <li>Comprehensive case assessment</li>
+            <li>Individual strategy for each URL</li>
+            <li>Policy and reporting analysis</li>
+            <li>Removal request assistance</li>
+            <li>Follow-up support</li>
+            <li>Moderator communication guidance</li>
+            <li>Search visibility assessment</li>
+            <li>Online reputation recommendations</li>
+            <li>Case monitoring</li>
+            <li>Final case summary</li>
+          </ul>
+          <a href="mailto:info@mr-soomro.com?subject=Reddit%20Case%20Assessment" class="btn btn--outline btn--block">Get Advanced Support</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">WHY US</p>
+        <h2>Why Choose Our Reddit Removal Service?</h2>
+      </div>
+      <div class="card-grid">
+        <div class="feature-card reveal">
+          <h3>Confidential Handling</h3>
+          <p>We treat your case and submitted information professionally and confidentially.</p>
+        </div>
+        <div class="feature-card reveal">
+          <h3>Case-by-Case Strategy</h3>
+          <p>We don't use the same approach for every Reddit URL. Each case is assessed individually.</p>
+        </div>
+        <div class="feature-card reveal">
+          <h3>Policy-Focused Approach</h3>
+          <p>We focus on legitimate reporting and removal options rather than making unrealistic promises.</p>
+        </div>
+        <div class="feature-card reveal">
+          <h3>Professional Communication</h3>
+          <p>Clear and professional communication throughout the agreed service period.</p>
+        </div>
+        <div class="feature-card reveal">
+          <h3>Reputation-Focused Support</h3>
+          <p>If content cannot be removed, we can help identify alternative strategies for managing its online impact.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="container container--narrow">
+      <div class="section-head reveal">
+        <p class="eyebrow">QUESTIONS</p>
+        <h2>Frequently Asked Questions</h2>
+      </div>
+      <div class="accordion">
+        <div class="accordion__item reveal">
+          <h3><button class="accordion__trigger" aria-expanded="false">Can you guarantee Reddit post removal?<span class="accordion__icon" aria-hidden="true"></span></button></h3>
+          <div class="accordion__panel"><p>No. The final removal decision is controlled by Reddit or the relevant moderators. We can only assist with legitimate removal or reporting options.</p></div>
+        </div>
+        <div class="accordion__item reveal">
+          <h3><button class="accordion__trigger" aria-expanded="false">How much does Reddit post removal cost?<span class="accordion__icon" aria-hidden="true"></span></button></h3>
+          <div class="accordion__panel"><p>Our packages start at $600 for one Reddit URL. Professional and Advanced packages are available for multiple URLs and more complex cases.</p></div>
+        </div>
+        <div class="accordion__item reveal">
+          <h3><button class="accordion__trigger" aria-expanded="false">How long does the process take?<span class="accordion__icon" aria-hidden="true"></span></button></h3>
+          <div class="accordion__panel"><p>Our standard timelines range from 2–5 business days for Basic cases to 7–14 business days for Advanced cases. Actual platform response times may vary.</p></div>
+        </div>
+        <div class="accordion__item reveal">
+          <h3><button class="accordion__trigger" aria-expanded="false">What information do you need?<span class="accordion__icon" aria-hidden="true"></span></button></h3>
+          <div class="accordion__panel"><p>Normally, we need the Reddit URL and a brief explanation of the issue. Additional information may be requested depending on the circumstances.</p></div>
+        </div>
+        <div class="accordion__item reveal">
+          <h3><button class="accordion__trigger" aria-expanded="false">Can you handle multiple Reddit posts?<span class="accordion__icon" aria-hidden="true"></span></button></h3>
+          <div class="accordion__panel"><p>Yes. Our Professional package covers up to 3 URLs, while the Advanced package covers up to 5 URLs.</p></div>
+        </div>
+        <div class="accordion__item reveal">
+          <h3><button class="accordion__trigger" aria-expanded="false">What happens if Reddit does not remove the post?<span class="accordion__icon" aria-hidden="true"></span></button></h3>
+          <div class="accordion__panel"><p>If removal is not available, we can discuss alternative online reputation-management strategies to help reduce the potential impact of the content.</p></div>
+        </div>
+        <div class="accordion__item reveal">
+          <h3><button class="accordion__trigger" aria-expanded="false">Is my information confidential?<span class="accordion__icon" aria-hidden="true"></span></button></h3>
+          <div class="accordion__panel"><p>We handle client information professionally and only request information necessary to assess and work on the case.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPORTANT NOTICE -->
+  <section class="notice">
+    <div class="container">
+      <div class="notice__box reveal">
+        <h2>Important Information</h2>
+        <p><strong>Removal is not guaranteed.</strong> Reddit, subreddit moderators, or other relevant parties make the final decision regarding whether content is removed or remains online. Our service provides assessment, strategy, request preparation, reporting assistance, and follow-up support where applicable.</p>
+        <p>We do not guarantee a specific outcome, ranking position, search-result position, or removal decision.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+ <footer itemscope itemtype="https://schema.org/Organization">
+    <div class="ftt">
+      <div>
+        <span class="ftlo" itemprop="name">MR.<span>Soomro</span></span>
+        <p class="fttg" itemprop="description">Pakistan's trusted SEO agency helping businesses rank higher, attract more clients and grow sustainably with data-driven search strategies since 2016.</p>
+        <div class="ft-soc-row">
+          <a href="https://wa.me/923092102705" title="WhatsApp" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg></a>
+          <a href="https://facebook.com/mrSoomro" title="Facebook" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+          <a href="https://linkedin.com/in/mrSoomro" title="LinkedIn" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a href="https://instagram.com/mrSoomro" title="Instagram" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="mailto:info@mr-soomro.com" title="Email" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+        </div>
+      </div>
+      <div><div class="ftct">Services</div><ul class="ftlk"><li><strong>Technical SEO</strong></li><li><a href="services.html">Website Audit</a></li><li><a href="services.html">Core Web Vitals</a></li><li><a href="services.html">Schema Markup</a></li><li><a href="services.html">Crawl Error Fixes</a></li></ul></div>
+      <div><div class="ftct">Services</div><ul class="ftlk"><li><strong>On-Page SEO</strong></li><li><a href="services.html">Keyword Research</a></li><li><a href="services.html">Meta Optimization</a></li><li><a href="services.html">Internal Linking</a></li><li><strong>Off-Page SEO</strong></li><li><a href="services.html">Guest Posting</a></li><li><a href="services.html">Link Building</a></li><li><a href="services.html">Digital PR</a></li></ul></div>
+      <div><div class="ftct">More Services</div><ul class="ftlk"><li><strong>Local SEO</strong></li><li><a href="services.html">Google Business Profile</a></li><li><a href="services.html">Citation Building</a></li><li><strong>E-commerce SEO</strong></li><li><a href="services.html">Shopify SEO</a></li><li><a href="services.html">WooCommerce SEO</a></li><li><strong>SEO Consulting</strong></li><li><a href="services.html">Competitor Analysis</a></li><li><a href="services.html">Monthly Reporting</a></li></ul></div>
+<div><div class="ftct">Quick Links</div><ul class="ftlk"><li><a href="../index.html#about">Why Choose Us</a></li><li><a href="../index.html#process">SEO Process</a></li><li><a href="reviews.html">Client Reviews</a></li><li><a href="blogs.html">Blog</a></li><li><a href="../index.html#contact">Book Free Consultation</a></li></ul></div>
+      <div><div class="ftct">Contact</div><ul class="ftlk"><li><a href="mailto:info@mr-soomro.com">info@mr-soomro.com</a></li><li><a href="tel:+923092102705">0309 210 2705</a></li><li><a href="https://wa.me/923092102705">WhatsApp</a></li><li style="color:rgba(255,255,255,.28);font-size:13px;font-weight:300">House No G 209, Mohallah Humayoo, Masjid Al Fazal Town, Phuleli, Hyderabad, Sindh, Pakistan 71000</li></ul></div>
+    </div>
+    <div class="ftbt">
+      <div class="ftcp">&copy; 2026 <a href="../index.html">Mr. Soomro SEO Agency</a>. All rights reserved.</div>
+<div class="ftbl"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms &amp; Conditions</a><a href="cookie-policy.html">Cookie Policy</a></div>
+    </div>
+  </footer>
+ <button class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></button>
+<script>
+
+    // ========== SCROLL TO TOP ==========
+        const scrollTopBtn = document.getElementById('scrollTop');
+        window.addEventListener('scroll', () => {
+            scrollTopBtn.classList.toggle('visible', window.scrollY > 500);
+        });
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+
+(function () {
+  "use strict";
+
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  var yearEl = document.getElementById("year");
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  
+
+  document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+    link.addEventListener("click", function (e) {
+      var id = link.getAttribute("href");
+      if (id.length < 2) return;
+      var target = document.querySelector(id);
+      if (!target) return;
+      e.preventDefault();
+      target.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
+      target.setAttribute("tabindex", "-1");
+      target.focus({ preventScroll: true });
+    });
+  });
+
+  var revealEls = document.querySelectorAll(".reveal");
+  if ("IntersectionObserver" in window && !reduceMotion) {
+    var io = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry, i) {
+          if (entry.isIntersecting) {
+            var el = entry.target;
+            setTimeout(function () {
+              el.classList.add("is-visible");
+            }, (i % 6) * 60);
+            io.unobserve(el);
+          }
+        });
+      },
+      { threshold: 0.15, rootMargin: "0px 0px -40px 0px" }
+    );
+    revealEls.forEach(function (el) {
+      io.observe(el);
+    });
+  } else {
+    revealEls.forEach(function (el) {
+      el.classList.add("is-visible");
+    });
+  }
+
+  var triggers = document.querySelectorAll(".accordion__trigger");
+  triggers.forEach(function (trigger) {
+    trigger.addEventListener("click", function () {
+      var item = trigger.closest(".accordion__item");
+      var panel = item.querySelector(".accordion__panel");
+      var isOpen = trigger.getAttribute("aria-expanded") === "true";
+
+      triggers.forEach(function (t) {
+        if (t !== trigger) {
+          t.setAttribute("aria-expanded", "false");
+          t.closest(".accordion__item").querySelector(".accordion__panel").style.maxHeight = null;
+        }
+      });
+
+      if (isOpen) {
+        trigger.setAttribute("aria-expanded", "false");
+        panel.style.maxHeight = null;
+      } else {
+        trigger.setAttribute("aria-expanded", "true");
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
+    });
+  });
+})();
+</script>
+  <script src="../pages/script.js"></script>
+</body>
+</html>
