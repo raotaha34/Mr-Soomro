@@ -1346,21 +1346,35 @@
         .pricing-card.popular {
             border-color: var(--orange-primary);
             transform: scale(1.03);
+            background: #1a1a1a;
+            color: #fff;
+            overflow: visible;
         }
 
         .pricing-card.popular::before {
             content: 'MOST POPULAR';
             position: absolute;
-            top: 20px;
-            right: -32px;
-            background: var(--orange-primary);
-            color: var(--white);
-            padding: 5px 40px;
+            top: -14px;
+            left: 50%;
+            right: auto;
+            background: #f7b733;
+            color: #fff;
+            padding: 5px 22px;
+            border-radius: 50px;
             font-size: 10px;
             font-weight: 700;
             letter-spacing: 1px;
-            transform: rotate(45deg);
+            transform: translateX(-50%);
         }
+
+        .pricing-card.popular .pricing-tier,
+        .pricing-card.popular .pricing-name,
+        .pricing-card.popular .pricing-price,
+        .pricing-card.popular .pricing-price *,
+        .pricing-card.popular .pricing-features li,
+        .pricing-card.popular .pricing-best { color: #fff; }
+
+        .pricing-card.popular .pricing-best { color: #000; }
 
         .pricing-card:hover {
             transform: translateY(-10px);

@@ -9,35 +9,131 @@
 
   /* Sticky navbar appearance on scroll */
   var navbar = document.getElementById("navbar") || document.getElementById("mainNav");
+  var lastScroll = 0;
   function onScroll() {
     var scrolled = window.scrollY > 12;
     if (navbar) {
       navbar.classList.toggle("is-scrolled", scrolled);
       navbar.classList.toggle("scr", scrolled);
       navbar.classList.toggle("scrolled", scrolled);
+      if (navbar.classList.contains("site-navbar") && window.innerWidth > 900) {
+        if (window.scrollY <= 100 || window.scrollY < lastScroll) navbar.classList.remove("collapsed");
+        else if (window.scrollY > 200) navbar.classList.add("collapsed");
+      } else if (navbar.classList.contains("site-navbar")) {
+        navbar.classList.remove("collapsed");
+      }
     }
+    lastScroll = window.scrollY;
   }
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
+
+  if (navbar) {
+    navbar.addEventListener("mouseenter", function () {
+      if (window.innerWidth > 900) navbar.classList.remove("collapsed");
+    });
+  }
 
   /* Normalize primary navbar destinations for every page depth */
   var pagePath = window.location.pathname.replace(/\\/g, "/");
   var rootPrefix = pagePath.indexOf("/pages/blog/") !== -1 || pagePath.indexOf("/pages/") !== -1 || pagePath.indexOf("/Services/") !== -1 ? "../" : "";
   if (pagePath.indexOf("/pages/blog/") !== -1) rootPrefix = "../../";
+  var isBlogPage = pagePath.indexOf("/pages/blog/") !== -1;
+  var isServicePage = pagePath.indexOf("/Services/") !== -1;
+  var isServicesLanding = /\/pages\/services\.html$/i.test(pagePath);
+
+  /* Use the services page navbar consistently across the rest of the site. */
+  var legacyNav = document.getElementById("mainNav") || document.getElementById("navbar");
+  if (legacyNav && !legacyNav.querySelector(".nav-container")) {
+    legacyNav.id = "navbar";
+    legacyNav.className = "navbar site-navbar";
+    var navHost = legacyNav.closest("header");
+    if (navHost) navHost.classList.add("site-navbar-host");
+    var servicesPage = rootPrefix + "pages/services.html";
+    legacyNav.innerHTML = '<div class="nav-container">' +
+      '<a href="' + rootPrefix + 'index.html" class="nav-logo">' +
+      '<div class="nav-logo-icon"><i class="fas fa-chart-line"></i></div>' +
+      '<div class="nav-logo-text-wrap"><div class="nav-logo-text">Mr <span>Soomro</span></div><div class="nav-logo-sub">Digital Marketing Expert</div></div>' +
+      '</a>' +
+      '<ul class="nav-links">' +
+      '<li><a href="' + rootPrefix + 'pages/about.html">About</a></li>' +
+      '<li><a href="' + servicesPage + '">Services</a></li>' +
+      '<li><a href="' + servicesPage + '#process">Process</a></li>' +
+      '<li><a href="' + rootPrefix + 'pages/reviews.html">Reviews</a></li>' +
+      (isBlogPage ? '' : '<li><a href="' + servicesPage + '#faq">FAQ</a></li>') +
+      '</ul>' +
+      '<a href="' + rootPrefix + 'index.html#contact" class="nav-cta">Free Audit</a>' +
+      '<button class="mobile-toggle" type="button" aria-label="Open menu"><i class="fas fa-bars"></i></button>' +
+      '<div class="mobile-menu">' +
+      '<a href="' + rootPrefix + 'pages/about.html">About</a>' +
+      '<a href="' + servicesPage + '">Services</a>' +
+      '<a href="' + servicesPage + '#process">Process</a>' +
+      '<a href="' + rootPrefix + 'pages/reviews.html">Reviews</a>' +
+      (isBlogPage ? '' : '<a href="' + servicesPage + '#faq">FAQ</a>') +
+      '<a href="' + rootPrefix + 'index.html#contact" class="nav-cta">Free SEO Audit</a>' +
+      '</div></div>';
+    var sharedMobileToggle = legacyNav.querySelector(".mobile-toggle");
+    var sharedMobileMenu = legacyNav.querySelector(".mobile-menu");
+    sharedMobileToggle.addEventListener("click", function () {
+      sharedMobileMenu.classList.toggle("active");
+      sharedMobileToggle.querySelector("i").classList.toggle("fa-bars");
+      sharedMobileToggle.querySelector("i").classList.toggle("fa-times");
+    });
+    onScroll();
+  }
+
   var primaryNavTargets = {
     home: rootPrefix + "index.html",
     about: rootPrefix + "pages/about.html",
     services: rootPrefix + "pages/services.html",
-    process: rootPrefix + "index.html#process",
+    process: isServicePage || isServicesLanding ? rootPrefix + "pages/services.html#process" : rootPrefix + "index.html#process",
+    reviews: rootPrefix + "pages/reviews.html",
+    faq: rootPrefix + "pages/services.html#faq",
     blog: rootPrefix + "pages/blogs.html",
     reviews: rootPrefix + "pages/reviews.html",
     contact: rootPrefix + "index.html#contact"
   };
   document.querySelectorAll("#mainNav a, #navbar a, .mnav-links a, .nav-links a").forEach(function (link) {
     var label = link.textContent.trim().toLowerCase();
-    var targetKey = label === "home" ? "home" : label === "about" ? "about" : label === "services" ? "services" : label === "process" ? "process" : label === "blog" ? "blog" : label === "reviews" ? "reviews" : label === "contact" || label === "free seo audit" ? "contact" : null;
+    var targetKey = label === "home" ? "home" : label === "about" ? "about" : label === "services" ? "services" : label === "process" ? "process" : label === "reviews" ? "reviews" : label === "faq" ? "faq" : label === "blog" ? "blog" : label === "contact" || label === "free seo audit" ? "contact" : null;
     if (targetKey) link.setAttribute("href", primaryNavTargets[targetKey]);
   });
+
+  /* Keep the current top-level section visibly active. */
+  var activeNavLabel = isServicePage || isServicesLanding ? "services" :
+    /\/pages\/about\.html$/i.test(pagePath) ? "about" :
+    /\/pages\/reviews\.html$/i.test(pagePath) ? "reviews" :
+    /\/pages\/blogs\.html$/i.test(pagePath) || isBlogPage ? "blog" : "";
+  if (activeNavLabel) {
+    document.querySelectorAll("#navbar .nav-links a").forEach(function (link) {
+      link.classList.toggle("active", link.textContent.trim().toLowerCase() === activeNavLabel);
+    });
+  }
+
+  /* Add the shared service assistant where a page does not already provide it. */
+  if (!document.getElementById("chatbotBtn")) {
+    document.body.insertAdjacentHTML("beforeend", '<button class="chatbot-btn" id="chatbotBtn" type="button" aria-label="Open AI Assistant"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2M20 14h2M15 13v2M9 13v2"/></svg><span class="chatbot-badge">1</span></button><div class="chatbot-window" id="chatbotWindow"><div class="chatbot-header"><div class="chatbot-header-info"><div class="chatbot-avatar"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2M20 14h2M15 13v2M9 13v2"/></svg></div><div><div class="chatbot-name">Soomro AI Assistant</div><div class="chatbot-status">Online - Ready to help</div></div></div><button class="chatbot-close" type="button" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div><div class="chatbot-messages" id="chatMessages"><div class="chat-message bot"><div class="chat-msg-avatar bot">AI</div><div class="chat-msg-bubble">Hi! I am the Mr. Soomro AI Assistant. How can I help with your SEO today?</div></div><div class="chat-suggestions"><button class="chat-suggestion" type="button" data-chat="Tell me about your SEO services">Our SEO Services</button><button class="chat-suggestion" type="button" data-chat="How much does SEO cost?">Pricing</button><button class="chat-suggestion" type="button" data-chat="I need a free SEO audit">Free SEO Audit</button><button class="chat-suggestion" type="button" data-chat="How long does SEO take?">Timeline</button></div></div><div class="chatbot-input-wrap"><input class="chatbot-input" id="chatInput" type="text" placeholder="Type your question..." aria-label="Chat message"><button class="chatbot-send" type="button" aria-label="Send"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg></button></div><div class="chatbot-footer">Powered by <strong>Mr. Soomro AI</strong> - Instant SEO help</div></div>');
+    var sharedChatButton = document.getElementById("chatbotBtn");
+    var sharedChatWindow = document.getElementById("chatbotWindow");
+    var sharedChatInput = document.getElementById("chatInput");
+    var sharedChatMessages = document.getElementById("chatMessages");
+    var sharedResponse = function (text) {
+      var value = text.toLowerCase();
+      if (/service|offer/.test(value)) return "We offer technical SEO, link building, Reddit marketing, AI SEO and GEO, reputation management, guest posts, backlinks, and more.";
+      if (/price|cost|pricing|package/.test(value)) return "Pricing depends on your goals and competition. Contact us for a tailored recommendation and free SEO audit.";
+      if (/audit|free|analy/.test(value)) return "Our free SEO audit reviews technical issues, keywords, content gaps, and backlink opportunities.";
+      if (/time|long|when|month|result/.test(value)) return "SEO often shows meaningful results in 3 to 6 months, depending on competition and implementation.";
+      if (/hello|hi|hey/.test(value)) return "Hello! I can help with services, pricing, timelines, or a free SEO audit.";
+      return "For a detailed answer, contact info@mr-soomro.com or 0309 210 2705. We would be happy to help.";
+    };
+    var addSharedMessage = function (text, sender) { var row = document.createElement("div"); row.className = "chat-message " + sender; var avatar = document.createElement("div"); avatar.className = "chat-msg-avatar " + sender; avatar.textContent = sender === "bot" ? "AI" : "You"; var bubble = document.createElement("div"); bubble.className = "chat-msg-bubble"; bubble.textContent = text; row.append(avatar, bubble); sharedChatMessages.appendChild(row); sharedChatMessages.scrollTop = sharedChatMessages.scrollHeight; };
+    var sendSharedMessage = function () { var text = sharedChatInput.value.trim(); if (!text) return; addSharedMessage(text, "user"); sharedChatInput.value = ""; var suggestions = sharedChatMessages.querySelector(".chat-suggestions"); if (suggestions) suggestions.remove(); window.setTimeout(function () { addSharedMessage(sharedResponse(text), "bot"); }, 500); };
+    sharedChatButton.addEventListener("click", function () { sharedChatWindow.classList.add("open"); sharedChatButton.querySelector(".chatbot-badge").style.display = "none"; sharedChatInput.focus(); });
+    sharedChatWindow.querySelector(".chatbot-close").addEventListener("click", function () { sharedChatWindow.classList.remove("open"); });
+    sharedChatWindow.querySelector(".chatbot-send").addEventListener("click", sendSharedMessage);
+    sharedChatInput.addEventListener("keydown", function (event) { if (event.key === "Enter") sendSharedMessage(); });
+    sharedChatWindow.querySelectorAll("[data-chat]").forEach(function (button) { button.addEventListener("click", function () { sharedChatInput.value = button.getAttribute("data-chat"); sendSharedMessage(); }); });
+  }
 
   var sitePageTargets = {
     "index.html": rootPrefix + "index.html",

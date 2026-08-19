@@ -699,7 +699,7 @@
         }
 
         /* Pricing */
-        .pricing-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+        .pricing-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; align-items: stretch; }
 
         .pricing-card {
             background: var(--white);
@@ -709,11 +709,14 @@
             text-align: center;
             transition: all 0.4s ease;
             position: relative;
+            display: flex;
+            flex-direction: column;
         }
 
         .pricing-card.featured {
             border-color: var(--primary-orange);
-            transform: scale(1.03);
+            background: #1a1a1a;
+            color: #fff;
         }
 
         .pricing-card.featured .pricing-badge { display: block; }
@@ -722,7 +725,7 @@
             display: none;
             position: absolute;
             top: -14px; left: 50%; transform: translateX(-50%);
-            background: var(--primary-orange);
+            background: #f7b733;
             color: white;
             padding: 5px 22px;
             border-radius: 50px;
@@ -730,13 +733,19 @@
             text-transform: uppercase; letter-spacing: 1px;
         }
 
+        .pricing-card.featured .pricing-plan,
+        .pricing-card.featured .pricing-links,
+        .pricing-card.featured .pricing-price,
+        .pricing-card.featured .pricing-best,
+        .pricing-card.featured .pricing-features li { color: #fff; }
+
         .pricing-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 25px 60px rgba(0,0,0,0.1);
             border-color: var(--primary-orange);
         }
 
-        .pricing-card.featured:hover { transform: scale(1.03) translateY(-5px); }
+        .pricing-card.featured:hover { transform: translateY(-5px); }
 
         .pricing-plan {
             font-family: 'Space Grotesk', sans-serif;
@@ -764,7 +773,7 @@
             border-bottom: 1px solid var(--border-gray);
         }
 
-        .pricing-features { list-style: none; text-align: left; margin-bottom: 30px; }
+        .pricing-features { list-style: none; text-align: left; margin-bottom: 30px; flex: 1; }
 
         .pricing-features li {
             display: flex; align-items: flex-start; gap: 10px;
