@@ -1,361 +1,210 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { exec } from 'child_process';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PROJECT_ROOT = path.join(__dirname, '..');
 const KNOWLEDGE_DIR = path.join(__dirname, 'knowledge');
 
-// Directories to scan for content
-const SCAN_DIRECTORIES = [
-    path.join(PROJECT_ROOT, 'Services'),
-    path.join(PROJECT_ROOT, 'pages'),
-    path.join(PROJECT_ROOT, 'pages/blog')
-];
-
-// File patterns to include/exclude
-const INCLUDE_PATTERNS = ['.html'];
-const EXCLUDE_PATTERNS = ['node_modules', '.git', 'src', 'assets', 'images', 'css'];
-
-// HTML tags to remove
-const REMOVE_TAGS = ['script', 'style', 'link', 'meta', 'title', 'head', 'nav', 'footer', 'button', 'input', 'textarea', 'select', 'form', 'iframe', 'noscript'];
+const EXCLUDE_DIRS = new Set(['node_modules', '.git', 'src', 'assets', 'images', 'css']);
+const REMOVE_TAG_CONTENTS = ['script', 'style', 'noscript', 'iframe', 'svg'];
 
 function extractTextFromHTML(html) {
     let text = html;
-    
-    // Remove script and style tags with their content
-    text = text.replace(/<script\b[^>]*>([\s\S]*?)<\/script>/gim, '');
-    text = text.replace(/<style\b[^>]*>([\s\S]*?)<\/style>/gim, '');
-    
-    // Remove other specified tags
-    REMOVE_TAGS.forEach(tag => {
-        text = text.replace(new RegExp(`<${tag}[^>]*>.*?</${tag}>`, 'gims'), '');
-        text = text.replace(new RegExp(`<${tag}[^>]*>`, 'gim'), '');
-        text = text.replace(new RegExp(`</${tag}>`, 'gim'), '');
+
+    // Remove script, style, svg, iframe with their inner content
+    REMOVE_TAG_CONTENTS.forEach(tag => {
+        text = text.replace(new RegExp(`<${tag}\\b[^>]*>[\\s\\S]*?<\\/${tag}>`, 'gim'), ' ');
     });
-    
-    // Remove all HTML tags
-    text = text.replace(/<[^>]+>/g, '');
-    
+
+    // Replace block closing tags with spaces to avoid concatenating words together
+    text = text.replace(/<\/(p|div|li|h[1-6]|section|article|header|footer|nav|tr|td|th)>/gi, ' ');
+
+    // Remove all remaining HTML tags
+    text = text.replace(/<[^>]+>/g, ' ');
+
     // Decode HTML entities
-    text = text.replace(/&nbsp;/g, ' ');
-    text = text.replace(/&amp;/g, '&');
-    text = text.replace(/&lt;/g, '<');
-    text = text.replace(/&gt;/g, '>');
-    text = text.replace(/&quot;/g, '"');
-    text = text.replace(/&#39;/g, "'");
-    text = text.replace(/&mdash;/g, '—');
-    text = text.replace(/&ndash;/g, '–');
-    
-    // Clean up whitespace
-    text = text.replace(/\s+/g, ' ').trim();
-    
-    // Remove common navigation/footer boilerplate
-    const removePatterns = [
-        /Mr\. Soomro/gi,
-        /Digital Marketing Expert/gi,
-        /Free SEO Audit/gi,
-        /Contact Us/gi,
-        /Get Started/gi,
-        /Learn More/gi,
-        /Navigation/gi,
-        /Menu/gi,
-        /Home/gi,
-        /About/gi,
-        /Services/gi,
-        /Reviews/gi,
-        /Blog/gi,
-        /Privacy Policy/gi,
-        /Terms of Service/gi,
-        /Cookie Policy/gi,
-        /All rights reserved/gi,
-        /Copyright/gi,
-        /Scroll to top/gi,
-        /View Packages/gi,
-        /Starting From/gi,
-        /View Pricing/gi,
-        /Request a Quote/gi,
-        /Get in touch/gi,
-        /Follow us/gi,
-        /Subscribe/gi,
-        /Newsletter/gi,
-    ];
-    
-    removePatterns.forEach(pattern => {
-        text = text.replace(pattern, '');
-    });
-    
-    return text;
+    text = text
+        .replace(/&nbsp;/g, ' ')
+        .replace(/&amp;/g, '&')
+        .replace(/&lt;/g, '<')
+        .replace(/&gt;/g, '>')
+        .replace(/&quot;/g, '"')
+        .replace(/&#39;/g, "'")
+        .replace(/&mdash;/g, '—')
+        .replace(/&ndash;/g, '–');
+
+    // Normalize whitespace
+    return text.replace(/\s+/g, ' ').trim();
 }
 
 function extractPageInfo(html, filePath) {
     const text = extractTextFromHTML(html);
-    
-    // Extract page title from filename
     const fileName = path.basename(filePath, '.html');
-    const pageName = fileName.replace(/-/g, ' ').replace(/\./g, ' ');
-    
-    // Extract meaningful sentences (longer than 30 chars)
-    const sentences = text.split(/[.!?]+/).filter(s => s.trim().length > 30);
-    
-    // Take first 15 meaningful sentences as page description
-    const description = sentences.slice(0, 15).join('. ').trim();
-    
-    // Try to extract headings from original HTML
+    const pageName = fileName.replace(/[-_.]+/g, ' ').trim();
+
+    // Extract headings for topic context
     const headings = [];
-    const headingMatches = html.match(/<h[1-6][^>]*>(.*?)<\/h[1-6]>/gi);
-    if (headingMatches) {
-        headingMatches.forEach(match => {
-            const headingText = match.replace(/<[^>]+>/g, '').trim();
-            if (headingText.length > 5 && headingText.length < 100) {
-                headings.push(headingText);
-            }
-        });
+    const headingMatches = html.match(/<h[1-6][^>]*>(.*?)<\/h[1-6]>/gi) || [];
+    headingMatches.forEach(match => {
+        const headingText = match.replace(/<[^>]+>/g, '').trim();
+        if (headingText.length > 3 && headingText.length < 120) {
+            headings.push(headingText);
+        }
+    });
+
+    // Extract FAQs if present in markup (accordion / faq items)
+    const faqs = [];
+    const faqPattern = /<(?:div|article)[^>]*(?:faq|accordion)[^>]*>([\s\S]*?)<\/(?:div|article)>/gi;
+    let faqBlockMatch;
+    while ((faqBlockMatch = faqPattern.exec(html)) !== null) {
+        const blockText = extractTextFromHTML(faqBlockMatch[1]);
+        if (blockText.length > 20) {
+            faqs.push(blockText);
+        }
     }
-    
+
     return {
         pageName: pageName.charAt(0).toUpperCase() + pageName.slice(1),
-        description,
-        headings: headings.slice(0, 5),
+        headings: [...new Set(headings)].slice(0, 10),
+        faqs: faqs.slice(0, 8),
         fullText: text,
-        filePath: path.relative(PROJECT_ROOT, filePath)
+        filePath: path.relative(PROJECT_ROOT, filePath).replace(/\\/g, '/')
     };
 }
 
-function scanDirectory(dir) {
-    const results = [];
-    
-    if (!fs.existsSync(dir)) {
-        console.log(`Directory not found: ${dir}`);
-        return results;
-    }
-    
-    const items = fs.readdirSync(dir);
-    
-    for (const item of items) {
-        const fullPath = path.join(dir, item);
-        const stat = fs.statSync(fullPath);
-        
-        // Skip excluded directories
-        if (EXCLUDE_PATTERNS.some(pattern => item.includes(pattern))) {
-            continue;
-        }
-        
-        if (stat.isDirectory()) {
-            // Recursively scan subdirectories
-            results.push(...scanDirectory(fullPath));
-        } else if (stat.isFile() && INCLUDE_PATTERNS.some(pattern => item.endsWith(pattern))) {
-            results.push(fullPath);
+function scanFiles() {
+    const htmlFiles = new Set();
+
+    function walk(dir, isRoot = false) {
+        if (!fs.existsSync(dir)) return;
+        const entries = fs.readdirSync(dir, { withFileTypes: true });
+
+        for (const entry of entries) {
+            const fullPath = path.join(dir, entry.name);
+
+            if (entry.isDirectory()) {
+                if (!EXCLUDE_DIRS.has(entry.name) && !isRoot) {
+                    walk(fullPath, false);
+                }
+            } else if (entry.isFile() && entry.name.endsWith('.html')) {
+                htmlFiles.add(fullPath);
+            }
         }
     }
-    
-    return results;
+
+    // Scan project root (for index.html)
+    walk(PROJECT_ROOT, true);
+
+    // Scan specific subdirectories recursively
+    walk(path.join(PROJECT_ROOT, 'Services'), false);
+    walk(path.join(PROJECT_ROOT, 'pages'), false);
+
+    return Array.from(htmlFiles);
 }
 
 async function extractAllWebsiteContent() {
     console.log('🔍 Scanning website for content...\n');
-    
-    let allPages = [];
-    
-    // Scan all configured directories
-    for (const dir of SCAN_DIRECTORIES) {
-        console.log(`Scanning: ${dir}`);
-        const files = scanDirectory(dir);
-        console.log(`  Found ${files.length} HTML files\n`);
-        
-        for (const file of files) {
-            try {
-                const html = fs.readFileSync(file, 'utf-8');
-                const pageInfo = extractPageInfo(html, file);
+
+    if (!fs.existsSync(KNOWLEDGE_DIR)) {
+        fs.mkdirSync(KNOWLEDGE_DIR, { recursive: true });
+    }
+
+    const files = scanFiles();
+    const allPages = [];
+
+    for (const file of files) {
+        try {
+            const html = fs.readFileSync(file, 'utf-8');
+            const pageInfo = extractPageInfo(html, file);
+            if (pageInfo.fullText.length > 50) {
                 allPages.push(pageInfo);
-                console.log(`  ✓ Extracted: ${pageInfo.pageName}`);
-            } catch (error) {
-                console.log(`  ✗ Error reading ${file}: ${error.message}`);
+                console.log(`  ✓ Extracted: ${pageInfo.pageName} (${pageInfo.filePath})`);
             }
+        } catch (error) {
+            console.error(`  ✗ Error reading ${file}: ${error.message}`);
         }
     }
-    
-    console.log(`\n✅ Extracted content from ${allPages.length} pages\n`);
-    
-    // Generate comprehensive services.txt
-    let servicesContent = 'Mr. Soomro provides the following professional SEO and digital marketing services:\n\n';
-    
-    // Group by service pages (from Services directory)
-    const servicePages = allPages.filter(p => p.filePath.includes('Services'));
-    const otherPages = allPages.filter(p => !p.filePath.includes('Services'));
-    
-    servicePages.forEach((page, index) => {
-        servicesContent += `${index + 1}. ${page.pageName} - ${page.description}\n\n`;
-        if (page.headings.length > 0) {
-            servicesContent += `   Key topics: ${page.headings.join(', ')}\n\n`;
-        }
-    });
-    
-    servicesContent += '[AUTO-GENERATED from website HTML pages]\n';
-    servicesContent += `Last updated: ${new Date().toISOString()}\n`;
-    
-    fs.writeFileSync(path.join(KNOWLEDGE_DIR, 'services.txt'), servicesContent);
-    console.log('📝 Generated: services.txt');
-    
-    // Generate comprehensive knowledge base
-    let comprehensiveContent = 'MR. SOOMRO - COMPLETE WEBSITE KNOWLEDGE BASE\n\n';
-    comprehensiveContent += `Auto-generated on: ${new Date().toISOString()}\n`;
-    comprehensiveContent += `Total pages scanned: ${allPages.length}\n\n`;
-    comprehensiveContent += '='.repeat(60) + '\n\n';
-    
+
+    console.log(`\n✅ Successfully extracted content from ${allPages.length} unique pages.\n`);
+
+    // 1. Comprehensive Master Knowledge Base (Full content without artificial cuts)
+    let masterContent = `MR. SOOMRO SEO AGENCY - COMPLETE WEBSITE KNOWLEDGE BASE\n`;
+    masterContent += `Generated: ${new Date().toISOString()}\n`;
+    masterContent += `Total Pages Indexed: ${allPages.length}\n`;
+    masterContent += `${'='.repeat(60)}\n\n`;
+
     allPages.forEach(page => {
-        comprehensiveContent += `=== ${page.pageName.toUpperCase()} ===\n`;
-        comprehensiveContent += `File: ${page.filePath}\n\n`;
-        
+        masterContent += `=== PAGE: ${page.pageName.toUpperCase()} ===\n`;
+        masterContent += `File: ${page.filePath}\n`;
         if (page.headings.length > 0) {
-            comprehensiveContent += 'Headings:\n';
-            page.headings.forEach(h => {
-                comprehensiveContent += `  - ${h}\n`;
-            });
-            comprehensiveContent += '\n';
+            masterContent += `Key Topics: ${page.headings.join(' | ')}\n`;
         }
-        
-        comprehensiveContent += 'Description:\n';
-        comprehensiveContent += page.description + '\n\n';
-        
-        comprehensiveContent += 'Full Content:\n';
-        comprehensiveContent += page.fullText.substring(0, 3000) + '\n\n';
-        comprehensiveContent += '='.repeat(60) + '\n\n';
+        masterContent += `Content:\n${page.fullText}\n\n`;
+        masterContent += `${'='.repeat(60)}\n\n`;
     });
-    
-    fs.writeFileSync(path.join(KNOWLEDGE_DIR, 'comprehensive-knowledge.txt'), comprehensiveContent);
-    console.log('📝 Generated: comprehensive-knowledge.txt');
-    
-    // Generate FAQ from content
-    const faqContent = generateFAQFromContent(allPages);
-    fs.writeFileSync(path.join(KNOWLEDGE_DIR, 'faq-auto.txt'), faqContent);
-    console.log('📝 Generated: faq-auto.txt');
-    
-    // Generate about page content
-    const aboutContent = generateAboutContent(allPages);
-    fs.writeFileSync(path.join(KNOWLEDGE_DIR, 'about-auto.txt'), aboutContent);
-    console.log('📝 Generated: about-auto.txt');
-    
+
+    fs.writeFileSync(path.join(KNOWLEDGE_DIR, 'website-content.txt'), masterContent, 'utf-8');
+    console.log('📝 Generated: src/knowledge/website-content.txt');
+
+    // 2. Focused Services Overview & Packages
+    const servicePages = allPages.filter(p => p.filePath.startsWith('Services/') || p.filePath.includes('services'));
+    let servicesSummary = `MR. SOOMRO - SERVICES DIRECTORY & PACKAGES\n\n`;
+
+    servicePages.forEach((page, i) => {
+        servicesSummary += `${i + 1}. ${page.pageName}\n`;
+        if (page.headings.length) {
+            servicesSummary += `   Topics: ${page.headings.join(', ')}\n`;
+        }
+        servicesSummary += `   Details: ${page.fullText.substring(0, 2000)}...\n\n`;
+    });
+
+    fs.writeFileSync(path.join(KNOWLEDGE_DIR, 'services.txt'), servicesSummary, 'utf-8');
+    console.log('📝 Generated: src/knowledge/services.txt');
+
     console.log('\n🎉 Knowledge base extraction complete!');
-    console.log(`\n📊 Statistics:`);
-    console.log(`   - Service pages: ${servicePages.length}`);
-    console.log(`   - Other pages: ${otherPages.length}`);
-    console.log(`   - Total pages: ${allPages.length}`);
-    
     return allPages;
 }
 
-function generateFAQFromContent(pages) {
-    let faqContent = 'FREQUENTLY ASKED QUESTIONS (Auto-generated from website content)\n\n';
-    
-    // Extract common questions from content
-    const questions = [];
-    
-    pages.forEach(page => {
-        // Look for question patterns in the content
-        const questionPatterns = [
-            /how (does|do|can|to|should|will|would)/gi,
-            /what (is|are|does|do|can)/gi,
-            /why (use|choose|should|is)/gi,
-            /when (to|should|can)/gi,
-            /where (to|can|should)/gi,
-            /which (is|are|to|should)/gi
-        ];
-        
-        const sentences = page.fullText.split(/[.!?]+/);
-        sentences.forEach(sentence => {
-            sentence = sentence.trim();
-            if (sentence.length > 20 && sentence.length < 200) {
-                questionPatterns.forEach(pattern => {
-                    if (pattern.test(sentence) && !questions.includes(sentence)) {
-                        questions.push(sentence);
-                    }
-                });
-            }
-        });
-    });
-    
-    // Add top questions
-    const topQuestions = questions.slice(0, 15);
-    topQuestions.forEach((q, i) => {
-        faqContent += `Q: ${q}\n`;
-        faqContent += `A: This information is available on our website. Please contact Mr. Soomro for detailed answers.\n\n`;
-    });
-    
-    faqContent += '[AUTO-GENERATED FAQ - Please review and add real answers]\n';
-    return faqContent;
-}
-
-function generateAboutContent(pages) {
-    let aboutContent = 'ABOUT MR. SOOMRO (Auto-generated from website content)\n\n';
-    
-    // Extract about-related content
-    const aboutPages = pages.filter(p => 
-        p.pageName.toLowerCase().includes('about') || 
-        p.filePath.toLowerCase().includes('about')
-    );
-    
-    if (aboutPages.length > 0) {
-        aboutContent += aboutPages[0].description + '\n\n';
-        aboutContent += 'Additional Information:\n';
-        aboutContent += aboutPages[0].fullText.substring(0, 1500) + '\n\n';
-    } else {
-        aboutContent += 'Mr. Soomro is a professional SEO and digital marketing agency providing comprehensive search engine optimization services.\n\n';
-        aboutContent += 'Services include on-page SEO, technical SEO, local SEO, link building, content marketing, and reputation management.\n\n';
-    }
-    
-    aboutContent += '[AUTO-GENERATED - Please review and update with real company information]\n';
-    return aboutContent;
-}
-
 // Watch mode for automatic updates
-function startWatchMode() {
+async function startWatchMode() {
     console.log('👀 Starting watch mode for automatic knowledge base updates...\n');
-    
-    const chokidar = require('chokidar');
-    
-    // Watch all scan directories
-    const watchPaths = SCAN_DIRECTORIES;
-    
+    let chokidar;
+    try {
+        chokidar = await import('chokidar');
+    } catch {
+        console.error('⚠️ Watch mode requires chokidar. Please run: npm install chokidar');
+        return;
+    }
+
+    const watchPaths = [
+        path.join(PROJECT_ROOT, 'index.html'),
+        path.join(PROJECT_ROOT, 'Services'),
+        path.join(PROJECT_ROOT, 'pages')
+    ];
+
     const watcher = chokidar.watch(watchPaths, {
-        ignored: /(^|[\/\\])\../, // ignore dotfiles
+        ignored: /(^|[\/\\])\../,
         persistent: true
     });
-    
+
     watcher.on('change', async (filePath) => {
         if (filePath.endsWith('.html')) {
             console.log(`\n📄 File changed: ${filePath}`);
             console.log('🔄 Re-extracting knowledge base...');
             await extractAllWebsiteContent();
-            console.log('✅ Knowledge base updated automatically!\n');
+            console.log('✅ Knowledge base updated!\n');
         }
     });
-    
-    console.log('Watching for HTML file changes...');
-    console.log('Press Ctrl+C to stop watch mode\n');
+
+    console.log('Watching for HTML file changes... Press Ctrl+C to stop.');
 }
 
-// Main execution
 const args = process.argv.slice(2);
-const watchMode = args.includes('--watch') || args.includes('-w');
+const isWatch = args.includes('--watch') || args.includes('-w');
 
-if (watchMode) {
-    // Install chokidar if not available
-    try {
-        require('chokidar');
-        startWatchMode();
-    } catch (error) {
-        console.log('⚠️  Watch mode requires chokidar. Installing...');
-        exec('npm install chokidar', (error, stdout, stderr) => {
-            if (error) {
-                console.error('Error installing chokidar:', error);
-                return;
-            }
-            console.log('✅ chokidar installed. Starting watch mode...');
-            startWatchMode();
-        });
-    }
+if (isWatch) {
+    extractAllWebsiteContent().then(() => startWatchMode()).catch(console.error);
 } else {
     extractAllWebsiteContent().catch(console.error);
 }

@@ -90,7 +90,6 @@
     reviews: rootPrefix + "pages/reviews.html",
     faq: rootPrefix + "pages/services.html#faq",
     blog: rootPrefix + "pages/blogs.html",
-    reviews: rootPrefix + "pages/reviews.html",
     contact: rootPrefix + "index.html#contact"
   };
   document.querySelectorAll("#mainNav a, #navbar a, .mnav-links a, .nav-links a").forEach(function (link) {

@@ -92,6 +92,15 @@ async function callGroq(apiKey, systemPrompt, userMessage) {
     const text = choice.message?.content?.trim();
     
     if (!text) {
+      // Reasoning models may put thinking in `reasoning` and leave `content` empty
+      // when token budget is tight. Fall back gracefully.
+      const reasoning = choice.message?.reasoning?.trim();
+      if (reasoning) {
+        return {
+          answer: "I processed your question but couldn't formulate a full response. Please try rephrasing.",
+          aiConnected: true,
+        };
+      }
       return {
         answer: "No response generated. Please try again.",
         aiConnected: true,

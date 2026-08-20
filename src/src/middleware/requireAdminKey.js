@@ -1,3 +1,5 @@
+import crypto from "crypto";
+
 // Protects internal-only routes (like reading captured leads).
 // Requires header: x-admin-key: <ADMIN_API_KEY from .env>
 export function requireAdminKey(req, res, next) {
@@ -13,7 +15,16 @@ export function requireAdminKey(req, res, next) {
 
   const providedKey = req.headers["x-admin-key"];
 
-  if (!providedKey || providedKey !== configuredKey) {
+  if (!providedKey) {
+    return res.status(401).json({ error: "Unauthorized." });
+  }
+
+  // Timing-safe comparison to prevent timing attacks on the admin key.
+  // Both values are converted to Buffers of equal length before comparison.
+  const a = Buffer.from(String(providedKey));
+  const b = Buffer.from(String(configuredKey));
+
+  if (a.length !== b.length || !crypto.timingSafeEqual(a, b)) {
     return res.status(401).json({ error: "Unauthorized." });
   }
 

@@ -1,8 +1,39 @@
 import { Router } from "express";
+import rateLimit from "express-rate-limit";
 import { saveLead, getAllLeads } from "../services/leadService.js";
 import { requireAdminKey } from "../middleware/requireAdminKey.js";
 
 const router = Router();
+
+// Rate limiter for lead submissions (POST) — prevents form-spam
+const submitLimiter = rateLimit({
+  windowMs: 60 * 1000,
+  max: 5,
+  message: { error: "Too many submissions. Please wait a moment and try again." },
+  standardHeaders: true,
+  legacyHeaders: false,
+});
+
+// Rate limiter for admin reads (GET) — generous for legitimate admin use
+const readLimiter = rateLimit({
+  windowMs: 60 * 1000,
+  max: 30,
+  message: { error: "Too many requests. Please wait a moment." },
+  standardHeaders: true,
+  legacyHeaders: false,
+});
+
+// Sanitize string input to prevent XSS when leads are displayed.
+function sanitize(str) {
+  if (typeof str !== "string") return undefined;
+  return str
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#x27;")
+    .trim();
+}
 
 /**
  * @swagger
@@ -90,8 +121,8 @@ const router = Router();
  *                 error:
  *                   type: string
  */
-router.post("/", (req, res) => {
-  const { name, email, website, phone, requirement } = req.body;
+router.post("/", submitLimiter, (req, res) => {
+  const { name, email, website, phone, requirement } = req.body ?? {};
 
   if (!name || !email) {
     return res.status(400).json({ error: "Fields 'name' and 'email' are required." });
@@ -102,7 +133,30 @@ router.post("/", (req, res) => {
     return res.status(400).json({ error: "Invalid email format." });
   }
 
-  const lead = saveLead({ name, email, website, phone, requirement });
+  // Validate field lengths to prevent abuse
+  if (name.length > 200) {
+    return res.status(400).json({ error: "Name is too long (max 200 characters)." });
+  }
+  if (email.length > 320) {
+    return res.status(400).json({ error: "Email is too long (max 320 characters)." });
+  }
+  if (website && website.length > 500) {
+    return res.status(400).json({ error: "Website is too long (max 500 characters)." });
+  }
+  if (phone && phone.length > 30) {
+    return res.status(400).json({ error: "Phone is too long (max 30 characters)." });
+  }
+  if (requirement && requirement.length > 2000) {
+    return res.status(400).json({ error: "Requirement is too long (max 2000 characters)." });
+  }
+
+  const lead = saveLead({
+    name: sanitize(name),
+    email: sanitize(email),
+    website: sanitize(website),
+    phone: sanitize(phone),
+    requirement: sanitize(requirement),
+  });
   res.status(201).json({ message: "Lead saved.", lead });
 });
 
@@ -160,7 +214,7 @@ router.post("/", (req, res) => {
  *                 error:
  *                   type: string
  */
-router.get("/", requireAdminKey, (req, res) => {
+router.get("/", readLimiter, requireAdminKey, (req, res) => {
   res.json(getAllLeads());
 });
 

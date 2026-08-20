@@ -19,6 +19,11 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^pages/(?:blog/)?([^/]+)/?$ /$1 [R=301,L]
 
+# Redirect /Services/XYZ to /XYZ (clean root URL)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^Services/([^/]+)/?$ /$1 [R=301,L]
+
 # Remove trailing slash from non-directories (to prevent broken relative assets)
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_URI} (.+)/$
@@ -35,5 +40,9 @@ RewriteRule ^([^/]+)/?$ pages/$1.html [L]
 # Serve clean URLs from matching .html files in pages/blog/ directory
 RewriteCond %{DOCUMENT_ROOT}/pages/blog/$1.html -f
 RewriteRule ^([^/]+)/?$ pages/blog/$1.html [L]
+
+# Serve clean URLs from matching .html files in Services/ directory
+RewriteCond %{DOCUMENT_ROOT}/Services/$1.html -f
+RewriteRule ^([^/]+)/?$ Services/$1.html [L]
 
 DirectoryIndex index.html

@@ -16,14 +16,38 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+const trustProxyHops = Number(process.env.TRUST_PROXY_HOPS) || 0;
+if (trustProxyHops > 0) {
+  app.set("trust proxy", trustProxyHops);
+}
+
+const allowedOrigins = [
+  "http://localhost:5000",
+  "http://127.0.0.1:5000",
+  "http://localhost:8080",
+  "http://127.0.0.1:8080",
+  "file://",
+];
+
+if (process.env.ALLOWED_ORIGINS) {
+  const extra = process.env.ALLOWED_ORIGINS.split(",").map((o) => o.trim()).filter(Boolean);
+  allowedOrigins.push(...extra);
+}
+
 app.use(cors({
-  origin: ['http://localhost:5000', 'http://127.0.0.1:5000', 'http://localhost:8080', 'http://127.0.0.1:8080', 'file://'],
-  credentials: true
+  origin: (origin, callback) => {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+  credentials: true,
 }));
 app.use(express.json());
 
-  // Limits how many AI calls a single IP can trigger — protects your Groq API bill
-  // from being run up by spam or abuse.
+// Limits how many AI calls a single IP can trigger — protects your Groq API bill
+// from being run up by spam or abuse.
 const chatLimiter = rateLimit({
   windowMs: 60 * 1000, // 1 minute
   max: 15,
@@ -32,18 +56,8 @@ const chatLimiter = rateLimit({
   legacyHeaders: false,
 });
 
-// Limits how many lead submissions a single IP can make — prevents form-spam
-// from filling leads.json with junk entries.
-const leadLimiter = rateLimit({
-  windowMs: 60 * 1000,
-  max: 5,
-  message: { error: "Too many submissions. Please wait a moment and try again." },
-  standardHeaders: true,
-  legacyHeaders: false,
-});
-
 app.use("/api/chat", chatLimiter, chatRouter);
-app.use("/api/lead", leadLimiter, leadRouter);
+app.use("/api/lead", leadRouter);
 
 // Swagger configuration
 const swaggerOptions = {
