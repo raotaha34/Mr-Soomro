@@ -1,0 +1,152 @@
+MR. SOOMRO — COMPLETE COMPANY INFORMATION
+
+=== COMPANY OVERVIEW ===
+Full Name: Mr. Soomro SEO Agency
+Also Known As: Mr. Soomro, MR. Soomro, Mr Soomro
+Tagline: "Pakistan's trusted SEO agency helping businesses rank higher, attract more clients and grow sustainably with data-driven search strategies since 2016."
+Founded: 2016
+Location: Hyderabad, Sindh, Pakistan
+Experience: 8+ years in SEO and digital marketing
+Website: https://mr-soomro.com/
+Google Site Verification: Verified (ID: 25kEpDiOk4PLQW0r1ZXmyVQRFbJeDPXqcp8-zq1Znw8)
+
+=== WHAT MR. SOOMRO DOES ===
+Mr. Soomro is a performance-focused digital service provider specialising in:
+- Reddit marketing and brand awareness campaigns
+- Online reputation management (Google and Trustpilot review management)
+- SEO backlinks (guest posts, high-authority backlinks, niche edits, PBN backlinks, niche-relevant backlinks, authority link building)
+- AI SEO and GEO (Generative Engine Optimization) for visibility in AI-powered search
+- Reddit post removal and negative content suppression
+- Link building campaigns designed around your website, competitors, and long-term SEO goals
+- Technical SEO (website audits, Core Web Vitals, schema markup, crawl error fixes)
+- On-Page SEO (keyword research, meta optimization, internal linking)
+- Off-Page SEO (guest posting, link building, digital PR)
+- Local SEO (Google Business Profile, citation building)
+- E-commerce SEO (Shopify SEO, WooCommerce SEO)
+- SEO Consulting (competitor analysis, monthly reporting)
+- Content Marketing strategy and execution
+
+=== KEY STATISTICS ===
+- 100+ clients served across Pakistan, UK, and UAE
+- 91% client retention rate (industry average: 50%)
+- 93% client satisfaction score (industry average: 72%)
+- 8+ years of experience since 2016
+- 48.2K organic traffic achieved for clients (+127% growth)
+- Domain Authority increased to 62 (+18 points)
+- Search Visibility Growth: +84%
+- Trusted by 100+ businesses
+
+=== COMPANY PHILOSOPHY ===
+"We don't chase rankings for the sake of rankings. We build systems that turn search traffic into real revenue — month after month, year after year."
+
+Strategy First. Data Driven. Results Focused.
+
+=== CORE VALUES ===
+1. Data-Driven Strategy — Every decision backed by keyword research, competitor analysis, and live performance data
+2. Transparency — Clear reporting, honest communication, no vanity metrics
+3. Quality Over Quantity — Focus on real outcomes, not link volume
+4. Long-Term Partnerships — 91% client retention rate reflects commitment to sustained results
+
+=== WHO WE WORK WITH ===
+- Local startups and small businesses
+- E-commerce brands (Shopify, WooCommerce)
+- SaaS companies
+- Enterprise brands
+- Businesses across Pakistan, the UK, and UAE
+- Any niche that needs SEO and digital marketing support
+
+=== BRANDS WE HAVE HELPED GROW ===
+TechWyse Solutions, UrbanCart, Nexa Digital, BrightPath Marketing, Prime Auto Care, Elite Dental Clinic, Vision Realty Group, GreenLeaf Interiors, CloudNova Solutions, Alpha Logistics
+
+=== OUR SEO PROCESS (5 Steps) ===
+Step 1: SEO Audit & Research — Comprehensive analysis of your website, competitors, keywords, and current SEO health
+Step 2: Strategy & Planning — Custom SEO roadmap based on audit findings, business goals, and market opportunity
+Step 3: Technical Optimization — Fix crawl errors, improve site speed, optimize Core Web Vitals, add schema markup
+Step 4: Content & Link Building — Create quality content, build authoritative backlinks, improve topical relevance
+Step 5: Monitor & Optimize — Track rankings, traffic, conversions, and continuously refine the strategy
+
+=== SERVICE DELIVERY TIMELINES ===
+- Guest Post Backlinks: Custom timeline based on niche
+- High-Authority Backlinks: 7-21 days typical delivery
+- Niche Edit Backlinks: 7-21 days delivery
+- Niche-Relevant Backlinks: 7-21 days delivery
+- PBN Backlinks: 5-14 days fast delivery
+- Authority Backlinks: 7-21 days typical delivery
+- Link Building Campaigns: Ongoing monthly campaigns
+- Reddit Marketing: 7-30 days typical campaign
+- Reddit Post Removal: Case-by-case assessment
+- Review Management: Ongoing monitoring and management
+- AI SEO & GEO: Custom timeline based on website size
+
+=== GUARANTEES AND PROMISES ===
+- No specific ranking guarantees (ethical SEO practice — no agency can guarantee specific positions)
+- 91% client retention rate as proof of quality
+- 93% client satisfaction score
+- Data-driven approach with transparent reporting
+- Long-term partnership focus
+- Quality over quantity in link building
+- 100% original content for guest posts
+- Manual posting and community-focused approach for Reddit marketing
+- Professional and confidential handling of all cases
+- Response time: within 24 hours guaranteed
+- Free SEO audit available for all new prospects
+
+=== ADDITIONAL SERVICES LISTED ON WEBSITE ===
+Technical SEO:
+- Website Audit
+- Core Web Vitals optimization
+- Schema Markup implementation
+- Crawl Error Fixes
+
+On-Page SEO:
+- Keyword Research
+- Meta Optimization (title tags, descriptions)
+- Internal Linking strategy
+
+Off-Page SEO:
+- Guest Posting
+- Link Building campaigns
+- Digital PR
+
+Local SEO:
+- Google Business Profile optimization
+- Citation Building
+
+E-commerce SEO:
+- Shopify SEO
+- WooCommerce SEO
+
+SEO Consulting:
+- Competitor Analysis
+- Monthly Reporting
+
+=== FREE SEO AUDIT ===
+Mr. Soomro offers a free, no-obligation SEO audit for any business. To request one:
+1. Fill out the contact form at https://mr-soomro.com/#contact (requires: website URL, name, business email, phone)
+2. Email info@mr-soomro.com with your website URL and goals
+3. Call or WhatsApp: +92 309 210 2705
+The SEO strategist will review your website and send a personalised audit within 24 hours.
+
+=== LEGAL PAGES ===
+Terms and Conditions: Available at https://mr-soomro.com/pages/terms — covers website use, SEO result disclaimers, service agreements
+Privacy Policy: Available at https://mr-soomro.com/pages/privacy — covers data collection from contact forms and user communication
+Cookie Policy: Available at https://mr-soomro.com/pages/cookie-policy — covers essential cookies, analytics tools, and third-party services (EmailJS)
+
+=== TECHNOLOGY USED ON WEBSITE ===
+- EmailJS for contact form submissions
+- Schema.org structured data (LocalBusiness markup)
+- Google Fonts (Inter, Plus Jakarta Sans, Crimson Text)
+- Responsive design with mobile navigation
+- Animated counters and scroll reveal effects
+- Soomro AI Assistant chatbot (connected to /api/chat)
+- Intersection Observer for scroll animations
+- CSS Grid and Flexbox for layout
+- Custom cursor effects (dot and ring)
+- Page loader with "MS" branding
+
+=== WEBSITE NAVIGATION STRUCTURE ===
+Main Navigation: Home, About, Services, Process, Blog, Reviews, Contact (Free SEO Audit)
+Service Pages: 11 dedicated service pages
+Blog: 9 articles with pagination
+Reviews: Filterable by category (SEO, Reputation, Backlinks, Reddit Marketing, Content)
+Legal: Privacy Policy, Terms & Conditions, Cookie Policy

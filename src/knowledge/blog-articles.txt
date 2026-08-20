@@ -1,0 +1,80 @@
+MR. SOOMRO — BLOG ARTICLES & SEO INSIGHTS
+
+The Mr. Soomro blog publishes expert SEO tips, strategies, and industry insights to help businesses rank higher and grow organically.
+
+=== BLOG ARTICLE 1 (Featured) ===
+Title: The Complete SEO Strategy Guide for 2026: What Actually Works
+Date: January 15, 2026
+Read Time: 8 min read
+URL: /pages/blog/blog-on-page-seo.html
+Summary: Discover the latest SEO trends and strategies that are driving real results in 2026. From AI-powered optimization to technical SEO essentials, learn what it takes to rank #1 on Google.
+
+=== BLOG ARTICLE 2 ===
+Title: Core Web Vitals 2026: Complete Guide
+Date: January 20, 2026
+Read Time: 6 min read
+URL: /pages/blog/blog-core-web-vitals.html
+Summary: Learn how to improve your Core Web Vitals scores (LCP, INP, CLS) to outrank competitors in Google's Page Experience Update. Covers practical techniques for improving site speed and user experience.
+
+=== BLOG ARTICLE 3 ===
+Title: Local SEO Playbook 2026 for Pakistani Businesses
+Date: December 28, 2025
+Read Time: 5 min read
+URL: /pages/blog/blog-local-seo.html
+Summary: Step-by-step guide to dominating Google Maps 3-pack and local search in Pakistan. Perfect for local businesses wanting to attract nearby customers through local search optimization.
+
+=== BLOG ARTICLE 4 ===
+Title: 10 White-Hat Link Building Strategies That Work
+Date: January 12, 2026
+Read Time: 8 min read
+URL: /pages/blog/blog-link-building.html
+Summary: Discover 10 proven white-hat link building strategies that build domain authority without risking Google penalties. Covers guest posting, broken link building, digital PR, and more ethical approaches.
+
+=== BLOG ARTICLE 5 ===
+Title: Keyword Research 2026: Find High-Intent Terms
+Date: December 15, 2025
+Read Time: 9 min read
+URL: /pages/blog/blog-keyword-research.html
+Summary: Learn how to find high-intent keywords that actually convert and drive ROI for your business. Covers tools, techniques, and frameworks for identifying profitable search terms.
+
+=== BLOG ARTICLE 6 ===
+Title: On-Page SEO Checklist for Pakistani Businesses
+Date: December 5, 2025
+Read Time: 6 min read
+URL: /pages/blog/blog-on-page-seo.html
+Summary: 30-point on-page SEO checklist to maximise visibility and conversion rates for Pakistani business websites. Covers title tags, meta descriptions, header structure, internal linking, and content optimization.
+
+=== BLOG ARTICLE 7 ===
+Title: How to Get Featured in Google AI Overviews
+Date: January 5, 2026
+Read Time: 7 min read
+URL: /pages/blog/blog-ai-overviews.html
+Summary: Learn how to optimise your content to be featured in Google AI Overviews and stay ahead as search evolves. Covers entity optimization, structured data, content formatting, and GEO strategies.
+
+=== BLOG ARTICLE 8 ===
+Title: Content Marketing Strategy for SEO Success
+Date: December 20, 2025
+Read Time: 6 min read
+URL: /pages/blog/blog-content-marketing.html
+Summary: How to create content that ranks and converts. Learn the content strategy framework used by top-performing websites, including topic clustering, pillar pages, and content distribution.
+
+=== BLOG ARTICLE 9 ===
+Title: Online Reputation Management Guide
+Date: November 28, 2025
+Read Time: 5 min read
+URL: /pages/blog/blog-reputation-management.html
+Summary: Protect and enhance your brand's online reputation. Learn strategies for review management, crisis response, negative content suppression, and building a positive digital presence.
+
+=== BLOG TOPICS COVERED ===
+- SEO strategy and best practices for 2026
+- Core Web Vitals (LCP, INP, CLS) optimization
+- Local SEO for Pakistani businesses and Google Maps
+- White-hat link building strategies
+- Keyword research and high-intent terms
+- On-page SEO checklist and optimization
+- AI Overviews and GEO (Generative Engine Optimization)
+- Content marketing strategy and frameworks
+- Online reputation management and crisis response
+
+=== NEWSLETTER ===
+Mr. Soomro offers a weekly newsletter with SEO tips, strategies, and industry updates. Businesses can subscribe through the blog page at https://mr-soomro.com/pages/blogs.html to receive weekly SEO insights delivered to their inbox.

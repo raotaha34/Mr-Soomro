@@ -8,6 +8,7 @@ import swaggerUi from "swagger-ui-express";
 import swaggerJsdoc from "swagger-jsdoc";
 import chatRouter from "./routes/chat.js";
 import leadRouter from "./routes/lead.js";
+import contactRouter from "./routes/contact.js";
 import { loadKnowledgeBase } from "./services/vectorService.js";
 
 dotenv.config();
@@ -58,6 +59,7 @@ const chatLimiter = rateLimit({
 
 app.use("/api/chat", chatLimiter, chatRouter);
 app.use("/api/lead", leadRouter);
+app.use("/api/contact", contactRouter);
 
 // Swagger configuration
 const swaggerOptions = {
@@ -89,7 +91,16 @@ const swaggerOptions = {
 };
 
 const swaggerSpec = swaggerJsdoc(swaggerOptions);
-app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+
+// Serve the OpenAPI spec as JSON for debugging
+app.get("/api-docs/swagger.json", (req, res) => {
+  res.setHeader("Content-Type", "application/json");
+  res.send(JSON.stringify(swaggerSpec));
+});
+
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec, {
+  swaggerOptions: { persistAuthorization: true },
+}));
 
 /**
  * @swagger
@@ -123,5 +134,8 @@ app.listen(PORT, () => {
   console.log(`Knowledge base ready: ${chunkCount} chunks indexed.`);
   if (!process.env.GROQ_API_KEY) {
     console.warn("WARNING: GROQ_API_KEY not set. Chat will respond with a placeholder message.");
+  }
+  if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
+    console.warn("WARNING: EMAIL_USER/EMAIL_PASS not set. Contact form emails will not work.");
   }
 });
