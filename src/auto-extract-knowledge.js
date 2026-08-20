@@ -245,44 +245,57 @@ async function extractAllWebsiteContent() {
     return allPages;
 }
 
+// Question patterns are rebuilt per call: /g regexes keep lastIndex between
+// .test() calls, which made the old shared list skip every other match.
+function questionPatterns() {
+    return [
+        /how (does|do|can|to|should|will|would)/i,
+        /what (is|are|does|do|can)/i,
+        /why (use|choose|should|is)/i,
+        /when (to|should|can)/i,
+        /where (to|can|should)/i,
+        /which (is|are|to|should)/i
+    ];
+}
+
 function generateFAQFromContent(pages) {
     let faqContent = 'FREQUENTLY ASKED QUESTIONS (Auto-generated from website content)\n\n';
-    
-    // Extract common questions from content
-    const questions = [];
-    
+
+    const entries = [];
+    const seen = new Set();
+
     pages.forEach(page => {
-        // Look for question patterns in the content
-        const questionPatterns = [
-            /how (does|do|can|to|should|will|would)/gi,
-            /what (is|are|does|do|can)/gi,
-            /why (use|choose|should|is)/gi,
-            /when (to|should|can)/gi,
-            /where (to|can|should)/gi,
-            /which (is|are|to|should)/gi
-        ];
-        
-        const sentences = page.fullText.split(/[.!?]+/);
-        sentences.forEach(sentence => {
-            sentence = sentence.trim();
-            if (sentence.length > 20 && sentence.length < 200) {
-                questionPatterns.forEach(pattern => {
-                    if (pattern.test(sentence) && !questions.includes(sentence)) {
-                        questions.push(sentence);
-                    }
-                });
-            }
+        const sentences = page.fullText
+            .split(/[.!?]+/)
+            .map(s => s.trim())
+            .filter(Boolean);
+
+        sentences.forEach((sentence, index) => {
+            if (sentence.length < 20 || sentence.length > 200) return;
+            if (!questionPatterns().some(pattern => pattern.test(sentence))) return;
+
+            const key = sentence.toLowerCase();
+            if (seen.has(key)) return;
+
+            // Answer with the copy that actually follows the question on the page.
+            const answer = sentences
+                .slice(index + 1, index + 4)
+                .join('. ')
+                .trim();
+            if (answer.length < 40) return;
+
+            seen.add(key);
+            entries.push({ question: sentence, answer, page: page.pageName });
         });
     });
-    
-    // Add top questions
-    const topQuestions = questions.slice(0, 15);
-    topQuestions.forEach((q, i) => {
-        faqContent += `Q: ${q}\n`;
-        faqContent += `A: This information is available on our website. Please contact Mr. Soomro for detailed answers.\n\n`;
+
+    entries.slice(0, 15).forEach(entry => {
+        faqContent += `Q: ${entry.question}?\n`;
+        faqContent += `A: ${entry.answer.substring(0, 600)}\n`;
+        faqContent += `   (Source page: ${entry.page})\n\n`;
     });
-    
-    faqContent += '[AUTO-GENERATED FAQ - Please review and add real answers]\n';
+
+    faqContent += '[AUTO-GENERATED from website HTML pages]\n';
     return faqContent;
 }
 

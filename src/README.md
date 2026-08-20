@@ -18,10 +18,16 @@ below — one thing remains that only you can do.
 
 ## What you still have to do
 
-Replace every file in knowledge/*.txt with real Mr. Soomro website copy.
-Everything in there right now is placeholder text. Do not deploy with
-placeholder content — the bot will confidently give customers wrong
-information about your business.
+Most of knowledge/ is generated from your real pages by
+`node auto-extract-knowledge.js` (add `--watch` to regenerate on every HTML
+save). Re-run it whenever you edit the website.
+
+Two files are still written by hand and hold generic copy that you should
+check before deploying, or the bot will state it as fact:
+
+- knowledge/about.txt — company history and positioning
+- knowledge/pricing.txt — says quotes are custom; add real packages if you
+  have them, and do not invent numbers
 
 ## Setup
 
