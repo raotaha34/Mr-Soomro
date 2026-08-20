@@ -112,22 +112,46 @@
 
   /* Add the shared service assistant where a page does not already provide it. */
   if (!document.getElementById("chatbotBtn")) {
-    document.body.insertAdjacentHTML("beforeend", '<button class="chatbot-btn" id="chatbotBtn" type="button" aria-label="Open AI Assistant"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2M20 14h2M15 13v2M9 13v2"/></svg><span class="chatbot-badge">1</span></button><div class="chatbot-window" id="chatbotWindow"><div class="chatbot-header"><div class="chatbot-header-info"><div class="chatbot-avatar"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2M20 14h2M15 13v2M9 13v2"/></svg></div><div><div class="chatbot-name">Soomro AI Assistant</div><div class="chatbot-status">Online - Ready to help</div></div></div><button class="chatbot-close" type="button" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div><div class="chatbot-messages" id="chatMessages"><div class="chat-message bot"><div class="chat-msg-avatar bot">AI</div><div class="chat-msg-bubble">Hi! I am the Mr. Soomro AI Assistant. How can I help with your SEO today?</div></div><div class="chat-suggestions"><button class="chat-suggestion" type="button" data-chat="Tell me about your SEO services">Our SEO Services</button><button class="chat-suggestion" type="button" data-chat="How much does SEO cost?">Pricing</button><button class="chat-suggestion" type="button" data-chat="I need a free SEO audit">Free SEO Audit</button><button class="chat-suggestion" type="button" data-chat="How long does SEO take?">Timeline</button></div></div><div class="chatbot-input-wrap"><input class="chatbot-input" id="chatInput" type="text" placeholder="Type your question..." aria-label="Chat message"><button class="chatbot-send" type="button" aria-label="Send"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg></button></div><div class="chatbot-footer">Powered by <strong>Mr. Soomro AI</strong> - Instant SEO help</div></div>');
+    document.body.insertAdjacentHTML("beforeend", '<button class="chatbot-btn" id="chatbotBtn" type="button" aria-label="Open AI Assistant"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2M20 14h2M15 13v2M9 13v2"/></svg><span class="chatbot-badge">1</span></button><div class="chatbot-window" id="chatbotWindow"><div class="chatbot-header"><div class="chatbot-header-info"><div class="chatbot-avatar"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2M20 14h2M15 13v2M9 13v2"/></svg></div><div><div class="chatbot-name">Soomro AI Assistant</div><div class="chatbot-status">Online - Ready to help</div></div></div><button class="chatbot-close" type="button" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div><div class="chatbot-messages" id="chatMessages"><div class="chat-message bot"><div class="chat-msg-avatar bot">AI</div><div class="chat-msg-bubble">Hi! I am the Mr. Soomro AI Assistant. How can I help with your SEO today?</div></div><div class="chat-suggestions"><button class="chat-suggestion" type="button" data-chat="Tell me about your SEO services">Our SEO Services</button><button class="chat-suggestion" type="button" data-chat="How much does SEO cost?">Pricing</button><button class="chat-suggestion" type="button" data-chat="I need a free SEO audit">Free SEO Audit</button><button class="chat-suggestion" type="button" data-chat="How long does SEO take?">Timeline</button></div></div><div class="chatbot-input-wrap"><input class="chatbot-input" id="chatInput" type="text" placeholder="Type your question..." aria-label="Chat message"><button class="chatbot-send" type="button" aria-label="Send message"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg></button></div><div class="chatbot-footer">Powered by <strong>Mr. Soomro AI</strong></div></div>');
     var sharedChatButton = document.getElementById("chatbotBtn");
     var sharedChatWindow = document.getElementById("chatbotWindow");
     var sharedChatInput = document.getElementById("chatInput");
     var sharedChatMessages = document.getElementById("chatMessages");
-    var sharedResponse = function (text) {
-      var value = text.toLowerCase();
-      if (/service|offer/.test(value)) return "We offer technical SEO, link building, Reddit marketing, AI SEO and GEO, reputation management, guest posts, backlinks, and more.";
-      if (/price|cost|pricing|package/.test(value)) return "Pricing depends on your goals and competition. Contact us for a tailored recommendation and free SEO audit.";
-      if (/audit|free|analy/.test(value)) return "Our free SEO audit reviews technical issues, keywords, content gaps, and backlink opportunities.";
-      if (/time|long|when|month|result/.test(value)) return "SEO often shows meaningful results in 3 to 6 months, depending on competition and implementation.";
-      if (/hello|hi|hey/.test(value)) return "Hello! I can help with services, pricing, timelines, or a free SEO audit.";
-      return "For a detailed answer, contact info@mr-soomro.com or 0309 210 2705. We would be happy to help.";
-    };
     var addSharedMessage = function (text, sender) { var row = document.createElement("div"); row.className = "chat-message " + sender; var avatar = document.createElement("div"); avatar.className = "chat-msg-avatar " + sender; avatar.textContent = sender === "bot" ? "AI" : "You"; var bubble = document.createElement("div"); bubble.className = "chat-msg-bubble"; bubble.textContent = text; row.append(avatar, bubble); sharedChatMessages.appendChild(row); sharedChatMessages.scrollTop = sharedChatMessages.scrollHeight; };
-    var sendSharedMessage = function () { var text = sharedChatInput.value.trim(); if (!text) return; addSharedMessage(text, "user"); sharedChatInput.value = ""; var suggestions = sharedChatMessages.querySelector(".chat-suggestions"); if (suggestions) suggestions.remove(); window.setTimeout(function () { addSharedMessage(sharedResponse(text), "bot"); }, 500); };
+    var addTypingIndicator = function () { var typing = document.createElement("div"); typing.className = "chat-message bot typing"; typing.innerHTML = '<div class="chat-msg-avatar bot">AI</div><div class="chat-msg-bubble">...</div>'; sharedChatMessages.appendChild(typing); sharedChatMessages.scrollTop = sharedChatMessages.scrollHeight; return typing; };
+    var sendSharedMessage = async function () { 
+      var text = sharedChatInput.value.trim(); 
+      if (!text) return; 
+      addSharedMessage(text, "user"); 
+      sharedChatInput.value = ""; 
+      var suggestions = sharedChatMessages.querySelector(".chat-suggestions"); 
+      if (suggestions) suggestions.remove(); 
+      var typing = addTypingIndicator();
+      try {
+        var response = await fetch("/api/chat", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ message: text })
+        });
+        var data = await response.json();
+        typing.remove();
+        if (response.ok) {
+          addSharedMessage(data.answer, "bot");
+          if (data.sources && data.sources.length > 0) {
+            var sourcesDiv = document.createElement("div");
+            sourcesDiv.className = "chat-message bot";
+            sourcesDiv.innerHTML = '<div class="chat-msg-avatar bot">AI</div><div class="chat-msg-bubble" style="font-size: 11px; opacity: 0.7;">Sources: ' + data.sources.join(", ") + '</div>';
+            sharedChatMessages.appendChild(sourcesDiv);
+            sharedChatMessages.scrollTop = sharedChatMessages.scrollHeight;
+          }
+        } else {
+          addSharedMessage(data.error || "Sorry, I couldn't process your request. Please try again.", "bot");
+        }
+      } catch (error) {
+        typing.remove();
+        addSharedMessage("Unable to connect to the AI service. Please make sure the server is running.", "bot");
+      }
+    };
     sharedChatButton.addEventListener("click", function () { sharedChatWindow.classList.add("open"); sharedChatButton.querySelector(".chatbot-badge").style.display = "none"; sharedChatInput.focus(); });
     sharedChatWindow.querySelector(".chatbot-close").addEventListener("click", function () { sharedChatWindow.classList.remove("open"); });
     sharedChatWindow.querySelector(".chatbot-send").addEventListener("click", sendSharedMessage);
