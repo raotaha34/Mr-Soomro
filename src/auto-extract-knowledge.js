@@ -1,17 +1,16 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { exec } from 'child_process';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PROJECT_ROOT = path.join(__dirname, '..');
 const KNOWLEDGE_DIR = path.join(__dirname, 'knowledge');
 
-// Directories to scan for content
+// Directories to scan for content. scanDirectory() recurses, so listing a
+// subdirectory of one of these (pages/blog) would extract those pages twice.
 const SCAN_DIRECTORIES = [
     path.join(PROJECT_ROOT, 'Services'),
-    path.join(PROJECT_ROOT, 'pages'),
-    path.join(PROJECT_ROOT, 'pages/blog')
+    path.join(PROJECT_ROOT, 'pages')
 ];
 
 // File patterns to include/exclude
@@ -313,24 +312,33 @@ function generateAboutContent(pages) {
 function startWatchMode() {
     console.log('👀 Starting watch mode for automatic knowledge base updates...\n');
     
-    const chokidar = require('chokidar');
-    
-    // Watch all scan directories
-    const watchPaths = SCAN_DIRECTORIES;
-    
-    const watcher = chokidar.watch(watchPaths, {
-        ignored: /(^|[\/\\])\../, // ignore dotfiles
-        persistent: true
-    });
-    
-    watcher.on('change', async (filePath) => {
-        if (filePath.endsWith('.html')) {
-            console.log(`\n📄 File changed: ${filePath}`);
+    let pending = null;
+
+    const onChange = (filePath) => {
+        if (!filePath || !filePath.endsWith('.html') || path.basename(filePath).startsWith('.')) return;
+        console.log(`\n📄 File changed: ${filePath}`);
+        // Editors fire several events per save, so re-extract once things settle.
+        clearTimeout(pending);
+        pending = setTimeout(async () => {
             console.log('🔄 Re-extracting knowledge base...');
-            await extractAllWebsiteContent();
-            console.log('✅ Knowledge base updated automatically!\n');
+            try {
+                await extractAllWebsiteContent();
+                console.log('✅ Knowledge base updated automatically!\n');
+            } catch (error) {
+                console.error(`❌ Extraction failed: ${error.message}\n`);
+            }
+        }, 300);
+    };
+
+    for (const dir of SCAN_DIRECTORIES) {
+        if (!fs.existsSync(dir)) {
+            console.log(`Directory not found, not watching: ${dir}`);
+            continue;
         }
-    });
+        fs.watch(dir, { recursive: true, persistent: true }, (eventType, filename) => {
+            onChange(filename && path.join(dir, filename));
+        });
+    }
     
     console.log('Watching for HTML file changes...');
     console.log('Press Ctrl+C to stop watch mode\n');
@@ -341,21 +349,7 @@ const args = process.argv.slice(2);
 const watchMode = args.includes('--watch') || args.includes('-w');
 
 if (watchMode) {
-    // Install chokidar if not available
-    try {
-        require('chokidar');
-        startWatchMode();
-    } catch (error) {
-        console.log('⚠️  Watch mode requires chokidar. Installing...');
-        exec('npm install chokidar', (error, stdout, stderr) => {
-            if (error) {
-                console.error('Error installing chokidar:', error);
-                return;
-            }
-            console.log('✅ chokidar installed. Starting watch mode...');
-            startWatchMode();
-        });
-    }
+    startWatchMode();
 } else {
     extractAllWebsiteContent().catch(console.error);
 }

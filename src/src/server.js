@@ -38,15 +38,15 @@ const allowedOrigins = (process.env.ALLOWED_ORIGINS || "")
   .concat(DEFAULT_ORIGINS);
 
 app.use(cors({
-  // No Origin header (curl, same-origin) and "null" (pages opened via file://)
-  // never carry cookies, so allowing them costs nothing.
+  // "null" covers pages opened straight from disk (file://) and a missing Origin
+  // covers curl and same-origin requests. The API is credential-free — auth is a
+  // header, not a cookie — so neither opens anything up.
   origin(origin, callback) {
     if (!origin || origin === "null" || allowedOrigins.includes(origin)) {
       return callback(null, true);
     }
     callback(new Error(`Origin ${origin} is not allowed by CORS.`));
   },
-  credentials: true,
 }));
 app.use(express.json({ limit: "32kb" }));
 
