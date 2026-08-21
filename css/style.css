@@ -242,8 +242,8 @@ body { font-family: var(--fb); background: var(--bg); color: var(--T); line-heig
 
 
 /* ── NAV ── */
-nav { position:fixed;top:0;left:0;right:0;z-index:500;height:70px;padding:0 54px;display:flex;align-items:center;justify-content:space-between;background:rgb(255 255 255);backdrop-filter:blur(20px);border-bottom:1px solid var(--bdr);transition:all .4s }
-nav.scr { background:rgba(255,255,255,.98);box-shadow:0 4px 30px rgba(249,115,22,.1);border-bottom-color:var(--bdr2) }
+nav { position:fixed;top:0;left:0;right:0;z-index:500;height:70px;padding:0 54px;display:flex;align-items:center;justify-content:space-between;background:transparent;border:none;transition:all .4s;overflow:visible }
+nav.scr { background:#fff;box-shadow:0 4px 30px rgba(249,115,22,.1);border-bottom:none }
 .nlogo { font-family:var(--fd);font-size:26px;font-weight:800;letter-spacing:.05em;color:var(--T);text-decoration:none;display:flex;align-items:center;gap:8px }
 .nlogo img { max-height:40px;width:auto;display:block }
 .nlogo img { display: none !important; }
@@ -269,8 +269,8 @@ nav.scr { background:rgba(255,255,255,.98);box-shadow:0 4px 30px rgba(249,115,22
 .ncta::after { display:none!important }
 .nbg { display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px }
 .nbg span { display:block;width:24px;height:2px;background:var(--T);border-radius:2px;transition:all .3s }
-.mnav { position:fixed;top:70px;left:0;right:0;bottom:0;background:rgba(255,255,255,.98);backdrop-filter:blur(20px);z-index:450;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:32px;transform:translateX(100%);transition:transform .4s var(--ee);padding:40px 24px;overflow-y:auto }
-.mnav.open { transform:translateX(0) }
+.mnav { position:fixed;top:70px;left:0;right:0;bottom:0;background:#fff;z-index:999;display:none;flex-direction:column;align-items:center;justify-content:center;gap:32px;padding:40px 24px;overflow-y:auto }
+.mnav.open { display:flex !important }
 .mnav-links { display:flex;flex-direction:column;align-items:center;gap:18px }
 .mnav-links a { font-family:var(--fd);font-size:clamp(26px,7vw,40px);font-weight:800;letter-spacing:.04em;color:var(--T);text-decoration:none;transition:color .3s;text-align:center;line-height:1.05 }
 .mnav-links a:hover { color:var(--A) }
@@ -326,7 +326,7 @@ nav.scr { background:rgba(255,255,255,.98);box-shadow:0 4px 30px rgba(249,115,22
 .proof-text span { font-size:13px;color:var(--Ts) }
 
 /* Hero Visual */
-.hero-visual { position:relative;display:flex;align-items:center;justify-content:center }
+.hero-visual { position:relative;display:flex;align-items:center;justify-content:center;overflow:visible }
 .visual-main { position:relative;width:100%;max-width:500px }
 .visual-main img { width:100%;border-radius:24px;box-shadow:0 40px 80px rgba(0,0,0,.12),0 0 50px var(--A-glow);border:2px solid rgba(249,115,22,.2) }
 .visual-glow { position:absolute;inset:-20px;background:radial-gradient(circle,rgba(249,115,22,.15) 0%,transparent 70%);filter:blur(40px);z-index:-1;animation:glowPulse 4s ease-in-out infinite }
@@ -477,7 +477,11 @@ section { padding:120px 60px }
 .cll:hover { border-color:var(--A);color:var(--A);box-shadow:0 8px 30px var(--A-glow);transform:translateY(-6px) scale(1.02) }
 
 /* ── CONTACT ── */
+<<<<<<< HEAD
 #contact { background:#ff9900;position:relative;overflow:hidden }
+=======
+#contact {  background: #ff9900;;position:relative;overflow:hidden }
+>>>>>>> a60c84f (feat: SEO audit modal on all pages, CTA background fixes, responsive improvements)
 #contact::before { content:'';position:absolute;top:-20%;right:-10%;width:600px;height:600px;background:radial-gradient(circle,rgba(249,115,22,.05) 0%,transparent 60%);filter:blur(80px) }
 .cng { display:grid;grid-template-columns:1fr 1.25fr;gap:90px;align-items:start;max-width:1200px;margin:0 auto;position:relative;z-index:1 }
 .cntxt { font-size:16px;font-weight:400;color:var(--Ts);line-height:1.9;margin-bottom:38px }
@@ -548,13 +552,26 @@ footer::before { content:'';position:absolute;top:0;left:50%;transform:translate
   section{padding:100px 40px} nav{padding:0 40px} .hero{padding:110px 40px 80px} footer{padding:70px 40px 28px}
   .abg{gap:56px} .stg{grid-template-columns:repeat(2,1fr)} .whyg{grid-template-columns:repeat(2,1fr)}
   .cng{gap:56px} .ftt{display:flex;flex-wrap:wrap;gap:40px} .prg{grid-template-columns:1fr 1fr;gap:48px}
-  .prg::before{display:none} .eband{padding:70px 40px} .hero-container{grid-template-columns:1fr;gap:40px;text-align:center}
+  .prg::before{display:none} .eband{padding:70px 40px} .hero-container{grid-template-columns:1fr 1fr;gap:30px;text-align:left}
   .hcnt{max-width:700px;margin:0 auto} .hero-trust{justify-content:center} .hero-proof{justify-content:center}
-  .hero-visual{max-width:480px;margin:0 auto;order:-1} .visual-card{display:none}
+  .hero-visual{max-width:100%;margin:0;order:0;overflow:visible}
+}
+@media(max-width:1024px) {
+  .hero-container{grid-template-columns:1fr 1fr;gap:24px}
+  .visual-3d-scene { animation:none;transform:none;transform-style:flat }
+  .dashboard-3d { position:relative;top:auto;left:auto;transform:none;width:100%;max-width:400px;margin:0 auto }
+  .card-1,.card-2,.card-3 { display:flex }
+}
+@media(max-width:900px) {
+  .hero-container { grid-template-columns:1fr;gap:40px;text-align:center }
+  .hcnt { max-width:600px;margin:0 auto }
+  .hero-visual { max-width:420px;margin:0 auto;order:-1 }
+  .hero-trust { justify-content:center }
+  .hero-proof { justify-content:center }
 }
 @media(max-width:768px) {
   section{padding:80px 20px} nav{padding:0 16px;height:60px} .hero{padding:90px 20px 70px}
-  footer{padding:60px 20px 24px} .nlinks{display:none} .nbg{display:flex;width:40px;height:40px;align-items:center;justify-content:center;border:1px solid var(--bdr);border-radius:10px}
+  footer{padding:60px 20px 24px} .nlinks{display:none} .nbg{display:flex !important;width:40px;height:40px;align-items:center;justify-content:center;border:1px solid var(--bdr);border-radius:10px;position:relative;z-index:1000;cursor:pointer;flex-shrink:0}
   .mnav{top:60px;padding:30px 20px;gap:18px} .abg{grid-template-columns:1fr} .abvis{display:none}
   .nlogo{font-size:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:calc(100vw - 80px)}
   .nlogo .tag{font-size:7px;padding:2px 5px;margin-left:5px} .svg,.blg{grid-template-columns:1fr}
@@ -641,3 +658,9 @@ img, video, canvas { max-width: 100%; height: auto; }
 
 
 
+
+
+/* ── GLOBAL OVERFLOW SAFEGUARDS ── */
+img,video,svg,canvas { max-width:100%;height:auto }
+.hero-container,.abg,.cng,.stg,.whyg,.prg,.frw,.ftt { width:100%;overflow:hidden }
+section,footer,.hero,.stbar,.eband,.whys,#clients,#testimonials { overflow-x:hidden }
