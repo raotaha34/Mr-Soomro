@@ -629,6 +629,15 @@ footer::before { content:'';position:absolute;top:0;left:50%;transform:translate
   .service-card{padding:20px}
 }
 
+/* ============ GLOBAL MOBILE SAFETY GUARDS ============ */
+/* Never allow horizontal scrolling on any page */
+body { overflow-x: clip; }
+/* Media can never blow out of their container on small screens */
+img, video, canvas { max-width: 100%; height: auto; }
+/* Injected navbar icons always render at a fixed size */
+#navbar.site-navbar .mobile-toggle svg { width: 20px; height: 20px; display: block; }
+#navbar.site-navbar .nav-logo-icon svg { width: 18px; height: 18px; display: block; }
+
 
 
 

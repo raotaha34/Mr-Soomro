@@ -55,11 +55,12 @@
     if (navHost) navHost.classList.add("site-navbar-host");
     var servicesPage = rootPrefix + "pages/services.html";
     var blogPage = rootPrefix + "pages/blogs.html";
+    var iconLogo = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 12l4-4 4 4 5-6"/></svg>';
     var iconBars = '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>';
     var iconClose = '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>';
     legacyNav.innerHTML = '<div class="nav-container">' +
       '<a href="' + rootPrefix + 'index.html" class="nav-logo">' +
-      '<div class="nav-logo-icon"><i class="fas fa-chart-line"></i></div>' +
+      '<div class="nav-logo-icon">' + iconLogo + '</div>' +
       '<div class="nav-logo-text-wrap"><div class="nav-logo-text">Mr <span>Soomro</span></div><div class="nav-logo-sub">Digital Marketing Expert</div></div>' +
       '</a>' +
       '<ul class="nav-links">' +

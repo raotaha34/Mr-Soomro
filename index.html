@@ -17,7 +17,7 @@
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css?v=2">
   <style>
     /* ============ PAGE-SPECIFIC STYLES (Not touching your navbar) ============ */
     :root {
@@ -1760,7 +1760,10 @@
     /* ============ RESPONSIVE ============ */
     @media (max-width: 1024px) {
       .hero-container { grid-template-columns: 1fr; gap: 60px; }
-      .hero-visual { height: 480px; max-width: 480px; margin: 0 auto; }
+      .hero-visual { height: auto; max-width: 480px; margin: 0 auto; perspective: none; padding-top: 8px; }
+      .visual-3d-scene { height: auto; animation: none; transform: none; transform-style: flat; }
+      .dashboard-3d { position: relative; top: auto; left: auto; transform: none; width: 100%; max-width: 440px; margin: 0 auto; }
+      .card-1, .card-2, .card-3 { display: none; }
       .abg { grid-template-columns: 1fr; gap: 60px; }
       .abvis { max-width: 500px; margin: 0 auto; }
       .whyg { grid-template-columns: repeat(2, 1fr); }
@@ -1779,7 +1782,7 @@
       .trust-num { font-size: 22px; }
       .hacts { flex-direction: column; align-items: stretch; }
       .bblu, .bout { justify-content: center; }
-      .hero-visual { height: 400px; }
+      .hero-visual { height: auto; }
       .dashboard-3d { padding: 22px; }
       .db-metric-value { font-size: 32px; }
       .card-1, .card-2, .card-3 { display: none; }
@@ -2497,6 +2500,6 @@
       });
     }
   </script>
-  <script src="pages/script.js"></script>
+  <script src="pages/script.js?v=2"></script>
 </body>
 </html>
