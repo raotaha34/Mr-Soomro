@@ -257,12 +257,13 @@
               <th>Name</th>
               <th>Email</th>
               <th>Phone</th>
+              <th>Website</th>
               <th>Requirement</th>
               <th>Date</th>
             </tr>
           </thead>
           <tbody id="leadsBody">
-            <tr class="loading-row"><td colspan="6">Loading leads...</td></tr>
+            <tr class="loading-row"><td colspan="7">Loading leads...</td></tr>
           </tbody>
         </table>
       </div>
@@ -357,7 +358,7 @@
     function renderLeads(leads) {
       var tbody = document.getElementById("leadsBody");
       if (!leads.length) {
-        tbody.innerHTML = '<tr><td colspan="6"><div class="empty-state"><p>No leads found</p><small>Leads will appear here when submitted through the website.</small></div></td></tr>';
+        tbody.innerHTML = '<tr><td colspan="7"><div class="empty-state"><p>No leads found</p><small>Leads will appear here when submitted through the website.</small></div></td></tr>';
         return;
       }
       // Sort newest first
@@ -373,6 +374,7 @@
           '<td class="name">' + esc(l.name) + '</td>' +
           '<td class="email"><a href="mailto:' + esc(l.email) + '">' + esc(l.email) + '</a></td>' +
           '<td>' + (l.phone ? esc(l.phone) : '<span style="color:var(--Tmut)">—</span>') + '</td>' +
+          '<td class="website">' + (l.website ? '<a href="' + esc(l.website) + '" target="_blank" style="color:var(--A);text-decoration:none;word-break:break-all;">' + esc(l.website) + '</a>' : '<span style="color:var(--Tmut)">—</span>') + '</td>' +
           '<td>' + (l.requirement ? '<span class="req-badge">' + esc(l.requirement) + '</span>' : '<span style="color:var(--Tmut)">—</span>') + '</td>' +
           '<td class="date">' + dateStr + '<br>' + timeStr + '</td>' +
           '</tr>';
@@ -407,7 +409,8 @@
         return (l.name && l.name.toLowerCase().indexOf(q) !== -1) ||
                (l.email && l.email.toLowerCase().indexOf(q) !== -1) ||
                (l.requirement && l.requirement.toLowerCase().indexOf(q) !== -1) ||
-               (l.phone && l.phone.indexOf(q) !== -1);
+               (l.phone && l.phone.indexOf(q) !== -1) ||
+               (l.website && l.website.toLowerCase().indexOf(q) !== -1);
       });
       renderLeads(filtered);
     });
