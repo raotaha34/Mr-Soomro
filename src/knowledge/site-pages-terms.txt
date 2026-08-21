@@ -1,0 +1,98 @@
+PAGE: Terms and Conditions - Mr. Soomro SEO
+URL: https://mr-soomro.vercel.app/pages/terms.html
+FILE: pages/terms.html
+
+--- NAVBAR / HEADER ITEMS ---
+About
+Services
+Blog
+Free SEO Audit
+
+--- FULL PAGE CONTENT ---
+About
+Services
+Blog
+Free SEO Audit
+Mr. Soomro SEO
+Terms and Conditions
+By using this website or requesting our services, you agree to provide accurate information and use the site lawfully. SEO results depend on competition, website condition, and search engine changes, so rankings are not guaranteed unless stated in a signed agreement.
+For questions, email info@mr-soomro.com
+or call +92 309 210 2705
+.
+MR. Soomro
+Pakistan's trusted SEO agency helping businesses rank higher, attract more clients and grow sustainably with data-driven search strategies since 2016.
+Services
+Technical SEO
+Website Audit
+Core Web Vitals
+Schema Markup
+Crawl Error Fixes
+Services
+On-Page SEO
+Keyword Research
+Meta Optimization
+Internal Linking
+Off-Page SEO
+Guest Posting
+Link Building
+Digital PR
+More Services
+Local SEO
+Google Business Profile
+Citation Building
+E-commerce SEO
+Shopify SEO
+WooCommerce SEO
+SEO Consulting
+Competitor Analysis
+Monthly Reporting
+Quick Links
+Why Choose Us
+SEO Process
+Client Reviews
+Blog
+Book Free Consultation
+Contact
+info@mr-soomro.com
+0309 210 2705
+WhatsApp
+House No G 209, Mohallah Humayoo, Masjid Al Fazal Town, Phuleli, Hyderabad, Sindh, Pakistan 71000
+&copy; 2026 Mr. Soomro SEO Agency
+. All rights reserved.
+Privacy Policy
+Terms & Conditions
+Cookie Policy
+
+--- LINKS ON THIS PAGE ---
+About -> about.html
+Services -> services.html
+Blog -> blogs.html
+Free SEO Audit -> ../index.html#contact
+info@mr-soomro.com -> mailto:info@mr-soomro.com
++92 309 210 2705 -> tel:+923092102705
+Website Audit -> services.html
+Core Web Vitals -> services.html
+Schema Markup -> services.html
+Crawl Error Fixes -> services.html
+Keyword Research -> services.html
+Meta Optimization -> services.html
+Internal Linking -> services.html
+Guest Posting -> services.html
+Link Building -> services.html
+Digital PR -> services.html
+Google Business Profile -> services.html
+Citation Building -> services.html
+Shopify SEO -> services.html
+WooCommerce SEO -> services.html
+Competitor Analysis -> services.html
+Monthly Reporting -> services.html
+Why Choose Us -> ../index.html#about
+SEO Process -> ../index.html#process
+Client Reviews -> reviews.html
+Book Free Consultation -> ../index.html#contact
+0309 210 2705 -> tel:+923092102705
+WhatsApp -> https://wa.me/923092102705
+Mr. Soomro SEO Agency -> ../index.html
+Privacy Policy -> privacy.html
+Terms & Conditions -> terms.html
+Cookie Policy -> cookie-policy.html

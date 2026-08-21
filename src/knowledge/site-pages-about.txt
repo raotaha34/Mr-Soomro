@@ -1,0 +1,214 @@
+PAGE: About Mr. Soomro | Pakistan's Leading SEO Agency Since 2016
+URL: https://mr-soomro.vercel.app/pages/about.html
+FILE: pages/about.html
+
+--- NAVBAR / HEADER ITEMS ---
+About
+Services
+Process
+Blog
+Reviews
+Free SEO Audit
+
+--- FULL PAGE CONTENT ---
+Home
+About
+Services
+Process
+Blog
+Reviews
+Contact
+Connect With Us
+About
+Services
+Process
+Blog
+Reviews
+Free SEO Audit
+About Mr. Soomro
+SEO That Delivers Real Revenue.
+Since 2016, we've helped over 100+ businesses across Pakistan, the UK, and UAE turn Google into their most profitable acquisition channel.
+100+
+Clients Served
+91%
+Retention Rate
+8+
+Years Experience
+Free SEO Audit
+Our Services
+Mr. Soomro SEO
+Verified
+MS
+SEO Agency
+Est. 2016 · Hyderabad, Pakistan
+100 +
+Clients
+91 %
+Retention
+500 +
+Reviews
+SEO Strategy
+Link Building
+Reddit Marketing
+Reputation
+AI SEO
++287%
+Traffic Growth
+5.0
+Client Rating
+Google
+Top Ranked
+2016
+The Beginning
+8+
+Years of SEO
+Our Story
+Built on Results. Rooted in Trust.
+Mr. Soomro SEO Agency is Pakistan's most results-driven search engine optimisation firm. Founded in 2016, we have helped over 100+ businesses — from local startups to enterprise brands — dominate Google search and generate measurable organic growth.
+MR Soomro is a performance-focused digital service provider specialising in Reddit marketing, online reputation management, and SEO backlinks . We focus on real outcomes, not vanity metrics. 91% client retention rate and a 93% client satisfaction score — our results speak for themselves.
+"We don't chase rankings for the sake of rankings. We build systems that turn search traffic into real revenue — month after month, year after year."
+What started as a one-person operation in Hyderabad has grown into a trusted partner for businesses across three countries — and we're just getting started.
+100 +
+Clients Served
+Since 2016
+91 %
+Retention Rate
+Industry avg: 50%
+93 %
+Satisfaction Score
+Industry avg: 72%
+8 +
+Years Experience
+Proven track record
+Our Values
+What Makes Us Different
+Four core principles guide every strategy, every campaign, and every client relationship we build.
+01 — Data
+Data-Driven Strategy
+Every decision backed by keyword research, competitor analysis and live performance data. No guesswork, no gut feelings — just proven methods.
+02 — Trust
+Full Transparency
+Monthly reports with clear KPIs, ranking movements, traffic trends and exact ROI figures. You see what we do — and why it works.
+03 — Results
+Proven Track Record
+95% of our clients achieve first-page rankings within 6 months. No lock-in contracts — because our results keep clients coming back.
+04 — Growth
+Long-Term Partnership
+We do not deliver and disappear. Your growth is our mission — we scale with you, evolve with search trends, and stay committed.
+Our Journey
+From 2016 to Today
+A timeline of milestones, growth, and the moments that shaped Mr. Soomro into Pakistan's most trusted SEO agency.
+The Beginning
+Founded Mr. Soomro SEO Agency in Hyderabad with a mission to bring world-class SEO to Pakistani businesses.
+2016
+2018
+First 25 Clients
+Reached our first major milestone — 25 clients served with 92% achieving page-one rankings within 6 months.
+International Expansion
+Started serving clients in the UK and UAE, bringing our data-driven SEO methodology to global markets.
+2020
+2022
+Reddit Marketing Launch
+Pioneered Reddit marketing services in Pakistan — helping brands generate authentic community-driven traffic.
+100+ Clients Milestone
+Crossed 100+ businesses served with a 91% retention rate — cementing our position as Pakistan's leading SEO agency.
+2024
+2026
+AI SEO & GEO
+Leading the next generation of search — helping brands rank in AI Overviews, ChatGPT, and generative engines.
+Meet The Founder
+The Mind Behind Mr. Soomro
+MS
+Founder & CEO
+Mr. Soomro
+SEO Strategist · Digital Growth Expert · 8+ Years Experience
+"SEO isn't about tricks or shortcuts. It's about understanding what your customers are searching for — and being the answer they can trust. That's what we've built here."
+Purpose
+Our Mission & Vision
+What drives us to do great work every single day.
+Our Mission
+To make world-class SEO accessible to every business.
+We exist to level the digital playing field — giving small businesses the same SEO power as billion-dollar brands. Through transparent processes, data-driven strategy, and real accountability, we help our clients rank, grow, and thrive online.
+Our Vision
+To be South Asia's most trusted SEO partner.
+We're building an agency defined not by size, but by results — a place where every client relationship compounds into long-term growth. By 2030, we aim to have helped 1,000+ businesses across Pakistan, the UK, UAE, and beyond dominate their markets.
+How We Work
+Our Proven 4-Step Process
+A structured approach to SEO that delivers measurable results — every single time.
+01
+Share Requirements & Full Audit
+Tell us about your goals, challenges, and what you want to achieve. This helps us clearly understand your needs from the start.
+02
+Analysis & Strategy
+We carefully analyse your current situation and create a tailored strategy. Every plan is customised to deliver the best possible results.
+03
+Optimise & Execute
+Our team implements the strategy using proven Reddit and SEO methods. We focus on quality work that drives real growth.
+04
+Progress & Updates
+You receive regular updates on performance and progress. Everything stays transparent, simple, and focused on results.
+Let's Work Together
+Ready to Grow Your Search Visibility?
+Let's identify what's holding your website back and build a strategy that turns search visibility into real business growth.
+Get Free SEO Audit
+Explore Our Services
+MR. Soomro
+Pakistan's trusted SEO agency helping businesses rank higher, attract more clients and grow sustainably with data-driven search strategies since 2016.
+Technical SEO
+Website Audit
+Core Web Vitals
+Schema Markup
+Crawl Error Fixes
+On-Page & Off-Page
+Keyword Research
+Meta Optimization
+Guest Posting
+Link Building
+Digital PR
+More Services
+Google Business Profile
+Citation Building
+Shopify SEO
+WooCommerce SEO
+Company
+About
+Services
+Process
+Reviews
+Blog
+Contact
+© 2026 Mr. Soomro SEO Agency
+. All rights reserved.
+Privacy Policy
+Terms & Conditions
+Cookie Policy
+
+--- LINKS ON THIS PAGE ---
+Home -> ../index.html
+About -> about.html
+Services -> services.html
+Process -> ../index.html#process
+Blog -> blogs.html
+Reviews -> reviews.html
+Contact -> ../index.html#contact
+Free SEO Audit -> ../index.html#contact
+Our Services -> services.html
+Get Free SEO Audit -> ../index.html#contact
+Explore Our Services -> services.html
+Website Audit -> services.html
+Core Web Vitals -> services.html
+Schema Markup -> services.html
+Crawl Error Fixes -> services.html
+Keyword Research -> services.html
+Meta Optimization -> services.html
+Guest Posting -> services.html
+Link Building -> services.html
+Digital PR -> services.html
+Google Business Profile -> services.html
+Citation Building -> services.html
+Shopify SEO -> services.html
+WooCommerce SEO -> services.html
+Mr. Soomro SEO Agency -> ../index.html
+Privacy Policy -> privacy.html
+Terms & Conditions -> terms.html
+Cookie Policy -> cookie-policy.html

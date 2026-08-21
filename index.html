@@ -14,7 +14,7 @@
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Mr. Soomro SEO Agency","description":"Expert SEO services including Reddit marketing, reputation management, backlinks, technical SEO, local SEO, and content marketing.","url":"https://mr-soomro.com/","email":"info@mr-soomro.com","telephone":"+923092102705","address":{"@type":"PostalAddress","streetAddress":"House No G 209, Mohallah Humayoo, Masjid Al Fazal Town, Phuleli","addressLocality":"Hyderabad","addressRegion":"Sindh","postalCode":"71000","addressCountry":"PK"}}</script>
   
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
@@ -2279,8 +2279,11 @@
 
 
   <script>
-    const hasEmailJS = typeof emailjs !== "undefined";
-    if (hasEmailJS) emailjs.init("hnD6svOG9ul9LoBqK");
+    /* Contact/audit form submits to the live RAG API.
+       Primary: POST /api/contact (sends email + saves lead).
+       Fallback: POST /api/lead (saves lead only) if /api/contact is unavailable. */
+
+    const API_BASE_URL = "https://src-five-sage.vercel.app";
 
     /* CONTACT FORM */
     const contactSubmit = document.getElementById("fSub");
@@ -2302,9 +2305,34 @@
       btn.disabled = true;
       btn.querySelector("span").textContent = "Sending...";
 
-      const promise = hasEmailJS
-        ? emailjs.send("service_0vyg0cj", "template_3fdrhag", data)
-        : Promise.reject(new Error("EmailJS is not loaded"));
+      const contactBody = {
+        name: data.name,
+        email: data.email,
+        website: data.website,
+        phone: data.phone,
+        message: "Free SEO Audit request for " + data.website +
+                 ". Phone: " + (data.phone || "not provided") + "."
+      };
+      const leadBody = { ...data, requirement: "Free SEO Audit" };
+
+      // Try /api/contact first (email + save); fall back to /api/lead (save only).
+      const promise = fetch(API_BASE_URL + "/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(contactBody)
+      }).then(function (res) {
+        if (!res.ok) throw new Error("Contact request failed: " + res.status);
+        return res.json();
+      }).catch(function () {
+        return fetch(API_BASE_URL + "/api/lead", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(leadBody)
+        }).then(function (res) {
+          if (!res.ok) throw new Error("Lead request failed: " + res.status);
+          return res.json();
+        });
+      });
 
       promise
         .then(() => {

@@ -1,6 +1,10 @@
 (function () {
   "use strict";
 
+  /* Base URL of the RAG chatbot API (Vercel deployment).
+     Override before this script loads via: window.API_BASE = "http://localhost:5000"; */
+  var API_BASE = window.API_BASE || "https://src-five-sage.vercel.app";
+
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   /* Footer year */
@@ -50,6 +54,9 @@
     var navHost = legacyNav.closest("header");
     if (navHost) navHost.classList.add("site-navbar-host");
     var servicesPage = rootPrefix + "pages/services.html";
+    var blogPage = rootPrefix + "pages/blogs.html";
+    var iconBars = '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>';
+    var iconClose = '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>';
     legacyNav.innerHTML = '<div class="nav-container">' +
       '<a href="' + rootPrefix + 'index.html" class="nav-logo">' +
       '<div class="nav-logo-icon"><i class="fas fa-chart-line"></i></div>' +
@@ -59,25 +66,34 @@
       '<li><a href="' + rootPrefix + 'pages/about.html">About</a></li>' +
       '<li><a href="' + servicesPage + '">Services</a></li>' +
       '<li><a href="' + servicesPage + '#process">Process</a></li>' +
+      '<li><a href="' + blogPage + '">Blog</a></li>' +
       '<li><a href="' + rootPrefix + 'pages/reviews.html">Reviews</a></li>' +
-      (isBlogPage ? '' : '<li><a href="' + servicesPage + '#faq">FAQ</a></li>') +
       '</ul>' +
       '<a href="' + rootPrefix + 'index.html#contact" class="nav-cta">Free Audit</a>' +
-      '<button class="mobile-toggle" type="button" aria-label="Open menu"><i class="fas fa-bars"></i></button>' +
+      '<button class="mobile-toggle" type="button" aria-label="Open menu" aria-expanded="false">' + iconBars + '</button>' +
       '<div class="mobile-menu">' +
+      '<a href="' + rootPrefix + 'index.html">Home</a>' +
       '<a href="' + rootPrefix + 'pages/about.html">About</a>' +
       '<a href="' + servicesPage + '">Services</a>' +
       '<a href="' + servicesPage + '#process">Process</a>' +
+      '<a href="' + blogPage + '">Blog</a>' +
       '<a href="' + rootPrefix + 'pages/reviews.html">Reviews</a>' +
-      (isBlogPage ? '' : '<a href="' + servicesPage + '#faq">FAQ</a>') +
       '<a href="' + rootPrefix + 'index.html#contact" class="nav-cta">Free SEO Audit</a>' +
       '</div></div>';
     var sharedMobileToggle = legacyNav.querySelector(".mobile-toggle");
     var sharedMobileMenu = legacyNav.querySelector(".mobile-menu");
     sharedMobileToggle.addEventListener("click", function () {
-      sharedMobileMenu.classList.toggle("active");
-      sharedMobileToggle.querySelector("i").classList.toggle("fa-bars");
-      sharedMobileToggle.querySelector("i").classList.toggle("fa-times");
+      var open = sharedMobileMenu.classList.toggle("active");
+      sharedMobileToggle.innerHTML = open ? iconClose : iconBars;
+      sharedMobileToggle.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    // Close the mobile menu after choosing a link.
+    sharedMobileMenu.addEventListener("click", function (e) {
+      if (e.target.closest("a")) {
+        sharedMobileMenu.classList.remove("active");
+        sharedMobileToggle.innerHTML = iconBars;
+        sharedMobileToggle.setAttribute("aria-expanded", "false");
+      }
     });
     onScroll();
   }
@@ -127,7 +143,7 @@
       if (suggestions) suggestions.remove(); 
       var typing = addTypingIndicator();
       try {
-        var response = await fetch("/api/chat", {
+        var response = await fetch(API_BASE + "/api/chat", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ message: text })

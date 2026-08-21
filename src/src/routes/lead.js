@@ -1,9 +1,38 @@
 import { Router } from "express";
 import rateLimit from "express-rate-limit";
+import nodemailer from "nodemailer";
 import { saveLead, getAllLeads } from "../services/leadService.js";
 import { requireAdminKey } from "../middleware/requireAdminKey.js";
 
 const router = Router();
+
+// Sends the owner an email about a new lead and returns the promise so the
+// caller can await it. On Vercel the function is frozen the moment the HTTP
+// response is sent, so the send MUST complete before we respond — a
+// fire-and-forget call here would be killed before the email ever goes out.
+function notifyLeadByEmail(lead) {
+  if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) return Promise.resolve();
+  const transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: { user: process.env.EMAIL_USER, pass: process.env.EMAIL_PASS },
+  });
+  return transporter.sendMail({
+    from: process.env.EMAIL_USER,
+    to: process.env.EMAIL_USER,
+    replyTo: lead.email,
+    subject: `New Lead — ${lead.name}`,
+    text: [
+      "New lead submitted via the website",
+      "",
+      `Name: ${lead.name}`,
+      `Email: ${lead.email}`,
+      `Website: ${lead.website || "Not provided"}`,
+      `Phone: ${lead.phone || "Not provided"}`,
+      `Requirement: ${lead.requirement || "Not provided"}`,
+      `Submitted: ${lead.createdAt}`,
+    ].join("\n"),
+  });
+}
 
 // Rate limiter for lead submissions (POST) — prevents form-spam
 const submitLimiter = rateLimit({
@@ -121,7 +150,7 @@ function sanitize(str) {
  *                 error:
  *                   type: string
  */
-router.post("/", submitLimiter, (req, res) => {
+router.post("/", submitLimiter, async (req, res) => {
   const { name, email, website, phone, requirement } = req.body ?? {};
 
   if (!name || !email) {
@@ -157,6 +186,15 @@ router.post("/", submitLimiter, (req, res) => {
     phone: sanitize(phone),
     requirement: sanitize(requirement),
   });
+
+  // Await so the email finishes before Vercel freezes the function. A failed
+  // notification must not fail the request — the lead is already saved.
+  try {
+    await notifyLeadByEmail(lead);
+  } catch (err) {
+    console.error("Lead notification email failed:", err.message);
+  }
+
   res.status(201).json({ message: "Lead saved.", lead });
 });
 

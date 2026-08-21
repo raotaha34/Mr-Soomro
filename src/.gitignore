@@ -3,3 +3,11 @@ node_modules/
 *.log
 .DS_Store
 leads.json
+
+.vercel
+.vercel-tmp/
+.env*
+!.env.example
+
+# test screenshots
+*.png

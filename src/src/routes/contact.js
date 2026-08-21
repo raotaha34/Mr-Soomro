@@ -7,7 +7,7 @@ const router = Router();
 // Rate limiter for contact form — prevents spam email submissions
 const contactLimiter = rateLimit({
   windowMs: 60 * 1000,
-  max: 5,
+  max: 3,
   message: { success: false, message: "Too many submissions. Please wait a moment and try again." },
   standardHeaders: true,
   legacyHeaders: false,

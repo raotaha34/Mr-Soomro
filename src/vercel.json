@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "functions": {
+    "api/index.js": {
+      "includeFiles": "src/**,knowledge/**"
+    }
+  },
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api" },
+    { "source": "/((?!api/|api-docs).*)", "destination": "/api" }
+  ]
+}
