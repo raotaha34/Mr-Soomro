@@ -19,8 +19,8 @@ function walk(dir) {
 function bump(file) {
   let src = readFileSync(file, "utf8");
   const out = src
-    .replace(/(src="[^"]*?script\.js)(\?[^"]*)?"/g, '$1?v=2"')
-    .replace(/(href="[^"]*?style\.css)(\?[^"]*)?"/g, '$1?v=2"');
+    .replace(/(src="[^"]*?script\.js)(\?[^"]*)?"/g, '$1?v=3"')
+    .replace(/(href="[^"]*?style\.css)(\?[^"]*)?"/g, '$1?v=3"');
   if (out !== src) {
     writeFileSync(file, out);
     changed++;

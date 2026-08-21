@@ -636,7 +636,6 @@ body { overflow-x: clip; }
 img, video, canvas { max-width: 100%; height: auto; }
 /* Injected navbar icons always render at a fixed size */
 #navbar.site-navbar .mobile-toggle svg { width: 20px; height: 20px; display: block; }
-#navbar.site-navbar .nav-logo-icon svg { width: 18px; height: 18px; display: block; }
 
 
 
