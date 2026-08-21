@@ -477,7 +477,7 @@ section { padding:120px 60px }
 .cll:hover { border-color:var(--A);color:var(--A);box-shadow:0 8px 30px var(--A-glow);transform:translateY(-6px) scale(1.02) }
 
 /* ── CONTACT ── */
-#contact { background:var(--bg);position:relative;overflow:hidden }
+#contact { background:#ff9900;position:relative;overflow:hidden }
 #contact::before { content:'';position:absolute;top:-20%;right:-10%;width:600px;height:600px;background:radial-gradient(circle,rgba(249,115,22,.05) 0%,transparent 60%);filter:blur(80px) }
 .cng { display:grid;grid-template-columns:1fr 1.25fr;gap:90px;align-items:start;max-width:1200px;margin:0 auto;position:relative;z-index:1 }
 .cntxt { font-size:16px;font-weight:400;color:var(--Ts);line-height:1.9;margin-bottom:38px }
