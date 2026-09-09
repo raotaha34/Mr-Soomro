@@ -1,0 +1,15 @@
+.vercel
+
+# Dependencies
+node_modules/
+
+# Environment secrets (API keys, Gmail credentials, admin key)
+src/.env
+.env
+
+# Lead data (contains visitor submissions)
+src/leads.json
+
+# Logs & OS files
+*.log
+.DS_Store
