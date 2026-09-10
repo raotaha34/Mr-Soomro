@@ -39,6 +39,7 @@
       --err: #dc2626;
       --err-bg: #fef2f2;
       --err-bdr: #fecaca;
+      --header-bg: rgba(255,255,255,0.82);
       --fd: 'Inter', sans-serif;
       --ease: cubic-bezier(0.22,1,0.36,1);
       --spring: cubic-bezier(0.34,1.56,0.64,1);
@@ -61,6 +62,7 @@
       --err: #f87171;
       --err-bg: rgba(248,113,113,0.1);
       --err-bdr: rgba(248,113,113,0.28);
+      --header-bg: rgba(19,17,16,0.72);
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -147,12 +149,14 @@
     @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
     .dash-header {
-      background: rgba(255,255,255,0.85);
-      backdrop-filter: blur(14px) saturate(160%);
-      -webkit-backdrop-filter: blur(14px) saturate(160%);
+      background: var(--header-bg);
+      backdrop-filter: blur(16px) saturate(180%);
+      -webkit-backdrop-filter: blur(16px) saturate(180%);
       border-bottom: 1px solid var(--bdr);
-      padding: 16px 40px; display: flex; align-items: center; justify-content: space-between;
+      box-shadow: 0 1px 0 var(--bdr), 0 12px 30px -18px rgba(0,0,0,0.18);
+      padding: 14px 40px; display: flex; align-items: center; justify-content: space-between;
       position: sticky; top: 0; z-index: 100; gap: 16px; flex-wrap: wrap;
+      transition: background .4s var(--ease), box-shadow .4s var(--ease);
     }
     .dash-header-left { display: flex; align-items: center; gap: 14px; }
     .dash-logo {
@@ -168,35 +172,54 @@
     .dash-title { font-size: 18px; font-weight: 700; letter-spacing: -0.01em; }
     .dash-title span { color: var(--A); }
 
-    .dash-header-right { display: flex; align-items: center; gap: 10px; }
+    .dash-header-right { display: flex; align-items: center; gap: 12px; }
+
+    /* Grouped action pill (View Site / Logout) */
+    .action-group {
+      display: flex; align-items: center; gap: 2px;
+      background: var(--surface); border: 1.5px solid var(--bdr-strong);
+      border-radius: 999px; padding: 4px; box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+    }
+    .action-divider { width: 1px; height: 18px; background: var(--bdr-strong); flex-shrink: 0; }
+
     .btn {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 10px 18px; border-radius: 9px; cursor: pointer;
+      display: inline-flex; align-items: center; gap: 7px;
+      padding: 9px 16px; border-radius: 999px; cursor: pointer;
       font-family: var(--fd); font-size: 12.5px; font-weight: 600;
-      letter-spacing: .03em; border: 1.5px solid var(--bdr-strong);
-      background: var(--surface); color: var(--Tm);
-      transition: transform .3s var(--spring), border-color .25s var(--ease), color .25s var(--ease), background .25s var(--ease);
+      letter-spacing: .03em; border: none;
+      background: transparent; color: var(--Tm);
+      transition: transform .3s var(--spring), color .25s var(--ease), background .25s var(--ease);
       text-decoration: none;
     }
     .btn:hover { transform: translateY(-1px); }
-    .btn svg { width: 15px; height: 15px; flex-shrink: 0; }
-    .btn-view-site:hover { border-color: var(--A); color: var(--A-deep); background: rgba(249,115,22,.05); }
+    .btn:active { transform: translateY(0) scale(0.97); }
+    .btn svg { width: 15px; height: 15px; flex-shrink: 0; transition: transform .35s var(--spring); }
+    .btn:hover svg { transform: scale(1.08); }
+    .btn-view-site:hover { color: var(--A-deep); background: var(--A-glow); }
     .btn-logout { color: var(--Ts); }
-    .btn-logout:hover { border-color: var(--err); color: var(--err); background: var(--err-bg); }
+    .btn-logout:hover { color: var(--err); background: var(--err-bg); }
 
     /* Theme toggle */
     .theme-toggle {
       width: 38px; height: 38px; border-radius: 50%; flex-shrink: 0;
       border: 1.5px solid var(--bdr-strong); background: var(--surface);
-      color: var(--Tm); cursor: pointer;
+      color: var(--Tm); cursor: pointer; position: relative; overflow: hidden;
       display: flex; align-items: center; justify-content: center;
-      transition: transform .4s var(--spring), border-color .25s var(--ease), color .25s var(--ease), background .25s var(--ease);
+      transition: transform .4s var(--spring), border-color .25s var(--ease), color .25s var(--ease), box-shadow .35s var(--ease);
     }
-    .theme-toggle:hover { border-color: var(--A); color: var(--A-deep); transform: translateY(-1px) rotate(-12deg); }
-    .theme-toggle svg { width: 17px; height: 17px; }
-    .theme-toggle .icon-sun { display: none; }
-    html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
-    html[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+    .theme-toggle:hover {
+      border-color: var(--A); color: var(--A-deep);
+      transform: translateY(-1px); box-shadow: 0 0 0 5px var(--A-glow);
+    }
+    .theme-toggle:active { transform: translateY(0) scale(0.94); }
+    .theme-toggle svg {
+      width: 17px; height: 17px; position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%,-50%) rotate(0deg) scale(1); opacity: 1;
+      transition: opacity .35s var(--ease), transform .5s var(--spring);
+    }
+    .theme-toggle .icon-sun { opacity: 0; transform: translate(-50%,-50%) rotate(-90deg) scale(0.4); }
+    html[data-theme="dark"] .theme-toggle .icon-moon { opacity: 0; transform: translate(-50%,-50%) rotate(90deg) scale(0.4); }
+    html[data-theme="dark"] .theme-toggle .icon-sun { opacity: 1; transform: translate(-50%,-50%) rotate(0deg) scale(1); }
     .login-theme-toggle { position: absolute; top: 20px; right: 20px; }
 
     .dash-body { padding: 32px 40px 64px; max-width: 1400px; margin: 0 auto; }
@@ -361,14 +384,17 @@
           <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
           <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
         </button>
-        <a href="../index.html" class="btn btn-view-site" id="viewSiteBtn" target="_blank" rel="noopener noreferrer">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          <span class="btn-label">View Site</span>
-        </a>
-        <button type="button" class="btn btn-logout" id="logoutBtn">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
-          <span class="btn-label">Logout</span>
-        </button>
+        <div class="action-group">
+          <a href="../index.html" class="btn btn-view-site" id="viewSiteBtn" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            <span class="btn-label">View Site</span>
+          </a>
+          <div class="action-divider"></div>
+          <button type="button" class="btn btn-logout" id="logoutBtn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+            <span class="btn-label">Logout</span>
+          </button>
+        </div>
       </div>
     </header>
 
