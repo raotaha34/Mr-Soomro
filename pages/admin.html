@@ -6,11 +6,13 @@
   <title>Admin Panel | Mr. Soomro</title>
   <link rel="icon" href="../assets/favicon.png?v=2" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
     :root {
       --A: #f97316;
       --A2: #f59e0b;
+      --A-deep: #ea580c;
       --T: #1a1714;
       --Tm: #3d3833;
       --Ts: #7a746d;
@@ -18,102 +20,153 @@
       --bg: #fafaf7;
       --bg2: #f2f0ea;
       --surface: #ffffff;
-      --bdr: rgba(26,23,20,0.1);
+      --bdr: rgba(26,23,20,0.09);
+      --bdr-strong: rgba(26,23,20,0.16);
       --A-glow: rgba(249,115,22,0.18);
+      --ok: #16a34a;
+      --err: #dc2626;
       --fd: 'Inter', sans-serif;
+      --ease: cubic-bezier(0.22,1,0.36,1);
+      --spring: cubic-bezier(0.34,1.56,0.64,1);
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: var(--fd); background: var(--bg); color: var(--T); min-height: 100vh; }
+    body {
+      font-family: var(--fd);
+      background: var(--bg);
+      color: var(--T);
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── SHARED ── */
+    .brand-mark {
+      width: 52px; height: 52px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--A), var(--A2));
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 6px 20px var(--A-glow);
+      position: relative;
+    }
+    .brand-mark::before {
+      content: ''; width: 28px; height: 28px;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 19V5'/%3E%3Cpath d='M4 19h16'/%3E%3Cpath d='m7 15 3-3 3 2 5-6'/%3E%3Cpath d='M15 8h3v3'/%3E%3C/svg%3E") center / contain no-repeat;
+    }
 
     /* ── LOGIN SCREEN ── */
     .login-wrap {
       display: flex; align-items: center; justify-content: center;
-      min-height: 100vh; padding: 20px;
-      background: linear-gradient(135deg, var(--bg) 0%, var(--bg2) 100%);
+      min-height: 100vh; padding: 20px; position: relative; overflow: hidden;
+      background:
+        radial-gradient(ellipse 900px 600px at 15% -10%, rgba(249,115,22,0.10), transparent 60%),
+        radial-gradient(ellipse 700px 500px at 105% 105%, rgba(245,158,11,0.08), transparent 60%),
+        linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%);
     }
     .login-card {
       background: var(--surface); border: 1px solid var(--bdr);
-      border-radius: 20px; padding: 48px 40px; width: 100%; max-width: 420px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.06);
+      border-radius: 22px; padding: 48px 40px; width: 100%; max-width: 420px;
+      box-shadow: 0 30px 70px -20px rgba(26,23,20,0.14);
+      opacity: 0; transform: translateY(18px);
+      animation: cardIn 0.7s var(--ease) forwards;
     }
-    .login-logo {
-      width: 52px; height: 52px; border-radius: 50%; margin: 0 auto 24px;
-      background: linear-gradient(135deg, var(--A), var(--A2));
-      display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 4px 12px rgba(245,145,30,.3);
+    @keyframes cardIn { to { opacity: 1; transform: translateY(0); } }
+    .login-card .brand-mark {
+      margin: 0 auto 24px;
+      animation: float 5s ease-in-out infinite;
     }
-    .login-logo::before {
-      content: ''; width: 28px; height: 28px;
-      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 19V5'/%3E%3Cpath d='M4 19h16'/%3E%3Cpath d='m7 15 3-3 3 2 5-6'/%3E%3Cpath d='M15 8h3v3'/%3E%3C/svg%3E") center / contain no-repeat;
-    }
-    .login-title { font-size: 24px; font-weight: 800; text-align: center; margin-bottom: 8px; }
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+    .login-title { font-size: 25px; font-weight: 800; text-align: center; margin-bottom: 6px; letter-spacing: -0.02em; }
     .login-sub { font-size: 14px; color: var(--Ts); text-align: center; margin-bottom: 32px; }
     .form-group { margin-bottom: 20px; }
     .form-group label {
       display: block; font-size: 11px; font-weight: 700;
-      letter-spacing: .14em; text-transform: uppercase; color: var(--Ts); margin-bottom: 8px;
+      letter-spacing: .13em; text-transform: uppercase; color: var(--Ts); margin-bottom: 8px;
     }
     .form-group input {
       width: 100%; padding: 14px 16px; border: 1.5px solid var(--bdr);
       border-radius: 12px; background: var(--bg); font: inherit; font-size: 15px;
-      color: var(--T); outline: none; transition: all .3s;
+      color: var(--T); outline: none; transition: border-color .25s var(--ease), box-shadow .25s var(--ease), background .25s var(--ease);
     }
-    .form-group input:focus { border-color: var(--A); background: var(--surface); box-shadow: 0 0 0 3px rgba(249,115,22,.1); }
+    .form-group input:focus { border-color: var(--A); background: var(--surface); box-shadow: 0 0 0 4px var(--A-glow); }
     .form-group input::placeholder { color: var(--Tmut); }
     .login-btn {
       width: 100%; padding: 16px; border: none; border-radius: 12px; cursor: pointer;
       background: linear-gradient(135deg, var(--A), var(--A2)); color: #fff;
       font-family: var(--fd); font-size: 14px; font-weight: 700;
-      letter-spacing: .08em; text-transform: uppercase;
-      box-shadow: 0 8px 28px var(--A-glow); transition: all .35s;
+      letter-spacing: .07em; text-transform: uppercase;
+      box-shadow: 0 10px 30px var(--A-glow);
+      transition: transform .35s var(--spring), box-shadow .35s var(--ease), opacity .2s;
     }
-    .login-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 36px var(--A-glow); }
+    .login-btn:hover { transform: translateY(-2px); box-shadow: 0 14px 38px var(--A-glow); }
+    .login-btn:active { transform: translateY(0); }
     .login-btn:disabled { opacity: .6; cursor: not-allowed; transform: none; }
     .login-error {
       display: none; margin-top: 16px; padding: 12px 16px; border-radius: 10px;
-      background: #fef2f2; border: 1px solid #fecaca; color: #dc2626;
+      background: #fef2f2; border: 1px solid #fecaca; color: var(--err);
       font-size: 13px; font-weight: 500; text-align: center;
+      opacity: 0; transform: translateY(-4px);
     }
-    .login-error.show { display: block; }
+    .login-error.show { display: block; animation: errIn .3s var(--ease) forwards; }
+    @keyframes errIn { to { opacity: 1; transform: translateY(0); } }
 
     /* ── DASHBOARD ── */
     .dashboard { display: none; min-height: 100vh; }
-    .dashboard.active { display: block; }
+    .dashboard.active { display: block; animation: fadeIn .5s var(--ease); }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
     .dash-header {
-      background: var(--surface); border-bottom: 1px solid var(--bdr);
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(14px) saturate(160%);
+      -webkit-backdrop-filter: blur(14px) saturate(160%);
+      border-bottom: 1px solid var(--bdr);
       padding: 16px 40px; display: flex; align-items: center; justify-content: space-between;
-      position: sticky; top: 0; z-index: 100;
+      position: sticky; top: 0; z-index: 100; gap: 16px; flex-wrap: wrap;
     }
     .dash-header-left { display: flex; align-items: center; gap: 14px; }
     .dash-logo {
       width: 38px; height: 38px; border-radius: 50%;
       background: linear-gradient(135deg, var(--A), var(--A2));
       display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 14px var(--A-glow);
     }
     .dash-logo::before {
       content: ''; width: 20px; height: 20px;
       background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 19V5'/%3E%3Cpath d='M4 19h16'/%3E%3Cpath d='m7 15 3-3 3 2 5-6'/%3E%3Cpath d='M15 8h3v3'/%3E%3C/svg%3E") center / contain no-repeat;
     }
-    .dash-title { font-size: 18px; font-weight: 700; }
+    .dash-title { font-size: 18px; font-weight: 700; letter-spacing: -0.01em; }
     .dash-title span { color: var(--A); }
-    .logout-btn {
-      padding: 8px 20px; border: 1.5px solid var(--bdr); border-radius: 8px;
-      background: transparent; color: var(--Ts); font-family: var(--fd);
-      font-size: 12px; font-weight: 600; text-transform: uppercase;
-      letter-spacing: .06em; cursor: pointer; transition: all .3s;
+
+    .dash-header-right { display: flex; align-items: center; gap: 10px; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 18px; border-radius: 9px; cursor: pointer;
+      font-family: var(--fd); font-size: 12.5px; font-weight: 600;
+      letter-spacing: .03em; border: 1.5px solid var(--bdr-strong);
+      background: var(--surface); color: var(--Tm);
+      transition: transform .3s var(--spring), border-color .25s var(--ease), color .25s var(--ease), background .25s var(--ease);
+      text-decoration: none;
     }
-    .logout-btn:hover { border-color: #dc2626; color: #dc2626; background: #fef2f2; }
-    .dash-body { padding: 32px 40px; max-width: 1400px; margin: 0 auto; }
+    .btn:hover { transform: translateY(-1px); }
+    .btn svg { width: 15px; height: 15px; flex-shrink: 0; }
+    .btn-view-site:hover { border-color: var(--A); color: var(--A-deep); background: rgba(249,115,22,.05); }
+    .btn-logout { color: var(--Ts); }
+    .btn-logout:hover { border-color: var(--err); color: var(--err); background: #fef2f2; }
+
+    .dash-body { padding: 32px 40px 64px; max-width: 1400px; margin: 0 auto; }
 
     /* Stats row */
     .stats-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 32px; }
     .stat-card {
       background: var(--surface); border: 1px solid var(--bdr); border-radius: 16px;
-      padding: 24px; transition: all .3s;
+      padding: 24px; transition: transform .35s var(--spring), border-color .3s var(--ease), box-shadow .3s var(--ease);
+      opacity: 0; transform: translateY(14px);
+      animation: cardIn .55s var(--ease) forwards;
     }
-    .stat-card:hover { border-color: rgba(249,115,22,.25); box-shadow: 0 8px 24px rgba(0,0,0,.04); }
-    .stat-label { font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--Ts); margin-bottom: 8px; }
-    .stat-value { font-size: 32px; font-weight: 800; color: var(--T); }
+    .stat-card:nth-child(1) { animation-delay: 0ms; }
+    .stat-card:nth-child(2) { animation-delay: 60ms; }
+    .stat-card:nth-child(3) { animation-delay: 120ms; }
+    .stat-card:nth-child(4) { animation-delay: 180ms; }
+    .stat-card:hover { border-color: rgba(249,115,22,.3); box-shadow: 0 14px 34px -12px rgba(26,23,20,.12); transform: translateY(-3px); }
+    .stat-label { font-size: 11px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; color: var(--Ts); margin-bottom: 10px; }
+    .stat-value { font-size: 34px; font-weight: 800; color: var(--T); letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
     .stat-value.accent { color: var(--A); }
 
     /* Toolbar */
@@ -121,19 +174,25 @@
       display: flex; align-items: center; justify-content: space-between;
       margin-bottom: 20px; gap: 16px; flex-wrap: wrap;
     }
-    .search-box {
-      flex: 1; min-width: 240px; padding: 12px 16px; border: 1.5px solid var(--bdr);
-      border-radius: 10px; background: var(--surface); font: inherit; font-size: 14px;
-      color: var(--T); outline: none; transition: all .3s;
+    .search-box-wrap { position: relative; flex: 1; min-width: 240px; }
+    .search-box-wrap svg {
+      position: absolute; left: 14px; top: 50%; transform: translateY(-50%);
+      width: 16px; height: 16px; color: var(--Tmut); pointer-events: none;
     }
-    .search-box:focus { border-color: var(--A); box-shadow: 0 0 0 3px rgba(249,115,22,.1); }
+    .search-box {
+      width: 100%; padding: 12px 16px 12px 40px; border: 1.5px solid var(--bdr);
+      border-radius: 10px; background: var(--surface); font: inherit; font-size: 14px;
+      color: var(--T); outline: none; transition: border-color .25s var(--ease), box-shadow .25s var(--ease);
+    }
+    .search-box:focus { border-color: var(--A); box-shadow: 0 0 0 4px var(--A-glow); }
     .refresh-btn {
-      padding: 12px 24px; border: 1.5px solid var(--bdr); border-radius: 10px;
-      background: var(--surface); color: var(--T); font-family: var(--fd);
-      font-size: 13px; font-weight: 600; cursor: pointer; transition: all .3s;
+      padding: 12px 22px; border: 1.5px solid var(--bdr-strong); border-radius: 10px;
+      background: var(--surface); color: var(--Tm); font-family: var(--fd);
+      font-size: 13px; font-weight: 600; cursor: pointer;
+      transition: border-color .25s var(--ease), color .25s var(--ease), transform .3s var(--spring);
       display: flex; align-items: center; gap: 8px;
     }
-    .refresh-btn:hover { border-color: var(--A); color: var(--A); }
+    .refresh-btn:hover { border-color: var(--A); color: var(--A-deep); transform: translateY(-1px); }
     .refresh-btn.spinning svg { animation: spin .8s linear infinite; }
     @keyframes spin { to { transform: rotate(360deg); } }
 
@@ -141,47 +200,59 @@
     .table-wrap {
       background: var(--surface); border: 1px solid var(--bdr);
       border-radius: 16px; overflow: hidden;
+      box-shadow: 0 1px 2px rgba(26,23,20,.03);
     }
     table { width: 100%; border-collapse: collapse; }
     thead { background: var(--bg2); }
     th {
       padding: 14px 20px; font-size: 11px; font-weight: 700;
-      letter-spacing: .12em; text-transform: uppercase; color: var(--Ts);
+      letter-spacing: .11em; text-transform: uppercase; color: var(--Ts);
       text-align: left; border-bottom: 1px solid var(--bdr);
     }
     td {
       padding: 16px 20px; font-size: 14px; color: var(--Tm);
       border-bottom: 1px solid var(--bdr); vertical-align: top;
     }
+    tbody tr { transition: background .2s var(--ease); }
     tr:last-child td { border-bottom: none; }
-    tr:hover td { background: rgba(249,115,22,.02); }
+    tr:hover td { background: rgba(249,115,22,.035); }
     td.name { font-weight: 600; color: var(--T); }
-    td.email a { color: var(--A); text-decoration: none; font-weight: 500; }
-    td.email a:hover { text-decoration: underline; }
+    td.email a { color: var(--A-deep); text-decoration: none; font-weight: 500; transition: opacity .2s; }
+    td.email a:hover { opacity: .7; text-decoration: underline; }
     td.date { font-size: 12px; color: var(--Ts); white-space: nowrap; }
     td .req-badge {
       display: inline-block; padding: 4px 12px; border-radius: 20px;
       font-size: 11px; font-weight: 600; letter-spacing: .04em;
-      background: rgba(249,115,22,.08); color: var(--A); border: 1px solid rgba(249,115,22,.2);
+      background: rgba(249,115,22,.08); color: var(--A-deep); border: 1px solid rgba(249,115,22,.2);
     }
+    td .muted { color: var(--Tmut); }
 
     /* Empty & loading states */
-    .empty-state { padding: 60px 20px; text-align: center; }
-    .empty-state p { font-size: 16px; color: var(--Ts); margin-bottom: 8px; }
+    .empty-state { padding: 64px 20px; text-align: center; }
+    .empty-state svg { color: var(--Tmut); margin-bottom: 14px; }
+    .empty-state p { font-size: 16px; font-weight: 600; color: var(--Tm); margin-bottom: 6px; }
     .empty-state small { font-size: 13px; color: var(--Tmut); }
-    .loading-row td { text-align: center; padding: 40px; color: var(--Ts); }
+    .loading-row td { text-align: center; padding: 48px; color: var(--Ts); font-size: 13px; }
+    .loading-row .spinner {
+      display: inline-block; width: 16px; height: 16px; margin-right: 8px;
+      border: 2px solid var(--bdr-strong); border-top-color: var(--A);
+      border-radius: 50%; vertical-align: middle; animation: spin .7s linear infinite;
+    }
 
     /* Responsive */
     @media (max-width: 768px) {
       .dash-header { padding: 14px 20px; }
-      .dash-body { padding: 20px; }
+      .dash-body { padding: 20px 20px 48px; }
       .table-wrap { overflow-x: auto; }
       table { min-width: 700px; }
       .stats-row { grid-template-columns: 1fr 1fr; }
+      .dash-header-right { width: 100%; justify-content: flex-end; }
     }
     @media (max-width: 480px) {
       .stats-row { grid-template-columns: 1fr; }
       .login-card { padding: 36px 24px; }
+      .btn span.btn-label { display: none; }
+      .btn { padding: 10px 12px; }
     }
   </style>
 </head>
@@ -190,38 +261,38 @@
   <!-- ════════ LOGIN SCREEN ════════ -->
   <div class="login-wrap" id="loginScreen">
     <div class="login-card">
-      <div class="login-logo"></div>
+      <div class="brand-mark"></div>
       <h1 class="login-title">Admin Panel</h1>
       <p class="login-sub">Sign in to view leads dashboard</p>
       <form id="loginForm" autocomplete="off">
-  <div class="form-group">
-    <label for="username">Username</label>
-    <input
-      type="text"
-      id="username"
-      placeholder="Enter admin username"
-      required
-      autocomplete="username"
-    >
-  </div>
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input
+            type="text"
+            id="username"
+            placeholder="Enter admin username"
+            required
+            autocomplete="username"
+          >
+        </div>
 
-  <div class="form-group">
-    <label for="adminKey">Admin Key</label>
-    <input
-      type="password"
-      id="adminKey"
-      placeholder="Enter admin key"
-      required
-      autocomplete="current-password"
-    >
-  </div>
+        <div class="form-group">
+          <label for="adminKey">Admin Key</label>
+          <input
+            type="password"
+            id="adminKey"
+            placeholder="Enter admin key"
+            required
+            autocomplete="current-password"
+          >
+        </div>
 
-  <button type="submit" class="login-btn" id="loginBtn">
-    Sign In
-  </button>
+        <button type="submit" class="login-btn" id="loginBtn">
+          Sign In
+        </button>
 
-  <div class="login-error" id="loginError"></div>
-</form>
+        <div class="login-error" id="loginError"></div>
+      </form>
     </div>
   </div>
 
@@ -232,7 +303,16 @@
         <div class="dash-logo"></div>
         <div class="dash-title">Leads <span>Dashboard</span></div>
       </div>
-      <button type="button" id="logoutBtn">Logout</button>
+      <div class="dash-header-right">
+        <a href="../index.html" class="btn btn-view-site" id="viewSiteBtn" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          <span class="btn-label">View Site</span>
+        </a>
+        <button type="button" class="btn btn-logout" id="logoutBtn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+          <span class="btn-label">Logout</span>
+        </button>
+      </div>
     </header>
 
     <div class="dash-body">
@@ -258,7 +338,10 @@
 
       <!-- Toolbar -->
       <div class="toolbar">
-        <input type="text" class="search-box" id="searchBox" placeholder="Search by name, email, or requirement...">
+        <div class="search-box-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" class="search-box" id="searchBox" placeholder="Search by name, email, or requirement...">
+        </div>
         <button class="refresh-btn" id="refreshBtn" onclick="fetchLeads()">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/></svg>
           Refresh
@@ -280,24 +363,22 @@
             </tr>
           </thead>
           <tbody id="leadsBody">
-            <tr class="loading-row"><td colspan="7">Loading leads...</td></tr>
+            <tr class="loading-row"><td colspan="7"><span class="spinner"></span>Loading leads...</td></tr>
           </tbody>
         </table>
       </div>
     </div>
   </div>
+
 <script>
   /* ── CONFIG ── */
-
   const API_BASE = "https://src-five-sage.vercel.app";
   const ADMIN_USERNAME = "basitsoomro";
 
   let allLeads = [];
   let adminKey = "";
 
-
   /* ── LOGIN ── */
-
   document.getElementById("loginForm").addEventListener("submit", function(e) {
     e.preventDefault();
 
@@ -337,9 +418,7 @@
 
     /*
      * Test the Admin Key directly against /api/lead.
-     *
-     * Backend expects:
-     * x-admin-key
+     * Backend expects: x-admin-key
      */
     fetch(API_BASE + "/api/lead", {
       method: "GET",
@@ -395,9 +474,7 @@
       });
   });
 
-
   /* ── SHOW DASHBOARD ── */
-
   function showDashboard() {
 
     /* Hide login */
@@ -415,24 +492,16 @@
     updateStats(allLeads);
   }
 
-
   /* ── LOGOUT ── */
-
   function logout() {
 
-    /*
-     * Remove Admin Key from memory.
-     */
+    /* Remove Admin Key from memory. */
     adminKey = "";
 
-    /*
-     * Remove leads from memory.
-     */
+    /* Remove leads from memory. */
     allLeads = [];
 
-    /*
-     * Clear login fields.
-     */
+    /* Clear login fields. */
     const adminKeyInput = document.getElementById("adminKey");
     const usernameInput = document.getElementById("username");
 
@@ -444,31 +513,23 @@
       usernameInput.value = "";
     }
 
-    /*
-     * Clear search box.
-     */
+    /* Clear search box. */
     const searchBox = document.getElementById("searchBox");
 
     if (searchBox) {
       searchBox.value = "";
     }
 
-    /*
-     * Hide dashboard.
-     */
+    /* Hide dashboard. */
     const dashboard = document.getElementById("dashboard");
 
     dashboard.classList.remove("active");
     dashboard.style.display = "none";
 
-    /*
-     * Show login screen.
-     */
+    /* Show login screen. */
     document.getElementById("loginScreen").style.display = "flex";
 
-    /*
-     * Clear login error.
-     */
+    /* Clear login error. */
     const loginError = document.getElementById("loginError");
 
     if (loginError) {
@@ -476,9 +537,7 @@
       loginError.classList.remove("show");
     }
 
-    /*
-     * Reset login button.
-     */
+    /* Reset login button. */
     const loginBtn = document.getElementById("loginBtn");
 
     if (loginBtn) {
@@ -487,35 +546,26 @@
     }
   }
 
-
   /* ── LOGOUT BUTTON ── */
-
   document.getElementById("logoutBtn").addEventListener("click", function() {
     logout();
   });
 
-
   /* ── FETCH LEADS ── */
-
   function fetchLeads() {
 
     const btn = document.getElementById("refreshBtn");
 
     btn.classList.add("spinning");
 
-    /*
-     * If there is no Admin Key in memory,
-     * return to login.
-     */
+    /* If there is no Admin Key in memory, return to login. */
     if (!adminKey) {
       btn.classList.remove("spinning");
       logout();
       return;
     }
 
-    /*
-     * Send Admin Key to the protected API.
-     */
+    /* Send Admin Key to the protected API. */
     fetch(API_BASE + "/api/lead", {
       method: "GET",
       headers: {
@@ -524,26 +574,20 @@
     })
       .then(function(r) {
 
-        /*
-         * Admin Key is invalid.
-         */
+        /* Admin Key is invalid. */
         if (r.status === 401) {
           logout();
           throw new Error("Invalid or expired admin key.");
         }
 
-        /*
-         * Admin access is not configured.
-         */
+        /* Admin access is not configured. */
         if (r.status === 503) {
           throw new Error(
             "Admin access is not configured on the server."
           );
         }
 
-        /*
-         * Other API error.
-         */
+        /* Other API error. */
         if (!r.ok) {
           throw new Error("API returned " + r.status);
         }
@@ -552,19 +596,13 @@
       })
       .then(function(leads) {
 
-        /*
-         * Update leads.
-         */
+        /* Update leads. */
         allLeads = Array.isArray(leads) ? leads : [];
 
-        /*
-         * Render table.
-         */
+        /* Render table. */
         renderLeads(allLeads);
 
-        /*
-         * Update statistics.
-         */
+        /* Update statistics. */
         updateStats(allLeads);
 
         btn.classList.remove("spinning");
@@ -577,9 +615,7 @@
       });
   }
 
-
   /* ── RENDER TABLE ── */
-
   function renderLeads(leads) {
 
     const tbody = document.getElementById("leadsBody");
@@ -590,6 +626,7 @@
         '<tr>' +
           '<td colspan="7">' +
             '<div class="empty-state">' +
+              '<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><line x1="8" y1="11" x2="16" y2="11"/><line x1="8" y1="15" x2="12" y2="15"/></svg>' +
               '<p>No leads found</p>' +
               '<small>Leads will appear here when submitted through the website.</small>' +
             '</div>' +
@@ -599,9 +636,7 @@
       return;
     }
 
-    /*
-     * Sort newest first.
-     */
+    /* Sort newest first. */
     leads.sort(function(a, b) {
       return new Date(b.createdAt) - new Date(a.createdAt);
     });
@@ -633,72 +668,35 @@
 
       html +=
         "<tr>" +
-
-          "<td>" +
-            (i + 1) +
-          "</td>" +
-
-          '<td class="name">' +
-            esc(l.name) +
-          "</td>" +
-
+          "<td>" + (i + 1) + "</td>" +
+          '<td class="name">' + esc(l.name) + "</td>" +
           '<td class="email">' +
-            '<a href="mailto:' +
-              esc(l.email) +
-            '">' +
-              esc(l.email) +
-            "</a>" +
+            '<a href="mailto:' + esc(l.email) + '">' + esc(l.email) + "</a>" +
           "</td>" +
-
           "<td>" +
-            (
-              l.phone
-                ? esc(l.phone)
-                : '<span style="color:var(--Tmut)">—</span>'
-            ) +
+            (l.phone ? esc(l.phone) : '<span class="muted">—</span>') +
           "</td>" +
-
           '<td class="website">' +
-            (
-              l.website
-                ? '<a href="' +
-                    esc(l.website) +
-                    '" target="_blank" rel="noopener noreferrer" style="color:var(--A);text-decoration:none;word-break:break-all;">' +
-                    esc(l.website) +
-                  "</a>"
-                : '<span style="color:var(--Tmut)">—</span>'
-            ) +
+            (l.website
+              ? '<a href="' + esc(l.website) + '" target="_blank" rel="noopener noreferrer" style="color:var(--A-deep);text-decoration:none;word-break:break-all;">' + esc(l.website) + "</a>"
+              : '<span class="muted">—</span>') +
           "</td>" +
-
           "<td>" +
-            (
-              l.requirement
-                ? '<span class="req-badge">' +
-                    esc(l.requirement) +
-                  "</span>"
-                : '<span style="color:var(--Tmut)">—</span>'
-            ) +
+            (l.requirement
+              ? '<span class="req-badge">' + esc(l.requirement) + "</span>"
+              : '<span class="muted">—</span>') +
           "</td>" +
-
-          '<td class="date">' +
-            dateStr +
-            "<br>" +
-            timeStr +
-          "</td>" +
-
+          '<td class="date">' + dateStr + "<br>" + timeStr + "</td>" +
         "</tr>";
     }
 
     tbody.innerHTML = html;
   }
 
-
   /* ── STATS ── */
-
   function updateStats(leads) {
 
-    document.getElementById("statTotal").textContent =
-      leads.length;
+    document.getElementById("statTotal").textContent = leads.length;
 
     const now = new Date();
 
@@ -710,9 +708,7 @@
 
     const weekStart = new Date(todayStart);
 
-    weekStart.setDate(
-      weekStart.getDate() - weekStart.getDay()
-    );
+    weekStart.setDate(weekStart.getDate() - weekStart.getDay());
 
     let todayCount = 0;
     let weekCount = 0;
@@ -737,70 +733,43 @@
       }
     }
 
-    document.getElementById("statToday").textContent =
-      todayCount;
-
-    document.getElementById("statWeek").textContent =
-      weekCount;
-
-    document.getElementById("statPhone").textContent =
-      phoneCount;
+    document.getElementById("statToday").textContent = todayCount;
+    document.getElementById("statWeek").textContent = weekCount;
+    document.getElementById("statPhone").textContent = phoneCount;
   }
 
-
   /* ── SEARCH ── */
+  document.getElementById("searchBox").addEventListener("input", function() {
 
-  document.getElementById("searchBox").addEventListener(
-    "input",
-    function() {
+    const q = this.value.toLowerCase().trim();
 
-      const q = this.value.toLowerCase().trim();
-
-      if (!q) {
-        renderLeads(allLeads);
-        return;
-      }
-
-      const filtered = allLeads.filter(function(l) {
-
-        return (
-          (l.name &&
-            l.name.toLowerCase().indexOf(q) !== -1) ||
-
-          (l.email &&
-            l.email.toLowerCase().indexOf(q) !== -1) ||
-
-          (l.requirement &&
-            l.requirement.toLowerCase().indexOf(q) !== -1) ||
-
-          (l.phone &&
-            l.phone.indexOf(q) !== -1) ||
-
-          (l.website &&
-            l.website.toLowerCase().indexOf(q) !== -1)
-        );
-      });
-
-      renderLeads(filtered);
+    if (!q) {
+      renderLeads(allLeads);
+      return;
     }
-  );
 
+    const filtered = allLeads.filter(function(l) {
+      return (
+        (l.name && l.name.toLowerCase().indexOf(q) !== -1) ||
+        (l.email && l.email.toLowerCase().indexOf(q) !== -1) ||
+        (l.requirement && l.requirement.toLowerCase().indexOf(q) !== -1) ||
+        (l.phone && l.phone.indexOf(q) !== -1) ||
+        (l.website && l.website.toLowerCase().indexOf(q) !== -1)
+      );
+    });
+
+    renderLeads(filtered);
+  });
 
   /* ── ESCAPE HTML ── */
-
   function esc(s) {
-
     if (s === null || s === undefined) {
       return "";
     }
-
     const d = document.createElement("div");
-
     d.textContent = String(s);
-
     return d.innerHTML;
   }
-
 </script>
 </body>
 </html>
